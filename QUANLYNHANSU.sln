@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QUANLYNHANSU", "QUANLYNHANS
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "File báo cáo", "File báo cáo", "{D2B966AA-D877-410F-84A3-75A00696744E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuanLyNhanSu-Master", "QuanLyNhanSu-Master\QuanLyNhanSu-Master.csproj", "{BD8B5FB2-1078-4C3E-885C-C7153F0FDEB2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,6 +19,10 @@ Global
 		{0C7476B3-0ED0-4B51-B0E4-BEB6E35A9E76}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0C7476B3-0ED0-4B51-B0E4-BEB6E35A9E76}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0C7476B3-0ED0-4B51-B0E4-BEB6E35A9E76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD8B5FB2-1078-4C3E-885C-C7153F0FDEB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD8B5FB2-1078-4C3E-885C-C7153F0FDEB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD8B5FB2-1078-4C3E-885C-C7153F0FDEB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD8B5FB2-1078-4C3E-885C-C7153F0FDEB2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
