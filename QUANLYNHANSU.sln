@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.1209
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QUANLYNHANSU", "QUANLYNHANSU\QUANLYNHANSU.csproj", "{0C7476B3-0ED0-4B51-B0E4-BEB6E35A9E76}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "File báo cáo", "File báo cáo", "{D2B966AA-D877-410F-84A3-75A00696744E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
