@@ -40,5 +40,15 @@ namespace QuanLyNhanSu_Master
             iconDashboard.ImageActive =   ((System.Drawing.Image)(resources.GetObject("iconDashboard.ImageActive")));
             //this.iconDashboard.MouseHover(sender, e);
         }
+
+        private void bunifuFlatButton3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuFlatButton4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
