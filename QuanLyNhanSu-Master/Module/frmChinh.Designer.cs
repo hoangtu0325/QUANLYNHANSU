@@ -40,13 +40,13 @@
             this.LogoACB = new Bunifu.Framework.UI.BunifuImageButton();
             this.txtSearch = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.iconDashboard = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuFlatButton4 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnDashboard = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.PanelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
@@ -75,9 +75,9 @@
             this.PanelTop.Controls.Add(this.txtSearch);
             this.PanelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelTop.Location = new System.Drawing.Point(0, 0);
-            this.PanelTop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.PanelTop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PanelTop.Name = "PanelTop";
-            this.PanelTop.Size = new System.Drawing.Size(1837, 53);
+            this.PanelTop.Size = new System.Drawing.Size(1034, 43);
             this.PanelTop.TabIndex = 0;
             // 
             // bunifuImageButton1
@@ -85,10 +85,9 @@
             this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
             this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(1568, 8);
-            this.bunifuImageButton1.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuImageButton1.Location = new System.Drawing.Point(1176, 6);
             this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Size = new System.Drawing.Size(40, 37);
+            this.bunifuImageButton1.Size = new System.Drawing.Size(30, 30);
             this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bunifuImageButton1.TabIndex = 24;
             this.bunifuImageButton1.TabStop = false;
@@ -100,10 +99,9 @@
             this.btnExit.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
             this.btnExit.ImageActive = ((System.Drawing.Image)(resources.GetObject("btnExit.ImageActive")));
-            this.btnExit.Location = new System.Drawing.Point(1780, 0);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(4);
+            this.btnExit.Location = new System.Drawing.Point(991, 0);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(57, 53);
+            this.btnExit.Size = new System.Drawing.Size(43, 43);
             this.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnExit.TabIndex = 22;
             this.btnExit.TabStop = false;
@@ -117,12 +115,11 @@
             this.iconSearch.IconChar = FontAwesome.Sharp.IconChar.Sistrix;
             this.iconSearch.IconColor = System.Drawing.Color.Black;
             this.iconSearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconSearch.IconSize = 28;
-            this.iconSearch.Location = new System.Drawing.Point(230, 12);
-            this.iconSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.iconSearch.IconSize = 23;
+            this.iconSearch.Location = new System.Drawing.Point(172, 10);
             this.iconSearch.Name = "iconSearch";
-            this.iconSearch.Padding = new System.Windows.Forms.Padding(3, 4, 3, 2);
-            this.iconSearch.Size = new System.Drawing.Size(33, 28);
+            this.iconSearch.Padding = new System.Windows.Forms.Padding(2, 3, 2, 2);
+            this.iconSearch.Size = new System.Drawing.Size(25, 23);
             this.iconSearch.TabIndex = 2;
             this.iconSearch.TabStop = false;
             // 
@@ -133,11 +130,9 @@
             this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.ThList;
             this.iconPictureBox2.IconColor = System.Drawing.Color.White;
             this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox2.IconSize = 39;
-            this.iconPictureBox2.Location = new System.Drawing.Point(1616, 7);
-            this.iconPictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.iconPictureBox2.Location = new System.Drawing.Point(868, 6);
             this.iconPictureBox2.Name = "iconPictureBox2";
-            this.iconPictureBox2.Size = new System.Drawing.Size(43, 39);
+            this.iconPictureBox2.Size = new System.Drawing.Size(32, 32);
             this.iconPictureBox2.TabIndex = 2;
             this.iconPictureBox2.TabStop = false;
             // 
@@ -147,11 +142,9 @@
             this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Bell;
             this.iconPictureBox1.IconColor = System.Drawing.Color.White;
             this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.IconSize = 39;
-            this.iconPictureBox1.Location = new System.Drawing.Point(1517, 7);
-            this.iconPictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.iconPictureBox1.Location = new System.Drawing.Point(1138, 6);
             this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(43, 39);
+            this.iconPictureBox1.Size = new System.Drawing.Size(32, 32);
             this.iconPictureBox1.TabIndex = 2;
             this.iconPictureBox1.TabStop = false;
             // 
@@ -160,10 +153,10 @@
             this.LogoACB.BackColor = System.Drawing.Color.Transparent;
             this.LogoACB.Image = ((System.Drawing.Image)(resources.GetObject("LogoACB.Image")));
             this.LogoACB.ImageActive = null;
-            this.LogoACB.Location = new System.Drawing.Point(27, 3);
-            this.LogoACB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.LogoACB.Location = new System.Drawing.Point(20, 2);
+            this.LogoACB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.LogoACB.Name = "LogoACB";
-            this.LogoACB.Size = new System.Drawing.Size(81, 47);
+            this.LogoACB.Size = new System.Drawing.Size(61, 38);
             this.LogoACB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.LogoACB.TabIndex = 19;
             this.LogoACB.TabStop = false;
@@ -183,38 +176,64 @@
             this.txtSearch.LineIdleColor = System.Drawing.Color.White;
             this.txtSearch.LineMouseHoverColor = System.Drawing.Color.White;
             this.txtSearch.LineThickness = 4;
-            this.txtSearch.Location = new System.Drawing.Point(230, 9);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtSearch.Location = new System.Drawing.Point(172, 7);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.txtSearch.Size = new System.Drawing.Size(341, 34);
+            this.txtSearch.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.txtSearch.Size = new System.Drawing.Size(256, 28);
             this.txtSearch.TabIndex = 21;
             this.txtSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
-            this.panel2.Controls.Add(this.bunifuThinButton21);
             this.panel2.Controls.Add(this.iconDashboard);
             this.panel2.Controls.Add(this.bunifuFlatButton4);
             this.panel2.Controls.Add(this.bunifuFlatButton1);
             this.panel2.Controls.Add(this.bunifuFlatButton3);
             this.panel2.Controls.Add(this.btnDashboard);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 53);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Location = new System.Drawing.Point(0, 43);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(231, 907);
+            this.panel2.Size = new System.Drawing.Size(173, 591);
             this.panel2.TabIndex = 1;
+            // 
+            // bunifuThinButton21
+            // 
+            this.bunifuThinButton21.ActiveBorderThickness = 1;
+            this.bunifuThinButton21.ActiveCornerRadius = 20;
+            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.White;
+            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton21.BackColor = System.Drawing.Color.White;
+            this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
+            this.bunifuThinButton21.ButtonText = "ThinButton";
+            this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuThinButton21.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButton21.ForeColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton21.IdleBorderThickness = 1;
+            this.bunifuThinButton21.IdleCornerRadius = 20;
+            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.White;
+            this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton21.Location = new System.Drawing.Point(362, 328);
+            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuThinButton21.Name = "bunifuThinButton21";
+            this.bunifuThinButton21.Size = new System.Drawing.Size(136, 33);
+            this.bunifuThinButton21.TabIndex = 2;
+            this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton21.MouseHover += new System.EventHandler(this.iconDashboard_MouseHover);
             // 
             // iconDashboard
             // 
             this.iconDashboard.BackColor = System.Drawing.Color.Transparent;
             this.iconDashboard.Image = ((System.Drawing.Image)(resources.GetObject("iconDashboard.Image")));
             this.iconDashboard.ImageActive = ((System.Drawing.Image)(resources.GetObject("iconDashboard.ImageActive")));
-            this.iconDashboard.Location = new System.Drawing.Point(13, 8);
+            this.iconDashboard.Location = new System.Drawing.Point(10, 6);
+            this.iconDashboard.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.iconDashboard.Name = "iconDashboard";
-            this.iconDashboard.Size = new System.Drawing.Size(35, 35);
+            this.iconDashboard.Size = new System.Drawing.Size(26, 28);
             this.iconDashboard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.iconDashboard.TabIndex = 3;
             this.iconDashboard.TabStop = false;
@@ -245,14 +264,14 @@
             this.bunifuFlatButton4.IconVisible = true;
             this.bunifuFlatButton4.IconZoom = 50D;
             this.bunifuFlatButton4.IsTab = false;
-            this.bunifuFlatButton4.Location = new System.Drawing.Point(13, 176);
-            this.bunifuFlatButton4.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.bunifuFlatButton4.Location = new System.Drawing.Point(10, 143);
+            this.bunifuFlatButton4.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.bunifuFlatButton4.Name = "bunifuFlatButton4";
             this.bunifuFlatButton4.Normalcolor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton4.OnHovercolor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton4.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(71)))), ((int)(((byte)(173)))));
             this.bunifuFlatButton4.selected = false;
-            this.bunifuFlatButton4.Size = new System.Drawing.Size(197, 44);
+            this.bunifuFlatButton4.Size = new System.Drawing.Size(148, 36);
             this.bunifuFlatButton4.TabIndex = 2;
             this.bunifuFlatButton4.Text = "Bảng lương";
             this.bunifuFlatButton4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -282,14 +301,14 @@
             this.bunifuFlatButton1.IconVisible = true;
             this.bunifuFlatButton1.IconZoom = 50D;
             this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(13, 120);
-            this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.bunifuFlatButton1.Location = new System.Drawing.Point(10, 98);
+            this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.bunifuFlatButton1.Name = "bunifuFlatButton1";
             this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(71)))), ((int)(((byte)(173)))));
             this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(197, 44);
+            this.bunifuFlatButton1.Size = new System.Drawing.Size(148, 36);
             this.bunifuFlatButton1.TabIndex = 2;
             this.bunifuFlatButton1.Text = "Chấm công";
             this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -319,14 +338,14 @@
             this.bunifuFlatButton3.IconVisible = true;
             this.bunifuFlatButton3.IconZoom = 70D;
             this.bunifuFlatButton3.IsTab = false;
-            this.bunifuFlatButton3.Location = new System.Drawing.Point(13, 64);
-            this.bunifuFlatButton3.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.bunifuFlatButton3.Location = new System.Drawing.Point(10, 52);
+            this.bunifuFlatButton3.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.bunifuFlatButton3.Name = "bunifuFlatButton3";
             this.bunifuFlatButton3.Normalcolor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton3.OnHovercolor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton3.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(71)))), ((int)(((byte)(173)))));
             this.bunifuFlatButton3.selected = false;
-            this.bunifuFlatButton3.Size = new System.Drawing.Size(197, 44);
+            this.bunifuFlatButton3.Size = new System.Drawing.Size(148, 36);
             this.bunifuFlatButton3.TabIndex = 2;
             this.bunifuFlatButton3.Text = "Hồ sơ nhân sự";
             this.bunifuFlatButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -356,14 +375,14 @@
             this.btnDashboard.IconVisible = true;
             this.btnDashboard.IconZoom = 70D;
             this.btnDashboard.IsTab = false;
-            this.btnDashboard.Location = new System.Drawing.Point(13, 8);
-            this.btnDashboard.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnDashboard.Location = new System.Drawing.Point(10, 6);
+            this.btnDashboard.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.Normalcolor = System.Drawing.Color.Transparent;
             this.btnDashboard.OnHovercolor = System.Drawing.Color.Transparent;
             this.btnDashboard.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(71)))), ((int)(((byte)(173)))));
             this.btnDashboard.selected = false;
-            this.btnDashboard.Size = new System.Drawing.Size(197, 44);
+            this.btnDashboard.Size = new System.Drawing.Size(148, 36);
             this.btnDashboard.TabIndex = 2;
             this.btnDashboard.Text = "Dashboard";
             this.btnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -379,42 +398,18 @@
             this.bunifuDragControl1.TargetControl = this.PanelTop;
             this.bunifuDragControl1.Vertical = true;
             // 
-            // bunifuThinButton21
-            // 
-            this.bunifuThinButton21.ActiveBorderThickness = 1;
-            this.bunifuThinButton21.ActiveCornerRadius = 20;
-            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
-            this.bunifuThinButton21.ButtonText = "ThinButton";
-            this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton21.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton21.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton21.IdleBorderThickness = 1;
-            this.bunifuThinButton21.IdleCornerRadius = 20;
-            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.White;
-            this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton21.Location = new System.Drawing.Point(27, 245);
-            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuThinButton21.Name = "bunifuThinButton21";
-            this.bunifuThinButton21.Size = new System.Drawing.Size(181, 41);
-            this.bunifuThinButton21.TabIndex = 2;
-            this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuThinButton21.MouseHover += new System.EventHandler(this.iconDashboard_MouseHover);
-            // 
             // frmChinh
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1837, 960);
+            this.ClientSize = new System.Drawing.Size(1034, 634);
+            this.Controls.Add(this.bunifuThinButton21);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.PanelTop);
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmChinh";
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
