@@ -100,6 +100,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Packages\Bunifu_UI_v1.52.dll" />
+    <Content Include="Resources\ACB_Logo-1.png" />
+    <Content Include="Resources\ACB_Logo.png" />
+    <Content Include="Resources\close.png" />
+    <Content Include="Resources\close1.png" />
+    <Content Include="Resources\find.png" />
+    <Content Include="Resources\find1.png" />
+    <Content Include="Resources\white.jpg" />
     <None Include="Packages\Icon\find.png" />
     <None Include="Packages\Icon\white.jpg" />
     <None Include="Packages\Icon\ACB_Logo-1.png" />
