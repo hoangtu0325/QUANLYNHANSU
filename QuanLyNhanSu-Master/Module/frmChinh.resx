@@ -126,16 +126,19 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="bunifuThinButton21.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAIgAAAAhCAYAAAACqeN0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHlSURBVHhe7dqtS0NRHIdx/yKbyWaymcSypEEEgxYtGkwG
-        BV/CgrBgUAQNA8OSIOJANIiIKAsThBtURJGFoeHIc3Z/l123e/ru/X7ggvhWzsN5uxtyIgEKRIIUiAQp
-        EAlSIBKkQCQoGEj798fVHutu6XTHzRytufG9eTe8MaVnwB/GkfFcqG666v25+2634hHvlRnIZfPW/yPi
-        IJKblwcXfb3FP5VBxjgynmeNa7daK/txJpR+egKhJv5o7mTdvbc+4+9KnoXGPBUIvzi5v5xZk+Qbq0bp
-        YCW1UqQCoSLFUWwsPexPTBII9TDFiGxfHLrKVdV/7QPhtMJGRXsOAT2w1Wh+RJ1AWFZYXkQMMwgziQ+E
-        8zBHHhHz9PrsZxEfyERl0U8nIoZlZmSr1AlkdHc6eJsmxcStqw+EUihGpFsSCCcYXaPLf0kg3H9wDyJi
-        2JOyN/WB2JFGxNjVhw+E5YVatA8RY1cfPhCU68f+EbHPACEJhNmDlzR3USP+jhQRr1tYTezaIwkEbEzs
-        Dl6KhziYJHija1KBgBmESOxtnhQD+w1mju440BMIWG441VATu1m95c0nlhHbb7Ap7Xeb3jcQQ00cdcbK
-        s8kHXvXk5+EVi33mOEswEBEFIkEKRIIUiAQpEAlw7g+rBbZNZC7+bgAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAALUAAAApCAYAAABz92iRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAJ8SURBVHhe7ZxLaxNRGIb9Re5cuXLlzo2CC93YRRFEFKSC
+        N3QhggS0VloVKipIpAZp8FYEKyW1tHhBq1QllnrBiEZqi8yi6OKT98x0NGTs0uZ8PA+8EEhmVs+Eb87M
+        e9YkSWKEeApSE3dBauIuSE3cBamJuyA1cZcVpZ5fXLDq8we2r3rKdpSP2sYLu2xtaSsh/z1yTw7uvnHS
+        hp7csy/fm4XOKv+U+v6ryXCinpu9NvJ6wh5/nLHGYtMAVgO5JwdH64/syMhAcFNyF7nbJrWugIO3z9rO
+        ygn7lixkpwToLH4sJXb4br91Dx23D81Gi8MtUkvoLZf3W/XlWHYoQGfzcO6Zbbt6yN5+fl8stf6hERpi
+        Q2OJ5u02qTVDa+QAiJHeWtnOj1f+SK1VDg3ezNAQK0u/fobReebTbCq17iJ1RwkQMxenqlYavZJKrbU/
+        LZUAxMybr+9s86WeVOpNg3ttbr6RfQUQJxpB1p3enkq9vq8rrPsBxI6ePgap9QHAA0gN7kBqcAdSgzuQ
+        GtyB1OAOpAZ3IDW4I5daT2H0NAYgdnKp9YYeVS3wQC61KjFqEADEjN5f0ntMQepztevhJWuAmFFr68Ct
+        vlRq9btkOHM1xMye4ZLdeVFLpVbOjJVtYKKSfQ0QF9rGQ/vTyOVcalW6VF6cbtSznwHEgWqImjSWN7jJ
+        pVbU71LPi8IAxIKE7rp2zMbrT3OPW6RWpmang9iDk8PZYQCdiSqI+of+W2ilTWpFo4gKjLoCdEdJyxw6
+        BTW0ND9rOzx1a4v21CuUejm6ArREsqG/OyxqE7LaUfVQN4TauLTIWWVFqQmJMUhN3AWpibsgNXEXpCbO
+        kthvRfmBNGPdWkAAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="iconDashboard.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
