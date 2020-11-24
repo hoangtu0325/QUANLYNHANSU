@@ -127,17 +127,15 @@
   <data name="bunifuThinButton21.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAIgAAAAhCAYAAAACqeN0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAI6SURBVHhe7ZrLK0RhGMb9RXZWVlZ2NpQFGxZSEiXKLRZS
-        mnIZuRWhNGKSyW1SSINMLrnl0pBbRoxc0lmIxavn3MyY49ub8/zqWc2cs/l+ne/93vdL0zRNGOavUBBG
-        GQrCKENBGGUoCKMMBWGUUQry/PYqgf0VqQq0S5GvSbIHyiTdk8/882AdsZ7lU20ysbMoDy8xx/VH/hRk
-        6WRTf1H1TKcETzdk+/ZYom8xIf8frCPWczmyJY3BXn2dIYqTB0mCwKa6uW4p9bfKk/ZqvpKkMu8fmjQs
-        9EjJRIvcxKIJPiQIAjnyRmokcLRqPkrcxPrlnhSM1cv5/bWzIPhyUA53g60H9UmSIKg5sK0Q0hnySf+a
-        /0cQnFZQqLDmIODj61MvNY7vLgxBUMGimiXEYigcEM/yqCEIzsM48hBicfZ4JbnD1YYgOYOVcvkcNX8i
-        xNhmMjoKDUEyvcX6WZiQeNB11QWBKTCGkHhsQXCCYRud/MYWBC1WdNEIsUBNitpUF6QvNKk3RwixQEe9
-        dtZrCILeO2xhHUIsKqY9Mn8YMgRBulZ90rvhN38mbgbXO3AHCF7YgqDdjiHNQTRi/o24EYxbsJtYl4hs
-        QRD03tGDZ9PMnUCO4vFmWYvs2k4kCIKELw50SQY3p83HiBvAqAVfjng5kCRBEGw3GNTAJlSznPKmJuie
-        o97AtVLM45zupjoKYgU24aiT1VNiX3hlUicYsaAYxcV0p/VHlIIwDAVhlKEgjDIUhFGGgjCKaPINH0jl
-        Xlw+UKMAAAAASUVORK5CYII=
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHlSURBVHhe7dqtS0NRHIdx/yKbyWaymcSypEEEgxYtGkwG
+        BV/CgrBgUAQNA8OSIOJANIiIKAsThBtURJGFoeHIc3Z/l123e/ru/X7ggvhWzsN5uxtyIgEKRIIUiAQp
+        EAlSIBKkQCQoGEj798fVHutu6XTHzRytufG9eTe8MaVnwB/GkfFcqG666v25+2634hHvlRnIZfPW/yPi
+        IJKblwcXfb3FP5VBxjgynmeNa7daK/txJpR+egKhJv5o7mTdvbc+4+9KnoXGPBUIvzi5v5xZk+Qbq0bp
+        YCW1UqQCoSLFUWwsPexPTBII9TDFiGxfHLrKVdV/7QPhtMJGRXsOAT2w1Wh+RJ1AWFZYXkQMMwgziQ+E
+        8zBHHhHz9PrsZxEfyERl0U8nIoZlZmSr1AlkdHc6eJsmxcStqw+EUihGpFsSCCcYXaPLf0kg3H9wDyJi
+        2JOyN/WB2JFGxNjVhw+E5YVatA8RY1cfPhCU68f+EbHPACEJhNmDlzR3USP+jhQRr1tYTezaIwkEbEzs
+        Dl6KhziYJHija1KBgBmESOxtnhQD+w1mju440BMIWG441VATu1m95c0nlhHbb7Ap7Xeb3jcQQ00cdcbK
+        s8kHXvXk5+EVi33mOEswEBEFIkEKRIIUiAQpEAlw7g+rBbZNZC7+bgAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="iconDashboard.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
