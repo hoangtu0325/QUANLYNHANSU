@@ -104,8 +104,12 @@
     <Content Include="Resources\ACB_Logo.png" />
     <Content Include="Resources\close.png" />
     <Content Include="Resources\close1.png" />
+    <None Include="Resources\exit.png" />
     <Content Include="Resources\find.png" />
     <Content Include="Resources\find1.png" />
+    <None Include="Resources\headphones.png" />
+    <None Include="Resources\headphone-1.png" />
+    <None Include="Resources\headphone %282%29.png" />
     <Content Include="Resources\white.jpg" />
     <None Include="Packages\Icon\find.png" />
     <None Include="Packages\Icon\white.jpg" />

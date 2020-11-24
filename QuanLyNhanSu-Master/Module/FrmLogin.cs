@@ -24,7 +24,8 @@ namespace QuanLyNhanSu_Master
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-
+            Form frmChinh = new frmChinh();
+            frmChinh.Show();
         }
     }
 }
