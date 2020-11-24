@@ -33,6 +33,8 @@
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.paneltop = new System.Windows.Forms.Panel();
+            this.btnMinimized = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnExit = new Bunifu.Framework.UI.BunifuImageButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.bunifuImageButton3 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
@@ -41,8 +43,11 @@
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.txtUsername = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtPassword = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.btnExit = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnExitáda = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnLogin = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.paneltop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimized)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
@@ -66,12 +71,44 @@
             // paneltop
             // 
             this.paneltop.BackColor = System.Drawing.Color.White;
+            this.paneltop.Controls.Add(this.btnMinimized);
+            this.paneltop.Controls.Add(this.btnExit);
             this.paneltop.Dock = System.Windows.Forms.DockStyle.Top;
             this.paneltop.Location = new System.Drawing.Point(0, 0);
-            this.paneltop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.paneltop.Margin = new System.Windows.Forms.Padding(2);
             this.paneltop.Name = "paneltop";
-            this.paneltop.Size = new System.Drawing.Size(438, 46);
+            this.paneltop.Size = new System.Drawing.Size(548, 58);
             this.paneltop.TabIndex = 10;
+            // 
+            // btnMinimized
+            // 
+            this.btnMinimized.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMinimized.BackColor = System.Drawing.Color.Transparent;
+            this.btnMinimized.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimized.Image")));
+            this.btnMinimized.ImageActive = ((System.Drawing.Image)(resources.GetObject("btnMinimized.ImageActive")));
+            this.btnMinimized.Location = new System.Drawing.Point(457, 3);
+            this.btnMinimized.Name = "btnMinimized";
+            this.btnMinimized.Size = new System.Drawing.Size(50, 50);
+            this.btnMinimized.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnMinimized.TabIndex = 0;
+            this.btnMinimized.TabStop = false;
+            this.btnMinimized.Zoom = 10;
+            this.btnMinimized.Click += new System.EventHandler(this.btnMinimized_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExit.BackColor = System.Drawing.Color.Transparent;
+            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
+            this.btnExit.ImageActive = ((System.Drawing.Image)(resources.GetObject("btnExit.ImageActive")));
+            this.btnExit.Location = new System.Drawing.Point(495, 3);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(50, 50);
+            this.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnExit.TabIndex = 0;
+            this.btnExit.TabStop = false;
+            this.btnExit.Zoom = 10;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // panel1
             // 
@@ -83,12 +120,12 @@
             this.panel1.Controls.Add(this.iconPictureBox1);
             this.panel1.Controls.Add(this.txtUsername);
             this.panel1.Controls.Add(this.txtPassword);
-            this.panel1.Controls.Add(this.btnExit);
+            this.panel1.Controls.Add(this.btnExitáda);
             this.panel1.Controls.Add(this.btnLogin);
-            this.panel1.Location = new System.Drawing.Point(0, 51);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Location = new System.Drawing.Point(0, 64);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(438, 356);
+            this.panel1.Size = new System.Drawing.Size(548, 445);
             this.panel1.TabIndex = 11;
             // 
             // bunifuImageButton3
@@ -96,10 +133,10 @@
             this.bunifuImageButton3.BackColor = System.Drawing.Color.Transparent;
             this.bunifuImageButton3.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton3.Image")));
             this.bunifuImageButton3.ImageActive = null;
-            this.bunifuImageButton3.Location = new System.Drawing.Point(74, 2);
-            this.bunifuImageButton3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuImageButton3.Location = new System.Drawing.Point(92, 2);
+            this.bunifuImageButton3.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuImageButton3.Name = "bunifuImageButton3";
-            this.bunifuImageButton3.Size = new System.Drawing.Size(296, 77);
+            this.bunifuImageButton3.Size = new System.Drawing.Size(370, 96);
             this.bunifuImageButton3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton3.TabIndex = 18;
             this.bunifuImageButton3.TabStop = false;
@@ -110,10 +147,10 @@
             this.bunifuImageButton2.BackColor = System.Drawing.Color.Transparent;
             this.bunifuImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.Image")));
             this.bunifuImageButton2.ImageActive = null;
-            this.bunifuImageButton2.Location = new System.Drawing.Point(376, 190);
-            this.bunifuImageButton2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuImageButton2.Location = new System.Drawing.Point(470, 238);
+            this.bunifuImageButton2.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuImageButton2.Name = "bunifuImageButton2";
-            this.bunifuImageButton2.Size = new System.Drawing.Size(16, 16);
+            this.bunifuImageButton2.Size = new System.Drawing.Size(20, 20);
             this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton2.TabIndex = 15;
             this.bunifuImageButton2.TabStop = false;
@@ -125,10 +162,10 @@
             this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
             this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(376, 144);
-            this.bunifuImageButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuImageButton1.Location = new System.Drawing.Point(470, 180);
+            this.bunifuImageButton1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Size = new System.Drawing.Size(16, 16);
+            this.bunifuImageButton1.Size = new System.Drawing.Size(20, 20);
             this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton1.TabIndex = 15;
             this.bunifuImageButton1.TabStop = false;
@@ -142,11 +179,11 @@
             this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.Lock;
             this.iconPictureBox2.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(184)))));
             this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox2.IconSize = 40;
-            this.iconPictureBox2.Location = new System.Drawing.Point(26, 178);
-            this.iconPictureBox2.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.iconPictureBox2.IconSize = 50;
+            this.iconPictureBox2.Location = new System.Drawing.Point(32, 222);
+            this.iconPictureBox2.Margin = new System.Windows.Forms.Padding(10);
             this.iconPictureBox2.Name = "iconPictureBox2";
-            this.iconPictureBox2.Size = new System.Drawing.Size(40, 40);
+            this.iconPictureBox2.Size = new System.Drawing.Size(50, 50);
             this.iconPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.iconPictureBox2.TabIndex = 13;
             this.iconPictureBox2.TabStop = false;
@@ -159,11 +196,11 @@
             this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.User;
             this.iconPictureBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(184)))));
             this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.IconSize = 40;
-            this.iconPictureBox1.Location = new System.Drawing.Point(26, 132);
-            this.iconPictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.iconPictureBox1.IconSize = 50;
+            this.iconPictureBox1.Location = new System.Drawing.Point(32, 165);
+            this.iconPictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(40, 40);
+            this.iconPictureBox1.Size = new System.Drawing.Size(50, 50);
             this.iconPictureBox1.TabIndex = 14;
             this.iconPictureBox1.TabStop = false;
             // 
@@ -179,10 +216,10 @@
             this.txtUsername.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(65)))), ((int)(((byte)(155)))));
             this.txtUsername.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(65)))), ((int)(((byte)(155)))));
             this.txtUsername.LineThickness = 3;
-            this.txtUsername.Location = new System.Drawing.Point(74, 133);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtUsername.Location = new System.Drawing.Point(92, 166);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(296, 38);
+            this.txtUsername.Size = new System.Drawing.Size(370, 48);
             this.txtUsername.TabIndex = 1;
             this.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -199,38 +236,38 @@
             this.txtPassword.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(65)))), ((int)(((byte)(155)))));
             this.txtPassword.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(65)))), ((int)(((byte)(155)))));
             this.txtPassword.LineThickness = 3;
-            this.txtPassword.Location = new System.Drawing.Point(74, 178);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPassword.Location = new System.Drawing.Point(92, 222);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(296, 40);
+            this.txtPassword.Size = new System.Drawing.Size(370, 50);
             this.txtPassword.TabIndex = 2;
             this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // btnExit
+            // btnExitáda
             // 
-            this.btnExit.ActiveBorderThickness = 1;
-            this.btnExit.ActiveCornerRadius = 20;
-            this.btnExit.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(65)))), ((int)(((byte)(155)))));
-            this.btnExit.ActiveForecolor = System.Drawing.Color.White;
-            this.btnExit.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(65)))), ((int)(((byte)(155)))));
-            this.btnExit.BackColor = System.Drawing.Color.White;
-            this.btnExit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnExit.BackgroundImage")));
-            this.btnExit.ButtonText = "Thoát";
-            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExit.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(184)))));
-            this.btnExit.IdleBorderThickness = 1;
-            this.btnExit.IdleCornerRadius = 20;
-            this.btnExit.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(184)))));
-            this.btnExit.IdleForecolor = System.Drawing.Color.White;
-            this.btnExit.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(184)))));
-            this.btnExit.Location = new System.Drawing.Point(240, 237);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(130, 42);
-            this.btnExit.TabIndex = 10;
-            this.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.btnExitáda.ActiveBorderThickness = 1;
+            this.btnExitáda.ActiveCornerRadius = 20;
+            this.btnExitáda.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(65)))), ((int)(((byte)(155)))));
+            this.btnExitáda.ActiveForecolor = System.Drawing.Color.White;
+            this.btnExitáda.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(65)))), ((int)(((byte)(155)))));
+            this.btnExitáda.BackColor = System.Drawing.Color.White;
+            this.btnExitáda.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnExitáda.BackgroundImage")));
+            this.btnExitáda.ButtonText = "Thoát";
+            this.btnExitáda.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExitáda.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExitáda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(184)))));
+            this.btnExitáda.IdleBorderThickness = 1;
+            this.btnExitáda.IdleCornerRadius = 20;
+            this.btnExitáda.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(184)))));
+            this.btnExitáda.IdleForecolor = System.Drawing.Color.White;
+            this.btnExitáda.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(184)))));
+            this.btnExitáda.Location = new System.Drawing.Point(300, 296);
+            this.btnExitáda.Margin = new System.Windows.Forms.Padding(5);
+            this.btnExitáda.Name = "btnExitáda";
+            this.btnExitáda.Size = new System.Drawing.Size(162, 52);
+            this.btnExitáda.TabIndex = 10;
+            this.btnExitáda.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnExitáda.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnLogin
             // 
@@ -250,28 +287,31 @@
             this.btnLogin.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(184)))));
             this.btnLogin.IdleForecolor = System.Drawing.Color.White;
             this.btnLogin.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(184)))));
-            this.btnLogin.Location = new System.Drawing.Point(74, 237);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLogin.Location = new System.Drawing.Point(92, 296);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(5);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(130, 42);
+            this.btnLogin.Size = new System.Drawing.Size(162, 52);
             this.btnLogin.TabIndex = 10;
             this.btnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // FrmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(438, 417);
+            this.ClientSize = new System.Drawing.Size(548, 521);
             this.Controls.Add(this.paneltop);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.TransparencyKey = System.Drawing.Color.AliceBlue;
+            this.paneltop.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimized)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
@@ -294,7 +334,9 @@
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtUsername;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtPassword;
-        private Bunifu.Framework.UI.BunifuThinButton2 btnExit;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnExitáda;
         private Bunifu.Framework.UI.BunifuThinButton2 btnLogin;
+        private Bunifu.Framework.UI.BunifuImageButton btnExit;
+        private Bunifu.Framework.UI.BunifuImageButton btnMinimized;
     }
 }

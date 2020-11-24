@@ -27,5 +27,10 @@ namespace QuanLyNhanSu_Master
             Form frmChinh = new frmChinh();
             frmChinh.Show();
         }
+
+        private void btnMinimized_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }
