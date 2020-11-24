@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmChinh));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.PanelTop = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -36,8 +37,6 @@
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnExit = new Bunifu.Framework.UI.BunifuImageButton();
             this.iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
-            this.btnExitsád = new FontAwesome.Sharp.IconPictureBox();
-            this.iconPictureBox4 = new FontAwesome.Sharp.IconPictureBox();
             this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.bunifuImageButton3 = new Bunifu.Framework.UI.BunifuImageButton();
@@ -46,8 +45,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnExitsád)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).BeginInit();
@@ -64,8 +61,6 @@
             this.PanelTop.Controls.Add(this.bunifuImageButton1);
             this.PanelTop.Controls.Add(this.btnExit);
             this.PanelTop.Controls.Add(this.iconPictureBox3);
-            this.PanelTop.Controls.Add(this.btnExitsád);
-            this.PanelTop.Controls.Add(this.iconPictureBox4);
             this.PanelTop.Controls.Add(this.iconPictureBox2);
             this.PanelTop.Controls.Add(this.iconPictureBox1);
             this.PanelTop.Controls.Add(this.bunifuImageButton3);
@@ -97,7 +92,7 @@
             // bunifuImageButton1
             // 
             this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton1.Image = global::QuanLyNhanSu_Master.Properties.Resources.headphone__2_;
+            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
             this.bunifuImageButton1.ImageActive = null;
             this.bunifuImageButton1.Location = new System.Drawing.Point(1176, 3);
             this.bunifuImageButton1.Name = "bunifuImageButton1";
@@ -111,7 +106,7 @@
             // 
             this.btnExit.BackColor = System.Drawing.Color.Transparent;
             this.btnExit.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnExit.Image = global::QuanLyNhanSu_Master.Properties.Resources.exit;
+            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
             this.btnExit.ImageActive = null;
             this.btnExit.Location = new System.Drawing.Point(1335, 0);
             this.btnExit.Name = "btnExit";
@@ -137,32 +132,6 @@
             this.iconPictureBox3.TabIndex = 2;
             this.iconPictureBox3.TabStop = false;
             // 
-            // btnExitsád
-            // 
-            this.btnExitsád.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(65)))), ((int)(((byte)(155)))));
-            this.btnExitsád.IconChar = FontAwesome.Sharp.IconChar.TimesCircle;
-            this.btnExitsád.IconColor = System.Drawing.Color.White;
-            this.btnExitsád.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnExitsád.IconSize = 43;
-            this.btnExitsád.Location = new System.Drawing.Point(994, 8);
-            this.btnExitsád.Name = "btnExitsád";
-            this.btnExitsád.Padding = new System.Windows.Forms.Padding(5, 5, 7, 5);
-            this.btnExitsád.Size = new System.Drawing.Size(46, 43);
-            this.btnExitsád.TabIndex = 2;
-            this.btnExitsád.TabStop = false;
-            // 
-            // iconPictureBox4
-            // 
-            this.iconPictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(65)))), ((int)(((byte)(155)))));
-            this.iconPictureBox4.IconChar = FontAwesome.Sharp.IconChar.ThList;
-            this.iconPictureBox4.IconColor = System.Drawing.Color.White;
-            this.iconPictureBox4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox4.Location = new System.Drawing.Point(888, 8);
-            this.iconPictureBox4.Name = "iconPictureBox4";
-            this.iconPictureBox4.Size = new System.Drawing.Size(32, 32);
-            this.iconPictureBox4.TabIndex = 2;
-            this.iconPictureBox4.TabStop = false;
-            // 
             // iconPictureBox2
             // 
             this.iconPictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -170,7 +139,7 @@
             this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.ThList;
             this.iconPictureBox2.IconColor = System.Drawing.Color.White;
             this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox2.Location = new System.Drawing.Point(1297, 3);
+            this.iconPictureBox2.Location = new System.Drawing.Point(1231, 3);
             this.iconPictureBox2.Name = "iconPictureBox2";
             this.iconPictureBox2.Size = new System.Drawing.Size(32, 32);
             this.iconPictureBox2.TabIndex = 2;
@@ -191,7 +160,7 @@
             // bunifuImageButton3
             // 
             this.bunifuImageButton3.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton3.Image = global::QuanLyNhanSu_Master.Properties.Resources.ACB_Logo_1;
+            this.bunifuImageButton3.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton3.Image")));
             this.bunifuImageButton3.ImageActive = null;
             this.bunifuImageButton3.Location = new System.Drawing.Point(20, 2);
             this.bunifuImageButton3.Margin = new System.Windows.Forms.Padding(2);
@@ -243,8 +212,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnExitsád)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).EndInit();
@@ -263,8 +230,6 @@
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox3;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
-        private FontAwesome.Sharp.IconPictureBox btnExitsád;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox4;
         private Bunifu.Framework.UI.BunifuImageButton btnExit;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
     }
