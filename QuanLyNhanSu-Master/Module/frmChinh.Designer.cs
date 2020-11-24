@@ -144,7 +144,7 @@
             this.btnExitsád.IconColor = System.Drawing.Color.White;
             this.btnExitsád.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnExitsád.IconSize = 43;
-            this.btnExitsád.Location = new System.Drawing.Point(1044, 3);
+            this.btnExitsád.Location = new System.Drawing.Point(994, 8);
             this.btnExitsád.Name = "btnExitsád";
             this.btnExitsád.Padding = new System.Windows.Forms.Padding(5, 5, 7, 5);
             this.btnExitsád.Size = new System.Drawing.Size(46, 43);
