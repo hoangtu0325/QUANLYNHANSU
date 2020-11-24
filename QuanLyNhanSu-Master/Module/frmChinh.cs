@@ -12,16 +12,33 @@ namespace QuanLyNhanSu_Master
 {
     public partial class frmChinh : Form
     {
+        System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmChinh));
+
         public frmChinh()
         {
             InitializeComponent();
         }
 
-
-
         private void btnExit_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnDashboard_MouseHover(object sender, EventArgs e)
+        {
+            MessageBox.Show("đá");
+        }
+
+        private void btnDashboard_Click(object sender, EventArgs e)
+        {
+            iconDashboard.ImageActive = ((System.Drawing.Image)(resources.GetObject("iconDashboard.ImageActive")));
+
+        }
+
+        private void iconDashboard_MouseHover(object sender, EventArgs e)
+        {
+            iconDashboard.ImageActive =   ((System.Drawing.Image)(resources.GetObject("iconDashboard.ImageActive")));
+            //this.iconDashboard.MouseHover(sender, e);
         }
     }
 }
