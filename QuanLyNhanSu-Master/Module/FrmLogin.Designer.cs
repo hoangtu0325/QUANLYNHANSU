@@ -43,7 +43,6 @@
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.txtUsername = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtPassword = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.btnExitáda = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnLogin = new Bunifu.Framework.UI.BunifuThinButton2();
             this.paneltop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimized)).BeginInit();
@@ -120,12 +119,12 @@
             this.panel1.Controls.Add(this.iconPictureBox1);
             this.panel1.Controls.Add(this.txtUsername);
             this.panel1.Controls.Add(this.txtPassword);
-            this.panel1.Controls.Add(this.btnExitáda);
             this.panel1.Controls.Add(this.btnLogin);
-            this.panel1.Location = new System.Drawing.Point(0, 64);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 58);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(548, 445);
+            this.panel1.Size = new System.Drawing.Size(548, 463);
             this.panel1.TabIndex = 11;
             // 
             // bunifuImageButton3
@@ -243,32 +242,6 @@
             this.txtPassword.TabIndex = 2;
             this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // btnExitáda
-            // 
-            this.btnExitáda.ActiveBorderThickness = 1;
-            this.btnExitáda.ActiveCornerRadius = 20;
-            this.btnExitáda.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(65)))), ((int)(((byte)(155)))));
-            this.btnExitáda.ActiveForecolor = System.Drawing.Color.White;
-            this.btnExitáda.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(65)))), ((int)(((byte)(155)))));
-            this.btnExitáda.BackColor = System.Drawing.Color.White;
-            this.btnExitáda.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnExitáda.BackgroundImage")));
-            this.btnExitáda.ButtonText = "Thoát";
-            this.btnExitáda.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExitáda.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExitáda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(184)))));
-            this.btnExitáda.IdleBorderThickness = 1;
-            this.btnExitáda.IdleCornerRadius = 20;
-            this.btnExitáda.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(184)))));
-            this.btnExitáda.IdleForecolor = System.Drawing.Color.White;
-            this.btnExitáda.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(184)))));
-            this.btnExitáda.Location = new System.Drawing.Point(300, 296);
-            this.btnExitáda.Margin = new System.Windows.Forms.Padding(5);
-            this.btnExitáda.Name = "btnExitáda";
-            this.btnExitáda.Size = new System.Drawing.Size(162, 52);
-            this.btnExitáda.TabIndex = 10;
-            this.btnExitáda.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnExitáda.Click += new System.EventHandler(this.btnExit_Click);
-            // 
             // btnLogin
             // 
             this.btnLogin.ActiveBorderThickness = 1;
@@ -287,7 +260,7 @@
             this.btnLogin.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(184)))));
             this.btnLogin.IdleForecolor = System.Drawing.Color.White;
             this.btnLogin.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(184)))));
-            this.btnLogin.Location = new System.Drawing.Point(92, 296);
+            this.btnLogin.Location = new System.Drawing.Point(196, 296);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(5);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(162, 52);
@@ -301,8 +274,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(548, 521);
-            this.Controls.Add(this.paneltop);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.paneltop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmLogin";
@@ -334,7 +307,6 @@
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtUsername;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtPassword;
-        private Bunifu.Framework.UI.BunifuThinButton2 btnExitáda;
         private Bunifu.Framework.UI.BunifuThinButton2 btnLogin;
         private Bunifu.Framework.UI.BunifuImageButton btnExit;
         private Bunifu.Framework.UI.BunifuImageButton btnMinimized;

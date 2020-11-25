@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyNhanSu_Master.Module;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -31,14 +32,14 @@ namespace QuanLyNhanSu_Master
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-            iconDashboard.ImageActive = ((System.Drawing.Image)(resources.GetObject("iconDashboard.ImageActive")));
+            Form frmLayouLogin = new frmLayoutLogin();
+            frmLayouLogin.Show();
 
         }
 
         private void iconDashboard_MouseHover(object sender, EventArgs e)
         {
-            iconDashboard.ImageActive =   ((System.Drawing.Image)(resources.GetObject("iconDashboard.ImageActive")));
-            //this.iconDashboard.MouseHover(sender, e);
+
         }
 
         private void bunifuFlatButton3_Click(object sender, EventArgs e)
