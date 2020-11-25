@@ -32,7 +32,7 @@ namespace QuanLyNhanSu_Master.DAO
             //var list = hasData.ToString();
             //list.Reverse();
 
-            string query = "USP_Login @userName , @passWord";
+            string query = "SP_Login @userName , @passWord";
 
             DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { userName, hasPass /*list*/});
 

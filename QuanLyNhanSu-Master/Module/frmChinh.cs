@@ -25,36 +25,43 @@ namespace QuanLyNhanSu_Master
             Application.Exit();
         }
 
-        private void btnDashboard_MouseHover(object sender, EventArgs e)
-        {
-            
-        }
-
         private void btnDashboard_Click(object sender, EventArgs e)
         {
             Form frmLayouLogin = new frmLayoutLogin();
-            frmLayouLogin.Show();
+            //frmLayouLogin.Show();
+            FrmChinh<FrmLogin>();
 
         }
 
-        private void iconDashboard_MouseHover(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuFlatButton3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuFlatButton4_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnMinimized_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void FrmChinh<ChildForm>() where ChildForm : Form, new()
+        {
+            Form formCenter;
+            formCenter = PanelCenter.Controls.OfType<ChildForm>().FirstOrDefault();
+            if (formCenter == null)
+            {
+                formCenter = new ChildForm();
+                formCenter.TopLevel = false;
+                PanelCenter.Controls.Add(formCenter);
+                formCenter.Dock = DockStyle.Fill;
+                PanelCenter.Tag = formCenter;
+                formCenter.Show();
+                formCenter.BringToFront();
+            }
+            else
+            {
+                formCenter.BringToFront();
+            }
+        }
+
+        private void bunifuFlatButton3_Click(object sender, EventArgs e)
+        {
+            FrmChinh<frmLayout>();
         }
     }
 }
