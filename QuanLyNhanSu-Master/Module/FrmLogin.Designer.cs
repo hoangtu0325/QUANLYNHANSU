@@ -37,8 +37,8 @@
             this.btnExit = new Bunifu.Framework.UI.BunifuImageButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.bunifuImageButton3 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.imgErrorPassWord = new Bunifu.Framework.UI.BunifuImageButton();
+            this.imgErrorUserName = new Bunifu.Framework.UI.BunifuImageButton();
             this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.txtUsername = new Bunifu.Framework.UI.BunifuMaterialTextbox();
@@ -49,15 +49,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgErrorPassWord)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgErrorUserName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
             // 
-            this.bunifuElipse1.ElipseRadius = 5;
+            this.bunifuElipse1.ElipseRadius = 20;
             this.bunifuElipse1.TargetControl = this;
             // 
             // bunifuDragControl1
@@ -76,7 +76,7 @@
             this.paneltop.Location = new System.Drawing.Point(0, 0);
             this.paneltop.Margin = new System.Windows.Forms.Padding(2);
             this.paneltop.Name = "paneltop";
-            this.paneltop.Size = new System.Drawing.Size(548, 58);
+            this.paneltop.Size = new System.Drawing.Size(535, 58);
             this.paneltop.TabIndex = 10;
             // 
             // btnMinimized
@@ -85,7 +85,7 @@
             this.btnMinimized.BackColor = System.Drawing.Color.Transparent;
             this.btnMinimized.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimized.Image")));
             this.btnMinimized.ImageActive = ((System.Drawing.Image)(resources.GetObject("btnMinimized.ImageActive")));
-            this.btnMinimized.Location = new System.Drawing.Point(457, 3);
+            this.btnMinimized.Location = new System.Drawing.Point(444, 3);
             this.btnMinimized.Name = "btnMinimized";
             this.btnMinimized.Size = new System.Drawing.Size(50, 50);
             this.btnMinimized.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -100,7 +100,7 @@
             this.btnExit.BackColor = System.Drawing.Color.Transparent;
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
             this.btnExit.ImageActive = ((System.Drawing.Image)(resources.GetObject("btnExit.ImageActive")));
-            this.btnExit.Location = new System.Drawing.Point(495, 3);
+            this.btnExit.Location = new System.Drawing.Point(482, 3);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(50, 50);
             this.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -113,8 +113,8 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.bunifuImageButton3);
-            this.panel1.Controls.Add(this.bunifuImageButton2);
-            this.panel1.Controls.Add(this.bunifuImageButton1);
+            this.panel1.Controls.Add(this.imgErrorPassWord);
+            this.panel1.Controls.Add(this.imgErrorUserName);
             this.panel1.Controls.Add(this.iconPictureBox2);
             this.panel1.Controls.Add(this.iconPictureBox1);
             this.panel1.Controls.Add(this.txtUsername);
@@ -124,7 +124,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 58);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(548, 463);
+            this.panel1.Size = new System.Drawing.Size(535, 463);
             this.panel1.TabIndex = 11;
             // 
             // bunifuImageButton3
@@ -132,7 +132,7 @@
             this.bunifuImageButton3.BackColor = System.Drawing.Color.Transparent;
             this.bunifuImageButton3.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton3.Image")));
             this.bunifuImageButton3.ImageActive = null;
-            this.bunifuImageButton3.Location = new System.Drawing.Point(92, 2);
+            this.bunifuImageButton3.Location = new System.Drawing.Point(82, 2);
             this.bunifuImageButton3.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuImageButton3.Name = "bunifuImageButton3";
             this.bunifuImageButton3.Size = new System.Drawing.Size(370, 96);
@@ -141,35 +141,35 @@
             this.bunifuImageButton3.TabStop = false;
             this.bunifuImageButton3.Zoom = 10;
             // 
-            // bunifuImageButton2
+            // imgErrorPassWord
             // 
-            this.bunifuImageButton2.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.Image")));
-            this.bunifuImageButton2.ImageActive = null;
-            this.bunifuImageButton2.Location = new System.Drawing.Point(470, 238);
-            this.bunifuImageButton2.Margin = new System.Windows.Forms.Padding(2);
-            this.bunifuImageButton2.Name = "bunifuImageButton2";
-            this.bunifuImageButton2.Size = new System.Drawing.Size(20, 20);
-            this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton2.TabIndex = 15;
-            this.bunifuImageButton2.TabStop = false;
-            this.bunifuImageButton2.Visible = false;
-            this.bunifuImageButton2.Zoom = 10;
+            this.imgErrorPassWord.BackColor = System.Drawing.Color.Transparent;
+            this.imgErrorPassWord.Image = ((System.Drawing.Image)(resources.GetObject("imgErrorPassWord.Image")));
+            this.imgErrorPassWord.ImageActive = null;
+            this.imgErrorPassWord.Location = new System.Drawing.Point(470, 238);
+            this.imgErrorPassWord.Margin = new System.Windows.Forms.Padding(2);
+            this.imgErrorPassWord.Name = "imgErrorPassWord";
+            this.imgErrorPassWord.Size = new System.Drawing.Size(20, 20);
+            this.imgErrorPassWord.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgErrorPassWord.TabIndex = 15;
+            this.imgErrorPassWord.TabStop = false;
+            this.imgErrorPassWord.Visible = false;
+            this.imgErrorPassWord.Zoom = 10;
             // 
-            // bunifuImageButton1
+            // imgErrorUserName
             // 
-            this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
-            this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(470, 180);
-            this.bunifuImageButton1.Margin = new System.Windows.Forms.Padding(2);
-            this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Size = new System.Drawing.Size(20, 20);
-            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton1.TabIndex = 15;
-            this.bunifuImageButton1.TabStop = false;
-            this.bunifuImageButton1.Visible = false;
-            this.bunifuImageButton1.Zoom = 10;
+            this.imgErrorUserName.BackColor = System.Drawing.Color.Transparent;
+            this.imgErrorUserName.Image = ((System.Drawing.Image)(resources.GetObject("imgErrorUserName.Image")));
+            this.imgErrorUserName.ImageActive = null;
+            this.imgErrorUserName.Location = new System.Drawing.Point(470, 180);
+            this.imgErrorUserName.Margin = new System.Windows.Forms.Padding(2);
+            this.imgErrorUserName.Name = "imgErrorUserName";
+            this.imgErrorUserName.Size = new System.Drawing.Size(20, 20);
+            this.imgErrorUserName.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgErrorUserName.TabIndex = 15;
+            this.imgErrorUserName.TabStop = false;
+            this.imgErrorUserName.Visible = false;
+            this.imgErrorUserName.Zoom = 10;
             // 
             // iconPictureBox2
             // 
@@ -215,7 +215,7 @@
             this.txtUsername.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(65)))), ((int)(((byte)(155)))));
             this.txtUsername.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(65)))), ((int)(((byte)(155)))));
             this.txtUsername.LineThickness = 3;
-            this.txtUsername.Location = new System.Drawing.Point(92, 166);
+            this.txtUsername.Location = new System.Drawing.Point(82, 166);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(370, 48);
@@ -235,7 +235,7 @@
             this.txtPassword.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(65)))), ((int)(((byte)(155)))));
             this.txtPassword.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(65)))), ((int)(((byte)(155)))));
             this.txtPassword.LineThickness = 3;
-            this.txtPassword.Location = new System.Drawing.Point(92, 222);
+            this.txtPassword.Location = new System.Drawing.Point(82, 222);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(370, 50);
@@ -260,7 +260,7 @@
             this.btnLogin.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(184)))));
             this.btnLogin.IdleForecolor = System.Drawing.Color.White;
             this.btnLogin.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(184)))));
-            this.btnLogin.Location = new System.Drawing.Point(196, 296);
+            this.btnLogin.Location = new System.Drawing.Point(186, 296);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(5);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(162, 52);
@@ -273,7 +273,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(548, 521);
+            this.ClientSize = new System.Drawing.Size(535, 521);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.paneltop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -287,8 +287,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgErrorPassWord)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgErrorUserName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -301,8 +301,8 @@
         private System.Windows.Forms.Panel paneltop;
         private System.Windows.Forms.Panel panel1;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton3;
-        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton2;
-        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
+        private Bunifu.Framework.UI.BunifuImageButton imgErrorPassWord;
+        private Bunifu.Framework.UI.BunifuImageButton imgErrorUserName;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtUsername;

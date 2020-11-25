@@ -20,14 +20,14 @@ namespace QuanLyNhanSu_Master
             InitializeComponent();
         }
 
-        private void btnExit_Click_1(object sender, EventArgs e)
+        private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
         private void btnDashboard_MouseHover(object sender, EventArgs e)
         {
-            MessageBox.Show("đá");
+            
         }
 
         private void btnDashboard_Click(object sender, EventArgs e)
@@ -50,6 +50,11 @@ namespace QuanLyNhanSu_Master
         private void bunifuFlatButton4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnMinimized_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }
