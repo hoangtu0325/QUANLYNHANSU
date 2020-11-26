@@ -285,7 +285,6 @@
             this.txtPassword.TabIndex = 2;
             this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
-            this.txtPassword.Leave += new System.EventHandler(this.btnLogin_Click);
             // 
             // btnLogin
             // 

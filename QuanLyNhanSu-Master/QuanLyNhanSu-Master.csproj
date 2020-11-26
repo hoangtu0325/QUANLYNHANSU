@@ -41,6 +41,9 @@
       <HintPath>..\packages\FontAwesome.Sharp.5.15.3\lib\net45\FontAwesome.Sharp.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="MyINI">
+      <HintPath>Packages\MyINI.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Management" />
@@ -59,6 +62,7 @@
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\HoSoNhanVienDAO.cs" />
     <Compile Include="DTO\Account.cs" />
+    <Compile Include="DTO\NhanVien.cs" />
     <Compile Include="Module\frmHoSoNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,11 +87,11 @@
     <Compile Include="Module\frmLayoutLogin.Designer.cs">
       <DependentUpon>frmLayoutLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Module\FrmLogin.cs">
+    <Compile Include="Module\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Module\FrmLogin.Designer.cs">
-      <DependentUpon>FrmLogin.cs</DependentUpon>
+    <Compile Include="Module\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -103,8 +107,8 @@
     <EmbeddedResource Include="Module\frmLayoutLogin.resx">
       <DependentUpon>frmLayoutLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Module\FrmLogin.resx">
-      <DependentUpon>FrmLogin.cs</DependentUpon>
+    <EmbeddedResource Include="Module\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
