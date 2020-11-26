@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace QuanLyNhanSu_Master
 {
-    public partial class FrmLogin : Form
+    public partial class frmLogin : Form
     {
-        public FrmLogin()
+        public frmLogin()
         {
             InitializeComponent();
         }

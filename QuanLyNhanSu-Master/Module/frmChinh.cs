@@ -27,9 +27,10 @@ namespace QuanLyNhanSu_Master
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
+            lblStatus.Text = "DASHBOARD";
             Form frmLayouLogin = new frmLayoutLogin();
             //frmLayouLogin.Show();
-            FrmChinh<FrmLogin>();
+            //FormChild<frmLogin>();
 
         }
 
@@ -39,7 +40,7 @@ namespace QuanLyNhanSu_Master
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void FrmChinh<ChildForm>() where ChildForm : Form, new()
+        private void FormChild<ChildForm>() where ChildForm : Form, new()
         {
             Form formCenter;
             formCenter = PanelCenter.Controls.OfType<ChildForm>().FirstOrDefault();
@@ -59,9 +60,21 @@ namespace QuanLyNhanSu_Master
             }
         }
 
-        private void bunifuFlatButton3_Click(object sender, EventArgs e)
+        private void btnNhanVien_Click(object sender, EventArgs e)
         {
-            FrmChinh<frmLayout>();
+            lblStatus.Text = "HỒ SƠ NHÂN VIÊN";
+            FormChild<frmHoSoNhanVien>();
+            
+        }
+
+        private void btnChamCong_Click(object sender, EventArgs e)
+        {
+            lblStatus.Text = "CHẤM CÔNG";
+        }
+
+        private void btnBangLuong_Click(object sender, EventArgs e)
+        {
+            lblStatus.Text = "BẢNG LƯƠNG";
         }
     }
 }

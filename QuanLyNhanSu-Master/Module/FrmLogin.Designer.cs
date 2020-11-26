@@ -1,6 +1,6 @@
 ﻿namespace QuanLyNhanSu_Master
 {
-    partial class FrmLogin
+    partial class frmLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -29,13 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.paneltop = new System.Windows.Forms.Panel();
             this.btnMinimized = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnExit = new Bunifu.Framework.UI.BunifuImageButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.CbSaveAccount = new Bunifu.Framework.UI.BunifuCheckbox();
             this.bunifuImageButton3 = new Bunifu.Framework.UI.BunifuImageButton();
             this.imgErrorPassWord = new Bunifu.Framework.UI.BunifuImageButton();
             this.imgErrorUserName = new Bunifu.Framework.UI.BunifuImageButton();
@@ -112,6 +115,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.CbSaveAccount);
             this.panel1.Controls.Add(this.bunifuImageButton3);
             this.panel1.Controls.Add(this.imgErrorPassWord);
             this.panel1.Controls.Add(this.imgErrorUserName);
@@ -126,6 +132,43 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(535, 463);
             this.panel1.TabIndex = 11;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DimGray;
+            this.label2.Location = new System.Drawing.Point(330, 291);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(129, 23);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "Quên mật khẩu";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(65)))), ((int)(((byte)(155)))));
+            this.label1.Location = new System.Drawing.Point(109, 293);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(122, 23);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "Lưu tài khoản?";
+            // 
+            // CbSaveAccount
+            // 
+            this.CbSaveAccount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(65)))), ((int)(((byte)(155)))));
+            this.CbSaveAccount.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(65)))), ((int)(((byte)(155)))));
+            this.CbSaveAccount.Checked = true;
+            this.CbSaveAccount.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(65)))), ((int)(((byte)(155)))));
+            this.CbSaveAccount.ForeColor = System.Drawing.Color.White;
+            this.CbSaveAccount.Location = new System.Drawing.Point(82, 294);
+            this.CbSaveAccount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CbSaveAccount.Name = "CbSaveAccount";
+            this.CbSaveAccount.Size = new System.Drawing.Size(20, 20);
+            this.CbSaveAccount.TabIndex = 19;
             // 
             // bunifuImageButton3
             // 
@@ -262,7 +305,7 @@
             this.btnLogin.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(184)))));
             this.btnLogin.IdleForecolor = System.Drawing.Color.White;
             this.btnLogin.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(184)))));
-            this.btnLogin.Location = new System.Drawing.Point(186, 296);
+            this.btnLogin.Location = new System.Drawing.Point(190, 328);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(5);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(162, 52);
@@ -270,7 +313,7 @@
             this.btnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // FrmLogin
+            // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
@@ -280,7 +323,7 @@
             this.Controls.Add(this.paneltop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "FrmLogin";
+            this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.TransparencyKey = System.Drawing.Color.AliceBlue;
@@ -288,6 +331,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimized)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgErrorPassWord)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgErrorUserName)).EndInit();
@@ -312,5 +356,8 @@
         private Bunifu.Framework.UI.BunifuThinButton2 btnLogin;
         private Bunifu.Framework.UI.BunifuImageButton btnExit;
         private Bunifu.Framework.UI.BunifuImageButton btnMinimized;
+        private System.Windows.Forms.Label label1;
+        private Bunifu.Framework.UI.BunifuCheckbox CbSaveAccount;
+        private System.Windows.Forms.Label label2;
     }
 }
