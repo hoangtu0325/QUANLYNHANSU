@@ -57,11 +57,13 @@
   <ItemGroup>
     <Compile Include="DAO\AccountDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
-    <Compile Include="Module\Form1.cs">
+    <Compile Include="DAO\HoSoNhanVienDAO.cs" />
+    <Compile Include="DTO\Account.cs" />
+    <Compile Include="Module\frmHoSoNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Module\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Module\frmHoSoNhanVien.Designer.cs">
+      <DependentUpon>frmHoSoNhanVien.cs</DependentUpon>
     </Compile>
     <Compile Include="Module\frmChinh.cs">
       <SubType>Form</SubType>
@@ -89,8 +91,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Module\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Module\frmHoSoNhanVien.resx">
+      <DependentUpon>frmHoSoNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Module\frmChinh.resx">
       <DependentUpon>frmChinh.cs</DependentUpon>
@@ -146,8 +148,6 @@
     <None Include="Packages\Icon\ACB_Logo.png" />
     <None Include="Packages\Icon\close.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DTO\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

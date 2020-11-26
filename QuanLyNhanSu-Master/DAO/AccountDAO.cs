@@ -36,6 +36,7 @@ namespace QuanLyNhanSu_Master.DAO
 
             DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { userName, hasPass /*list*/});
 
+
             return result.Rows.Count > 0;
         }
     }

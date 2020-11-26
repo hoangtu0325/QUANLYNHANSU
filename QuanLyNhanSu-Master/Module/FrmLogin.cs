@@ -48,30 +48,23 @@ namespace QuanLyNhanSu_Master
                 else
                 {
                     imgErrorPassWord.Visible = false;
-                } 
+                }
             }
+            else
+            {
+                imgErrorUserName.Visible = false;
+                imgErrorPassWord.Visible = false;
+                return true;
+            }
+
             return true;
         }
 
+      
+
         public bool Login(string userName, string passWord)
         {
-            byte[] temp = ASCIIEncoding.ASCII.GetBytes(passWord);
-            byte[] hasData = new MD5CryptoServiceProvider().ComputeHash(temp);
-
-            string hasPass = "";
-
-            foreach (byte item in hasData)
-            {
-                hasPass += item;
-            }
-            //var list = hasData.ToString();
-            //list.Reverse();
-
-            string query = "USP_Login @userName , @passWord";
-
-            DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { userName, hasPass /*list*/});
-
-            return result.Rows.Count > 0;
+            return AccountDAO.Instance.Login(userName, passWord);
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -81,17 +74,38 @@ namespace QuanLyNhanSu_Master
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            
+            string userName = txtUsername.Text;
+            string passWord = txtPassword.Text;
+
             if (ValidateTextBox())
             {
-                Form frmChinh = new frmChinh();
-                 frmChinh.Show();
-                this.Hide();
+                if (Login(userName, passWord))
+                {
+                    Form frmChinh = new frmChinh();
+                    frmChinh.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Sai tên tài khoản hoặc mật khẩu!!");
+                }
+                
             }
         }
 
         private void btnMinimized_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnLogin_Click(sender, e);
+            }
+           
         }
     }
 }

@@ -19,7 +19,7 @@ namespace QuanLyNhanSu_Master.DAO
         }
 
         private DataProvider() { }
-        private string connectisionString = @"Data Source=(LocalDb)\MSSQLLocalDB;Initial Catalog=QuanLyNhanSu1;Integrated Security=True";
+        private string connectisionString = @"Data Source=(LocalDb)\MSSQLLocalDB;Initial Catalog=QUANLYNHANSU;Integrated Security=True";
         //private string connectisionString = @"Data Source=(LocalDb)\MSSQLLocalDB;Initial Catalog=QuanLyNhanSu1;Integrated Security=True";
         //private string connectisionString = @"Data Source=(LocalDb)\MSSQLLocalDB;Initial Catalog=QuanLyNhanSu1;Integrated Security=True";
 
