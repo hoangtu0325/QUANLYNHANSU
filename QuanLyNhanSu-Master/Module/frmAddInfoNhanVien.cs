@@ -19,10 +19,7 @@ namespace QuanLyNhanSu_Master.Module
             InitializeComponent();
         }
 
-        
-
-
-
+    
     }
 
 }
