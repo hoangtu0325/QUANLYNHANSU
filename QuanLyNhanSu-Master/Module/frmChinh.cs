@@ -70,11 +70,24 @@ namespace QuanLyNhanSu_Master
         private void btnChamCong_Click(object sender, EventArgs e)
         {
             lblStatus.Text = "CHẤM CÔNG";
+            this.iconDashboard.Image = ((System.Drawing.Image)(resources.GetObject("iconDashboard.ImageActive")));
         }
 
         private void btnBangLuong_Click(object sender, EventArgs e)
         {
             lblStatus.Text = "BẢNG LƯƠNG";
+            
+        }
+
+        private void btnDashboard_MouseHover(object sender, EventArgs e)
+        {
+            this.iconDashboard.Image = ((System.Drawing.Image)(resources.GetObject("iconDashboard.ImageActive")));
+          
+        }
+
+        private void btnChamCong_MouseHover(object sender, EventArgs e)
+        {
+            this.iconDashboard.Image = ((System.Drawing.Image)(resources.GetObject("iconDashboard.ImageActive")));
         }
     }
 }

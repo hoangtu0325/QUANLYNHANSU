@@ -56,6 +56,8 @@ namespace QuanLyNhanSu_Master
             this.btnImport = new Bunifu.Framework.UI.BunifuTileButton();
             this.btnAddNew = new Bunifu.Framework.UI.BunifuFlatButton();
             this.imgBtnAddNew = new Bunifu.Framework.UI.BunifuImageButton();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.bunifuMaterialTextbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.PanelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimized)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
@@ -64,6 +66,7 @@ namespace QuanLyNhanSu_Master
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconDashboard)).BeginInit();
+            this.PanelCenter.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgBtnAddNew)).BeginInit();
             this.SuspendLayout();
@@ -76,6 +79,7 @@ namespace QuanLyNhanSu_Master
             // PanelTop
             // 
             this.PanelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(71)))), ((int)(((byte)(173)))));
+            this.PanelTop.Controls.Add(this.bunifuMaterialTextbox1);
             this.PanelTop.Controls.Add(this.LogoACB);
             this.PanelTop.Controls.Add(this.btnMinimized);
             this.PanelTop.Controls.Add(this.bunifuImageButton1);
@@ -217,14 +221,14 @@ namespace QuanLyNhanSu_Master
             this.panel2.Location = new System.Drawing.Point(0, 125);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(231, 655);
+            this.panel2.Size = new System.Drawing.Size(230, 655);
             this.panel2.TabIndex = 1;
             // 
             // iconDashboard
             // 
             this.iconDashboard.BackColor = System.Drawing.Color.Transparent;
             this.iconDashboard.Image = ((System.Drawing.Image)(resources.GetObject("iconDashboard.Image")));
-            this.iconDashboard.ImageActive = null;
+            this.iconDashboard.ImageActive = ((System.Drawing.Image)(resources.GetObject("iconDashboard.ImageActive")));
             this.iconDashboard.Location = new System.Drawing.Point(3, 7);
             this.iconDashboard.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.iconDashboard.Name = "iconDashboard";
@@ -237,7 +241,7 @@ namespace QuanLyNhanSu_Master
             // 
             // btnBangLuong
             // 
-            this.btnBangLuong.Activecolor = System.Drawing.Color.Transparent;
+            this.btnBangLuong.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(136)))), ((int)(((byte)(202)))));
             this.btnBangLuong.BackColor = System.Drawing.Color.Transparent;
             this.btnBangLuong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnBangLuong.BorderRadius = 0;
@@ -263,10 +267,10 @@ namespace QuanLyNhanSu_Master
             this.btnBangLuong.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnBangLuong.Name = "btnBangLuong";
             this.btnBangLuong.Normalcolor = System.Drawing.Color.Transparent;
-            this.btnBangLuong.OnHovercolor = System.Drawing.Color.White;
-            this.btnBangLuong.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(71)))), ((int)(((byte)(173)))));
+            this.btnBangLuong.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(136)))), ((int)(((byte)(202)))));
+            this.btnBangLuong.OnHoverTextColor = System.Drawing.Color.White;
             this.btnBangLuong.selected = false;
-            this.btnBangLuong.Size = new System.Drawing.Size(231, 60);
+            this.btnBangLuong.Size = new System.Drawing.Size(230, 60);
             this.btnBangLuong.TabIndex = 2;
             this.btnBangLuong.Text = "Bảng lương";
             this.btnBangLuong.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -276,7 +280,7 @@ namespace QuanLyNhanSu_Master
             // 
             // btnChamCong
             // 
-            this.btnChamCong.Activecolor = System.Drawing.Color.Transparent;
+            this.btnChamCong.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(136)))), ((int)(((byte)(202)))));
             this.btnChamCong.BackColor = System.Drawing.Color.Transparent;
             this.btnChamCong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnChamCong.BorderRadius = 0;
@@ -302,20 +306,21 @@ namespace QuanLyNhanSu_Master
             this.btnChamCong.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnChamCong.Name = "btnChamCong";
             this.btnChamCong.Normalcolor = System.Drawing.Color.Transparent;
-            this.btnChamCong.OnHovercolor = System.Drawing.Color.White;
-            this.btnChamCong.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(71)))), ((int)(((byte)(173)))));
+            this.btnChamCong.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(136)))), ((int)(((byte)(202)))));
+            this.btnChamCong.OnHoverTextColor = System.Drawing.Color.White;
             this.btnChamCong.selected = false;
-            this.btnChamCong.Size = new System.Drawing.Size(231, 60);
+            this.btnChamCong.Size = new System.Drawing.Size(230, 60);
             this.btnChamCong.TabIndex = 2;
             this.btnChamCong.Text = "Chấm công";
             this.btnChamCong.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnChamCong.Textcolor = System.Drawing.Color.Black;
             this.btnChamCong.TextFont = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChamCong.Click += new System.EventHandler(this.btnChamCong_Click);
+            this.btnChamCong.MouseHover += new System.EventHandler(this.btnChamCong_MouseHover);
             // 
             // btnNhanVien
             // 
-            this.btnNhanVien.Activecolor = System.Drawing.Color.Transparent;
+            this.btnNhanVien.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(136)))), ((int)(((byte)(202)))));
             this.btnNhanVien.BackColor = System.Drawing.Color.Transparent;
             this.btnNhanVien.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnNhanVien.BorderRadius = 0;
@@ -341,10 +346,10 @@ namespace QuanLyNhanSu_Master
             this.btnNhanVien.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnNhanVien.Name = "btnNhanVien";
             this.btnNhanVien.Normalcolor = System.Drawing.Color.Transparent;
-            this.btnNhanVien.OnHovercolor = System.Drawing.Color.White;
-            this.btnNhanVien.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(71)))), ((int)(((byte)(173)))));
+            this.btnNhanVien.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(136)))), ((int)(((byte)(202)))));
+            this.btnNhanVien.OnHoverTextColor = System.Drawing.Color.White;
             this.btnNhanVien.selected = false;
-            this.btnNhanVien.Size = new System.Drawing.Size(231, 60);
+            this.btnNhanVien.Size = new System.Drawing.Size(230, 60);
             this.btnNhanVien.TabIndex = 2;
             this.btnNhanVien.Text = "Hồ sơ nhân sự";
             this.btnNhanVien.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -354,7 +359,7 @@ namespace QuanLyNhanSu_Master
             // 
             // btnDashboard
             // 
-            this.btnDashboard.Activecolor = System.Drawing.Color.Transparent;
+            this.btnDashboard.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(136)))), ((int)(((byte)(202)))));
             this.btnDashboard.BackColor = System.Drawing.Color.Transparent;
             this.btnDashboard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnDashboard.BorderRadius = 0;
@@ -380,16 +385,17 @@ namespace QuanLyNhanSu_Master
             this.btnDashboard.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.Normalcolor = System.Drawing.Color.Transparent;
-            this.btnDashboard.OnHovercolor = System.Drawing.Color.White;
-            this.btnDashboard.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(71)))), ((int)(((byte)(173)))));
+            this.btnDashboard.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(136)))), ((int)(((byte)(202)))));
+            this.btnDashboard.OnHoverTextColor = System.Drawing.Color.White;
             this.btnDashboard.selected = false;
-            this.btnDashboard.Size = new System.Drawing.Size(231, 60);
+            this.btnDashboard.Size = new System.Drawing.Size(230, 60);
             this.btnDashboard.TabIndex = 2;
             this.btnDashboard.Text = "Dashboard";
             this.btnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnDashboard.Textcolor = System.Drawing.Color.Black;
             this.btnDashboard.TextFont = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
+            this.btnDashboard.MouseHover += new System.EventHandler(this.btnDashboard_MouseHover);
             // 
             // bunifuDragControl1
             // 
@@ -400,14 +406,17 @@ namespace QuanLyNhanSu_Master
             // 
             // PanelCenter
             // 
+            this.PanelCenter.BackColor = System.Drawing.Color.Transparent;
+            this.PanelCenter.Controls.Add(this.checkedListBox1);
             this.PanelCenter.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelCenter.Location = new System.Drawing.Point(231, 125);
+            this.PanelCenter.Location = new System.Drawing.Point(230, 125);
             this.PanelCenter.Name = "PanelCenter";
-            this.PanelCenter.Size = new System.Drawing.Size(1148, 655);
+            this.PanelCenter.Size = new System.Drawing.Size(1149, 655);
             this.PanelCenter.TabIndex = 2;
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.lblStatus);
             this.panel1.Controls.Add(this.btnExport);
             this.panel1.Controls.Add(this.bunifuTileButton1);
@@ -541,6 +550,37 @@ namespace QuanLyNhanSu_Master
             this.imgBtnAddNew.TabStop = false;
             this.imgBtnAddNew.Zoom = 5;
             // 
+            // checkedListBox1
+            // 
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Items.AddRange(new object[] {
+            "sđsd",
+            "sfsdfs"});
+            this.checkedListBox1.Location = new System.Drawing.Point(496, 233);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(120, 89);
+            this.checkedListBox1.TabIndex = 0;
+            // 
+            // bunifuMaterialTextbox1
+            // 
+            this.bunifuMaterialTextbox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.bunifuMaterialTextbox1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMaterialTextbox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bunifuMaterialTextbox1.HintForeColor = System.Drawing.Color.Empty;
+            this.bunifuMaterialTextbox1.HintText = "";
+            this.bunifuMaterialTextbox1.isPassword = false;
+            this.bunifuMaterialTextbox1.LineFocusedColor = System.Drawing.Color.Blue;
+            this.bunifuMaterialTextbox1.LineIdleColor = System.Drawing.Color.Gray;
+            this.bunifuMaterialTextbox1.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.bunifuMaterialTextbox1.LineThickness = 3;
+            this.bunifuMaterialTextbox1.Location = new System.Drawing.Point(600, 5);
+            this.bunifuMaterialTextbox1.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuMaterialTextbox1.Name = "bunifuMaterialTextbox1";
+            this.bunifuMaterialTextbox1.Size = new System.Drawing.Size(370, 44);
+            this.bunifuMaterialTextbox1.TabIndex = 7;
+            this.bunifuMaterialTextbox1.Text = "bunifuMaterialTextbox1";
+            this.bunifuMaterialTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
             // frmChinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -565,6 +605,7 @@ namespace QuanLyNhanSu_Master
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.iconDashboard)).EndInit();
+            this.PanelCenter.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgBtnAddNew)).EndInit();
@@ -598,6 +639,8 @@ namespace QuanLyNhanSu_Master
         private BunifuTileButton LogoACB;
         private BunifuTileButton bunifuTileButton1;
         private BunifuCustomLabel lblStatus;
+        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private BunifuMaterialTextbox bunifuMaterialTextbox1;
     }
 }
 
