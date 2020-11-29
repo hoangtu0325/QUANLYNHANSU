@@ -85,6 +85,21 @@ namespace QuanLyNhanSu_Master.DAO
             return "";
         }
 
+        public string AddNewImployee(string txtTenNhanVien, string txtNgaySinh, string txtGioiTinh,string txtDiaChi,string txtEmail, string txtSdt, string txtCmnd,string txtNgayCap, string txtTenTinhThanh, string txtDanToc,string txtPhongBan,string txtTenChucVu,string txtHeSoLuong,string txtTinhTrangLamViec,string txtSoBHXH,string txtSoBHYT,string txtTaiKhoanNH)
+        {
+            try
+            {
+               
 
+                string query = "SP_AddNewImployee @TenNV, @NgaySinh, @GioiTinh, @DiaChi, @Email, @Sdt, @Cmnd, @NgayCap, @TenTinhThanh, @DanToc, @TenPhongBan, @TenChucVu, @HeSoLuong, @TinhTrangLamViec, @SoBHXH, @SoBHYT, @TaiKhoanNH";
+                DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { txtTenNhanVien, txtNgaySinh, txtGioiTinh, txtDiaChi, txtEmail, txtSdt, txtCmnd, txtNgayCap, txtTenTinhThanh, txtDanToc, txtPhongBan, txtTenChucVu, txtHeSoLuong, txtTinhTrangLamViec, txtSoBHXH, txtSoBHYT, txtTaiKhoanNH /*list*/});
+                return "True";
+            }
+            catch (Exception ex)
+            {
+               return "" + ex;
+               // return false;
+            }
+        }
     }
 }
