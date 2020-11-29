@@ -21,8 +21,8 @@ namespace QuanLyNhanSu_Master.DAO
         public DataTable GetNhanVien()
         {
             string query = "SELECT NV.MaNV AS [Mã NV], NV.TenNV AS [Họ tên], NV.GioiTinh AS [Giới tính], CV.TenChucVu AS [Chức vụ], PB.TenPhongBan AS [Tên phòng ban], NV.Cmnd AS CMND, NV.NgaySinh AS [Ngày sinh], NV.DiaChi AS [Địa chỉ], NV.Email, NV.Sdt AS SĐT, ";
-            query += " NV.NgayVaoLam AS[Ngày vào làm], NV.ThamNien AS[Thâm niên], NV.HeSoLuong AS[Hệ số lương], NV.TinhTrangLamViec AS[Tình trạng làm việc], NV.HinhAnh AS[Hình Ảnh], NV.SoBHXH AS BHXH, NV.SoBHYT AS BHYT, ";
-            query += " NV.TaikhoanNH AS[Số tài khoản], NV.DanToc AS[Dân tộc], NV.NgayBatDau AS[Ngày vào làm], NV.NgayKetThuc AS[Ngày nghỉ], NV.MaLuong, NV.MaChamCong ";
+            query += "  NV.ThamNien AS[Thâm niên], NV.HeSoLuong AS[Hệ số lương], NV.TinhTrangLamViec AS[Tình trạng làm việc], NV.SoBHXH AS BHXH, NV.SoBHYT AS BHYT, ";
+            query += " NV.TaikhoanNH AS[Số tài khoản], NV.DanToc AS[Dân tộc], NV.NgayBatDau AS[Ngày vào làm], NV.NgayKetThuc AS[Ngày nghỉ] ";
             query += " FROM NhanVien AS NV INNER JOIN ";
             query += " PhongBan AS PB ON NV.MaPhongBan = PB.MaPhongBan INNER JOIN ";
             query += " ChucVu AS CV ON NV.MaChucVu = CV.MaChucVu";
@@ -32,8 +32,8 @@ namespace QuanLyNhanSu_Master.DAO
         public DataTable GetNhanVien(String name)
         {
             string query = "SELECT NV.MaNV AS [Mã NV], NV.TenNV AS [Họ tên], NV.GioiTinh AS [Giới tính], CV.TenChucVu AS [Chức vụ], PB.TenPhongBan AS [Tên phòng ban], NV.Cmnd AS CMND, NV.NgaySinh AS [Ngày sinh], NV.DiaChi AS [Địa chỉ], NV.Email, NV.Sdt AS SĐT, ";
-            query += " NV.NgayVaoLam AS[Ngày vào làm], NV.ThamNien AS[Thâm niên], NV.HeSoLuong AS[Hệ số lương], NV.TinhTrangLamViec AS[Tình trạng làm việc], NV.HinhAnh AS[Hình Ảnh], NV.SoBHXH AS BHXH, NV.SoBHYT AS BHYT, ";
-            query += " NV.TaikhoanNH AS[Số tài khoản], NV.DanToc AS[Dân tộc], NV.NgayBatDau AS[Ngày vào làm], NV.NgayKetThuc AS[Ngày nghỉ], NV.MaLuong, NV.MaChamCong ";
+            query += " NV.ThamNien AS[Thâm niên], NV.HeSoLuong AS[Hệ số lương], NV.TinhTrangLamViec AS[Tình trạng làm việc], NV.SoBHXH AS BHXH, NV.SoBHYT AS BHYT, ";
+            query += " NV.TaikhoanNH AS[Số tài khoản], NV.DanToc AS[Dân tộc], NV.NgayBatDau AS[Ngày vào làm], NV.NgayKetThuc AS[Ngày nghỉ]";
             query += " FROM NhanVien AS NV INNER JOIN ";
             query += " PhongBan AS PB ON NV.MaPhongBan = PB.MaPhongBan INNER JOIN ";
             query += " ChucVu AS CV ON NV.MaChucVu = CV.MaChucVu ";
