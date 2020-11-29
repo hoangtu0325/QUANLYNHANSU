@@ -20,9 +20,24 @@ namespace QuanLyNhanSu_Master.DAO
 
         public DataTable GetNhanVien()
         {
-            string query = "SELECT MaNV AS [Mã NV], TenNV AS [Tên NV], PhongBan AS [Phòng ban], Cmnd AS CMND, NgayCap AS [Ngày cấp], NgaySinh AS [Ngày sinh], GioiTinh AS [Giới tính], DiaChi AS [Địa chỉ], Email, Sdt AS [Số điện thoại], NgayVaoLam AS [Ngày vào làm], ";
-            query += " ThamNien AS[Thâm niên], HeSoLuong AS[Hệ số lương], TinhTrangLamViec AS[Tình trạng làm việc], HinhAnh AS[Hình ảnh], SoBHXH AS[Số BHXH], SoBHYT AS[Số BHYT], TaikhoanNH AS[Tài khoản ngân hàng], DanToc AS[Dân tộc] ";
-            query += " FROM NhanVien ";
+            string query = "SELECT NV.MaNV AS [Mã NV], NV.TenNV AS [Họ tên], NV.GioiTinh AS [Giới tính], CV.TenChucVu AS [Chức vụ], PB.TenPhongBan AS [Tên phòng ban], NV.Cmnd AS CMND, NV.NgaySinh AS [Ngày sinh], NV.DiaChi AS [Địa chỉ], NV.Email, NV.Sdt AS SĐT, ";
+            query += " NV.NgayVaoLam AS[Ngày vào làm], NV.ThamNien AS[Thâm niên], NV.HeSoLuong AS[Hệ số lương], NV.TinhTrangLamViec AS[Tình trạng làm việc], NV.HinhAnh AS[Hình Ảnh], NV.SoBHXH AS BHXH, NV.SoBHYT AS BHYT, ";
+            query += " NV.TaikhoanNH AS[Số tài khoản], NV.DanToc AS[Dân tộc], NV.NgayBatDau AS[Ngày vào làm], NV.NgayKetThuc AS[Ngày nghỉ], NV.MaLuong, NV.MaChamCong ";
+            query += " FROM NhanVien AS NV INNER JOIN ";
+            query += " PhongBan AS PB ON NV.MaPhongBan = PB.MaPhongBan INNER JOIN ";
+            query += " ChucVu AS CV ON NV.MaChucVu = CV.MaChucVu";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            return data;
+        }
+        public DataTable GetNhanVien(String name)
+        {
+            string query = "SELECT NV.MaNV AS [Mã NV], NV.TenNV AS [Họ tên], NV.GioiTinh AS [Giới tính], CV.TenChucVu AS [Chức vụ], PB.TenPhongBan AS [Tên phòng ban], NV.Cmnd AS CMND, NV.NgaySinh AS [Ngày sinh], NV.DiaChi AS [Địa chỉ], NV.Email, NV.Sdt AS SĐT, ";
+            query += " NV.NgayVaoLam AS[Ngày vào làm], NV.ThamNien AS[Thâm niên], NV.HeSoLuong AS[Hệ số lương], NV.TinhTrangLamViec AS[Tình trạng làm việc], NV.HinhAnh AS[Hình Ảnh], NV.SoBHXH AS BHXH, NV.SoBHYT AS BHYT, ";
+            query += " NV.TaikhoanNH AS[Số tài khoản], NV.DanToc AS[Dân tộc], NV.NgayBatDau AS[Ngày vào làm], NV.NgayKetThuc AS[Ngày nghỉ], NV.MaLuong, NV.MaChamCong ";
+            query += " FROM NhanVien AS NV INNER JOIN ";
+            query += " PhongBan AS PB ON NV.MaPhongBan = PB.MaPhongBan INNER JOIN ";
+            query += " ChucVu AS CV ON NV.MaChucVu = CV.MaChucVu ";
+            query += " where NV.TenNV like N'%" + name + "%'";
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             return data;
         }

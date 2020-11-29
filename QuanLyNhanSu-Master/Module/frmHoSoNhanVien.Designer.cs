@@ -91,6 +91,7 @@
             this.Controls.Add(this.buniDataGridHoSoNhanVien);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmHoSoNhanVien";
+            this.Load += new System.EventHandler(this.frmHoSoNhanVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.buniDataGridHoSoNhanVien)).EndInit();
             this.ResumeLayout(false);
 
@@ -99,6 +100,6 @@
         #endregion
 
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
-        private Bunifu.Framework.UI.BunifuCustomDataGrid buniDataGridHoSoNhanVien;
+        public Bunifu.Framework.UI.BunifuCustomDataGrid buniDataGridHoSoNhanVien;
     }
 }

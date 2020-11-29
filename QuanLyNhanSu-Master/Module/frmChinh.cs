@@ -1,4 +1,5 @@
-﻿using QuanLyNhanSu_Master.Module;
+﻿using QuanLyNhanSu_Master.DAO;
+using QuanLyNhanSu_Master.Module;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,6 +16,11 @@ namespace QuanLyNhanSu_Master
     {
         System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmChinh));
 
+        private bool IsCollapsed;
+        private bool IsSearch;
+
+        public DataGridView buniDataGridHoSoNhanVien { get; private set; }
+
         public frmChinh()
         {
             InitializeComponent();
@@ -27,11 +33,82 @@ namespace QuanLyNhanSu_Master
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-            lblStatus.Text = "DASHBOARD";
+           
             Form frmLayouLogin = new frmLayoutLogin();
             //frmLayouLogin.Show();
             //FormChild<frmLogin>();
+           // Bunifu.Framework.UI.BunifuFlatButton button = (Bunifu.Framework.UI.BunifuFlatButton)sender;
+            Button bt = (Button)sender;
 
+            if (bt.Name == "btnDashboard")
+            {
+                lblStatus.Text = "DASHBOARD";
+                //FormChild<frmLogin>();
+                btnDashboard.BackColor = Color.FromArgb(81, 136, 202);
+                btnDashboard.ForeColor = Color.White;
+                iconDashboard.Image = ((System.Drawing.Image)(resources.GetObject("iconDashboard.ImageActive")));
+            }
+            else
+            {
+                btnDashboard.BackColor = Color.Transparent;
+                btnDashboard.ForeColor = Color.Black;
+                iconDashboard.Image = ((System.Drawing.Image)(resources.GetObject("iconDashboard.Image")));
+            }
+            if (bt.Name == "btnNhanVien")
+            {
+                lblStatus.Text = "HỒ SƠ NHÂN VIÊN";
+                //FormChild<frmHoSoNhanVien>();
+                lblStatus.Text = "HỒ SƠ NHÂN VIÊN";
+                frmHoSoNhanVien frmHoSoNhanVien = new frmHoSoNhanVien();
+                frmHoSoNhanVien.Action = "Không tìm kiếm";
+                frmHoSoNhanVien.TopLevel = false;
+                frmHoSoNhanVien.MdiParent = this.MdiParent;
+                PanelCenter.Controls.Add(frmHoSoNhanVien);
+                frmHoSoNhanVien.Dock = DockStyle.Fill;
+                frmHoSoNhanVien.Show();
+                frmHoSoNhanVien.BringToFront();
+
+                btnNhanVien.BackColor = Color.FromArgb(81, 136, 202);
+                btnNhanVien.ForeColor = Color.White;
+               iconNhanVien.Image = ((System.Drawing.Image)(resources.GetObject("iconNhanVien.ImageActive")));
+            }
+            else
+            {
+                btnNhanVien.BackColor = Color.Transparent;
+                btnNhanVien.ForeColor = Color.Black;
+                iconNhanVien.Image = ((System.Drawing.Image)(resources.GetObject("iconNhanVien.Image")));
+            }
+            if (bt.Name == "btnChamCong")
+            {
+                lblStatus.Text = "CHẤM CÔNG";
+                //FormChild<frmLogin>();
+                btnChamCong.BackColor = Color.FromArgb(81, 136, 202);
+                btnChamCong.ForeColor = Color.White;
+                iconChamCong.Image = ((System.Drawing.Image)(resources.GetObject("iconChamCong.ImageActive")));
+            }
+            else
+            {
+                btnChamCong.BackColor = Color.Transparent;
+                btnChamCong.ForeColor = Color.Black;
+                iconChamCong.Image = ((System.Drawing.Image)(resources.GetObject("iconChamCong.Image")));
+
+            }
+            if (bt.Name == "btnBangLuong")
+            {
+                lblStatus.Text = "BẢNG LƯƠNG";
+                //FormChild<frmLogin>();
+                btnBangLuong.BackColor = Color.FromArgb(81, 136, 202);
+                btnBangLuong.ForeColor = Color.White;
+                iconBangLuong.Image = ((System.Drawing.Image)(resources.GetObject("iconChamCong.ImageActive")));
+
+            }
+            else
+            {
+                btnBangLuong.BackColor = Color.Transparent;
+                btnBangLuong.ForeColor = Color.Black;
+                iconBangLuong.Image = ((System.Drawing.Image)(resources.GetObject("iconChamCong.Image")));
+
+            }
         }
 
 
@@ -51,6 +128,22 @@ namespace QuanLyNhanSu_Master
                 PanelCenter.Controls.Add(formCenter);
                 formCenter.Dock = DockStyle.Fill;
                 PanelCenter.Tag = formCenter;
+                
+                if (formCenter.Name == "frmHoSoNhanVien")
+                {
+                    if (IsSearch == true)
+                    {
+                        frmHoSoNhanVien.Action = "Tìm kiếm";
+                        frmHoSoNhanVien.TenNhanVien = txtSearch.Text;
+                       
+                    }
+                    else
+                    {
+                        frmHoSoNhanVien.Action = "Không tìm kiếm";
+                        
+                    }
+                   
+                }
                 formCenter.Show();
                 formCenter.BringToFront();
             }
@@ -59,13 +152,9 @@ namespace QuanLyNhanSu_Master
                 formCenter.BringToFront();
             }
         }
+        
 
-        private void btnNhanVien_Click(object sender, EventArgs e)
-        {
-            lblStatus.Text = "HỒ SƠ NHÂN VIÊN";
-            FormChild<frmHoSoNhanVien>();
-            
-        }
+
 
         private void btnChamCong_Click(object sender, EventArgs e)
         {
@@ -88,6 +177,67 @@ namespace QuanLyNhanSu_Master
         private void btnChamCong_MouseHover(object sender, EventArgs e)
         {
             this.iconDashboard.Image = ((System.Drawing.Image)(resources.GetObject("iconDashboard.ImageActive")));
+        }
+
+        private void btnAddNew_Click(object sender, EventArgs e)
+        {
+            //FormChild<frmAddInfoNhanVien>();
+            lblStatus.Text = "HỒ SƠ NHÂN VIÊN";
+            frmAddInfoNhanVien frmAddInfoNhanVien = new frmAddInfoNhanVien();
+            frmAddInfoNhanVien.TopLevel = false;
+            frmAddInfoNhanVien.MdiParent = this.MdiParent;
+            PanelCenter.Controls.Add(frmAddInfoNhanVien);
+            frmAddInfoNhanVien.Dock = DockStyle.Fill;
+            frmAddInfoNhanVien.Show();
+            frmAddInfoNhanVien.BringToFront();
+
+        }
+
+        private void TimerNghiepVu_Tick(object sender, EventArgs e)
+        {
+            if (IsCollapsed)
+            {
+                PanelNghiepVu.Height += 20;
+                if (PanelNghiepVu.Size == PanelNghiepVu.MaximumSize)
+                {
+                    TimerNghiepVu.Stop();
+                    IsCollapsed = false;
+                }
+            }
+            else
+            {
+                PanelNghiepVu.Height -= 20;
+                if (PanelNghiepVu.Size == PanelNghiepVu.MinimumSize)
+                {
+                    TimerNghiepVu.Stop();
+                    IsCollapsed = true;
+                }
+            }
+            
+        }
+
+        private void btnNghiepVu_Click(object sender, EventArgs e)
+        {
+            TimerNghiepVu.Start();
+        }
+
+
+        private void txtSearch_KeyDown(object sender, KeyEventArgs e)
+        {
+            IsSearch = true;
+            if (e.KeyCode == Keys.Enter)
+            {
+                lblStatus.Text = "HỒ SƠ NHÂN VIÊN";
+                frmHoSoNhanVien frmHoSoNhanVien = new frmHoSoNhanVien();
+                frmHoSoNhanVien.Action = "Tìm kiếm";
+                frmHoSoNhanVien.TenNhanVien = txtSearch.Text;
+                frmHoSoNhanVien.TopLevel = false;
+                frmHoSoNhanVien.MdiParent = this.MdiParent;
+                PanelCenter.Controls.Add(frmHoSoNhanVien);
+                frmHoSoNhanVien.Dock = DockStyle.Fill;
+                frmHoSoNhanVien.Show();
+                frmHoSoNhanVien.BringToFront();
+            }
         }
     }
 }
