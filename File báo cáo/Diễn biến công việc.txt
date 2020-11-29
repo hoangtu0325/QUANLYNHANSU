@@ -1,1 +1,2 @@
 ﻿Hùng: mới thêm file mdf 
+Tú: thêm file data.sql vào master
