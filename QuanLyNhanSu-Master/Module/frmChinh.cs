@@ -271,11 +271,11 @@ namespace QuanLyNhanSu_Master
             frmAddNewUser frmAddNewUser = new frmAddNewUser();
             frmAddNewUser.StartPosition = FormStartPosition.CenterParent;
             var result =  frmAddNewUser.ShowDialog();
-            if (result == DialogResult.OK)
-            {
-                btnAddNew_Click(sender, e);         //values preserved after close
+            //if (result == DialogResult.OK)
+            //{
+            //    btnAddNew_Click(sender, e);         //values preserved after close
                
-            }
+            //}
 
         }
 
@@ -289,6 +289,13 @@ namespace QuanLyNhanSu_Master
                 btnAddNew_Click(sender, e);         //values preserved after close
                
             }
+        }
+
+        private void ToolStripAddTKAdmin_Click(object sender, EventArgs e)
+        {
+            frmAddNewUser frmAddNewUser = new frmAddNewUser();
+            frmAddNewUser.StartPosition = FormStartPosition.CenterParent;
+            var result = frmAddNewUser.ShowDialog();
         }
     }
 }

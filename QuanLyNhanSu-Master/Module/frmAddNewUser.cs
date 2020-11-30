@@ -38,12 +38,11 @@ namespace QuanLyNhanSu_Master.Module
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            //if (AccountDAO.)
-            //{
-            //    this.DialogResult = DialogResult.OK;
-            //    this.Close();
-
-            //}
+            if (AccountDAO.Instance.IsAddNewUser(txtUserName.Text, txtPassword.Text,txtEmail.Text))
+            {
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
         }
     }
 }

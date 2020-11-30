@@ -72,6 +72,7 @@ namespace QuanLyNhanSu_Master
             this.btnImport = new Bunifu.Framework.UI.BunifuTileButton();
             this.imgBtnAddNew = new Bunifu.Framework.UI.BunifuImageButton();
             this.TimerNghiepVu = new System.Windows.Forms.Timer(this.components);
+            this.ToolStripAddTKAdmin = new System.Windows.Forms.ToolStripMenuItem();
             this.PanelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimized)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
@@ -514,11 +515,11 @@ namespace QuanLyNhanSu_Master
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ToolstripCaiDat});
             this.menuStrip2.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
-            this.menuStrip2.Location = new System.Drawing.Point(1155, 41);
+            this.menuStrip2.Location = new System.Drawing.Point(1305, 41);
             this.menuStrip2.Name = "menuStrip2";
             this.menuStrip2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.menuStrip2.ShowItemToolTips = true;
-            this.menuStrip2.Size = new System.Drawing.Size(224, 28);
+            this.menuStrip2.Size = new System.Drawing.Size(74, 28);
             this.menuStrip2.TabIndex = 1;
             this.menuStrip2.Text = "TẠO MỚI";
             // 
@@ -540,7 +541,7 @@ namespace QuanLyNhanSu_Master
             this.ToolStripReSetPass.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ToolStripReSetPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(34)))), ((int)(((byte)(110)))));
             this.ToolStripReSetPass.Name = "ToolStripReSetPass";
-            this.ToolStripReSetPass.Size = new System.Drawing.Size(216, 28);
+            this.ToolStripReSetPass.Size = new System.Drawing.Size(202, 28);
             this.ToolStripReSetPass.Text = "Reset Pass User";
             this.ToolStripReSetPass.Click += new System.EventHandler(this.ToolStripReSetPass_Click);
             // 
@@ -556,7 +557,7 @@ namespace QuanLyNhanSu_Master
             this.menuStrip1.Location = new System.Drawing.Point(78, 17);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.ShowItemToolTips = true;
-            this.menuStrip1.Size = new System.Drawing.Size(111, 36);
+            this.menuStrip1.Size = new System.Drawing.Size(261, 36);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "TẠO MỚI";
             // 
@@ -565,7 +566,8 @@ namespace QuanLyNhanSu_Master
             this.ToolStripAddNew.BackColor = System.Drawing.Color.Transparent;
             this.ToolStripAddNew.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ToolStripAddNewNhanVien,
-            this.ToolStripAddNewPhongBan});
+            this.ToolStripAddNewPhongBan,
+            this.ToolStripAddTKAdmin});
             this.ToolStripAddNew.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ToolStripAddNew.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(34)))), ((int)(((byte)(110)))));
             this.ToolStripAddNew.Name = "ToolStripAddNew";
@@ -670,6 +672,15 @@ namespace QuanLyNhanSu_Master
             this.TimerNghiepVu.Interval = 1;
             this.TimerNghiepVu.Tick += new System.EventHandler(this.TimerNghiepVu_Tick);
             // 
+            // ToolStripAddTKAdmin
+            // 
+            this.ToolStripAddTKAdmin.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.ToolStripAddTKAdmin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(34)))), ((int)(((byte)(110)))));
+            this.ToolStripAddTKAdmin.Name = "ToolStripAddTKAdmin";
+            this.ToolStripAddTKAdmin.Size = new System.Drawing.Size(216, 28);
+            this.ToolStripAddTKAdmin.Text = "Tài khoản Admin";
+            this.ToolStripAddTKAdmin.Click += new System.EventHandler(this.ToolStripAddTKAdmin_Click);
+            // 
             // frmChinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -754,6 +765,7 @@ namespace QuanLyNhanSu_Master
         private System.Windows.Forms.MenuStrip menuStrip2;
         private System.Windows.Forms.ToolStripMenuItem ToolstripCaiDat;
         private System.Windows.Forms.ToolStripMenuItem ToolStripReSetPass;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripAddTKAdmin;
     }
 }
 
