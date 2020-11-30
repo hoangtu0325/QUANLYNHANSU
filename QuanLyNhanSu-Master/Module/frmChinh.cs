@@ -18,13 +18,19 @@ namespace QuanLyNhanSu_Master
 
         private bool IsCollapsed;
         private bool IsSearch;
-
         public DataGridView buniDataGridHoSoNhanVien { get; private set; }
 
         public frmChinh()
         {
             InitializeComponent();
         }
+
+
+        private void frmChinh_Load(object sender, EventArgs e)
+        {
+
+        }
+
 
         private void btnExit_Click(object sender, EventArgs e)
         {
@@ -37,7 +43,6 @@ namespace QuanLyNhanSu_Master
             Form frmLayouLogin = new frmLayoutLogin();
             //frmLayouLogin.Show();
             //FormChild<frmLogin>();
-           // Bunifu.Framework.UI.BunifuFlatButton button = (Bunifu.Framework.UI.BunifuFlatButton)sender;
             Button bt = (Button)sender;
 
             if (bt.Name == "btnDashboard")
@@ -54,6 +59,7 @@ namespace QuanLyNhanSu_Master
                 btnDashboard.ForeColor = Color.Black;
                 iconDashboard.Image = ((System.Drawing.Image)(resources.GetObject("iconDashboard.Image")));
             }
+
             if (bt.Name == "btnNhanVien")
             {
                 lblStatus.Text = "HỒ SƠ NHÂN VIÊN";
@@ -78,6 +84,7 @@ namespace QuanLyNhanSu_Master
                 btnNhanVien.ForeColor = Color.Black;
                 iconNhanVien.Image = ((System.Drawing.Image)(resources.GetObject("iconNhanVien.Image")));
             }
+
             if (bt.Name == "btnChamCong")
             {
                 lblStatus.Text = "CHẤM CÔNG";
@@ -93,6 +100,7 @@ namespace QuanLyNhanSu_Master
                 iconChamCong.Image = ((System.Drawing.Image)(resources.GetObject("iconChamCong.Image")));
 
             }
+
             if (bt.Name == "btnBangLuong")
             {
                 lblStatus.Text = "BẢNG LƯƠNG";
@@ -153,9 +161,6 @@ namespace QuanLyNhanSu_Master
             }
         }
         
-
-
-
         private void btnChamCong_Click(object sender, EventArgs e)
         {
             lblStatus.Text = "CHẤM CÔNG";
@@ -238,6 +243,19 @@ namespace QuanLyNhanSu_Master
                 frmHoSoNhanVien.Show();
                 frmHoSoNhanVien.BringToFront();
             }
+        }
+
+        private void ToolStripAddNewNhanVien_Click(object sender, EventArgs e)
+        {
+            frmAddNewUser frmAddNewUser = new frmAddNewUser();
+            frmAddNewUser.StartPosition = FormStartPosition.CenterParent;
+            var result =  frmAddNewUser.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                btnAddNew_Click(sender, e);         //values preserved after close
+               
+            }
+
         }
     }
 }

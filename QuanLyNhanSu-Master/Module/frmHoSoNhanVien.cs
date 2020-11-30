@@ -36,7 +36,9 @@ namespace QuanLyNhanSu_Master.Module
                 {
                     item.DefaultCellStyle.BackColor = Color.FromArgb(31, 65, 155);
                 }
+                
             }
+            
             return buniDataGridHoSoNhanVien;
         }
 

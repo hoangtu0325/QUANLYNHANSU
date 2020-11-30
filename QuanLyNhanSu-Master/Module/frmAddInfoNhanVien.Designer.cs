@@ -520,6 +520,7 @@
             this.txtHeSoLuong.Name = "txtHeSoLuong";
             this.txtHeSoLuong.Size = new System.Drawing.Size(343, 48);
             this.txtHeSoLuong.TabIndex = 66;
+            this.txtHeSoLuong.Text = "1";
             this.txtHeSoLuong.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // txtTinhTrangLamViec

@@ -32,7 +32,7 @@ namespace QuanLyNhanSu_Master.DAO
                 connection.Open();
 
                 SqlCommand command = new SqlCommand(query, connection);
-
+                
                 if (parameter != null)
                 {
                     string[] listPara = query.Split(' ');
@@ -46,7 +46,7 @@ namespace QuanLyNhanSu_Master.DAO
                         }
                     }
                 }
-
+           
                 SqlDataAdapter adapter = new SqlDataAdapter(command);
 
                 adapter.Fill(data);

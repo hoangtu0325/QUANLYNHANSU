@@ -42,6 +42,8 @@ namespace QuanLyNhanSu_Master
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.txtSearch = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.PanelNghiepVu = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnKhaiBaoPhongBan = new System.Windows.Forms.Button();
             this.btnNghiepVu = new System.Windows.Forms.Button();
@@ -61,11 +63,12 @@ namespace QuanLyNhanSu_Master
             this.btnExport = new Bunifu.Framework.UI.BunifuTileButton();
             this.bunifuTileButton1 = new Bunifu.Framework.UI.BunifuTileButton();
             this.btnImport = new Bunifu.Framework.UI.BunifuTileButton();
-            this.btnAddNew = new Bunifu.Framework.UI.BunifuFlatButton();
             this.imgBtnAddNew = new Bunifu.Framework.UI.BunifuImageButton();
             this.TimerNghiepVu = new System.Windows.Forms.Timer(this.components);
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.ToolStripAddNew = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripAddNewNhanVien = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripAddNewPhongBan = new System.Windows.Forms.ToolStripMenuItem();
             this.PanelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimized)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
@@ -81,6 +84,7 @@ namespace QuanLyNhanSu_Master
             ((System.ComponentModel.ISupportInitialize)(this.iconNhanVien)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgBtnAddNew)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -237,6 +241,34 @@ namespace QuanLyNhanSu_Master
             this.PanelNghiepVu.Name = "PanelNghiepVu";
             this.PanelNghiepVu.Size = new System.Drawing.Size(229, 71);
             this.PanelNghiepVu.TabIndex = 1;
+            // 
+            // button3
+            // 
+            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(0, 284);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(229, 71);
+            this.button3.TabIndex = 0;
+            this.button3.Text = "Khai báo phòng ban";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(0, 213);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(229, 71);
+            this.button2.TabIndex = 0;
+            this.button2.Text = "Khai báo phòng ban";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
@@ -445,10 +477,10 @@ namespace QuanLyNhanSu_Master
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.lblStatus);
+            this.panel1.Controls.Add(this.menuStrip1);
             this.panel1.Controls.Add(this.btnExport);
             this.panel1.Controls.Add(this.bunifuTileButton1);
             this.panel1.Controls.Add(this.btnImport);
-            this.panel1.Controls.Add(this.btnAddNew);
             this.panel1.Controls.Add(this.imgBtnAddNew);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 53);
@@ -527,50 +559,12 @@ namespace QuanLyNhanSu_Master
             this.btnImport.Size = new System.Drawing.Size(56, 54);
             this.btnImport.TabIndex = 0;
             // 
-            // btnAddNew
-            // 
-            this.btnAddNew.Activecolor = System.Drawing.Color.Transparent;
-            this.btnAddNew.BackColor = System.Drawing.Color.Transparent;
-            this.btnAddNew.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAddNew.BorderRadius = 0;
-            this.btnAddNew.ButtonText = "Tạo mới";
-            this.btnAddNew.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddNew.DisabledColor = System.Drawing.Color.Gray;
-            this.btnAddNew.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddNew.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(71)))), ((int)(((byte)(173)))));
-            this.btnAddNew.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnAddNew.Iconimage = null;
-            this.btnAddNew.Iconimage_right = null;
-            this.btnAddNew.Iconimage_right_Selected = null;
-            this.btnAddNew.Iconimage_Selected = null;
-            this.btnAddNew.IconMarginLeft = 0;
-            this.btnAddNew.IconMarginRight = 0;
-            this.btnAddNew.IconRightVisible = true;
-            this.btnAddNew.IconRightZoom = 0D;
-            this.btnAddNew.IconVisible = true;
-            this.btnAddNew.IconZoom = 90D;
-            this.btnAddNew.IsTab = false;
-            this.btnAddNew.Location = new System.Drawing.Point(76, 17);
-            this.btnAddNew.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
-            this.btnAddNew.Name = "btnAddNew";
-            this.btnAddNew.Normalcolor = System.Drawing.Color.Transparent;
-            this.btnAddNew.OnHovercolor = System.Drawing.Color.Transparent;
-            this.btnAddNew.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(34)))), ((int)(((byte)(110)))));
-            this.btnAddNew.selected = false;
-            this.btnAddNew.Size = new System.Drawing.Size(92, 39);
-            this.btnAddNew.TabIndex = 1;
-            this.btnAddNew.Text = "Tạo mới";
-            this.btnAddNew.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnAddNew.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(71)))), ((int)(((byte)(173)))));
-            this.btnAddNew.TextFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddNew.Click += new System.EventHandler(this.btnAddNew_Click);
-            // 
             // imgBtnAddNew
             // 
             this.imgBtnAddNew.BackColor = System.Drawing.Color.Transparent;
             this.imgBtnAddNew.Image = ((System.Drawing.Image)(resources.GetObject("imgBtnAddNew.Image")));
             this.imgBtnAddNew.ImageActive = null;
-            this.imgBtnAddNew.Location = new System.Drawing.Point(27, 17);
+            this.imgBtnAddNew.Location = new System.Drawing.Point(27, 15);
             this.imgBtnAddNew.Name = "imgBtnAddNew";
             this.imgBtnAddNew.Size = new System.Drawing.Size(40, 40);
             this.imgBtnAddNew.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -584,33 +578,52 @@ namespace QuanLyNhanSu_Master
             this.TimerNghiepVu.Interval = 1;
             this.TimerNghiepVu.Tick += new System.EventHandler(this.TimerNghiepVu_Tick);
             // 
-            // button2
+            // menuStrip1
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(0, 213);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(229, 71);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Khai báo phòng ban";
-            this.button2.UseVisualStyleBackColor = true;
+            this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripAddNew});
+            this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
+            this.menuStrip1.Location = new System.Drawing.Point(78, 17);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.ShowItemToolTips = true;
+            this.menuStrip1.Size = new System.Drawing.Size(111, 36);
+            this.menuStrip1.TabIndex = 1;
+            this.menuStrip1.Text = "TẠO MỚI";
             // 
-            // button3
+            // ToolStripAddNew
             // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(0, 284);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(229, 71);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "Khai báo phòng ban";
-            this.button3.UseVisualStyleBackColor = true;
+            this.ToolStripAddNew.BackColor = System.Drawing.Color.Transparent;
+            this.ToolStripAddNew.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripAddNewNhanVien,
+            this.ToolStripAddNewPhongBan});
+            this.ToolStripAddNew.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ToolStripAddNew.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(34)))), ((int)(((byte)(110)))));
+            this.ToolStripAddNew.Name = "ToolStripAddNew";
+            this.ToolStripAddNew.Size = new System.Drawing.Size(105, 32);
+            this.ToolStripAddNew.Text = "TẠO MỚI";
+            // 
+            // ToolStripAddNewNhanVien
+            // 
+            this.ToolStripAddNewNhanVien.BackColor = System.Drawing.Color.Transparent;
+            this.ToolStripAddNewNhanVien.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ToolStripAddNewNhanVien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(34)))), ((int)(((byte)(110)))));
+            this.ToolStripAddNewNhanVien.Name = "ToolStripAddNewNhanVien";
+            this.ToolStripAddNewNhanVien.Size = new System.Drawing.Size(216, 28);
+            this.ToolStripAddNewNhanVien.Text = "Nhân viên";
+            this.ToolStripAddNewNhanVien.Click += new System.EventHandler(this.ToolStripAddNewNhanVien_Click);
+            // 
+            // ToolStripAddNewPhongBan
+            // 
+            this.ToolStripAddNewPhongBan.BackColor = System.Drawing.Color.Transparent;
+            this.ToolStripAddNewPhongBan.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ToolStripAddNewPhongBan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(34)))), ((int)(((byte)(110)))));
+            this.ToolStripAddNewPhongBan.Name = "ToolStripAddNewPhongBan";
+            this.ToolStripAddNewPhongBan.Size = new System.Drawing.Size(216, 28);
+            this.ToolStripAddNewPhongBan.Text = "Phòng ban";
             // 
             // frmChinh
             // 
@@ -624,10 +637,12 @@ namespace QuanLyNhanSu_Master
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
+            this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmChinh";
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmChinh_Load);
             this.PanelTop.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimized)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
@@ -644,6 +659,8 @@ namespace QuanLyNhanSu_Master
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgBtnAddNew)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -664,7 +681,6 @@ namespace QuanLyNhanSu_Master
         private System.Windows.Forms.Panel PanelCenter;
         private System.Windows.Forms.Panel panel1;
         private BunifuImageButton imgBtnAddNew;
-        private BunifuFlatButton btnAddNew;
         private BunifuTileButton btnImport;
         private BunifuTileButton btnExport;
         private BunifuTileButton LogoACB;
@@ -684,6 +700,10 @@ namespace QuanLyNhanSu_Master
         private System.Windows.Forms.Timer TimerNghiepVu;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripAddNew;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripAddNewNhanVien;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripAddNewPhongBan;
     }
 }
 

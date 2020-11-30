@@ -17,6 +17,7 @@ namespace QuanLyNhanSu_Master.DAO
             get { if (instance == null) instance = new AccountDAO(); return instance; }
             private set { instance = value; }
         }
+        private AccountDAO() { }
 
         public bool Login(string userName, string passWord)
         {
@@ -85,13 +86,13 @@ namespace QuanLyNhanSu_Master.DAO
             return "";
         }
 
-        public string AddNewImployee(string txtTenNhanVien, string txtNgaySinh, string txtGioiTinh,string txtDiaChi,string txtEmail, string txtSdt, string txtCmnd,string txtNgayCap, string txtTenTinhThanh, string txtDanToc,string txtPhongBan,string txtTenChucVu,string txtHeSoLuong,string txtTinhTrangLamViec,string txtSoBHXH,string txtSoBHYT,string txtTaiKhoanNH)
+        public string AddNewImployee(string txtTenNhanVien, string txtNgaySinh, string txtGioiTinh,string txtDiaChi,string txtEmail, string txtSdt, string txtCmnd,string txtNgayCap, string txtTenTinhThanh, string txtDanToc,string txtPhongBan,string txtTenChucVu,float txtHeSoLuong,string txtTinhTrangLamViec,string txtSoBHXH,string txtSoBHYT,string txtTaiKhoanNH)
         {
             try
             {
                
 
-                string query = "SP_AddNewImployee @TenNV, @NgaySinh, @GioiTinh, @DiaChi, @Email, @Sdt, @Cmnd, @NgayCap, @TenTinhThanh, @DanToc, @TenPhongBan, @TenChucVu, @HeSoLuong, @TinhTrangLamViec, @SoBHXH, @SoBHYT, @TaiKhoanNH";
+                string query = " exec SP_AddNewImployee @TenNV , @NgaySinh , @GioiTinh , @DiaChi , @Email , @Sdt , @Cmnd , @NgayCap , @TenTinhThanh , @DanToc , @TenPhongBan , @TenChucVu , @HeSoLuong , @TinhTrangLamViec , @SoBHXH , @SoBHYT , @TaiKhoanNH";
                 DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { txtTenNhanVien, txtNgaySinh, txtGioiTinh, txtDiaChi, txtEmail, txtSdt, txtCmnd, txtNgayCap, txtTenTinhThanh, txtDanToc, txtPhongBan, txtTenChucVu, txtHeSoLuong, txtTinhTrangLamViec, txtSoBHXH, txtSoBHYT, txtTaiKhoanNH /*list*/});
                 return "True";
             }
@@ -99,6 +100,34 @@ namespace QuanLyNhanSu_Master.DAO
             {
                return "" + ex;
                // return false;
+            }
+        }
+
+        public bool IsAddNewUser(string userName, string passWord)
+        {
+            try
+            {
+                byte[] temp = ASCIIEncoding.ASCII.GetBytes(passWord);
+                byte[] hasData = new MD5CryptoServiceProvider().ComputeHash(temp);
+
+                string hasPass = "";
+
+                foreach (byte item in hasData)
+                {
+                    hasPass += item;
+                }
+                //var list = hasData.ToString();
+                //list.Reverse();
+
+                string query = "SP_Login @userName , @passWord";
+                hasPass = EnCrypt(passWord, "%4oPNbxNwO3Z15CoNCbi");
+                DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { userName, hasPass /*list*/});
+                return result.Rows.Count > 0;
+            }
+            catch (Exception)
+            {
+
+                return false;
             }
         }
     }
