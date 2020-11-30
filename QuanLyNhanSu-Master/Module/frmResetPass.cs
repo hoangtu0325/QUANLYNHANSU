@@ -34,5 +34,13 @@ namespace QuanLyNhanSu_Master.Module
             }
            
         }
+
+        private void txtUserName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnResetPass_Click(sender, e);
+            }
+        }
     }
 }

@@ -91,7 +91,7 @@
             this.txtTenNhanVien.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtTenNhanVien.Name = "txtTenNhanVien";
             this.txtTenNhanVien.Size = new System.Drawing.Size(343, 48);
-            this.txtTenNhanVien.TabIndex = 35;
+            this.txtTenNhanVien.TabIndex = 1;
             this.txtTenNhanVien.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // txtTenTinhThanh
@@ -110,7 +110,7 @@
             this.txtTenTinhThanh.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtTenTinhThanh.Name = "txtTenTinhThanh";
             this.txtTenTinhThanh.Size = new System.Drawing.Size(343, 48);
-            this.txtTenTinhThanh.TabIndex = 38;
+            this.txtTenTinhThanh.TabIndex = 5;
             this.txtTenTinhThanh.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // txtNgaySinh
@@ -129,7 +129,7 @@
             this.txtNgaySinh.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtNgaySinh.Name = "txtNgaySinh";
             this.txtNgaySinh.Size = new System.Drawing.Size(343, 48);
-            this.txtNgaySinh.TabIndex = 39;
+            this.txtNgaySinh.TabIndex = 4;
             this.txtNgaySinh.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // txtGioiTinh
@@ -148,7 +148,7 @@
             this.txtGioiTinh.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtGioiTinh.Name = "txtGioiTinh";
             this.txtGioiTinh.Size = new System.Drawing.Size(343, 48);
-            this.txtGioiTinh.TabIndex = 40;
+            this.txtGioiTinh.TabIndex = 7;
             this.txtGioiTinh.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // txtDiaChi
@@ -167,7 +167,7 @@
             this.txtDiaChi.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(343, 48);
-            this.txtDiaChi.TabIndex = 41;
+            this.txtDiaChi.TabIndex = 10;
             this.txtDiaChi.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // txtTaiKhoanNH
@@ -186,7 +186,7 @@
             this.txtTaiKhoanNH.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtTaiKhoanNH.Name = "txtTaiKhoanNH";
             this.txtTaiKhoanNH.Size = new System.Drawing.Size(343, 48);
-            this.txtTaiKhoanNH.TabIndex = 46;
+            this.txtTaiKhoanNH.TabIndex = 17;
             this.txtTaiKhoanNH.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // txtDanToc
@@ -205,7 +205,7 @@
             this.txtDanToc.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtDanToc.Name = "txtDanToc";
             this.txtDanToc.Size = new System.Drawing.Size(343, 48);
-            this.txtDanToc.TabIndex = 45;
+            this.txtDanToc.TabIndex = 6;
             this.txtDanToc.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // txtPhongBan
@@ -224,7 +224,7 @@
             this.txtPhongBan.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtPhongBan.Name = "txtPhongBan";
             this.txtPhongBan.Size = new System.Drawing.Size(343, 48);
-            this.txtPhongBan.TabIndex = 44;
+            this.txtPhongBan.TabIndex = 8;
             this.txtPhongBan.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // txtSdt
@@ -243,7 +243,7 @@
             this.txtSdt.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtSdt.Name = "txtSdt";
             this.txtSdt.Size = new System.Drawing.Size(343, 48);
-            this.txtSdt.TabIndex = 43;
+            this.txtSdt.TabIndex = 16;
             this.txtSdt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // txtEmail
@@ -262,7 +262,7 @@
             this.txtEmail.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(343, 48);
-            this.txtEmail.TabIndex = 42;
+            this.txtEmail.TabIndex = 13;
             this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // txtNgayCap
@@ -281,7 +281,7 @@
             this.txtNgayCap.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtNgayCap.Name = "txtNgayCap";
             this.txtNgayCap.Size = new System.Drawing.Size(343, 48);
-            this.txtNgayCap.TabIndex = 48;
+            this.txtNgayCap.TabIndex = 3;
             this.txtNgayCap.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // txtCmnd
@@ -300,7 +300,7 @@
             this.txtCmnd.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtCmnd.Name = "txtCmnd";
             this.txtCmnd.Size = new System.Drawing.Size(343, 48);
-            this.txtCmnd.TabIndex = 47;
+            this.txtCmnd.TabIndex = 2;
             this.txtCmnd.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // btnSave
@@ -490,7 +490,7 @@
             this.txtTenChucVu.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtTenChucVu.Name = "txtTenChucVu";
             this.txtTenChucVu.Size = new System.Drawing.Size(343, 48);
-            this.txtTenChucVu.TabIndex = 64;
+            this.txtTenChucVu.TabIndex = 9;
             this.txtTenChucVu.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuCustomLabel11
@@ -519,7 +519,7 @@
             this.txtHeSoLuong.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtHeSoLuong.Name = "txtHeSoLuong";
             this.txtHeSoLuong.Size = new System.Drawing.Size(343, 48);
-            this.txtHeSoLuong.TabIndex = 66;
+            this.txtHeSoLuong.TabIndex = 11;
             this.txtHeSoLuong.Text = "1";
             this.txtHeSoLuong.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -539,7 +539,7 @@
             this.txtTinhTrangLamViec.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtTinhTrangLamViec.Name = "txtTinhTrangLamViec";
             this.txtTinhTrangLamViec.Size = new System.Drawing.Size(343, 48);
-            this.txtTinhTrangLamViec.TabIndex = 68;
+            this.txtTinhTrangLamViec.TabIndex = 12;
             this.txtTinhTrangLamViec.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuCustomLabel12
@@ -568,7 +568,7 @@
             this.txtSoBHYT.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtSoBHYT.Name = "txtSoBHYT";
             this.txtSoBHYT.Size = new System.Drawing.Size(343, 48);
-            this.txtSoBHYT.TabIndex = 72;
+            this.txtSoBHYT.TabIndex = 15;
             this.txtSoBHYT.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuCustomLabel13
@@ -597,7 +597,7 @@
             this.txtSoBHXH.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtSoBHXH.Name = "txtSoBHXH";
             this.txtSoBHXH.Size = new System.Drawing.Size(343, 48);
-            this.txtSoBHXH.TabIndex = 70;
+            this.txtSoBHXH.TabIndex = 14;
             this.txtSoBHXH.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuCustomLabel14

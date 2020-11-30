@@ -55,14 +55,15 @@
             // 
             this.btnMinimized.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMinimized.Location = new System.Drawing.Point(474, 0);
+            this.btnMinimized.Location = new System.Drawing.Point(4, 0);
             this.btnMinimized.Visible = false;
             // 
             // btnExit
             // 
-            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExit.Location = new System.Drawing.Point(512, 0);
+            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnExit.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnExit.Location = new System.Drawing.Point(515, 0);
+            this.btnExit.Size = new System.Drawing.Size(50, 67);
             // 
             // panel1
             // 
@@ -157,6 +158,7 @@
             this.txtRePassword.Size = new System.Drawing.Size(276, 44);
             this.txtRePassword.TabIndex = 4;
             this.txtRePassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtRePassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtRePassword_KeyDown);
             // 
             // btnDoiMatKhau
             // 

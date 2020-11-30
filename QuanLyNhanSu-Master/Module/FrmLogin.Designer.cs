@@ -265,6 +265,7 @@
             this.txtUsername.Size = new System.Drawing.Size(370, 48);
             this.txtUsername.TabIndex = 1;
             this.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtUsername.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
             // 
             // txtPassword
             // 

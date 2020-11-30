@@ -53,10 +53,15 @@ namespace QuanLyNhanSu_Master.Module
                         MessageBox.Show("Bạn nhập sai tài khoản");
                     }
                 }
-            }
+            } 
+        }
 
-        
-           
+        private void txtRePassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnDoiMatKhau_Click(sender, e);
+            }
         }
     }
 }

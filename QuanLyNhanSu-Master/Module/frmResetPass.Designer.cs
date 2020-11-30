@@ -45,12 +45,12 @@
             // 
             // btnMinimized
             // 
-            this.btnMinimized.Location = new System.Drawing.Point(137, 0);
+            this.btnMinimized.Location = new System.Drawing.Point(-150, 0);
             this.btnMinimized.Visible = false;
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(176, 0);
+            this.btnExit.Location = new System.Drawing.Point(-111, 0);
             // 
             // txtUserName
             // 
@@ -70,6 +70,7 @@
             this.txtUserName.Size = new System.Drawing.Size(276, 44);
             this.txtUserName.TabIndex = 53;
             this.txtUserName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtUserName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUserName_KeyDown);
             // 
             // btnResetPass
             // 

@@ -73,6 +73,7 @@ namespace QuanLyNhanSu_Master
             this.imgBtnAddNew = new Bunifu.Framework.UI.BunifuImageButton();
             this.TimerNghiepVu = new System.Windows.Forms.Timer(this.components);
             this.ToolStripAddTKAdmin = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.PanelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimized)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
@@ -557,7 +558,7 @@ namespace QuanLyNhanSu_Master
             this.menuStrip1.Location = new System.Drawing.Point(78, 17);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.ShowItemToolTips = true;
-            this.menuStrip1.Size = new System.Drawing.Size(261, 36);
+            this.menuStrip1.Size = new System.Drawing.Size(111, 36);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "TẠO MỚI";
             // 
@@ -681,6 +682,11 @@ namespace QuanLyNhanSu_Master
             this.ToolStripAddTKAdmin.Text = "Tài khoản Admin";
             this.ToolStripAddTKAdmin.Click += new System.EventHandler(this.ToolStripAddTKAdmin_Click);
             // 
+            // toolTip1
+            // 
+            this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.toolTip1.ToolTipTitle = "Nhập hàng loạt dữ liệu từ file Excel";
+            // 
             // frmChinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -766,6 +772,7 @@ namespace QuanLyNhanSu_Master
         private System.Windows.Forms.ToolStripMenuItem ToolstripCaiDat;
         private System.Windows.Forms.ToolStripMenuItem ToolStripReSetPass;
         private System.Windows.Forms.ToolStripMenuItem ToolStripAddTKAdmin;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 

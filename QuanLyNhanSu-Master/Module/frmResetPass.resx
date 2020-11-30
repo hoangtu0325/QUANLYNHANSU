@@ -133,17 +133,18 @@
   <data name="btnResetPass.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         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
-        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
+        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
+        SUVORK5CYII=
 </value>
   </data>
   <metadata name="bunifuCustomLabel5.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

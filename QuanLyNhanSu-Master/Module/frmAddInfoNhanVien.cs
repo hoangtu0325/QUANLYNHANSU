@@ -22,7 +22,7 @@ namespace QuanLyNhanSu_Master.Module
         {
             InitializeComponent();
         }
-
+        public bool IsShowfrmHoSoNhanVien = false;
         public bool AddNewImployee(string txtTenNhanVien, string txtNgaySinh, string txtGioiTinh, string txtDiaChi, string txtEmail, string txtSdt, string txtCmnd, string txtNgayCap, string txtTenTinhThanh, string txtDanToc, string txtPhongBan, string txtTenChucVu, float txtHeSoLuong, string txtTinhTrangLamViec, string txtSoBHXH, string txtSoBHYT, string txtTaiKhoanNH)
         {
             return AccountDAO.Instance.AddNewImployee(txtTenNhanVien, txtNgaySinh, txtGioiTinh, txtDiaChi, txtEmail, txtSdt, txtCmnd, txtNgayCap, txtTenTinhThanh, txtDanToc, txtPhongBan, txtTenChucVu, txtHeSoLuong, txtTinhTrangLamViec, txtSoBHXH, txtSoBHYT, txtTaiKhoanNH);
@@ -54,9 +54,8 @@ namespace QuanLyNhanSu_Master.Module
             if (flag)
             {
                 MessageBox.Show("Thêm thông tin nhân viên thành công");
-                Form frmHoSoNhanVien = new frmHoSoNhanVien();
-                frmHoSoNhanVien.Show();
-                this.Hide();
+                IsShowfrmHoSoNhanVien = true;
+                //this.Hide();
             }
             else
             {

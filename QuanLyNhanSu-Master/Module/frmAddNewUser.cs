@@ -11,9 +11,8 @@ using System.Windows.Forms;
 
 namespace QuanLyNhanSu_Master.Module
 {
-    public partial class frmAddNewUser : frmLayoutLogin
+    public partial class frmAddNewUser : Form
     {
-
         public string ReturnValue1 { get; set; }
 
         public frmAddNewUser()
@@ -38,10 +37,43 @@ namespace QuanLyNhanSu_Master.Module
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            if (AccountDAO.Instance.IsAddNewUser(txtUserName.Text, txtPassword.Text,txtEmail.Text))
+            string userName = txtUserName.Text.Trim();
+            string passWord = txtPassword.Text.Trim();
+            string RePassword = txtRePassword.Text.Trim();
+            string Email = txtEmail.Text.Trim();
+
+            if (userName == "" || passWord == "" || RePassword == "" || Email == "")
             {
-                this.DialogResult = DialogResult.OK;
-                this.Close();
+                MessageBox.Show("Chưa nhập đủ thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                if (passWord != RePassword)
+                {
+                    MessageBox.Show("Mật khẩu mới phải trùng nhau", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else
+                {
+                    if (AccountDAO.Instance.IsAddNewUser(userName, passWord, Email))
+                    {
+
+                        MessageBox.Show("Thêm tài khoản Admin thành công");
+                        this.DialogResult = DialogResult.OK;
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Tài khoản đã khai báo hoặc không kết nối được server!!");
+                    }
+                }
+            }
+        }
+
+        private void txtEmail_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnRegister_Click(sender, e);
             }
         }
     }

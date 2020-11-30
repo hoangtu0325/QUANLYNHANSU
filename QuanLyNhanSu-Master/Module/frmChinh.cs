@@ -46,7 +46,7 @@ namespace QuanLyNhanSu_Master
             // MessageBox.Show("" + role);
             if (role != "Admin")
             {
-                ToolStripAddNewNhanVien.Visible = false;
+                ToolStripAddTKAdmin.Visible = false;
                 ToolStripReSetPass.Visible = false;
             }
             //adminToolStripMenuItem.Enabled = type == 1;
@@ -217,6 +217,8 @@ namespace QuanLyNhanSu_Master
             frmAddInfoNhanVien.Show();
             frmAddInfoNhanVien.BringToFront();
 
+
+
         }
 
         private void TimerNghiepVu_Tick(object sender, EventArgs e)
@@ -253,7 +255,7 @@ namespace QuanLyNhanSu_Master
             IsSearch = true;
             if (e.KeyCode == Keys.Enter)
             {
-                lblStatus.Text = "HỒ SƠ NHÂN VIÊN";
+                lblStatus.Text = "TÌM NHÂN VIÊN - " + txtSearch.Text;
                 frmHoSoNhanVien frmHoSoNhanVien = new frmHoSoNhanVien();
                 frmHoSoNhanVien.Action = "Tìm kiếm";
                 frmHoSoNhanVien.TenNhanVien = txtSearch.Text;
@@ -268,14 +270,9 @@ namespace QuanLyNhanSu_Master
 
         private void ToolStripAddNewNhanVien_Click(object sender, EventArgs e)
         {
-            frmAddNewUser frmAddNewUser = new frmAddNewUser();
-            frmAddNewUser.StartPosition = FormStartPosition.CenterParent;
-            var result =  frmAddNewUser.ShowDialog();
-            //if (result == DialogResult.OK)
-            //{
-            //    btnAddNew_Click(sender, e);         //values preserved after close
-               
-            //}
+          
+            btnAddNew_Click(sender, e);         //values preserved after close
+         
 
         }
 
