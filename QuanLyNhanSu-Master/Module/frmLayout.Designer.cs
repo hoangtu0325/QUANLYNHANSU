@@ -43,7 +43,7 @@
             // 
             // ElipseWindow1
             // 
-            this.ElipseWindow1.ElipseRadius = 5;
+            this.ElipseWindow1.ElipseRadius = 20;
             this.ElipseWindow1.TargetControl = this;
             // 
             // PanelHeader

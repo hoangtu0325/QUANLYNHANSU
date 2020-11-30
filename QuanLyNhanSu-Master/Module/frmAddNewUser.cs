@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyNhanSu_Master.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -37,7 +38,7 @@ namespace QuanLyNhanSu_Master.Module
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            if (true)
+            if (AccountDAO.)
             {
                 this.DialogResult = DialogResult.OK;
                 this.Close();

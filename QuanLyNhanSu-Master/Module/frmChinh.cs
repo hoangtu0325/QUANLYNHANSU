@@ -1,4 +1,5 @@
 ﻿using QuanLyNhanSu_Master.DAO;
+using QuanLyNhanSu_Master.DTO;
 using QuanLyNhanSu_Master.Module;
 using System;
 using System.Collections.Generic;
@@ -19,18 +20,38 @@ namespace QuanLyNhanSu_Master
         private bool IsCollapsed;
         private bool IsSearch;
         public DataGridView buniDataGridHoSoNhanVien { get; private set; }
+        private Account loginAccount;
 
-        public frmChinh()
+        public Account LoginAccount
+        {
+            get { return loginAccount; }
+            set { loginAccount = value;  }
+        }
+        
+        public frmChinh(Account acc)
         {
             InitializeComponent();
+            this.loginAccount = acc;
+            ChangeAccount(loginAccount.Role);
         }
 
 
         private void frmChinh_Load(object sender, EventArgs e)
         {
-
+            
         }
 
+        void ChangeAccount(string role)
+        {
+            // MessageBox.Show("" + role);
+            if (role != "Admin")
+            {
+                ToolStripAddNewNhanVien.Visible = false;
+                ToolStripReSetPass.Visible = false;
+            }
+            //adminToolStripMenuItem.Enabled = type == 1;
+           // thôngTinTàiKhoảnToolStripMenuItem.Text += " (" + LoginAccount.DisplayName + ")";
+        }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
@@ -256,6 +277,18 @@ namespace QuanLyNhanSu_Master
                
             }
 
+        }
+
+        private void ToolStripReSetPass_Click(object sender, EventArgs e)
+        {
+             frmResetPass frmAddNewUser = new frmResetPass();
+            frmAddNewUser.StartPosition = FormStartPosition.CenterParent;
+            var result =  frmAddNewUser.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                btnAddNew_Click(sender, e);         //values preserved after close
+               
+            }
         }
     }
 }

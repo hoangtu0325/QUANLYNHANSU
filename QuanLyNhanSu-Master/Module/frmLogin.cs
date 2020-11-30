@@ -1,5 +1,7 @@
 ﻿using MyINI;
 using QuanLyNhanSu_Master.DAO;
+using QuanLyNhanSu_Master.DTO;
+using QuanLyNhanSu_Master.Module;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,6 +27,7 @@ namespace QuanLyNhanSu_Master
         private string storeConfig = "config.ini";
         private string init = "init";
 
+        #region Methods
         private void LoadData()
         {
             bool flag = File.Exists(this.storeConfig);
@@ -37,7 +40,6 @@ namespace QuanLyNhanSu_Master
                 this.txtPassword.Text = AccountDAO.Instance.DeCrypt(pass, "%4oPNbxNwO3Z15CoNCbi").ToString(); 
             }
         }
-
 
         private void SaveData()
         {
@@ -109,13 +111,13 @@ namespace QuanLyNhanSu_Master
             return true;
         }
 
-      
-
         public bool Login(string userName, string passWord)
         {
             return AccountDAO.Instance.Login(userName, passWord);
         }
+        #endregion
 
+        #region Events
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -135,7 +137,8 @@ namespace QuanLyNhanSu_Master
                     {
                         SaveData();
                     }
-                    Form frmChinh = new frmChinh();
+                    Account loginAccount = AccountDAO.Instance.GetAccountByUserName(userName);
+                    frmChinh frmChinh = new frmChinh(loginAccount);
                     frmChinh.Show();
                     this.Hide();
                 }
@@ -160,5 +163,19 @@ namespace QuanLyNhanSu_Master
             }
            
         }
+
+        private void lblQuenMatKhau_Click(object sender, EventArgs e)
+        {
+            frmDoiMatKhau frmDoiMatKhau = new frmDoiMatKhau();
+            frmDoiMatKhau.StartPosition = FormStartPosition.CenterParent;
+            var result = frmDoiMatKhau.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                this.txtUsername.Text = frmDoiMatKhau.UserName;  //values preserved after close
+                this.txtPassword.Text = frmDoiMatKhau.PassWord;
+
+            }
+        }
+        #endregion
     }
 }

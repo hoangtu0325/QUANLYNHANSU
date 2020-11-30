@@ -45,6 +45,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             this.SuspendLayout();
             // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 20;
+            // 
             // PanelHeader
             // 
             this.PanelHeader.Size = new System.Drawing.Size(565, 67);
@@ -99,7 +103,7 @@
             this.btnRegister.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(65)))), ((int)(((byte)(155)))));
             this.btnRegister.ActiveForecolor = System.Drawing.Color.White;
             this.btnRegister.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(65)))), ((int)(((byte)(155)))));
-            this.btnRegister.BackColor = System.Drawing.SystemColors.Control;
+            this.btnRegister.BackColor = System.Drawing.Color.White;
             this.btnRegister.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRegister.BackgroundImage")));
             this.btnRegister.ButtonText = "Đăng Kí";
             this.btnRegister.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -110,7 +114,7 @@
             this.btnRegister.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(184)))));
             this.btnRegister.IdleForecolor = System.Drawing.Color.White;
             this.btnRegister.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(184)))));
-            this.btnRegister.Location = new System.Drawing.Point(303, 397);
+            this.btnRegister.Location = new System.Drawing.Point(351, 385);
             this.btnRegister.Margin = new System.Windows.Forms.Padding(5);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(162, 52);
@@ -218,6 +222,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(565, 463);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.bunifuCustomLabel4);

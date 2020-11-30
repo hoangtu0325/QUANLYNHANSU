@@ -1,16 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace QuanLyNhanSu_Master.DTO
 {
-    class Account
+    public class Account
     {
-        private int role;
+        private string role;
 
-        public int Role
+        public string Role
         {
             get { return role; }
             set { role = value; }
@@ -24,12 +25,12 @@ namespace QuanLyNhanSu_Master.DTO
             set { password = value; }
         }
 
-        private string displayName;
+        private string id;
 
-        public string DisplayName
+        public string ID
         {
-            get { return displayName; }
-            set { displayName = value; }
+            get { return id; }
+            set { id = value; }
         }
 
         private string userName;
@@ -48,10 +49,21 @@ namespace QuanLyNhanSu_Master.DTO
             set { email = value; }
         }
 
-        public Account(string userName, string displayName, int type, string password = null, string email)
+        public Account() { }
+
+        public Account(DataRow row)
+        {
+            this.UserName = row["UserName"].ToString();
+            this.ID = row["ID"].ToString();
+            this.Role = row["Role"].ToString();
+            this.Password = row["Password"].ToString();
+            this.Email = row["Email"].ToString();
+        }
+
+        public Account(string userName, string id, string type, string email, string password = null)
         {
             this.UserName = userName;
-            this.DisplayName = displayName;
+            this.ID = id;
             this.Role = type;
             this.Password = password;
             this.Email = email;

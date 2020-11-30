@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyNhanSu_Master.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,50 +17,46 @@ namespace QuanLyNhanSu_Master.Module
         {
             InitializeComponent();
         }
+        public string UserName;
+        public string PassWord;
 
-        private void frmDoiMatKhau_Load(object sender, EventArgs e)
+        private void btnDoiMatKhau_Click(object sender, EventArgs e)
         {
+            string userName = txtUserName.Text.Trim();
+            string passWord = txtPassword.Text.Trim();
+            string RePassword = txtRePassword.Text.Trim();
+            string CodeVerify = txtCodeXacThuc.Text.Trim();
 
-        }
+            if (userName == "" || passWord == "" || RePassword == "" || CodeVerify == "")
+            {
+                MessageBox.Show("Chưa nhập đủ thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                if (passWord != RePassword)
+                {
+                    MessageBox.Show("Mật khẩu mới phải trùng nhau", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else
+                {
+                    if (AccountDAO.Instance.IsVerify(userName, CodeVerify))
+                    {
+                        AccountDAO.Instance.AllowChagePassword(userName, passWord);
+                        this.UserName = userName;
+                        this.PassWord = passWord;
+                        MessageBox.Show("Đổi mật khẩu thành công");
+                        this.DialogResult = DialogResult.OK;
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Bạn nhập sai tài khoản");
+                    }
+                }
+            }
 
-        private void bunifuCustomLabel1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuCustomLabel2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuCustomLabel2_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuCustomLabel3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuCustomLabel1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuCustomLabel4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnLogin_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuMaterialTextbox1_OnValueChanged(object sender, EventArgs e)
-        {
-
+        
+           
         }
     }
 }

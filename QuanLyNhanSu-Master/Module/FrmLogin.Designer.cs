@@ -36,7 +36,7 @@
             this.btnMinimized = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnExit = new Bunifu.Framework.UI.BunifuImageButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblQuenMatKhau = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.CbSaveAccount = new Bunifu.Framework.UI.BunifuCheckbox();
             this.bunifuImageButton3 = new Bunifu.Framework.UI.BunifuImageButton();
@@ -115,7 +115,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.lblQuenMatKhau);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.CbSaveAccount);
             this.panel1.Controls.Add(this.bunifuImageButton3);
@@ -133,17 +133,18 @@
             this.panel1.Size = new System.Drawing.Size(535, 463);
             this.panel1.TabIndex = 11;
             // 
-            // label2
+            // lblQuenMatKhau
             // 
-            this.label2.AutoSize = true;
-            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.DimGray;
-            this.label2.Location = new System.Drawing.Point(330, 291);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(129, 23);
-            this.label2.TabIndex = 20;
-            this.label2.Text = "Quên mật khẩu";
+            this.lblQuenMatKhau.AutoSize = true;
+            this.lblQuenMatKhau.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblQuenMatKhau.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuenMatKhau.ForeColor = System.Drawing.Color.DimGray;
+            this.lblQuenMatKhau.Location = new System.Drawing.Point(330, 291);
+            this.lblQuenMatKhau.Name = "lblQuenMatKhau";
+            this.lblQuenMatKhau.Size = new System.Drawing.Size(129, 23);
+            this.lblQuenMatKhau.TabIndex = 20;
+            this.lblQuenMatKhau.Text = "Quên mật khẩu";
+            this.lblQuenMatKhau.Click += new System.EventHandler(this.lblQuenMatKhau_Click);
             // 
             // label1
             // 
@@ -357,6 +358,6 @@
         private Bunifu.Framework.UI.BunifuImageButton btnMinimized;
         private System.Windows.Forms.Label label1;
         private Bunifu.Framework.UI.BunifuCheckbox CbSaveAccount;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblQuenMatKhau;
     }
 }

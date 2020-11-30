@@ -60,15 +60,18 @@ namespace QuanLyNhanSu_Master
             this.btnDashboard = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblStatus = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
+            this.ToolstripCaiDat = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripReSetPass = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.ToolStripAddNew = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripAddNewNhanVien = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripAddNewPhongBan = new System.Windows.Forms.ToolStripMenuItem();
             this.btnExport = new Bunifu.Framework.UI.BunifuTileButton();
             this.bunifuTileButton1 = new Bunifu.Framework.UI.BunifuTileButton();
             this.btnImport = new Bunifu.Framework.UI.BunifuTileButton();
             this.imgBtnAddNew = new Bunifu.Framework.UI.BunifuImageButton();
             this.TimerNghiepVu = new System.Windows.Forms.Timer(this.components);
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.ToolStripAddNew = new System.Windows.Forms.ToolStripMenuItem();
-            this.ToolStripAddNewNhanVien = new System.Windows.Forms.ToolStripMenuItem();
-            this.ToolStripAddNewPhongBan = new System.Windows.Forms.ToolStripMenuItem();
             this.PanelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimized)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
@@ -83,8 +86,9 @@ namespace QuanLyNhanSu_Master
             ((System.ComponentModel.ISupportInitialize)(this.iconChamCong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconNhanVien)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgBtnAddNew)).BeginInit();
+            this.menuStrip2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgBtnAddNew)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -477,6 +481,7 @@ namespace QuanLyNhanSu_Master
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.lblStatus);
+            this.panel1.Controls.Add(this.menuStrip2);
             this.panel1.Controls.Add(this.menuStrip1);
             this.panel1.Controls.Add(this.btnExport);
             this.panel1.Controls.Add(this.bunifuTileButton1);
@@ -499,84 +504,45 @@ namespace QuanLyNhanSu_Master
             this.lblStatus.TabIndex = 2;
             this.lblStatus.Text = "DASHBOARD";
             // 
-            // btnExport
+            // menuStrip2
             // 
-            this.btnExport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExport.BackColor = System.Drawing.Color.Transparent;
-            this.btnExport.color = System.Drawing.Color.Transparent;
-            this.btnExport.colorActive = System.Drawing.Color.Transparent;
-            this.btnExport.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExport.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExport.ForeColor = System.Drawing.Color.Black;
-            this.btnExport.Image = ((System.Drawing.Image)(resources.GetObject("btnExport.Image")));
-            this.btnExport.ImagePosition = 5;
-            this.btnExport.ImageZoom = 50;
-            this.btnExport.LabelPosition = 21;
-            this.btnExport.LabelText = "Export";
-            this.btnExport.Location = new System.Drawing.Point(1162, 9);
-            this.btnExport.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(56, 54);
-            this.btnExport.TabIndex = 0;
+            this.menuStrip2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.menuStrip2.BackColor = System.Drawing.Color.Transparent;
+            this.menuStrip2.Dock = System.Windows.Forms.DockStyle.None;
+            this.menuStrip2.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolstripCaiDat});
+            this.menuStrip2.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
+            this.menuStrip2.Location = new System.Drawing.Point(1155, 41);
+            this.menuStrip2.Name = "menuStrip2";
+            this.menuStrip2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.menuStrip2.ShowItemToolTips = true;
+            this.menuStrip2.Size = new System.Drawing.Size(224, 28);
+            this.menuStrip2.TabIndex = 1;
+            this.menuStrip2.Text = "TẠO MỚI";
             // 
-            // bunifuTileButton1
+            // ToolstripCaiDat
             // 
-            this.bunifuTileButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuTileButton1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuTileButton1.color = System.Drawing.Color.Transparent;
-            this.bunifuTileButton1.colorActive = System.Drawing.Color.Transparent;
-            this.bunifuTileButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTileButton1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuTileButton1.ForeColor = System.Drawing.Color.Black;
-            this.bunifuTileButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuTileButton1.Image")));
-            this.bunifuTileButton1.ImagePosition = 0;
-            this.bunifuTileButton1.ImageZoom = 40;
-            this.bunifuTileButton1.LabelPosition = 21;
-            this.bunifuTileButton1.LabelText = "Cài đặt";
-            this.bunifuTileButton1.Location = new System.Drawing.Point(1306, 17);
-            this.bunifuTileButton1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.bunifuTileButton1.Name = "bunifuTileButton1";
-            this.bunifuTileButton1.Size = new System.Drawing.Size(61, 46);
-            this.bunifuTileButton1.TabIndex = 0;
+            this.ToolstripCaiDat.BackColor = System.Drawing.Color.Transparent;
+            this.ToolstripCaiDat.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripReSetPass});
+            this.ToolstripCaiDat.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ToolstripCaiDat.ForeColor = System.Drawing.Color.Black;
+            this.ToolstripCaiDat.Name = "ToolstripCaiDat";
+            this.ToolstripCaiDat.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.ToolstripCaiDat.Size = new System.Drawing.Size(68, 24);
+            this.ToolstripCaiDat.Text = "Cài đặt";
             // 
-            // btnImport
+            // ToolStripReSetPass
             // 
-            this.btnImport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnImport.BackColor = System.Drawing.Color.Transparent;
-            this.btnImport.color = System.Drawing.Color.Transparent;
-            this.btnImport.colorActive = System.Drawing.Color.Transparent;
-            this.btnImport.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnImport.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnImport.ForeColor = System.Drawing.Color.Black;
-            this.btnImport.Image = ((System.Drawing.Image)(resources.GetObject("btnImport.Image")));
-            this.btnImport.ImagePosition = 5;
-            this.btnImport.ImageZoom = 50;
-            this.btnImport.LabelPosition = 21;
-            this.btnImport.LabelText = "Import";
-            this.btnImport.Location = new System.Drawing.Point(1226, 9);
-            this.btnImport.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnImport.Name = "btnImport";
-            this.btnImport.Size = new System.Drawing.Size(56, 54);
-            this.btnImport.TabIndex = 0;
-            // 
-            // imgBtnAddNew
-            // 
-            this.imgBtnAddNew.BackColor = System.Drawing.Color.Transparent;
-            this.imgBtnAddNew.Image = ((System.Drawing.Image)(resources.GetObject("imgBtnAddNew.Image")));
-            this.imgBtnAddNew.ImageActive = null;
-            this.imgBtnAddNew.Location = new System.Drawing.Point(27, 15);
-            this.imgBtnAddNew.Name = "imgBtnAddNew";
-            this.imgBtnAddNew.Size = new System.Drawing.Size(40, 40);
-            this.imgBtnAddNew.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.imgBtnAddNew.TabIndex = 0;
-            this.imgBtnAddNew.TabStop = false;
-            this.imgBtnAddNew.Zoom = 5;
-            this.imgBtnAddNew.Click += new System.EventHandler(this.btnAddNew_Click);
-            // 
-            // TimerNghiepVu
-            // 
-            this.TimerNghiepVu.Interval = 1;
-            this.TimerNghiepVu.Tick += new System.EventHandler(this.TimerNghiepVu_Tick);
+            this.ToolStripReSetPass.BackColor = System.Drawing.Color.Transparent;
+            this.ToolStripReSetPass.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ToolStripReSetPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(34)))), ((int)(((byte)(110)))));
+            this.ToolStripReSetPass.Name = "ToolStripReSetPass";
+            this.ToolStripReSetPass.Size = new System.Drawing.Size(216, 28);
+            this.ToolStripReSetPass.Text = "Reset Pass User";
+            this.ToolStripReSetPass.Click += new System.EventHandler(this.ToolStripReSetPass_Click);
             // 
             // menuStrip1
             // 
@@ -625,6 +591,85 @@ namespace QuanLyNhanSu_Master
             this.ToolStripAddNewPhongBan.Size = new System.Drawing.Size(216, 28);
             this.ToolStripAddNewPhongBan.Text = "Phòng ban";
             // 
+            // btnExport
+            // 
+            this.btnExport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExport.BackColor = System.Drawing.Color.Transparent;
+            this.btnExport.color = System.Drawing.Color.Transparent;
+            this.btnExport.colorActive = System.Drawing.Color.Transparent;
+            this.btnExport.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExport.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExport.ForeColor = System.Drawing.Color.Black;
+            this.btnExport.Image = ((System.Drawing.Image)(resources.GetObject("btnExport.Image")));
+            this.btnExport.ImagePosition = 5;
+            this.btnExport.ImageZoom = 50;
+            this.btnExport.LabelPosition = 21;
+            this.btnExport.LabelText = "Export";
+            this.btnExport.Location = new System.Drawing.Point(1162, 9);
+            this.btnExport.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(56, 54);
+            this.btnExport.TabIndex = 0;
+            // 
+            // bunifuTileButton1
+            // 
+            this.bunifuTileButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuTileButton1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuTileButton1.color = System.Drawing.Color.Transparent;
+            this.bunifuTileButton1.colorActive = System.Drawing.Color.Transparent;
+            this.bunifuTileButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTileButton1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuTileButton1.ForeColor = System.Drawing.Color.Black;
+            this.bunifuTileButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuTileButton1.Image")));
+            this.bunifuTileButton1.ImagePosition = 0;
+            this.bunifuTileButton1.ImageZoom = 40;
+            this.bunifuTileButton1.LabelPosition = 21;
+            this.bunifuTileButton1.LabelText = "  ";
+            this.bunifuTileButton1.Location = new System.Drawing.Point(1311, 17);
+            this.bunifuTileButton1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.bunifuTileButton1.Name = "bunifuTileButton1";
+            this.bunifuTileButton1.Size = new System.Drawing.Size(61, 46);
+            this.bunifuTileButton1.TabIndex = 0;
+            // 
+            // btnImport
+            // 
+            this.btnImport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnImport.BackColor = System.Drawing.Color.Transparent;
+            this.btnImport.color = System.Drawing.Color.Transparent;
+            this.btnImport.colorActive = System.Drawing.Color.Transparent;
+            this.btnImport.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnImport.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImport.ForeColor = System.Drawing.Color.Black;
+            this.btnImport.Image = ((System.Drawing.Image)(resources.GetObject("btnImport.Image")));
+            this.btnImport.ImagePosition = 5;
+            this.btnImport.ImageZoom = 50;
+            this.btnImport.LabelPosition = 21;
+            this.btnImport.LabelText = "Import";
+            this.btnImport.Location = new System.Drawing.Point(1226, 9);
+            this.btnImport.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnImport.Name = "btnImport";
+            this.btnImport.Size = new System.Drawing.Size(56, 54);
+            this.btnImport.TabIndex = 0;
+            // 
+            // imgBtnAddNew
+            // 
+            this.imgBtnAddNew.BackColor = System.Drawing.Color.Transparent;
+            this.imgBtnAddNew.Image = ((System.Drawing.Image)(resources.GetObject("imgBtnAddNew.Image")));
+            this.imgBtnAddNew.ImageActive = null;
+            this.imgBtnAddNew.Location = new System.Drawing.Point(27, 15);
+            this.imgBtnAddNew.Name = "imgBtnAddNew";
+            this.imgBtnAddNew.Size = new System.Drawing.Size(40, 40);
+            this.imgBtnAddNew.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgBtnAddNew.TabIndex = 0;
+            this.imgBtnAddNew.TabStop = false;
+            this.imgBtnAddNew.Zoom = 5;
+            this.imgBtnAddNew.Click += new System.EventHandler(this.btnAddNew_Click);
+            // 
+            // TimerNghiepVu
+            // 
+            this.TimerNghiepVu.Interval = 1;
+            this.TimerNghiepVu.Tick += new System.EventHandler(this.TimerNghiepVu_Tick);
+            // 
             // frmChinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -658,9 +703,11 @@ namespace QuanLyNhanSu_Master
             ((System.ComponentModel.ISupportInitialize)(this.iconNhanVien)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgBtnAddNew)).EndInit();
+            this.menuStrip2.ResumeLayout(false);
+            this.menuStrip2.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgBtnAddNew)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -704,6 +751,9 @@ namespace QuanLyNhanSu_Master
         private System.Windows.Forms.ToolStripMenuItem ToolStripAddNew;
         private System.Windows.Forms.ToolStripMenuItem ToolStripAddNewNhanVien;
         private System.Windows.Forms.ToolStripMenuItem ToolStripAddNewPhongBan;
+        private System.Windows.Forms.MenuStrip menuStrip2;
+        private System.Windows.Forms.ToolStripMenuItem ToolstripCaiDat;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripReSetPass;
     }
 }
 
