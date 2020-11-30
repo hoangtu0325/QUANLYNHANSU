@@ -10,18 +10,20 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using QuanLyNhanSu_Master.DAO;
 
+
 namespace QuanLyNhanSu_Master.Module
 {
 
-    
+
     public partial class frmAddInfoNhanVien : Form
     {
+
         public frmAddInfoNhanVien()
         {
             InitializeComponent();
         }
 
-        public string AddNewImployee(string txtTenNhanVien, string txtNgaySinh, string txtGioiTinh, string txtDiaChi, string txtEmail, string txtSdt, string txtCmnd, string txtNgayCap, string txtTenTinhThanh, string txtDanToc, string txtPhongBan, string txtTenChucVu, float txtHeSoLuong, string txtTinhTrangLamViec, string txtSoBHXH, string txtSoBHYT, string txtTaiKhoanNH)
+        public bool AddNewImployee(string txtTenNhanVien, string txtNgaySinh, string txtGioiTinh, string txtDiaChi, string txtEmail, string txtSdt, string txtCmnd, string txtNgayCap, string txtTenTinhThanh, string txtDanToc, string txtPhongBan, string txtTenChucVu, float txtHeSoLuong, string txtTinhTrangLamViec, string txtSoBHXH, string txtSoBHYT, string txtTaiKhoanNH)
         {
             return AccountDAO.Instance.AddNewImployee(txtTenNhanVien, txtNgaySinh, txtGioiTinh, txtDiaChi, txtEmail, txtSdt, txtCmnd, txtNgayCap, txtTenTinhThanh, txtDanToc, txtPhongBan, txtTenChucVu, txtHeSoLuong, txtTinhTrangLamViec, txtSoBHXH, txtSoBHYT, txtTaiKhoanNH);
 
@@ -29,6 +31,7 @@ namespace QuanLyNhanSu_Master.Module
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+
             string TenNV = txtTenNhanVien.Text;
             string NgaySinh = txtNgaySinh.Text;
             string Cmnd = txtCmnd.Text;
@@ -47,23 +50,20 @@ namespace QuanLyNhanSu_Master.Module
             string DanToc = txtDanToc.Text;
             string PB = txtPhongBan.Text;
 
+            bool flag = AddNewImployee(TenNV, NgaySinh, GT, DiaChi, Email, Sdt, Cmnd, NgayCap, TenTT, DanToc, PB, TenCV, HSLuong, TTLV, BHXH, BHYT, TKNH);
+            if (flag)
+            {
+                MessageBox.Show("Thêm thông tin nhân viên thành công");
+                Form frmHoSoNhanVien = new frmHoSoNhanVien();
+                frmHoSoNhanVien.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Lỗi");
+            }
 
 
-            string aa = AddNewImployee(TenNV, NgaySinh, GT, DiaChi, Email, Sdt, Cmnd, NgayCap, TenTT, DanToc, PB, TenCV, HSLuong, TTLV, BHXH, BHYT, TKNH);
-            MessageBox.Show("" + aa);
-            if (aa == "")
-                {
-                    
-                    Form frmHoSoNhanVien = new frmHoSoNhanVien();
-                    frmHoSoNhanVien.Show();
-                    this.Hide();
-                }
-                else
-                {
-                    MessageBox.Show("Lỗi");
-                }
-
-            
         }
     }
 

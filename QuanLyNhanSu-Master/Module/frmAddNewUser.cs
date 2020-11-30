@@ -38,12 +38,12 @@ namespace QuanLyNhanSu_Master.Module
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            if (AccountDAO.)
-            {
-                this.DialogResult = DialogResult.OK;
-                this.Close();
+            //if (AccountDAO.)
+            //{
+            //    this.DialogResult = DialogResult.OK;
+            //    this.Close();
 
-            }
+            //}
         }
     }
 }
