@@ -211,7 +211,7 @@ namespace QuanLyNhanSu_Master.DAO
                 byte[] temp = ASCIIEncoding.ASCII.GetBytes(passWord);
                 byte[] hasData = new MD5CryptoServiceProvider().ComputeHash(temp);
                 string hasPass = EnCrypt(passWord, "%4oPNbxNwO3Z15CoNCbi");
-                string query = string.Format("INSERT dbo.NguoiDung ( UserName, PassWord, Email, ID, CodeXacThuc, Role) VALUES  ( '{0}', '{1}', N{2}, '{3}','{4}', 'User')", userName, hasPass, email, "select MAX(ID)+ 1 from NguoiDung ", code);
+                string query = string.Format("INSERT dbo.NguoiDung ( UserName, PassWord, Email, ID, CodeXacThuc, Role) VALUES  ( '{0}', '{1}', N'{2}', (select MAX(ID)+ 1 from NguoiDung),{3}, 'User')", userName, hasPass, email , code);
 
                 int result = DataProvider.Instance.ExecuteNonQuery(query);
                 return result > 0;
