@@ -8,6 +8,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace QuanLyNhanSu_Master.DAO
 {
     class AccountDAO
@@ -182,20 +183,22 @@ namespace QuanLyNhanSu_Master.DAO
             return "";
         }
 
-        public string AddNewImployee(string txtTenNhanVien, string txtNgaySinh, string txtGioiTinh,string txtDiaChi,string txtEmail, string txtSdt, string txtCmnd,string txtNgayCap, string txtTenTinhThanh, string txtDanToc,string txtPhongBan,string txtTenChucVu,float txtHeSoLuong,string txtTinhTrangLamViec,string txtSoBHXH,string txtSoBHYT,string txtTaiKhoanNH)
+        public bool AddNewImployee(string txtTenNhanVien, string txtNgaySinh, string txtGioiTinh,string txtDiaChi,string txtEmail, string txtSdt, string txtCmnd,string txtNgayCap, string txtTenTinhThanh, string txtDanToc,string txtPhongBan,string txtTenChucVu,float txtHeSoLuong,string txtTinhTrangLamViec,string txtSoBHXH,string txtSoBHYT,string txtTaiKhoanNH)
         {
+            string query = string.Empty;
             try
             {
-               
 
-                string query = " exec SP_AddNewImployee @TenNV , @NgaySinh , @GioiTinh , @DiaChi , @Email , @Sdt , @Cmnd , @NgayCap , @TenTinhThanh , @DanToc , @TenPhongBan , @TenChucVu , @HeSoLuong , @TinhTrangLamViec , @SoBHXH , @SoBHYT , @TaiKhoanNH";
-                DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { txtTenNhanVien, txtNgaySinh, txtGioiTinh, txtDiaChi, txtEmail, txtSdt, txtCmnd, txtNgayCap, txtTenTinhThanh, txtDanToc, txtPhongBan, txtTenChucVu, txtHeSoLuong, txtTinhTrangLamViec, txtSoBHXH, txtSoBHYT, txtTaiKhoanNH /*list*/});
-                return "True";
+                query = "INSERT INTO NhanVien(MaNV, TenNV, NgaySinh, GioiTinh, DiaChi, Email, Sdt, Cmnd, NgayCap, MaTinhThanh, DanToc, MaPhongBan, MaChucVu, HeSoLuong, TinhTrangLamViec, SoBHXH, SoBHYT, TaiKhoanNH) ";
+                query += " VALUES((select max(MaNV) + 1 from NhanVien),N'" +txtTenNhanVien+"', N'"+ txtNgaySinh + "' , N'"+ txtGioiTinh + "', N'"+ txtDiaChi + "', N'"+ txtEmail + "', N'"+ txtSdt + "', N'"+ txtCmnd + "', N'"+ txtNgayCap + "', (select MaTinhThanh from TinhThanh where TenTinhThanh like CONCAT(N'"+ txtTenTinhThanh + "', '%')) ,N'"+ txtDanToc + "', (select MaPhongBan from PhongBan where TenPhongBan like CONCAT( N'"+ txtPhongBan + "', '%')), (select MaChucVu from ChucVu where TenChucVu like CONCAT(N'"+ txtTenChucVu + "', '%')) , N'"+ txtHeSoLuong + "', N'"+ txtTinhTrangLamViec + "', N'"+ txtSoBHXH + "', N'"+ txtSoBHYT+"', N'"+txtTaiKhoanNH +"')";
+                //string query = " exec SP_AddNewImployee @TenNV , @NgaySinh , @GioiTinh , @DiaChi , @Email , @Sdt , @Cmnd , @NgayCap , @TenTinhThanh , @DanToc , @TenPhongBan , @TenChucVu , @HeSoLuong , @TinhTrangLamViec , @SoBHXH , @SoBHYT , @TaiKhoanNH";
+                int result = DataProvider.Instance.ExecuteNonQuery(query);
+                return result > 0;
+
             }
             catch (Exception ex)
             {
-               return "" + ex;
-               // return false;
+               return false;
             }
         }
 
