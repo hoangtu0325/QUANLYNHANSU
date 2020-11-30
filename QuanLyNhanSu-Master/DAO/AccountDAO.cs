@@ -202,26 +202,19 @@ namespace QuanLyNhanSu_Master.DAO
             }
         }
 
-        public bool IsAddNewUser(string userName, string passWord)
+        public bool IsAddNewUser(string userName, string passWord, string email)
         {
             try
             {
+                Random rnd = new Random();
+                int code = rnd.Next(1000, 9999);
                 byte[] temp = ASCIIEncoding.ASCII.GetBytes(passWord);
                 byte[] hasData = new MD5CryptoServiceProvider().ComputeHash(temp);
+                string hasPass = EnCrypt(passWord, "%4oPNbxNwO3Z15CoNCbi");
+                string query = string.Format("INSERT dbo.NguoiDung ( UserName, PassWord, Email, ID, CodeXacThuc, Role) VALUES  ( '{0}', '{1}', N{2}, '{3}','{4}', 'User')", userName, hasPass, email, "select MAX(ID)+ 1 from NguoiDung ", code);
 
-                string hasPass = "";
-
-                foreach (byte item in hasData)
-                {
-                    hasPass += item;
-                }
-                //var list = hasData.ToString();
-                //list.Reverse();
-
-                string query = "SP_Login @userName , @passWord";
-                hasPass = EnCrypt(passWord, "%4oPNbxNwO3Z15CoNCbi");
-                DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { userName, hasPass /*list*/});
-                return result.Rows.Count > 0;
+                int result = DataProvider.Instance.ExecuteNonQuery(query);
+                return result > 0;
             }
             catch (Exception)
             {
