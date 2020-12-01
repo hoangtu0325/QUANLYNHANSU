@@ -107,8 +107,6 @@ namespace QuanLyNhanSu_Master
             if (bt.Name == "btnNhanVien" || bt.Name == "btnImport")
             {
                 lblStatus.Text = "HỒ SƠ NHÂN VIÊN";
-                //FormChild<frmHoSoNhanVien>();
-                lblStatus.Text = "HỒ SƠ NHÂN VIÊN";
                 frmHoSoNhanVien frmHoSoNhanVien = new frmHoSoNhanVien();
                 frmHoSoNhanVien.Action = "Không tìm kiếm";
                 frmHoSoNhanVien.TopLevel = false;
@@ -358,7 +356,7 @@ namespace QuanLyNhanSu_Master
                 {
                     try
                     {
-                        HoSoNhanVienDAO.Instance.AddNewImployee(dataGrid.Rows[i][0].ToString(), dataGrid.Rows[i][1].ToString(), dataGrid.Rows[i][2].ToString(), dataGrid.Rows[i][3].ToString(), dataGrid.Rows[i][4].ToString(), dataGrid.Rows[i][5].ToString(), dataGrid.Rows[i][6].ToString(), dataGrid.Rows[i][7].ToString(), dataGrid.Rows[i][8].ToString(), dataGrid.Rows[i][9].ToString(), dataGrid.Rows[i][10].ToString(), dataGrid.Rows[i][11].ToString(),Convert.ToInt64(dataGrid.Rows[i][12]), dataGrid.Rows[i][13].ToString(), dataGrid.Rows[i][14].ToString(), dataGrid.Rows[i][15].ToString(), dataGrid.Rows[i][16].ToString());
+                        HoSoNhanVienDAO.Instance.AddNewImployee(dataGrid.Rows[i][0].ToString(), (DateTime)dataGrid.Rows[i][1], dataGrid.Rows[i][2].ToString(), dataGrid.Rows[i][3].ToString(), dataGrid.Rows[i][4].ToString(), dataGrid.Rows[i][5].ToString(), dataGrid.Rows[i][6].ToString(), (DateTime)dataGrid.Rows[i][7], dataGrid.Rows[i][8].ToString(), dataGrid.Rows[i][9].ToString(), dataGrid.Rows[i][10].ToString(), dataGrid.Rows[i][11].ToString(),dataGrid.Rows[i][12].ToString(), dataGrid.Rows[i][13].ToString(), dataGrid.Rows[i][14].ToString(), dataGrid.Rows[i][15].ToString(), dataGrid.Rows[i][16].ToString());
                     }
                     catch (Exception ex)
                     {

@@ -9,45 +9,20 @@ namespace QuanLyNhanSu_Master.DTO
 {
     public class Account
     {
+       
         private string role;
-
-        public string Role
-        {
-            get { return role; }
-            set { role = value; }
-        }
-
         private string password;
-
-        public string Password
-        {
-            get { return password; }
-            set { password = value; }
-        }
-
-        private string id;
-
-        public string ID
-        {
-            get { return id; }
-            set { id = value; }
-        }
-
+        private string hoTen;
+        private string iD;
         private string userName;
-
-        public string UserName
-        {
-            get { return userName; }
-            set { userName = value; }
-        }
-
         private string email;
-
-        public string Email
-        {
-            get { return email; }
-            set { email = value; }
-        }
+        
+        public string HoTen { get => hoTen; set => hoTen = value; }
+        public string ID { get => iD; set => iD = value; }
+        public string UserName { get => userName; set => userName = value; }
+        public string Password { get => password; set => password = value; }
+        public string Email { get => email; set => email = value; }
+        public string Role { get => role; set => role = value; }
 
         public Account() { }
 

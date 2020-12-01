@@ -134,7 +134,6 @@ namespace QuanLyNhanSu_Master
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(348, 37);
             this.comboBox1.TabIndex = 25;
-            this.comboBox1.Text = "sfsdfsf";
             this.comboBox1.TextChanged += new System.EventHandler(this.comboBox1_TextChanged);
             this.comboBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox1_KeyDown);
             // 

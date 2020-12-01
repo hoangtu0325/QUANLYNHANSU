@@ -23,20 +23,21 @@ namespace QuanLyNhanSu_Master.Module
 
 
         public static string Action = "";
-        private static string tenNhanVien;
         public static string TenNhanVien = "";
-        public static int MaNhanVien ;
+        public static int MaNhanVien;
         public DataGridView SetFieldType(DataGridView buniDataGridHoSoNhanVien)
         {
             buniDataGridHoSoNhanVien.Columns["Họ tên"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            buniDataGridHoSoNhanVien.Columns["Tên phòng ban"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             // buniDataGridHoSoNhanVien.Columns["Hình ảnh"].Visible = false;
-           
+
             foreach (DataGridViewRow item in buniDataGridHoSoNhanVien.Rows)
             {
                 if (item.Index == 1)
                 {
                     item.DefaultCellStyle.BackColor = Color.FromArgb(31, 65, 155);
                 }
+              //  item.Cells["Giới tính"].Value = (bool)item.Cells["Giới tính"].Value ? "Nam" : "Nữ";
             }
             return buniDataGridHoSoNhanVien;
         }
@@ -46,10 +47,10 @@ namespace QuanLyNhanSu_Master.Module
             return HoSoNhanVienDAO.Instance.GetNhanVien();
         }
 
-        public DataTable GetNhanVien(string TenNhanVien)
+        public DataTable GetNhanVien(int MaNhanVien)
         {
 
-          return  HoSoNhanVienDAO.Instance.GetNhanVien(TenNhanVien);
+          return  HoSoNhanVienDAO.Instance.GetNhanVien(MaNhanVien);
         }
 
         private void frmHoSoNhanVien_Load(object sender, EventArgs e)
@@ -57,7 +58,7 @@ namespace QuanLyNhanSu_Master.Module
             if (Action == "Tìm kiếm")
             {
                 //buniDataGridHoSoNhanVien.DataSource = GetNhanVien(TenNhanVien);
-                buniDataGridHoSoNhanVien.DataSource = GetNhanVien(TenNhanVien);
+                buniDataGridHoSoNhanVien.DataSource = GetNhanVien(MaNhanVien);
             }
             if (Action == "Không tìm kiếm")
             {
