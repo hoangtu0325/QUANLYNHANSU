@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -62,13 +63,19 @@ namespace QuanLyNhanSu_Master.DAO
             return data;
         }
 
-        public bool AddNewImployee(string txtTenNhanVien, string txtNgaySinh, string txtGioiTinh, string txtDiaChi, string txtEmail, string txtSdt, string txtCmnd, string txtNgayCap, string txtTenTinhThanh, string txtDanToc, string txtPhongBan, string txtTenChucVu, float txtHeSoLuong, string txtTinhTrangLamViec, string txtSoBHXH, string txtSoBHYT, string txtTaiKhoanNH)
+        public bool AddNewImployee(string txtTenNhanVien, DateTime txtNgaySinh, string txtGioiTinh, string txtDiaChi, string txtEmail, string txtSdt, string txtCmnd, DateTime txtNgayCap, string txtTenTinhThanh, string txtDanToc, string txtPhongBan, string txtTenChucVu, string txtHeSoLuong, string txtTinhTrangLamViec, string txtSoBHXH, string txtSoBHYT, string txtTaiKhoanNH)
         {
             string query = string.Empty;
+            DateTime n = txtNgaySinh;
+            DateTime m = txtNgayCap;
+            string NgayCap = m.ToString("yyyy-MM-dd");
+            string NgaySinh = n.ToString("yyyy-MM-dd");
+
+
             try
             {
                 query = "INSERT INTO NhanVien(MaNV, TenNV, NgaySinh, GioiTinh, DiaChi, Email, Sdt, Cmnd, NgayCap, MaTinhThanh, DanToc, MaPhongBan, MaChucVu, HeSoLuong, TinhTrangLamViec, SoBHXH, SoBHYT, TaiKhoanNH) ";
-                query += " VALUES((select max(MaNV) + 1 from NhanVien),N'" + txtTenNhanVien + "',"+ txtNgaySinh  +", N'" + txtGioiTinh + "', N'" + txtDiaChi + "', N'" + txtEmail + "', N'" + txtSdt + "', N'" + txtCmnd + "', " + txtNgayCap + "', (select MaTinhThanh from TinhThanh where TenTinhThanh like CONCAT(N'" + txtTenTinhThanh + "', '%')) ,N'" + txtDanToc + "', (select MaPhongBan from PhongBan where TenPhongBan like CONCAT( N'" + txtPhongBan + "', '%')), (select MaChucVu from ChucVu where TenChucVu like CONCAT(N'" + txtTenChucVu + "', '%')) , N'" + txtHeSoLuong + "', N'" + txtTinhTrangLamViec + "', N'" + txtSoBHXH + "', N'" + txtSoBHYT + "', N'" + txtTaiKhoanNH + "')";
+                query += " VALUES((select max(MaNV) + 1 from NhanVien),N'" + txtTenNhanVien + "','"+ NgaySinh+ "',  (CASE '" + txtGioiTinh+"' WHEN N'Nam' THEN 1 ELSE 0 END), N'" + txtDiaChi + "', N'" + txtEmail + "', N'" + txtSdt + "', N'" + txtCmnd + "','" + NgayCap + "', (select MaTinhThanh from TinhThanh where TenTinhThanh like CONCAT(N'" + txtTenTinhThanh + "', '%')) ,N'" + txtDanToc + "', (select MaPhongBan from PhongBan where TenPhongBan like CONCAT( N'" + txtPhongBan + "', '%')), (select MaChucVu from ChucVu where TenChucVu like CONCAT(N'" + txtTenChucVu + "', '%')) , N'" + txtHeSoLuong + "', N'" + txtTinhTrangLamViec + "', N'" + txtSoBHXH + "', N'" + txtSoBHYT + "', N'" + txtTaiKhoanNH + "')";
                 int result = DataProvider.Instance.ExecuteNonQuery(query);
                 return result > 0;
             }
