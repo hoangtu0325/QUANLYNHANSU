@@ -25,9 +25,10 @@ namespace QuanLyNhanSu_Master.Module
         public static string Action = "";
         private static string tenNhanVien;
         public static string TenNhanVien = "";
+        public static int MaNhanVien ;
         public DataGridView SetFieldType(DataGridView buniDataGridHoSoNhanVien)
         {
-            //buniDataGridHoSoNhanVien.Columns["Tên NV"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            buniDataGridHoSoNhanVien.Columns["Họ tên"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             // buniDataGridHoSoNhanVien.Columns["Hình ảnh"].Visible = false;
            
             foreach (DataGridViewRow item in buniDataGridHoSoNhanVien.Rows)
@@ -36,9 +37,7 @@ namespace QuanLyNhanSu_Master.Module
                 {
                     item.DefaultCellStyle.BackColor = Color.FromArgb(31, 65, 155);
                 }
-                
             }
-            
             return buniDataGridHoSoNhanVien;
         }
 
@@ -57,12 +56,14 @@ namespace QuanLyNhanSu_Master.Module
         {
             if (Action == "Tìm kiếm")
             {
+                //buniDataGridHoSoNhanVien.DataSource = GetNhanVien(TenNhanVien);
                 buniDataGridHoSoNhanVien.DataSource = GetNhanVien(TenNhanVien);
             }
             if (Action == "Không tìm kiếm")
             {
                 buniDataGridHoSoNhanVien.DataSource = GetNhanVien();
             }
+            SetFieldType(buniDataGridHoSoNhanVien);
         }
     }
 }

@@ -37,6 +37,12 @@
     <Reference Include="Bunifu_UI_v1.52">
       <HintPath>..\packages\Bunifu_UI_v1.52.dll</HintPath>
     </Reference>
+    <Reference Include="ExcelDataReader, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.3.6.0\lib\net45\ExcelDataReader.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader.DataSet, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.DataSet.3.6.0\lib\net35\ExcelDataReader.DataSet.dll</HintPath>
+    </Reference>
     <Reference Include="FontAwesome.Sharp, Version=5.15.3.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.5.15.3\lib\net45\FontAwesome.Sharp.dll</HintPath>
     </Reference>
@@ -48,6 +54,7 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
+    <Reference Include="System.IO.Compression" />
     <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -71,6 +78,12 @@
     <Compile Include="Module\frmAddInfoNhanVien.Designer.cs">
       <DependentUpon>frmAddInfoNhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="Module\frmAddNewUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module\frmAddNewUser.Designer.cs">
+      <DependentUpon>frmAddNewUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Module\frmDoiMatKhau.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +101,12 @@
     </Compile>
     <Compile Include="Module\frmChinh.Designer.cs">
       <DependentUpon>frmChinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Module\frmImportExcelNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module\frmImportExcelNhanVien.Designer.cs">
+      <DependentUpon>frmImportExcelNhanVien.cs</DependentUpon>
     </Compile>
     <Compile Include="Module\frmLayout.cs">
       <SubType>Form</SubType>
@@ -107,16 +126,25 @@
     <Compile Include="Module\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Module\frmAddNewUser.cs">
+    <Compile Include="Module\frmAddNewUser1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Module\frmAddNewUser.Designer.cs">
-      <DependentUpon>frmAddNewUser.cs</DependentUpon>
+    <Compile Include="Module\frmAddNewUser1.Designer.cs">
+      <DependentUpon>frmAddNewUser1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Module\frmResetPass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module\frmResetPass.Designer.cs">
+      <DependentUpon>frmResetPass.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Module\frmAddInfoNhanVien.resx">
       <DependentUpon>frmAddInfoNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\frmAddNewUser.resx">
+      <DependentUpon>frmAddNewUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Module\frmDoiMatKhau.resx">
       <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
@@ -127,6 +155,9 @@
     <EmbeddedResource Include="Module\frmChinh.resx">
       <DependentUpon>frmChinh.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Module\frmImportExcelNhanVien.resx">
+      <DependentUpon>frmImportExcelNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Module\frmLayout.resx">
       <DependentUpon>frmLayout.cs</DependentUpon>
     </EmbeddedResource>
@@ -136,8 +167,11 @@
     <EmbeddedResource Include="Module\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Module\frmAddNewUser.resx">
-      <DependentUpon>frmAddNewUser.cs</DependentUpon>
+    <EmbeddedResource Include="Module\frmAddNewUser1.resx">
+      <DependentUpon>frmAddNewUser1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\frmResetPass.resx">
+      <DependentUpon>frmResetPass.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

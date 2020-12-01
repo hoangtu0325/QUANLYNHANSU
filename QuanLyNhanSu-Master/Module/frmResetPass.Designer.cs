@@ -45,12 +45,15 @@
             // 
             // btnMinimized
             // 
-            this.btnMinimized.Location = new System.Drawing.Point(-150, 0);
+            this.btnMinimized.Location = new System.Drawing.Point(-437, 0);
             this.btnMinimized.Visible = false;
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(-111, 0);
+            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnExit.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnExit.Location = new System.Drawing.Point(463, 0);
+            this.btnExit.Size = new System.Drawing.Size(50, 67);
             // 
             // txtUserName
             // 

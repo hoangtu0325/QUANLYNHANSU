@@ -34,6 +34,7 @@ namespace QuanLyNhanSu_Master
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmChinh));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.PanelTop = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.LogoACB = new Bunifu.Framework.UI.BunifuTileButton();
             this.btnMinimized = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
@@ -67,12 +68,12 @@ namespace QuanLyNhanSu_Master
             this.ToolStripAddNew = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripAddNewNhanVien = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripAddNewPhongBan = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripAddTKAdmin = new System.Windows.Forms.ToolStripMenuItem();
             this.btnExport = new Bunifu.Framework.UI.BunifuTileButton();
             this.bunifuTileButton1 = new Bunifu.Framework.UI.BunifuTileButton();
             this.btnImport = new Bunifu.Framework.UI.BunifuTileButton();
             this.imgBtnAddNew = new Bunifu.Framework.UI.BunifuImageButton();
             this.TimerNghiepVu = new System.Windows.Forms.Timer(this.components);
-            this.ToolStripAddTKAdmin = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.PanelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimized)).BeginInit();
@@ -101,6 +102,7 @@ namespace QuanLyNhanSu_Master
             // PanelTop
             // 
             this.PanelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(71)))), ((int)(((byte)(173)))));
+            this.PanelTop.Controls.Add(this.comboBox1);
             this.PanelTop.Controls.Add(this.LogoACB);
             this.PanelTop.Controls.Add(this.btnMinimized);
             this.PanelTop.Controls.Add(this.bunifuImageButton1);
@@ -114,6 +116,27 @@ namespace QuanLyNhanSu_Master
             this.PanelTop.Name = "PanelTop";
             this.PanelTop.Size = new System.Drawing.Size(1379, 53);
             this.PanelTop.TabIndex = 0;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboBox1.DropDownWidth = 370;
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.ItemHeight = 31;
+            this.comboBox1.Items.AddRange(new object[] {
+            "sdfsdfsd",
+            "dfsdfsdf"});
+            this.comboBox1.Location = new System.Drawing.Point(593, 8);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(348, 37);
+            this.comboBox1.TabIndex = 25;
+            this.comboBox1.Text = "sfsdfsf";
+            this.comboBox1.TextChanged += new System.EventHandler(this.comboBox1_TextChanged);
+            this.comboBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox1_KeyDown);
             // 
             // LogoACB
             // 
@@ -581,7 +604,7 @@ namespace QuanLyNhanSu_Master
             this.ToolStripAddNewNhanVien.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ToolStripAddNewNhanVien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(34)))), ((int)(((byte)(110)))));
             this.ToolStripAddNewNhanVien.Name = "ToolStripAddNewNhanVien";
-            this.ToolStripAddNewNhanVien.Size = new System.Drawing.Size(216, 28);
+            this.ToolStripAddNewNhanVien.Size = new System.Drawing.Size(215, 28);
             this.ToolStripAddNewNhanVien.Text = "Nhân viên";
             this.ToolStripAddNewNhanVien.Click += new System.EventHandler(this.ToolStripAddNewNhanVien_Click);
             // 
@@ -591,8 +614,17 @@ namespace QuanLyNhanSu_Master
             this.ToolStripAddNewPhongBan.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ToolStripAddNewPhongBan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(34)))), ((int)(((byte)(110)))));
             this.ToolStripAddNewPhongBan.Name = "ToolStripAddNewPhongBan";
-            this.ToolStripAddNewPhongBan.Size = new System.Drawing.Size(216, 28);
+            this.ToolStripAddNewPhongBan.Size = new System.Drawing.Size(215, 28);
             this.ToolStripAddNewPhongBan.Text = "Phòng ban";
+            // 
+            // ToolStripAddTKAdmin
+            // 
+            this.ToolStripAddTKAdmin.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.ToolStripAddTKAdmin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(34)))), ((int)(((byte)(110)))));
+            this.ToolStripAddTKAdmin.Name = "ToolStripAddTKAdmin";
+            this.ToolStripAddTKAdmin.Size = new System.Drawing.Size(215, 28);
+            this.ToolStripAddTKAdmin.Text = "Tài khoản Admin";
+            this.ToolStripAddTKAdmin.Click += new System.EventHandler(this.ToolStripAddTKAdmin_Click);
             // 
             // btnExport
             // 
@@ -653,6 +685,7 @@ namespace QuanLyNhanSu_Master
             this.btnImport.Name = "btnImport";
             this.btnImport.Size = new System.Drawing.Size(56, 54);
             this.btnImport.TabIndex = 0;
+            this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
             // 
             // imgBtnAddNew
             // 
@@ -673,19 +706,9 @@ namespace QuanLyNhanSu_Master
             this.TimerNghiepVu.Interval = 1;
             this.TimerNghiepVu.Tick += new System.EventHandler(this.TimerNghiepVu_Tick);
             // 
-            // ToolStripAddTKAdmin
-            // 
-            this.ToolStripAddTKAdmin.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.ToolStripAddTKAdmin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(34)))), ((int)(((byte)(110)))));
-            this.ToolStripAddTKAdmin.Name = "ToolStripAddTKAdmin";
-            this.ToolStripAddTKAdmin.Size = new System.Drawing.Size(216, 28);
-            this.ToolStripAddTKAdmin.Text = "Tài khoản Admin";
-            this.ToolStripAddTKAdmin.Click += new System.EventHandler(this.ToolStripAddTKAdmin_Click);
-            // 
             // toolTip1
             // 
             this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            this.toolTip1.ToolTipTitle = "Nhập hàng loạt dữ liệu từ file Excel";
             // 
             // frmChinh
             // 
@@ -735,7 +758,6 @@ namespace QuanLyNhanSu_Master
         private System.Windows.Forms.Panel PanelNghiepVu;
         private System.Windows.Forms.Panel PanelTop;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtSearch;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private FontAwesome.Sharp.IconPictureBox iconSearch;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
@@ -773,6 +795,8 @@ namespace QuanLyNhanSu_Master
         private System.Windows.Forms.ToolStripMenuItem ToolStripReSetPass;
         private System.Windows.Forms.ToolStripMenuItem ToolStripAddTKAdmin;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private BunifuMaterialTextbox txtSearch;
     }
 }
 
