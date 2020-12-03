@@ -68,6 +68,7 @@ namespace QuanLyNhanSu_Master
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.ToolstripCaiDat = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripReSetPass = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripReLogin = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.ToolStripAddNew = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripAddNewNhanVien = new System.Windows.Forms.ToolStripMenuItem();
@@ -81,7 +82,6 @@ namespace QuanLyNhanSu_Master
             this.TimerNghiepVu = new System.Windows.Forms.Timer(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.toolStripReLogin = new System.Windows.Forms.ToolStripMenuItem();
             this.PanelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -143,7 +143,7 @@ namespace QuanLyNhanSu_Master
             // 
             this.panel2.Controls.Add(this.iconSearch);
             this.panel2.Controls.Add(this.cbSearch);
-            this.panel2.Location = new System.Drawing.Point(236, 10);
+            this.panel2.Location = new System.Drawing.Point(225, 10);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(382, 37);
             this.panel2.TabIndex = 26;
@@ -584,7 +584,7 @@ namespace QuanLyNhanSu_Master
             this.lblStatus.AutoSize = true;
             this.lblStatus.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(71)))), ((int)(((byte)(173)))));
-            this.lblStatus.Location = new System.Drawing.Point(231, 22);
+            this.lblStatus.Location = new System.Drawing.Point(220, 22);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(129, 28);
             this.lblStatus.TabIndex = 2;
@@ -627,9 +627,18 @@ namespace QuanLyNhanSu_Master
             this.ToolStripReSetPass.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ToolStripReSetPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(34)))), ((int)(((byte)(110)))));
             this.ToolStripReSetPass.Name = "ToolStripReSetPass";
-            this.ToolStripReSetPass.Size = new System.Drawing.Size(216, 28);
+            this.ToolStripReSetPass.Size = new System.Drawing.Size(202, 28);
             this.ToolStripReSetPass.Text = "Reset Pass User";
             this.ToolStripReSetPass.Click += new System.EventHandler(this.ToolStripReSetPass_Click);
+            // 
+            // toolStripReLogin
+            // 
+            this.toolStripReLogin.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.toolStripReLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(34)))), ((int)(((byte)(110)))));
+            this.toolStripReLogin.Name = "toolStripReLogin";
+            this.toolStripReLogin.Size = new System.Drawing.Size(202, 28);
+            this.toolStripReLogin.Text = "Đăng nhập lại";
+            this.toolStripReLogin.Click += new System.EventHandler(this.toolStripReLogin_Click);
             // 
             // menuStrip1
             // 
@@ -803,15 +812,6 @@ namespace QuanLyNhanSu_Master
             // timer1
             // 
             this.timer1.Interval = 1;
-            // 
-            // toolStripReLogin
-            // 
-            this.toolStripReLogin.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.toolStripReLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(34)))), ((int)(((byte)(110)))));
-            this.toolStripReLogin.Name = "toolStripReLogin";
-            this.toolStripReLogin.Size = new System.Drawing.Size(216, 28);
-            this.toolStripReLogin.Text = "Đăng nhập lại";
-            this.toolStripReLogin.Click += new System.EventHandler(this.toolStripReLogin_Click);
             // 
             // frmChinh
             // 

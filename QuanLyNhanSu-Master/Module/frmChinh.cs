@@ -480,9 +480,14 @@ namespace QuanLyNhanSu_Master
 
         private void toolStripReLogin_Click(object sender, EventArgs e)
         {
-            this.Close();
-            frmLogin frmLogin = new frmLogin();
-            frmLogin.Show();
+            DialogResult result =  MessageBox.Show("Bạn có chắc muốn đăng nhập lại không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if(result == DialogResult.OK)
+            {
+                this.Close();
+                frmLogin frmLogin = new frmLogin();
+                frmLogin.Show();
+            }
+            
         }
     }
 }

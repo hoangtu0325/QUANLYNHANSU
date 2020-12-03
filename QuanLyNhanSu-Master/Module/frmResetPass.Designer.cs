@@ -56,10 +56,10 @@
             this.txtUserName.LineIdleColor = System.Drawing.Color.Gray;
             this.txtUserName.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.txtUserName.LineThickness = 3;
-            this.txtUserName.Location = new System.Drawing.Point(209, 236);
+            this.txtUserName.Location = new System.Drawing.Point(184, 236);
             this.txtUserName.Margin = new System.Windows.Forms.Padding(4);
             this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(276, 44);
+            this.txtUserName.Size = new System.Drawing.Size(301, 44);
             this.txtUserName.TabIndex = 61;
             this.txtUserName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -81,7 +81,7 @@
             this.btnResetPass.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(184)))));
             this.btnResetPass.IdleForecolor = System.Drawing.Color.White;
             this.btnResetPass.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(184)))));
-            this.btnResetPass.Location = new System.Drawing.Point(269, 299);
+            this.btnResetPass.Location = new System.Drawing.Point(251, 289);
             this.btnResetPass.Margin = new System.Windows.Forms.Padding(5);
             this.btnResetPass.Name = "btnResetPass";
             this.btnResetPass.Size = new System.Drawing.Size(162, 52);
@@ -182,6 +182,7 @@
             this.Controls.Add(this.btnResetPass);
             this.Controls.Add(this.bunifuCustomLabel5);
             this.Controls.Add(this.bunifuCustomLabel1);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmResetPass";
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimized)).EndInit();
