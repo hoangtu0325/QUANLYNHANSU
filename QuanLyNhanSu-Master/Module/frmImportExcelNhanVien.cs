@@ -42,12 +42,23 @@ namespace QuanLyNhanSu_Master.Module
                             tableName = TableCollection[0].TableName;
                         }
                     }
+                    dataTable = TableCollection[tableName.ToString()];
+                    dtGridViewChinh.DataSource = dataTable;
+                }
+                else
+                {
+                    MessageBox.Show("Vui lòng chọn file để Import");
                 }
             }
-            dataTable = TableCollection[tableName.ToString()];
-
-
-            dtGridViewChinh.DataSource = dataTable;
+           
+            //foreach (DataRow item in dataTable.Rows)
+            //{
+            //    if (Convert.ToBoolean(item["Ngày sinh"]) == true)
+            //    {
+            //        item["Ngày sinh"] = "Nam";
+            //    } 
+            //}
+           
 
         }
     }

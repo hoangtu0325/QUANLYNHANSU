@@ -34,14 +34,14 @@ namespace QuanLyNhanSu_Master
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmChinh));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.PanelTop = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.iconSearch = new FontAwesome.Sharp.IconPictureBox();
+            this.cbSearch = new System.Windows.Forms.ComboBox();
+            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.LogoACB = new Bunifu.Framework.UI.BunifuTileButton();
             this.btnMinimized = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnExit = new Bunifu.Framework.UI.BunifuImageButton();
-            this.iconSearch = new FontAwesome.Sharp.IconPictureBox();
-            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            this.txtSearch = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.PanelNghiepVu = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -60,6 +60,10 @@ namespace QuanLyNhanSu_Master
             this.btnNhanVien = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.lblStatus = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.ToolstripCaiDat = new System.Windows.Forms.ToolStripMenuItem();
@@ -69,18 +73,22 @@ namespace QuanLyNhanSu_Master
             this.ToolStripAddNewNhanVien = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripAddNewPhongBan = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripAddTKAdmin = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnRefresh = new Bunifu.Framework.UI.BunifuTileButton();
             this.btnExport = new Bunifu.Framework.UI.BunifuTileButton();
-            this.bunifuTileButton1 = new Bunifu.Framework.UI.BunifuTileButton();
+            this.bunifuBtnSetting = new Bunifu.Framework.UI.BunifuTileButton();
             this.btnImport = new Bunifu.Framework.UI.BunifuTileButton();
             this.imgBtnAddNew = new Bunifu.Framework.UI.BunifuImageButton();
             this.TimerNghiepVu = new System.Windows.Forms.Timer(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.toolStripReLogin = new System.Windows.Forms.ToolStripMenuItem();
             this.PanelTop.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMinimized)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconSearch)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimized)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             this.PanelNghiepVu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconDashboard)).BeginInit();
             this.PanelCenter.SuspendLayout();
@@ -102,40 +110,97 @@ namespace QuanLyNhanSu_Master
             // PanelTop
             // 
             this.PanelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(71)))), ((int)(((byte)(173)))));
-            this.PanelTop.Controls.Add(this.comboBox1);
+            this.PanelTop.Controls.Add(this.iconPictureBox1);
+            this.PanelTop.Controls.Add(this.panel2);
+            this.PanelTop.Controls.Add(this.bunifuImageButton1);
             this.PanelTop.Controls.Add(this.LogoACB);
             this.PanelTop.Controls.Add(this.btnMinimized);
-            this.PanelTop.Controls.Add(this.bunifuImageButton1);
             this.PanelTop.Controls.Add(this.btnExit);
-            this.PanelTop.Controls.Add(this.iconSearch);
-            this.PanelTop.Controls.Add(this.iconPictureBox1);
-            this.PanelTop.Controls.Add(this.txtSearch);
             this.PanelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelTop.Location = new System.Drawing.Point(0, 0);
             this.PanelTop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PanelTop.Name = "PanelTop";
             this.PanelTop.Size = new System.Drawing.Size(1379, 53);
             this.PanelTop.TabIndex = 0;
+            this.PanelTop.DoubleClick += new System.EventHandler(this.PanelTop_DoubleClick);
             // 
-            // comboBox1
+            // iconPictureBox1
             // 
-            this.comboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboBox1.DropDownWidth = 370;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.ItemHeight = 31;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.iconPictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconPictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Bell;
+            this.iconPictureBox1.IconColor = System.Drawing.Color.White;
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox1.IconSize = 39;
+            this.iconPictureBox1.Location = new System.Drawing.Point(1190, 10);
+            this.iconPictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(43, 39);
+            this.iconPictureBox1.TabIndex = 2;
+            this.iconPictureBox1.TabStop = false;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.iconSearch);
+            this.panel2.Controls.Add(this.cbSearch);
+            this.panel2.Location = new System.Drawing.Point(236, 10);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(382, 37);
+            this.panel2.TabIndex = 26;
+            // 
+            // iconSearch
+            // 
+            this.iconSearch.BackColor = System.Drawing.Color.White;
+            this.iconSearch.Dock = System.Windows.Forms.DockStyle.Right;
+            this.iconSearch.ForeColor = System.Drawing.Color.Black;
+            this.iconSearch.IconChar = FontAwesome.Sharp.IconChar.Sistrix;
+            this.iconSearch.IconColor = System.Drawing.Color.Black;
+            this.iconSearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconSearch.IconSize = 33;
+            this.iconSearch.Location = new System.Drawing.Point(1, 0);
+            this.iconSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.iconSearch.Name = "iconSearch";
+            this.iconSearch.Padding = new System.Windows.Forms.Padding(3, 4, 3, 2);
+            this.iconSearch.Size = new System.Drawing.Size(33, 37);
+            this.iconSearch.TabIndex = 2;
+            this.iconSearch.TabStop = false;
+            // 
+            // cbSearch
+            // 
+            this.cbSearch.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbSearch.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbSearch.Dock = System.Windows.Forms.DockStyle.Right;
+            this.cbSearch.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbSearch.DropDownWidth = 370;
+            this.cbSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbSearch.FormattingEnabled = true;
+            this.cbSearch.ItemHeight = 31;
+            this.cbSearch.Items.AddRange(new object[] {
             "sdfsdfsd",
             "dfsdfsdf"});
-            this.comboBox1.Location = new System.Drawing.Point(593, 8);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(348, 37);
-            this.comboBox1.TabIndex = 25;
-            this.comboBox1.TextChanged += new System.EventHandler(this.comboBox1_TextChanged);
-            this.comboBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox1_KeyDown);
+            this.cbSearch.Location = new System.Drawing.Point(34, 0);
+            this.cbSearch.Name = "cbSearch";
+            this.cbSearch.Size = new System.Drawing.Size(348, 37);
+            this.cbSearch.TabIndex = 25;
+            this.cbSearch.Click += new System.EventHandler(this.cbSearch_Click);
+            this.cbSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cbSearch_KeyDown);
+            this.cbSearch.Leave += new System.EventHandler(this.cbSearch_Leave);
+            // 
+            // bunifuImageButton1
+            // 
+            this.bunifuImageButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
+            this.bunifuImageButton1.ImageActive = null;
+            this.bunifuImageButton1.Location = new System.Drawing.Point(1234, 10);
+            this.bunifuImageButton1.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuImageButton1.Name = "bunifuImageButton1";
+            this.bunifuImageButton1.Size = new System.Drawing.Size(40, 37);
+            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.bunifuImageButton1.TabIndex = 24;
+            this.bunifuImageButton1.TabStop = false;
+            this.bunifuImageButton1.Zoom = 10;
             // 
             // LogoACB
             // 
@@ -171,20 +236,6 @@ namespace QuanLyNhanSu_Master
             this.btnMinimized.Zoom = 10;
             this.btnMinimized.Click += new System.EventHandler(this.btnMinimized_Click);
             // 
-            // bunifuImageButton1
-            // 
-            this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
-            this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(1568, 7);
-            this.bunifuImageButton1.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Size = new System.Drawing.Size(40, 37);
-            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bunifuImageButton1.TabIndex = 24;
-            this.bunifuImageButton1.TabStop = false;
-            this.bunifuImageButton1.Zoom = 10;
-            // 
             // btnExit
             // 
             this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -199,59 +250,6 @@ namespace QuanLyNhanSu_Master
             this.btnExit.TabStop = false;
             this.btnExit.Zoom = 10;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // iconSearch
-            // 
-            this.iconSearch.BackColor = System.Drawing.Color.White;
-            this.iconSearch.ForeColor = System.Drawing.Color.Black;
-            this.iconSearch.IconChar = FontAwesome.Sharp.IconChar.Sistrix;
-            this.iconSearch.IconColor = System.Drawing.Color.Black;
-            this.iconSearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconSearch.IconSize = 28;
-            this.iconSearch.Location = new System.Drawing.Point(229, 12);
-            this.iconSearch.Margin = new System.Windows.Forms.Padding(4);
-            this.iconSearch.Name = "iconSearch";
-            this.iconSearch.Padding = new System.Windows.Forms.Padding(3, 4, 3, 2);
-            this.iconSearch.Size = new System.Drawing.Size(33, 28);
-            this.iconSearch.TabIndex = 2;
-            this.iconSearch.TabStop = false;
-            // 
-            // iconPictureBox1
-            // 
-            this.iconPictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Bell;
-            this.iconPictureBox1.IconColor = System.Drawing.Color.White;
-            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.IconSize = 39;
-            this.iconPictureBox1.Location = new System.Drawing.Point(1517, 7);
-            this.iconPictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(43, 39);
-            this.iconPictureBox1.TabIndex = 2;
-            this.iconPictureBox1.TabStop = false;
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.BackColor = System.Drawing.Color.White;
-            this.txtSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.txtSearch.HintForeColor = System.Drawing.Color.Empty;
-            this.txtSearch.HintText = "Tìm kiếm hồ sơ nhân sự";
-            this.txtSearch.isPassword = false;
-            this.txtSearch.LineFocusedColor = System.Drawing.Color.White;
-            this.txtSearch.LineIdleColor = System.Drawing.Color.White;
-            this.txtSearch.LineMouseHoverColor = System.Drawing.Color.White;
-            this.txtSearch.LineThickness = 4;
-            this.txtSearch.Location = new System.Drawing.Point(229, 9);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.txtSearch.Size = new System.Drawing.Size(341, 34);
-            this.txtSearch.TabIndex = 21;
-            this.txtSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyDown);
             // 
             // PanelNghiepVu
             // 
@@ -504,11 +502,16 @@ namespace QuanLyNhanSu_Master
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.lblStatus);
             this.panel1.Controls.Add(this.menuStrip2);
             this.panel1.Controls.Add(this.menuStrip1);
+            this.panel1.Controls.Add(this.btnRefresh);
             this.panel1.Controls.Add(this.btnExport);
-            this.panel1.Controls.Add(this.bunifuTileButton1);
+            this.panel1.Controls.Add(this.bunifuBtnSetting);
             this.panel1.Controls.Add(this.btnImport);
             this.panel1.Controls.Add(this.imgBtnAddNew);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -516,6 +519,65 @@ namespace QuanLyNhanSu_Master
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1379, 72);
             this.panel1.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DimGray;
+            this.label2.Location = new System.Drawing.Point(1148, 22);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(13, 20);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "|";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBox1.BackColor = System.Drawing.Color.White;
+            this.comboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboBox1.DropDownWidth = 120;
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.ForeColor = System.Drawing.Color.Transparent;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.ItemHeight = 31;
+            this.comboBox1.Items.AddRange(new object[] {
+            "sdfsdfsd",
+            "dfsdfsdf"});
+            this.comboBox1.Location = new System.Drawing.Point(182, 19);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(19, 37);
+            this.comboBox1.TabIndex = 25;
+            this.comboBox1.Click += new System.EventHandler(this.cbSearch_Click);
+            this.comboBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cbSearch_KeyDown);
+            this.comboBox1.Leave += new System.EventHandler(this.cbSearch_Leave);
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.DimGray;
+            this.label3.Location = new System.Drawing.Point(1292, 22);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(13, 20);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "|";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DimGray;
+            this.label1.Location = new System.Drawing.Point(1220, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(13, 20);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "|";
             // 
             // lblStatus
             // 
@@ -550,7 +612,8 @@ namespace QuanLyNhanSu_Master
             // 
             this.ToolstripCaiDat.BackColor = System.Drawing.Color.Transparent;
             this.ToolstripCaiDat.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ToolStripReSetPass});
+            this.ToolStripReSetPass,
+            this.toolStripReLogin});
             this.ToolstripCaiDat.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ToolstripCaiDat.ForeColor = System.Drawing.Color.Black;
             this.ToolstripCaiDat.Name = "ToolstripCaiDat";
@@ -564,7 +627,7 @@ namespace QuanLyNhanSu_Master
             this.ToolStripReSetPass.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ToolStripReSetPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(34)))), ((int)(((byte)(110)))));
             this.ToolStripReSetPass.Name = "ToolStripReSetPass";
-            this.ToolStripReSetPass.Size = new System.Drawing.Size(202, 28);
+            this.ToolStripReSetPass.Size = new System.Drawing.Size(216, 28);
             this.ToolStripReSetPass.Text = "Reset Pass User";
             this.ToolStripReSetPass.Click += new System.EventHandler(this.ToolStripReSetPass_Click);
             // 
@@ -580,7 +643,7 @@ namespace QuanLyNhanSu_Master
             this.menuStrip1.Location = new System.Drawing.Point(78, 17);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.ShowItemToolTips = true;
-            this.menuStrip1.Size = new System.Drawing.Size(111, 36);
+            this.menuStrip1.Size = new System.Drawing.Size(101, 36);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "TẠO MỚI";
             // 
@@ -594,8 +657,8 @@ namespace QuanLyNhanSu_Master
             this.ToolStripAddNew.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ToolStripAddNew.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(34)))), ((int)(((byte)(110)))));
             this.ToolStripAddNew.Name = "ToolStripAddNew";
-            this.ToolStripAddNew.Size = new System.Drawing.Size(105, 32);
-            this.ToolStripAddNew.Text = "TẠO MỚI";
+            this.ToolStripAddNew.Size = new System.Drawing.Size(95, 32);
+            this.ToolStripAddNew.Text = "Tạo mới";
             // 
             // ToolStripAddNewNhanVien
             // 
@@ -625,6 +688,28 @@ namespace QuanLyNhanSu_Master
             this.ToolStripAddTKAdmin.Text = "Tài khoản Admin";
             this.ToolStripAddTKAdmin.Click += new System.EventHandler(this.ToolStripAddTKAdmin_Click);
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRefresh.BackColor = System.Drawing.Color.Transparent;
+            this.btnRefresh.color = System.Drawing.Color.Transparent;
+            this.btnRefresh.colorActive = System.Drawing.Color.Transparent;
+            this.btnRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRefresh.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefresh.ForeColor = System.Drawing.Color.Black;
+            this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
+            this.btnRefresh.ImagePosition = 4;
+            this.btnRefresh.ImageZoom = 45;
+            this.btnRefresh.LabelPosition = 21;
+            this.btnRefresh.LabelText = "Refresh";
+            this.btnRefresh.Location = new System.Drawing.Point(1083, 9);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(64, 54);
+            this.btnRefresh.TabIndex = 0;
+            this.btnRefresh.MouseEnter += new System.EventHandler(this.btnRefresh_MouseEnter);
+            this.btnRefresh.MouseLeave += new System.EventHandler(this.btnRefresh_MouseLeave);
+            // 
             // btnExport
             // 
             this.btnExport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -644,26 +729,30 @@ namespace QuanLyNhanSu_Master
             this.btnExport.Name = "btnExport";
             this.btnExport.Size = new System.Drawing.Size(56, 54);
             this.btnExport.TabIndex = 0;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            this.btnExport.MouseEnter += new System.EventHandler(this.btnRefresh_MouseEnter);
+            this.btnExport.MouseLeave += new System.EventHandler(this.btnRefresh_MouseLeave);
             // 
-            // bunifuTileButton1
+            // bunifuBtnSetting
             // 
-            this.bunifuTileButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuTileButton1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuTileButton1.color = System.Drawing.Color.Transparent;
-            this.bunifuTileButton1.colorActive = System.Drawing.Color.Transparent;
-            this.bunifuTileButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTileButton1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuTileButton1.ForeColor = System.Drawing.Color.Black;
-            this.bunifuTileButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuTileButton1.Image")));
-            this.bunifuTileButton1.ImagePosition = 0;
-            this.bunifuTileButton1.ImageZoom = 40;
-            this.bunifuTileButton1.LabelPosition = 21;
-            this.bunifuTileButton1.LabelText = "  ";
-            this.bunifuTileButton1.Location = new System.Drawing.Point(1311, 17);
-            this.bunifuTileButton1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.bunifuTileButton1.Name = "bunifuTileButton1";
-            this.bunifuTileButton1.Size = new System.Drawing.Size(61, 46);
-            this.bunifuTileButton1.TabIndex = 0;
+            this.bunifuBtnSetting.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuBtnSetting.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuBtnSetting.color = System.Drawing.Color.Transparent;
+            this.bunifuBtnSetting.colorActive = System.Drawing.Color.Transparent;
+            this.bunifuBtnSetting.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuBtnSetting.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuBtnSetting.ForeColor = System.Drawing.Color.Black;
+            this.bunifuBtnSetting.Image = ((System.Drawing.Image)(resources.GetObject("bunifuBtnSetting.Image")));
+            this.bunifuBtnSetting.ImagePosition = 0;
+            this.bunifuBtnSetting.ImageZoom = 40;
+            this.bunifuBtnSetting.LabelPosition = 21;
+            this.bunifuBtnSetting.LabelText = "  ";
+            this.bunifuBtnSetting.Location = new System.Drawing.Point(1311, 17);
+            this.bunifuBtnSetting.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.bunifuBtnSetting.Name = "bunifuBtnSetting";
+            this.bunifuBtnSetting.Size = new System.Drawing.Size(61, 46);
+            this.bunifuBtnSetting.TabIndex = 0;
             // 
             // btnImport
             // 
@@ -679,19 +768,21 @@ namespace QuanLyNhanSu_Master
             this.btnImport.ImageZoom = 50;
             this.btnImport.LabelPosition = 21;
             this.btnImport.LabelText = "Import";
-            this.btnImport.Location = new System.Drawing.Point(1226, 9);
+            this.btnImport.Location = new System.Drawing.Point(1234, 9);
             this.btnImport.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnImport.Name = "btnImport";
             this.btnImport.Size = new System.Drawing.Size(56, 54);
             this.btnImport.TabIndex = 0;
             this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
+            this.btnImport.MouseEnter += new System.EventHandler(this.btnRefresh_MouseEnter);
+            this.btnImport.MouseLeave += new System.EventHandler(this.btnRefresh_MouseLeave);
             // 
             // imgBtnAddNew
             // 
             this.imgBtnAddNew.BackColor = System.Drawing.Color.Transparent;
             this.imgBtnAddNew.Image = ((System.Drawing.Image)(resources.GetObject("imgBtnAddNew.Image")));
             this.imgBtnAddNew.ImageActive = null;
-            this.imgBtnAddNew.Location = new System.Drawing.Point(27, 15);
+            this.imgBtnAddNew.Location = new System.Drawing.Point(35, 13);
             this.imgBtnAddNew.Name = "imgBtnAddNew";
             this.imgBtnAddNew.Size = new System.Drawing.Size(40, 40);
             this.imgBtnAddNew.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -708,6 +799,19 @@ namespace QuanLyNhanSu_Master
             // toolTip1
             // 
             this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1;
+            // 
+            // toolStripReLogin
+            // 
+            this.toolStripReLogin.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.toolStripReLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(34)))), ((int)(((byte)(110)))));
+            this.toolStripReLogin.Name = "toolStripReLogin";
+            this.toolStripReLogin.Size = new System.Drawing.Size(216, 28);
+            this.toolStripReLogin.Text = "Đăng nhập lại";
+            this.toolStripReLogin.Click += new System.EventHandler(this.toolStripReLogin_Click);
             // 
             // frmChinh
             // 
@@ -728,11 +832,12 @@ namespace QuanLyNhanSu_Master
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmChinh_Load);
             this.PanelTop.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btnMinimized)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.iconSearch)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimized)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
             this.PanelNghiepVu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.iconDashboard)).EndInit();
             this.PanelCenter.ResumeLayout(false);
@@ -769,7 +874,7 @@ namespace QuanLyNhanSu_Master
         private BunifuTileButton btnImport;
         private BunifuTileButton btnExport;
         private BunifuTileButton LogoACB;
-        private BunifuTileButton bunifuTileButton1;
+        private BunifuTileButton bunifuBtnSetting;
         private BunifuCustomLabel lblStatus;
         private System.Windows.Forms.Button btnDashboard;
         private System.Windows.Forms.Panel PanelLeft;
@@ -794,8 +899,15 @@ namespace QuanLyNhanSu_Master
         private System.Windows.Forms.ToolStripMenuItem ToolStripReSetPass;
         private System.Windows.Forms.ToolStripMenuItem ToolStripAddTKAdmin;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ComboBox cbSearch;
+        private System.Windows.Forms.Panel panel2;
+        private BunifuTileButton btnRefresh;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBox1;
-        private BunifuMaterialTextbox txtSearch;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripReLogin;
     }
 }
 

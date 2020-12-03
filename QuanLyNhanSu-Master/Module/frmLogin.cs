@@ -2,6 +2,7 @@
 using QuanLyNhanSu_Master.DAO;
 using QuanLyNhanSu_Master.DTO;
 using QuanLyNhanSu_Master.Module;
+using QuanLyNhanSu_Master.Module.Popup;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,6 +23,7 @@ namespace QuanLyNhanSu_Master
         {
             InitializeComponent();
             LoadData();
+            (new DropShadow()).ApplyShadows(this);
         }
        
         private string storeConfig = "config.ini";

@@ -21,7 +21,7 @@ namespace QuanLyNhanSu_Master.DAO
 
         public DataTable GetNhanVien()
         {
-            string query = "SELECT NV.MaNV AS [Mã NV], NV.TenNV AS [Họ tên], NV.GioiTinh AS [Giới tính], CV.TenChucVu AS [Chức vụ], PB.TenPhongBan AS [Tên phòng ban], NV.Cmnd AS CMND, NV.NgaySinh AS [Ngày sinh], NV.DiaChi AS [Địa chỉ], NV.Email, NV.Sdt AS SĐT, ";
+            string query = "SELECT NV.MaNV AS [Mã NV], NV.TenNV AS [Họ tên], (CASE NV.GioiTinh WHEN 1 THEN 'Nam' ELSE N'Nữ' END) AS [Giới tính], CV.TenChucVu AS [Chức vụ], PB.TenPhongBan AS [Tên phòng ban], NV.Cmnd AS CMND, NV.NgaySinh AS [Ngày sinh], NV.DiaChi AS [Địa chỉ], NV.Email, NV.Sdt AS SĐT, ";
             query += "  NV.ThamNien AS[Thâm niên], NV.HeSoLuong AS[Hệ số lương], NV.TinhTrangLamViec AS[Tình trạng làm việc], NV.SoBHXH AS BHXH, NV.SoBHYT AS BHYT, ";
             query += " NV.TaikhoanNH AS[Số tài khoản], NV.DanToc AS[Dân tộc], NV.NgayBatDau AS[Ngày vào làm], NV.NgayKetThuc AS[Ngày nghỉ] ";
             query += " FROM NhanVien AS NV INNER JOIN ";
@@ -32,7 +32,7 @@ namespace QuanLyNhanSu_Master.DAO
         }
         public DataTable GetNhanVien(string name)
         {
-            string query = "SELECT NV.MaNV AS [Mã NV], NV.TenNV AS [Họ tên], NV.GioiTinh AS [Giới tính], CV.TenChucVu AS [Chức vụ], PB.TenPhongBan AS [Tên phòng ban], NV.Cmnd AS CMND, NV.NgaySinh AS [Ngày sinh], NV.DiaChi AS [Địa chỉ], NV.Email, NV.Sdt AS SĐT, ";
+            string query = "SELECT NV.MaNV AS [Mã NV], NV.TenNV AS [Họ tên], (CASE NV.GioiTinh WHEN 1 THEN 'Nam' ELSE N'Nữ' END) AS [Giới tính], CV.TenChucVu AS [Chức vụ], PB.TenPhongBan AS [Tên phòng ban], NV.Cmnd AS CMND, NV.NgaySinh AS [Ngày sinh], NV.DiaChi AS [Địa chỉ], NV.Email, NV.Sdt AS SĐT, ";
             query += " NV.ThamNien AS[Thâm niên], NV.HeSoLuong AS[Hệ số lương], NV.TinhTrangLamViec AS[Tình trạng làm việc], NV.SoBHXH AS BHXH, NV.SoBHYT AS BHYT, ";
             query += " NV.TaikhoanNH AS[Số tài khoản], NV.DanToc AS[Dân tộc], NV.NgayBatDau AS[Ngày vào làm], NV.NgayKetThuc AS[Ngày nghỉ]";
             query += " FROM NhanVien AS NV INNER JOIN ";
@@ -44,7 +44,7 @@ namespace QuanLyNhanSu_Master.DAO
         }
         public DataTable GetNhanVien(int MaNV)
         {
-            string query = "SELECT NV.MaNV AS [Mã NV], NV.TenNV AS [Họ tên], NV.GioiTinh AS [Giới tính], CV.TenChucVu AS [Chức vụ], PB.TenPhongBan AS [Tên phòng ban], NV.Cmnd AS CMND, NV.NgaySinh AS [Ngày sinh], NV.DiaChi AS [Địa chỉ], NV.Email, NV.Sdt AS SĐT, ";
+            string query = "SELECT NV.MaNV AS [Mã NV], NV.TenNV AS [Họ tên], (CASE NV.GioiTinh WHEN 1 THEN 'Nam' ELSE N'Nữ' END) AS [Giới tính], CV.TenChucVu AS [Chức vụ], PB.TenPhongBan AS [Tên phòng ban], NV.Cmnd AS CMND, NV.NgaySinh AS [Ngày sinh], NV.DiaChi AS [Địa chỉ], NV.Email, NV.Sdt AS SĐT, ";
             query += " NV.ThamNien AS[Thâm niên], NV.HeSoLuong AS[Hệ số lương], NV.TinhTrangLamViec AS[Tình trạng làm việc], NV.SoBHXH AS BHXH, NV.SoBHYT AS BHYT, ";
             query += " NV.TaikhoanNH AS[Số tài khoản], NV.DanToc AS[Dân tộc], NV.NgayBatDau AS[Ngày vào làm], NV.NgayKetThuc AS[Ngày nghỉ]";
             query += " FROM NhanVien AS NV INNER JOIN ";
@@ -84,5 +84,36 @@ namespace QuanLyNhanSu_Master.DAO
                 return false;
             }
         }
+
+        public int DataGridViewToExcel_ByRawData(System.Data.DataTable dataSource, string pstrRowFillter, ref object excelSheet, int Begin_rawDataCol = 0, int Begin_RawDataRow = 0, bool isIns = true)
+        {
+            // =========================================================================================
+            // TAO DU LIEU BÁO CÁO
+            // Copy the values to the object array
+            int TotalRowsExport = 0;
+
+            TotalRowsExport = dataSource.DefaultView.Count;
+            if (TotalRowsExport == 0)
+                return 0;
+            int lintColumnCount = dataSource.Columns.Count;
+            int row = 0;
+            // =========================================================================================
+            // Copy the DataTable to an object array
+            string excelRange = "";
+            // ----------------------------
+            // Calculate the final column letter
+            string finalColLetter = string.Empty;
+            string colCharset = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            int colCharsetLen = colCharset.Length;
+
+            if (lintColumnCount > colCharsetLen)
+                finalColLetter = colCharset.Substring(((lintColumnCount - 1) / colCharsetLen) - 1, 1);
+            finalColLetter += colCharset.Substring((lintColumnCount - 1) % colCharsetLen, 1);
+
+            object[,] rawData = new object[TotalRowsExport + 1, lintColumnCount - 1 + 1];
+        
+            return TotalRowsExport;
+        }
+
     }
 }

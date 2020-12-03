@@ -27,21 +27,24 @@ namespace QuanLyNhanSu_Master
         public Account LoginAccount
         {
             get { return loginAccount; }
-            set { loginAccount = value;  }
+            set { loginAccount = value; }
         }
-        
+
         public frmChinh(Account acc)
         {
             InitializeComponent();
             this.loginAccount = acc;
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            this.WindowState = FormWindowState.Maximized;
             ChangeAccount(loginAccount.Role);
+
         }
 
 
         private void frmChinh_Load(object sender, EventArgs e)
         {
-            comboBox1.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-            comboBox1.AutoCompleteSource = AutoCompleteSource.ListItems;
+            cbSearch.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cbSearch.AutoCompleteSource = AutoCompleteSource.ListItems;
 
             temp = HoSoNhanVienDAO.Instance.SearchAllNhanVien();
 
@@ -49,9 +52,11 @@ namespace QuanLyNhanSu_Master
             dtview.Sort = "ThongTinNV DESC";
             temp = dtview.ToTable();
 
-            comboBox1.DataSource = temp;
-            comboBox1.ValueMember = "ThongTinNV";
-            comboBox1.DisplayMember = "ThongTinNV";
+            cbSearch.DataSource = temp;
+            cbSearch.ValueMember = "ThongTinNV";
+            cbSearch.DisplayMember = "ThongTinNV";
+            cbSearch.SelectedItem = null;
+            cbSearch.SelectedText = "Tìm kiếm hồ sơ nhân sự";
         }
 
         void ChangeAccount(string role)
@@ -63,7 +68,7 @@ namespace QuanLyNhanSu_Master
                 ToolStripReSetPass.Visible = false;
             }
             //adminToolStripMenuItem.Enabled = type == 1;
-           // thôngTinTàiKhoảnToolStripMenuItem.Text += " (" + LoginAccount.DisplayName + ")";
+            // thôngTinTàiKhoảnToolStripMenuItem.Text += " (" + LoginAccount.DisplayName + ")";
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -73,7 +78,7 @@ namespace QuanLyNhanSu_Master
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-           
+
             Form frmLayouLogin = new frmLayoutLogin();
             Button bt = (Button)sender;
             //bt = (Button)sender;
@@ -87,7 +92,7 @@ namespace QuanLyNhanSu_Master
             //{
             //    bt = (Bunifu.Framework.UI.BunifuTileButton)sender;
             //}
-           
+
             //Bunifu.Framework.UI.BunifuTileButton bunifuTileButton = (Bunifu.Framework.UI.BunifuTileButton)sender;
             if (bt.Name == "btnDashboard")
             {
@@ -118,7 +123,7 @@ namespace QuanLyNhanSu_Master
 
                 btnNhanVien.BackColor = Color.FromArgb(81, 136, 202);
                 btnNhanVien.ForeColor = Color.White;
-               iconNhanVien.Image = ((System.Drawing.Image)(resources.GetObject("iconNhanVien.ImageActive")));
+                iconNhanVien.Image = ((System.Drawing.Image)(resources.GetObject("iconNhanVien.ImageActive")));
             }
             else
             {
@@ -178,21 +183,23 @@ namespace QuanLyNhanSu_Master
                 PanelCenter.Controls.Add(formCenter);
                 formCenter.Dock = DockStyle.Fill;
                 PanelCenter.Tag = formCenter;
-                
+
                 if (formCenter.Name == "frmHoSoNhanVien")
                 {
                     if (IsSearch == true)
                     {
                         frmHoSoNhanVien.Action = "Tìm kiếm";
-                        frmHoSoNhanVien.TenNhanVien = txtSearch.Text;
-                       
+                        string MaNV = cbSearch.SelectedValue.ToString();
+                        MaNV = MaNV.Split('-')[1];
+                        frmHoSoNhanVien.MaNhanVien = Convert.ToInt32(MaNV.Trim());
+
                     }
                     else
                     {
                         frmHoSoNhanVien.Action = "Không tìm kiếm";
-                        
+
                     }
-                   
+
                 }
                 formCenter.Show();
                 formCenter.BringToFront();
@@ -202,7 +209,7 @@ namespace QuanLyNhanSu_Master
                 formCenter.BringToFront();
             }
         }
-        
+
         private void btnChamCong_Click(object sender, EventArgs e)
         {
             lblStatus.Text = "CHẤM CÔNG";
@@ -212,13 +219,13 @@ namespace QuanLyNhanSu_Master
         private void btnBangLuong_Click(object sender, EventArgs e)
         {
             lblStatus.Text = "BẢNG LƯƠNG";
-            
+
         }
 
         private void btnDashboard_MouseHover(object sender, EventArgs e)
         {
             this.iconDashboard.Image = ((System.Drawing.Image)(resources.GetObject("iconDashboard.ImageActive")));
-          
+
         }
 
         private void btnChamCong_MouseHover(object sender, EventArgs e)
@@ -262,7 +269,7 @@ namespace QuanLyNhanSu_Master
                     IsCollapsed = true;
                 }
             }
-            
+
         }
 
         private void btnNghiepVu_Click(object sender, EventArgs e)
@@ -271,41 +278,39 @@ namespace QuanLyNhanSu_Master
         }
 
 
-        private void txtSearch_KeyDown(object sender, KeyEventArgs e)
-        {
-            IsSearch = true;
-            if (e.KeyCode == Keys.Enter)
-            {
-                lblStatus.Text = "TÌM NHÂN VIÊN - " + txtSearch.Text;
-                frmHoSoNhanVien frmHoSoNhanVien = new frmHoSoNhanVien();
-                frmHoSoNhanVien.Action = "Tìm kiếm";
-                frmHoSoNhanVien.TenNhanVien = txtSearch.Text;
-                frmHoSoNhanVien.TopLevel = false;
-                frmHoSoNhanVien.MdiParent = this.MdiParent;
-                PanelCenter.Controls.Add(frmHoSoNhanVien);
-                frmHoSoNhanVien.Dock = DockStyle.Fill;
-                frmHoSoNhanVien.Show();
-                frmHoSoNhanVien.BringToFront();
-            }
-        }
+        //private void txtSearch_KeyDown(object sender, KeyEventArgs e)
+        //{
+        //    IsSearch = true;
+        //    if (e.KeyCode == Keys.Enter)
+        //    {
+        //        cbSearch.SelectedText = "Tìm kiếm hồ sơ nhân sự";
+        //        lblStatus.Text = "TÌM NHÂN VIÊN - " + txtSearch.Text;
+        //        frmHoSoNhanVien frmHoSoNhanVien = new frmHoSoNhanVien();
+        //        frmHoSoNhanVien.Action = "Tìm kiếm";
+        //        frmHoSoNhanVien.TenNhanVien = txtSearch.Text;
+        //        frmHoSoNhanVien.TopLevel = false;
+        //        frmHoSoNhanVien.MdiParent = this.MdiParent;
+        //        PanelCenter.Controls.Add(frmHoSoNhanVien);
+        //        frmHoSoNhanVien.Dock = DockStyle.Fill;
+        //        frmHoSoNhanVien.Show();
+        //        frmHoSoNhanVien.BringToFront();
+        //    }
+        //}
 
         private void ToolStripAddNewNhanVien_Click(object sender, EventArgs e)
         {
-          
             btnAddNew_Click(sender, e);         //values preserved after close
-         
-
         }
 
         private void ToolStripReSetPass_Click(object sender, EventArgs e)
         {
-             frmResetPass frmAddNewUser = new frmResetPass();
+            frmResetPass frmAddNewUser = new frmResetPass();
             frmAddNewUser.StartPosition = FormStartPosition.CenterParent;
-            var result =  frmAddNewUser.ShowDialog();
+            var result = frmAddNewUser.ShowDialog();
             if (result == DialogResult.OK)
             {
                 btnAddNew_Click(sender, e);         //values preserved after close
-               
+
             }
         }
 
@@ -313,34 +318,10 @@ namespace QuanLyNhanSu_Master
         {
             frmAddNewUser frmAddNewUser = new frmAddNewUser();
             frmAddNewUser.StartPosition = FormStartPosition.CenterParent;
-            var result = frmAddNewUser.ShowDialog();
+            frmAddNewUser.Show();
         }
 
-        private void comboBox1_TextChanged(object sender, EventArgs e)
-        {
-        
-        }
 
-        private void comboBox1_KeyDown(object sender, KeyEventArgs e)
-        {
-            IsSearch = true;
-            if (e.KeyCode == Keys.Enter)
-            {
-                lblStatus.Text = "TÌM NHÂN VIÊN - " + txtSearch.Text;
-                frmHoSoNhanVien frmHoSoNhanVien = new frmHoSoNhanVien();
-                frmHoSoNhanVien.Action = "Tìm kiếm";
-                //frmHoSoNhanVien.TenNhanVien = txtSearch.Text;
-                string MaNV = comboBox1.SelectedValue.ToString();
-                MaNV = MaNV.Split('-')[1];
-                frmHoSoNhanVien.MaNhanVien = Convert.ToInt32(MaNV.Trim());
-                frmHoSoNhanVien.TopLevel = false;
-                frmHoSoNhanVien.MdiParent = this.MdiParent;
-                PanelCenter.Controls.Add(frmHoSoNhanVien);
-                frmHoSoNhanVien.Dock = DockStyle.Fill;
-                frmHoSoNhanVien.Show();
-                frmHoSoNhanVien.BringToFront();
-            }
-        }
 
         DataTableCollection TableCollection;
         private void btnImport_Click(object sender, EventArgs e)
@@ -352,15 +333,15 @@ namespace QuanLyNhanSu_Master
                 SBind.DataSource = frmImportExcelNhanVien.dataTable;
                 dataGrid = frmImportExcelNhanVien.dataTable;
                 int ss = dataGrid.Rows.Count;
-                for (int i = 0; i <= dataGrid.Rows.Count-1; i++)
+                for (int i = 0; i <= dataGrid.Rows.Count - 1; i++)
                 {
                     try
                     {
-                        HoSoNhanVienDAO.Instance.AddNewImployee(dataGrid.Rows[i][0].ToString(), (DateTime)dataGrid.Rows[i][1], dataGrid.Rows[i][2].ToString(), dataGrid.Rows[i][3].ToString(), dataGrid.Rows[i][4].ToString(), dataGrid.Rows[i][5].ToString(), dataGrid.Rows[i][6].ToString(), (DateTime)dataGrid.Rows[i][7], dataGrid.Rows[i][8].ToString(), dataGrid.Rows[i][9].ToString(), dataGrid.Rows[i][10].ToString(), dataGrid.Rows[i][11].ToString(),dataGrid.Rows[i][12].ToString(), dataGrid.Rows[i][13].ToString(), dataGrid.Rows[i][14].ToString(), dataGrid.Rows[i][15].ToString(), dataGrid.Rows[i][16].ToString());
+                        HoSoNhanVienDAO.Instance.AddNewImployee(dataGrid.Rows[i][0].ToString(), (DateTime)dataGrid.Rows[i][1], dataGrid.Rows[i][2].ToString(), dataGrid.Rows[i][3].ToString(), dataGrid.Rows[i][4].ToString(), dataGrid.Rows[i][5].ToString(), dataGrid.Rows[i][6].ToString(), (DateTime)dataGrid.Rows[i][7], dataGrid.Rows[i][8].ToString(), dataGrid.Rows[i][9].ToString(), dataGrid.Rows[i][10].ToString(), dataGrid.Rows[i][11].ToString(), dataGrid.Rows[i][12].ToString(), dataGrid.Rows[i][13].ToString(), dataGrid.Rows[i][14].ToString(), dataGrid.Rows[i][15].ToString(), dataGrid.Rows[i][16].ToString());
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(""+ex);
+                        MessageBox.Show("" + ex);
                     }
                 }
                 MessageBox.Show("Import nhân viên thành công");
@@ -378,6 +359,130 @@ namespace QuanLyNhanSu_Master
                 ImportExcelNhanVien.Show();
                 ImportExcelNhanVien.BringToFront();
             }
+        }
+
+        private void cbSearch_Click(object sender, EventArgs e)
+        {
+            cbSearch.SelectedItem = null;
+            cbSearch.SelectedText = "";
+        }
+        private void cbSearch_Leave(object sender, EventArgs e)
+        {
+            cbSearch.SelectedItem = null;
+            cbSearch.SelectedText = "";
+            cbSearch.SelectedText = "Tìm kiếm hồ sơ nhân sự";
+        }
+        private void cbSearch_KeyDown(object sender, KeyEventArgs e)
+        {
+            IsSearch = true;
+            if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Tab)
+            {
+                if (cbSearch.SelectedItem != null)
+                {
+                    lblStatus.Text = "TÌM NHÂN VIÊN - " + cbSearch.SelectedValue.ToString();
+                    frmHoSoNhanVien frmHoSoNhanVien = new frmHoSoNhanVien();
+                    frmHoSoNhanVien.Action = "Tìm kiếm";
+                    //frmHoSoNhanVien.TenNhanVien = txtSearch.Text;
+                    string MaNV = cbSearch.SelectedValue.ToString();
+                    MaNV = MaNV.Split('-')[1];
+                    frmHoSoNhanVien.MaNhanVien = Convert.ToInt32(MaNV.Trim());
+                    frmHoSoNhanVien.TopLevel = false;
+                    frmHoSoNhanVien.MdiParent = this.MdiParent;
+                    PanelCenter.Controls.Add(frmHoSoNhanVien);
+                    frmHoSoNhanVien.Dock = DockStyle.Fill;
+                    frmHoSoNhanVien.Show();
+                    frmHoSoNhanVien.BringToFront();
+                    cbSearch.SelectedItem = null;
+                    cbSearch.SelectedText = "Tìm kiếm hồ sơ nhân sự";
+                }
+                else
+                {
+                    MessageBox.Show("Không tìm thấy nhân viên");
+                }
+
+            }
+        }
+
+        private void btnRefresh_MouseEnter(object sender, EventArgs e)
+        {
+            Bunifu.Framework.UI.BunifuTileButton bt = (Bunifu.Framework.UI.BunifuTileButton)sender;
+            bt.BackColor = Color.FromArgb(238, 238, 238);
+            //bt.ForeColor = Color.White;
+        }
+
+        private void btnRefresh_MouseLeave(object sender, EventArgs e)
+        {
+            Bunifu.Framework.UI.BunifuTileButton bt = (Bunifu.Framework.UI.BunifuTileButton)sender;
+            bt.BackColor = Color.Transparent;
+            bt.ForeColor = Color.Black;
+        }
+
+        private void PanelTop_DoubleClick(object sender, EventArgs e)
+        {
+            if (this.WindowState != FormWindowState.Maximized)
+            {
+                this.WindowState = FormWindowState.Maximized;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+
+        }
+        private void MainWindow_OnResize(object sender, EventArgs e)
+        {
+            this.WindowState = WindowState;
+        }
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            
+            switch (lblStatus.Text)
+            {
+                case "HỒ SƠ NHÂN VIÊN":
+                    DataTable dataGrid = new DataTable();
+                    BindingSource SBind = new BindingSource();
+                    SBind.DataSource = frmHoSoNhanVien.dataTable;
+                    frmHoSoNhanVien.dataTable2 = frmHoSoNhanVien.dataTable;
+                    try
+                    {
+                        frmHoSoNhanVien.Action = "Export";
+                        frmHoSoNhanVien hoSoNhanVien = new frmHoSoNhanVien();
+                        hoSoNhanVien.IsExport1 = true;
+                       
+                        hoSoNhanVien.ExportExcel();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("" + ex);
+                    }
+                    break;
+                case "CHẤM CÔNG":
+                    break;
+                case "":
+                    break;
+                default:
+                    break;
+            }
+        }
+      
+        const int WS_MINIMIZEBOX = 0x20000;
+        const int CS_DBLCLKS = 0x8;
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                cp.Style |= WS_MINIMIZEBOX;
+                cp.ExStyle |= 0x02000000;
+                return cp;
+            }
+        }
+
+        private void toolStripReLogin_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            frmLogin frmLogin = new frmLogin();
+            frmLogin.Show();
         }
     }
 }

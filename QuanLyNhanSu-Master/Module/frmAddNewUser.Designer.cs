@@ -33,6 +33,7 @@
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.LogoACB = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnMinimized = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnExit = new Bunifu.Framework.UI.BunifuImageButton();
             this.txtEmail = new Bunifu.Framework.UI.BunifuMaterialTextbox();
@@ -45,23 +46,22 @@
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.LogoACB = new Bunifu.Framework.UI.BunifuImageButton();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LogoACB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimized)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.LogoACB)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
             // 
-            this.bunifuElipse1.ElipseRadius = 5;
+            this.bunifuElipse1.ElipseRadius = 0;
             this.bunifuElipse1.TargetControl = this;
             // 
             // bunifuDragControl1
             // 
             this.bunifuDragControl1.Fixed = true;
             this.bunifuDragControl1.Horizontal = true;
-            this.bunifuDragControl1.TargetControl = null;
+            this.bunifuDragControl1.TargetControl = this.panel1;
             this.bunifuDragControl1.Vertical = true;
             // 
             // panel1
@@ -74,6 +74,20 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(565, 67);
             this.panel1.TabIndex = 0;
+            // 
+            // LogoACB
+            // 
+            this.LogoACB.BackColor = System.Drawing.Color.Transparent;
+            this.LogoACB.Image = ((System.Drawing.Image)(resources.GetObject("LogoACB.Image")));
+            this.LogoACB.ImageActive = null;
+            this.LogoACB.Location = new System.Drawing.Point(12, 11);
+            this.LogoACB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.LogoACB.Name = "LogoACB";
+            this.LogoACB.Size = new System.Drawing.Size(81, 47);
+            this.LogoACB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.LogoACB.TabIndex = 42;
+            this.LogoACB.TabStop = false;
+            this.LogoACB.Zoom = 10;
             // 
             // btnMinimized
             // 
@@ -88,6 +102,7 @@
             this.btnMinimized.TabIndex = 1;
             this.btnMinimized.TabStop = false;
             this.btnMinimized.Zoom = 10;
+            this.btnMinimized.Click += new System.EventHandler(this.btnMinimized_Click);
             // 
             // btnExit
             // 
@@ -106,12 +121,11 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtEmail.HintForeColor = System.Drawing.Color.Empty;
-            this.txtEmail.HintText = "dfgdfgdf";
-            this.txtEmail.isPassword = true;
+            this.txtEmail.HintText = "";
+            this.txtEmail.isPassword = false;
             this.txtEmail.LineFocusedColor = System.Drawing.Color.Blue;
             this.txtEmail.LineIdleColor = System.Drawing.Color.Gray;
             this.txtEmail.LineMouseHoverColor = System.Drawing.Color.Blue;
@@ -136,7 +150,6 @@
             // 
             // txtRePassword
             // 
-            this.txtRePassword.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtRePassword.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRePassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtRePassword.HintForeColor = System.Drawing.Color.Empty;
@@ -152,10 +165,10 @@
             this.txtRePassword.Size = new System.Drawing.Size(276, 44);
             this.txtRePassword.TabIndex = 34;
             this.txtRePassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtRePassword.OnValueChanged += new System.EventHandler(this.txtPassword_OnValueChanged);
             // 
             // txtPassword
             // 
-            this.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtPassword.HintForeColor = System.Drawing.Color.Empty;
@@ -171,10 +184,10 @@
             this.txtPassword.Size = new System.Drawing.Size(276, 44);
             this.txtPassword.TabIndex = 33;
             this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtPassword.OnValueChanged += new System.EventHandler(this.txtPassword_OnValueChanged);
             // 
             // txtUserName
             // 
-            this.txtUserName.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUserName.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUserName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtUserName.HintForeColor = System.Drawing.Color.Empty;
@@ -198,7 +211,7 @@
             this.btnRegister.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(65)))), ((int)(((byte)(155)))));
             this.btnRegister.ActiveForecolor = System.Drawing.Color.White;
             this.btnRegister.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(65)))), ((int)(((byte)(155)))));
-            this.btnRegister.BackColor = System.Drawing.SystemColors.Control;
+            this.btnRegister.BackColor = System.Drawing.Color.White;
             this.btnRegister.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRegister.BackgroundImage")));
             this.btnRegister.ButtonText = "Đăng Kí";
             this.btnRegister.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -256,24 +269,11 @@
             this.bunifuCustomLabel1.TabIndex = 37;
             this.bunifuCustomLabel1.Text = "Tên Tài Khoản :";
             // 
-            // LogoACB
-            // 
-            this.LogoACB.BackColor = System.Drawing.Color.Transparent;
-            this.LogoACB.Image = ((System.Drawing.Image)(resources.GetObject("LogoACB.Image")));
-            this.LogoACB.ImageActive = null;
-            this.LogoACB.Location = new System.Drawing.Point(12, 11);
-            this.LogoACB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.LogoACB.Name = "LogoACB";
-            this.LogoACB.Size = new System.Drawing.Size(81, 47);
-            this.LogoACB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.LogoACB.TabIndex = 42;
-            this.LogoACB.TabStop = false;
-            this.LogoACB.Zoom = 10;
-            // 
             // frmAddNewUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(565, 463);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.bunifuCustomLabel4);
@@ -291,9 +291,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmAddNewUser";
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.LogoACB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimized)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.LogoACB)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

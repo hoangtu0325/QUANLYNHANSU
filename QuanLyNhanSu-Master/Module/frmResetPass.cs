@@ -1,4 +1,5 @@
 ﻿using QuanLyNhanSu_Master.DAO;
+using QuanLyNhanSu_Master.Module.Popup;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,17 +12,28 @@ using System.Windows.Forms;
 
 namespace QuanLyNhanSu_Master.Module
 {
-    public partial class frmResetPass : frmLayoutLogin
+    public partial class frmResetPass : Form
     {
         public frmResetPass()
         {
             InitializeComponent();
+            (new DropShadow()).ApplyShadows(this);
         }
+        //private const int CS_DROPSHADOW = 0x00020000;
 
+        //protected override CreateParams CreateParams
+        //{
+        //    get
+        //    {
+        //        CreateParams cp = base.CreateParams;
+        //            cp.ClassStyle |= CS_DROPSHADOW;
+        //        return cp;
+        //    }
+        //}
         private void btnResetPass_Click(object sender, EventArgs e)
         {
             int flag = AccountDAO.Instance.ResetPassAccount(txtUserName.Text);
-            MessageBox.Show("" + flag);
+            //MessageBox.Show("" + flag);
             if (flag == 1)
             {
                 MessageBox.Show("Reset Pass User thành công");
@@ -41,6 +53,11 @@ namespace QuanLyNhanSu_Master.Module
             {
                 btnResetPass_Click(sender, e);
             }
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

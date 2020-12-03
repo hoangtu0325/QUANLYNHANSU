@@ -55,7 +55,7 @@
             // 
             this.btnMinimized.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMinimized.Location = new System.Drawing.Point(4, 0);
+            this.btnMinimized.Location = new System.Drawing.Point(-231, 0);
             this.btnMinimized.Visible = false;
             // 
             // btnExit
@@ -85,7 +85,6 @@
             // 
             // txtUserName
             // 
-            this.txtUserName.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.txtUserName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtUserName.HintForeColor = System.Drawing.Color.Empty;
@@ -104,7 +103,6 @@
             // 
             // txtCodeXacThuc
             // 
-            this.txtCodeXacThuc.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtCodeXacThuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.txtCodeXacThuc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtCodeXacThuc.HintForeColor = System.Drawing.Color.Empty;
@@ -123,7 +121,6 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtPassword.HintForeColor = System.Drawing.Color.Empty;
@@ -139,10 +136,10 @@
             this.txtPassword.Size = new System.Drawing.Size(276, 44);
             this.txtPassword.TabIndex = 3;
             this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtPassword.OnValueChanged += new System.EventHandler(this.txtPassword_OnValueChanged);
             // 
             // txtRePassword
             // 
-            this.txtRePassword.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtRePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.txtRePassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtRePassword.HintForeColor = System.Drawing.Color.Empty;
@@ -158,6 +155,7 @@
             this.txtRePassword.Size = new System.Drawing.Size(276, 44);
             this.txtRePassword.TabIndex = 4;
             this.txtRePassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtRePassword.OnValueChanged += new System.EventHandler(this.txtPassword_OnValueChanged);
             this.txtRePassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtRePassword_KeyDown);
             // 
             // btnDoiMatKhau

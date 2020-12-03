@@ -68,6 +68,10 @@ namespace QuanLyNhanSu_Master.DAO
             string email;
 
             DataTable data = DataProvider.Instance.ExecuteQuery("SP_GetUserFromUserName @userName", new object[] { userName });
+            if (data.Rows.Count == 0)
+            {
+                return 0;
+            }
             DataRow firstRow = data.Rows[0];
             email = firstRow["Email"].ToString();
 

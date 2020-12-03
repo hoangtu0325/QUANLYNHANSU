@@ -63,5 +63,11 @@ namespace QuanLyNhanSu_Master.Module
                 btnDoiMatKhau_Click(sender, e);
             }
         }
+
+        private void txtPassword_OnValueChanged(object sender, EventArgs e)
+        {
+            Bunifu.Framework.UI.BunifuMaterialTextbox textbox = (Bunifu.Framework.UI.BunifuMaterialTextbox)sender;
+            textbox.isPassword = true;
+        }
     }
 }
