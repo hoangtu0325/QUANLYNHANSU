@@ -1,0 +1,275 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BD8B5FB2-1078-4C3E-885C-C7153F0FDEB2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QuanLyNhanSu_Master</RootNamespace>
+    <AssemblyName>QuanLyNhanSu-Master</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Win32Resource>
+    </Win32Resource>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>ACB_Logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="Aspose.Cells, Version=8.7.2.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <HintPath>..\packages\Aspose.Cells.8.7.2\lib\net40\Aspose.Cells.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>..\packages\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.3.6.0\lib\net45\ExcelDataReader.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader.DataSet, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.DataSet.3.6.0\lib\net35\ExcelDataReader.DataSet.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelEngine, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelEngine.1.1.1\lib\net40\ExcelEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="FontAwesome.Sharp, Version=5.15.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.5.15.3\lib\net45\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="MyINI">
+      <HintPath>Packages\MyINI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAO\AccountDAO.cs" />
+    <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\HoSoNhanVienDAO.cs" />
+    <Compile Include="DTO\Account.cs" />
+    <Compile Include="DTO\NhanVien.cs" />
+    <Compile Include="Module\frmAddInfoNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module\frmAddInfoNhanVien.Designer.cs">
+      <DependentUpon>frmAddInfoNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Module\frmAddNewUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module\frmAddNewUser.Designer.cs">
+      <DependentUpon>frmAddNewUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Module\frmDoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module\frmDoiMatKhau.Designer.cs">
+      <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Module\frmHoSoNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module\frmHoSoNhanVien.Designer.cs">
+      <DependentUpon>frmHoSoNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Module\frmChinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module\frmChinh.Designer.cs">
+      <DependentUpon>frmChinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Module\frmImportExcelNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module\frmImportExcelNhanVien.Designer.cs">
+      <DependentUpon>frmImportExcelNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Module\frmLayout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module\frmLayout.Designer.cs">
+      <DependentUpon>frmLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Module\frmLayoutLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module\frmLayoutLogin.Designer.cs">
+      <DependentUpon>frmLayoutLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Module\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Module\frmAddNewUser1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module\frmAddNewUser1.Designer.cs">
+      <DependentUpon>frmAddNewUser1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Module\frmResetPass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module\frmResetPass.Designer.cs">
+      <DependentUpon>frmResetPass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DropShadow.cs" />
+    <Compile Include="Module\Popup\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module\Popup\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Module\frmAddInfoNhanVien.resx">
+      <DependentUpon>frmAddInfoNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\frmAddNewUser.resx">
+      <DependentUpon>frmAddNewUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\frmDoiMatKhau.resx">
+      <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\frmHoSoNhanVien.resx">
+      <DependentUpon>frmHoSoNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\frmChinh.resx">
+      <DependentUpon>frmChinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\frmImportExcelNhanVien.resx">
+      <DependentUpon>frmImportExcelNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\frmLayout.resx">
+      <DependentUpon>frmLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\frmLayoutLogin.resx">
+      <DependentUpon>frmLayoutLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\frmAddNewUser1.resx">
+      <DependentUpon>frmAddNewUser1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\frmResetPass.resx">
+      <DependentUpon>frmResetPass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Popup\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ACB_Logo.ico" />
+    <Content Include="Packages\Bunifu_UI_v1.52.dll" />
+    <Content Include="Resources\ACB_Logo-1.png" />
+    <Content Include="Resources\ACB_Logo.png" />
+    <Content Include="Resources\close.png" />
+    <Content Include="Resources\close1.png" />
+    <None Include="Resources\exit.png" />
+    <Content Include="Resources\find.png" />
+    <Content Include="Resources\find1.png" />
+    <None Include="Resources\headphone-1.png" />
+    <None Include="Resources\headphone %282%29.png" />
+    <Content Include="Resources\white.jpg" />
+    <None Include="Packages\Icon\find.png" />
+    <None Include="Packages\Icon\white.jpg" />
+    <None Include="Packages\Icon\ACB_Logo-1.png" />
+    <None Include="Packages\Icon\ACB_Logo.png" />
+    <None Include="Packages\Icon\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
