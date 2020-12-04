@@ -69,6 +69,7 @@
             this.txtNgayCap = new System.Windows.Forms.TextBox();
             this.txtTonGiao = new System.Windows.Forms.TextBox();
             this.txtNguyenQuan = new System.Windows.Forms.TextBox();
+            this.btnLuu = new Bunifu.Framework.UI.BunifuThinButton2();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
@@ -80,6 +81,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
+            this.panel1.Controls.Add(this.btnLuu);
             this.panel1.Controls.Add(this.bunifuCustomLabel1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -546,6 +548,31 @@
             this.txtNguyenQuan.TabIndex = 64;
             this.txtNguyenQuan.Text = "Bình Thắng Dĩ an BÌnh Dương";
             // 
+            // btnLuu
+            // 
+            this.btnLuu.ActiveBorderThickness = 1;
+            this.btnLuu.ActiveCornerRadius = 20;
+            this.btnLuu.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(65)))), ((int)(((byte)(155)))));
+            this.btnLuu.ActiveForecolor = System.Drawing.Color.White;
+            this.btnLuu.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(65)))), ((int)(((byte)(155)))));
+            this.btnLuu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
+            this.btnLuu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLuu.BackgroundImage")));
+            this.btnLuu.ButtonText = "Lưu";
+            this.btnLuu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLuu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLuu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(184)))));
+            this.btnLuu.IdleBorderThickness = 1;
+            this.btnLuu.IdleCornerRadius = 20;
+            this.btnLuu.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(184)))));
+            this.btnLuu.IdleForecolor = System.Drawing.Color.White;
+            this.btnLuu.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(184)))));
+            this.btnLuu.Location = new System.Drawing.Point(1065, 0);
+            this.btnLuu.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(77, 58);
+            this.btnLuu.TabIndex = 65;
+            this.btnLuu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // frmInfoNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -614,5 +641,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel panel4;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel16;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnLuu;
     }
 }
