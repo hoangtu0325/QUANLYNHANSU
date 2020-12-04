@@ -106,6 +106,7 @@ namespace QuanLyNhanSu_Master.Module
                 _Worksheet xlWorkSheet = null;
                 xlWorkSheet = xlWorkBook.Worksheets[1];
                 int intColumnCount = dataTable2.Columns.Count;
+                int intRowCount = dataTable2.Rows.Count;
                 xlWorkSheet.Name = "Sheet_1";
                 
                 for (int i = 1; i < intColumnCount + 1; i++)
@@ -115,7 +116,7 @@ namespace QuanLyNhanSu_Master.Module
                 Microsoft.Office.Interop.Excel.Range range = xlWorkSheet.Range["A1", DataGridViewToExcel_ByfinalColLetter(intColumnCount) + "1"];
                 range.Font.Size = 16;
                 range.Interior.ColorIndex = 36;
-                for (int i = 0; i < intColumnCount - 1; i++)
+                for (int i = 0; i < intRowCount - 1; i++)
                 {
                     for (int j = 0; j < intColumnCount; j++)
                     {

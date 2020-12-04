@@ -2,6 +2,7 @@
 using QuanLyNhanSu_Master.DAO;
 using QuanLyNhanSu_Master.DTO;
 using QuanLyNhanSu_Master.Module;
+using QuanLyNhanSu_Master.Module.Popup;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -57,18 +58,16 @@ namespace QuanLyNhanSu_Master
             cbSearch.DisplayMember = "ThongTinNV";
             cbSearch.SelectedItem = null;
             cbSearch.SelectedText = "Tìm kiếm hồ sơ nhân sự";
+           
         }
 
         void ChangeAccount(string role)
         {
-            // MessageBox.Show("" + role);
             if (role != "Admin")
             {
                 ToolStripAddTKAdmin.Visible = false;
                 ToolStripReSetPass.Visible = false;
             }
-            //adminToolStripMenuItem.Enabled = type == 1;
-            // thôngTinTàiKhoảnToolStripMenuItem.Text += " (" + LoginAccount.DisplayName + ")";
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -81,19 +80,6 @@ namespace QuanLyNhanSu_Master
 
             Form frmLayouLogin = new frmLayoutLogin();
             Button bt = (Button)sender;
-            //bt = (Button)sender;
-            //frmLayouLogin.Show();
-            //FormChild<frmLogin>();
-            //if (sender.GetType().Name == "Button")
-            //{
-            //     bt = (Button)sender;
-            //}
-            //else
-            //{
-            //    bt = (Bunifu.Framework.UI.BunifuTileButton)sender;
-            //}
-
-            //Bunifu.Framework.UI.BunifuTileButton bunifuTileButton = (Bunifu.Framework.UI.BunifuTileButton)sender;
             if (bt.Name == "btnDashboard")
             {
                 lblStatus.Text = "DASHBOARD";
@@ -277,26 +263,6 @@ namespace QuanLyNhanSu_Master
             TimerNghiepVu.Start();
         }
 
-
-        //private void txtSearch_KeyDown(object sender, KeyEventArgs e)
-        //{
-        //    IsSearch = true;
-        //    if (e.KeyCode == Keys.Enter)
-        //    {
-        //        cbSearch.SelectedText = "Tìm kiếm hồ sơ nhân sự";
-        //        lblStatus.Text = "TÌM NHÂN VIÊN - " + txtSearch.Text;
-        //        frmHoSoNhanVien frmHoSoNhanVien = new frmHoSoNhanVien();
-        //        frmHoSoNhanVien.Action = "Tìm kiếm";
-        //        frmHoSoNhanVien.TenNhanVien = txtSearch.Text;
-        //        frmHoSoNhanVien.TopLevel = false;
-        //        frmHoSoNhanVien.MdiParent = this.MdiParent;
-        //        PanelCenter.Controls.Add(frmHoSoNhanVien);
-        //        frmHoSoNhanVien.Dock = DockStyle.Fill;
-        //        frmHoSoNhanVien.Show();
-        //        frmHoSoNhanVien.BringToFront();
-        //    }
-        //}
-
         private void ToolStripAddNewNhanVien_Click(object sender, EventArgs e)
         {
             btnAddNew_Click(sender, e);         //values preserved after close
@@ -320,8 +286,6 @@ namespace QuanLyNhanSu_Master
             frmAddNewUser.StartPosition = FormStartPosition.CenterParent;
             frmAddNewUser.Show();
         }
-
-
 
         DataTableCollection TableCollection;
         private void btnImport_Click(object sender, EventArgs e)
@@ -409,16 +373,16 @@ namespace QuanLyNhanSu_Master
 
         private void btnRefresh_MouseEnter(object sender, EventArgs e)
         {
-            Bunifu.Framework.UI.BunifuTileButton bt = (Bunifu.Framework.UI.BunifuTileButton)sender;
-            bt.BackColor = Color.FromArgb(238, 238, 238);
+            //Bunifu.Framework.UI.BunifuTileButton bt = (Bunifu.Framework.UI.BunifuTileButton)sender;
+            //bt.BackColor = Color.FromArgb(238, 238, 238);
             //bt.ForeColor = Color.White;
         }
 
         private void btnRefresh_MouseLeave(object sender, EventArgs e)
         {
-            Bunifu.Framework.UI.BunifuTileButton bt = (Bunifu.Framework.UI.BunifuTileButton)sender;
-            bt.BackColor = Color.Transparent;
-            bt.ForeColor = Color.Black;
+            //Bunifu.Framework.UI.BunifuTileButton bt = (Bunifu.Framework.UI.BunifuTileButton)sender;
+           // bt.BackColor = Color.Transparent;
+            //bt.ForeColor = Color.Black;
         }
 
         private void PanelTop_DoubleClick(object sender, EventArgs e)
@@ -492,6 +456,13 @@ namespace QuanLyNhanSu_Master
                 frmLogin.Show();
             }
             
+        }
+
+        private void ToolStripExportNhanVien_Click(object sender, EventArgs e)
+        {
+            frmFilterExportExcel frmFilterExportExcel = new frmFilterExportExcel();
+            frmFilterExportExcel.StartPosition = FormStartPosition.CenterScreen;
+            frmFilterExportExcel.Show();
         }
     }
 }

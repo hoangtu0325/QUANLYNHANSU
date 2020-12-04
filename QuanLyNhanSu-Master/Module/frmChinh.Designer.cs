@@ -69,6 +69,9 @@ namespace QuanLyNhanSu_Master
             this.ToolstripCaiDat = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripReSetPass = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripReLogin = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripImportBangChamCong = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripImportListNhanVien = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.ToolStripAddNew = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripAddNewNhanVien = new System.Windows.Forms.ToolStripMenuItem();
@@ -82,9 +85,8 @@ namespace QuanLyNhanSu_Master
             this.TimerNghiepVu = new System.Windows.Forms.Timer(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.toolStripImportBangChamCong = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripImportListNhanVien = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripExportNhanVien = new System.Windows.Forms.ToolStripMenuItem();
             this.PanelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -598,17 +600,18 @@ namespace QuanLyNhanSu_Master
             this.menuStrip2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.menuStrip2.BackColor = System.Drawing.Color.Transparent;
             this.menuStrip2.Dock = System.Windows.Forms.DockStyle.None;
-            this.menuStrip2.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStrip2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.menuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ToolstripCaiDat,
-            this.toolStripImportBangChamCong});
+            this.toolStripImportBangChamCong,
+            this.exportToolStripMenuItem});
             this.menuStrip2.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
-            this.menuStrip2.Location = new System.Drawing.Point(1089, 41);
+            this.menuStrip2.Location = new System.Drawing.Point(1157, 41);
             this.menuStrip2.Name = "menuStrip2";
             this.menuStrip2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.menuStrip2.ShowItemToolTips = true;
-            this.menuStrip2.Size = new System.Drawing.Size(290, 28);
+            this.menuStrip2.Size = new System.Drawing.Size(222, 28);
             this.menuStrip2.TabIndex = 1;
             this.menuStrip2.Text = "TẠO MỚI";
             // 
@@ -643,6 +646,37 @@ namespace QuanLyNhanSu_Master
             this.toolStripReLogin.Size = new System.Drawing.Size(216, 28);
             this.toolStripReLogin.Text = "Đăng nhập lại";
             this.toolStripReLogin.Click += new System.EventHandler(this.toolStripReLogin_Click);
+            // 
+            // toolStripImportBangChamCong
+            // 
+            this.toolStripImportBangChamCong.BackColor = System.Drawing.Color.Transparent;
+            this.toolStripImportBangChamCong.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripImportListNhanVien,
+            this.toolStripMenuItem3});
+            this.toolStripImportBangChamCong.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripImportBangChamCong.ForeColor = System.Drawing.Color.Black;
+            this.toolStripImportBangChamCong.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.toolStripImportBangChamCong.Name = "toolStripImportBangChamCong";
+            this.toolStripImportBangChamCong.Size = new System.Drawing.Size(66, 24);
+            this.toolStripImportBangChamCong.Text = "Import";
+            // 
+            // toolStripImportListNhanVien
+            // 
+            this.toolStripImportListNhanVien.BackColor = System.Drawing.Color.Transparent;
+            this.toolStripImportListNhanVien.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripImportListNhanVien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(34)))), ((int)(((byte)(110)))));
+            this.toolStripImportListNhanVien.Name = "toolStripImportListNhanVien";
+            this.toolStripImportListNhanVien.Size = new System.Drawing.Size(245, 28);
+            this.toolStripImportListNhanVien.Text = "Danh sách nhân viên";
+            this.toolStripImportListNhanVien.Click += new System.EventHandler(this.btnImport_Click);
+            // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.toolStripMenuItem3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(34)))), ((int)(((byte)(110)))));
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(245, 28);
+            this.toolStripMenuItem3.Text = "Bảng chấm công";
             // 
             // menuStrip1
             // 
@@ -736,15 +770,13 @@ namespace QuanLyNhanSu_Master
             this.btnExport.ImagePosition = 5;
             this.btnExport.ImageZoom = 50;
             this.btnExport.LabelPosition = 21;
-            this.btnExport.LabelText = "Export";
+            this.btnExport.LabelText = "";
             this.btnExport.Location = new System.Drawing.Point(1162, 9);
             this.btnExport.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnExport.Name = "btnExport";
             this.btnExport.Size = new System.Drawing.Size(56, 54);
             this.btnExport.TabIndex = 0;
             this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
-            this.btnExport.MouseEnter += new System.EventHandler(this.btnRefresh_MouseEnter);
-            this.btnExport.MouseLeave += new System.EventHandler(this.btnRefresh_MouseLeave);
             // 
             // bunifuBtnSetting
             // 
@@ -781,7 +813,7 @@ namespace QuanLyNhanSu_Master
             this.btnImport.ImageZoom = 50;
             this.btnImport.LabelPosition = 21;
             this.btnImport.LabelText = "Import";
-            this.btnImport.Location = new System.Drawing.Point(1243, 9);
+            this.btnImport.Location = new System.Drawing.Point(1234, 9);
             this.btnImport.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnImport.Name = "btnImport";
             this.btnImport.Size = new System.Drawing.Size(56, 54);
@@ -817,36 +849,21 @@ namespace QuanLyNhanSu_Master
             // 
             this.timer1.Interval = 1;
             // 
-            // toolStripImportBangChamCong
+            // exportToolStripMenuItem
             // 
-            this.toolStripImportBangChamCong.BackColor = System.Drawing.Color.Transparent;
-            this.toolStripImportBangChamCong.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripImportListNhanVien,
-            this.toolStripMenuItem3});
-            this.toolStripImportBangChamCong.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripImportBangChamCong.ForeColor = System.Drawing.Color.Black;
-            this.toolStripImportBangChamCong.Name = "toolStripImportBangChamCong";
-            this.toolStripImportBangChamCong.Size = new System.Drawing.Size(66, 24);
-            this.toolStripImportBangChamCong.Text = "Import";
+            this.exportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripExportNhanVien});
+            this.exportToolStripMenuItem.Margin = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
+            this.exportToolStripMenuItem.Size = new System.Drawing.Size(64, 24);
+            this.exportToolStripMenuItem.Text = "Export";
             // 
-            // toolStripImportListNhanVien
+            // ToolStripExportNhanVien
             // 
-            this.toolStripImportListNhanVien.BackColor = System.Drawing.Color.Transparent;
-            this.toolStripImportListNhanVien.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripImportListNhanVien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(34)))), ((int)(((byte)(110)))));
-            this.toolStripImportListNhanVien.Name = "toolStripImportListNhanVien";
-            this.toolStripImportListNhanVien.Size = new System.Drawing.Size(245, 28);
-            this.toolStripImportListNhanVien.Text = "Danh sách nhân viên";
-            this.toolStripImportListNhanVien.Click += new System.EventHandler(this.ToolStripReSetPass_Click);
-            // 
-            // toolStripMenuItem3
-            // 
-            this.toolStripMenuItem3.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.toolStripMenuItem3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(34)))), ((int)(((byte)(110)))));
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(245, 28);
-            this.toolStripMenuItem3.Text = "Bảng chấm công";
-            this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripReLogin_Click);
+            this.ToolStripExportNhanVien.Name = "ToolStripExportNhanVien";
+            this.ToolStripExportNhanVien.Size = new System.Drawing.Size(216, 26);
+            this.ToolStripExportNhanVien.Text = "Nhân viên";
+            this.ToolStripExportNhanVien.Click += new System.EventHandler(this.ToolStripExportNhanVien_Click);
             // 
             // frmChinh
             // 
@@ -946,6 +963,8 @@ namespace QuanLyNhanSu_Master
         private System.Windows.Forms.ToolStripMenuItem toolStripImportBangChamCong;
         private System.Windows.Forms.ToolStripMenuItem toolStripImportListNhanVien;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem exportToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripExportNhanVien;
     }
 }
 

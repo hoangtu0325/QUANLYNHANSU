@@ -51,15 +51,6 @@ namespace QuanLyNhanSu_Master.Module
                     this.status = "None Import Excel";
                 }
             }
-           
-            //foreach (DataRow item in dataTable.Rows)
-            //{
-            //    if (Convert.ToBoolean(item["Ngày sinh"]) == true)
-            //    {
-            //        item["Ngày sinh"] = "Nam";
-            //    } 
-            //}
-           
 
         }
     }
