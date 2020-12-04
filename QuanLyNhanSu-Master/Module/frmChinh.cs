@@ -455,7 +455,6 @@ namespace QuanLyNhanSu_Master
                 frmLogin frmLogin = new frmLogin();
                 frmLogin.Show();
             }
-            
         }
 
         private void ToolStripExportNhanVien_Click(object sender, EventArgs e)

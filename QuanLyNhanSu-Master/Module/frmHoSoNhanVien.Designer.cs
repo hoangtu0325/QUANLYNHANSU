@@ -37,6 +37,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.buniDataGridHoSoNhanVien = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.buniDataGridHoSoNhanVien)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,6 +83,7 @@
             this.buniDataGridHoSoNhanVien.HeaderForeColor = System.Drawing.Color.Black;
             this.buniDataGridHoSoNhanVien.Location = new System.Drawing.Point(0, 0);
             this.buniDataGridHoSoNhanVien.Name = "buniDataGridHoSoNhanVien";
+            this.buniDataGridHoSoNhanVien.ReadOnly = true;
             this.buniDataGridHoSoNhanVien.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.buniDataGridHoSoNhanVien.RowHeadersVisible = false;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -90,11 +92,21 @@
             this.buniDataGridHoSoNhanVien.RowTemplate.Height = 40;
             this.buniDataGridHoSoNhanVien.Size = new System.Drawing.Size(1148, 655);
             this.buniDataGridHoSoNhanVien.TabIndex = 0;
+            this.buniDataGridHoSoNhanVien.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.buniDataGridHoSoNhanVien_CellDoubleClick);
+            // 
+            // panel1
+            // 
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1148, 655);
+            this.panel1.TabIndex = 1;
             // 
             // frmHoSoNhanVien
             // 
             this.ClientSize = new System.Drawing.Size(1148, 655);
             this.Controls.Add(this.buniDataGridHoSoNhanVien);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmHoSoNhanVien";
             this.Load += new System.EventHandler(this.frmHoSoNhanVien_Load);
@@ -107,5 +119,6 @@
 
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         public Bunifu.Framework.UI.BunifuCustomDataGrid buniDataGridHoSoNhanVien;
+        private System.Windows.Forms.Panel panel1;
     }
 }

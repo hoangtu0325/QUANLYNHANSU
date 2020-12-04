@@ -12,6 +12,7 @@ using ExcelEngine;
 using Microsoft.Office.Interop.Excel;
 using System.Threading;
 using System.Timers;
+using QuanLyNhanSu_Master.Module.Popup;
 
 namespace QuanLyNhanSu_Master.Module
 {
@@ -143,6 +144,19 @@ namespace QuanLyNhanSu_Master.Module
             finalColLetter += colCharset.Substring((lintColumnCount - 1) % colCharset.Length, 1);
 
             return finalColLetter;
+        }
+
+        private void buniDataGridHoSoNhanVien_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            frminfonhanvien frminfonhanvien = new frminfonhanvien();
+            frminfonhanvien.TopLevel = false;
+            frminfonhanvien.MdiParent = this.MdiParent;
+            panel1.Controls.Add(frminfonhanvien);
+            buniDataGridHoSoNhanVien.Visible = false;
+            frminfonhanvien.Dock = DockStyle.Fill;
+            frminfonhanvien.TopMost = true;
+            frminfonhanvien.Show();
+            frminfonhanvien.BringToFront();
         }
     }
 }

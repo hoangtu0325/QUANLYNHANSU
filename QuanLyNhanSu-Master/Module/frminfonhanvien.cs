@@ -19,7 +19,7 @@ namespace QuanLyNhanSu_Master.Module
 
         private void frminfonhanvien_Load(object sender, EventArgs e)
         {
-
+            this.CenterToParent();
         }
 
         private void bunifuCustomLabel5_Click(object sender, EventArgs e)
