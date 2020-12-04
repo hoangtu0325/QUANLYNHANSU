@@ -37,38 +37,44 @@
             this.bunifuCustomLabel10 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel20 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.lblDienThoai = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel17 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.lblHonNhan = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel19 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel15 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel14 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel9 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel13 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.lblNgaySinh = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel12 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.abc = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel11 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.lblMaNV = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.lblTenNV = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.lblGioiTinh = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.lblQuocTich = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.lblEmail = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.lblTonGiao = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.lblNgayCap = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.lblDanToc = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.lblCMT = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.lblNoiSinh = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel8 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNgaySinh = new System.Windows.Forms.TextBox();
+            this.txtHonNhan = new System.Windows.Forms.TextBox();
+            this.txtDienThoai = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtQuocTich = new System.Windows.Forms.TextBox();
+            this.txtGioiTinh = new System.Windows.Forms.TextBox();
+            this.txtMaNV = new System.Windows.Forms.TextBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.bunifuCustomLabel16 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtCMT = new System.Windows.Forms.TextBox();
+            this.txtDanToc = new System.Windows.Forms.TextBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.bunifuCustomLabel18 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.txtNgayCap = new System.Windows.Forms.TextBox();
+            this.txtTonGiao = new System.Windows.Forms.TextBox();
+            this.txtNguyenQuan = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -88,44 +94,46 @@
             this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.Red;
             this.bunifuCustomLabel1.Location = new System.Drawing.Point(21, 13);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(182, 31);
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(170, 30);
             this.bunifuCustomLabel1.TabIndex = 0;
             this.bunifuCustomLabel1.Text = "Thông tin chung";
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.txtDanToc);
+            this.panel2.Controls.Add(this.txtMaNV);
+            this.panel2.Controls.Add(this.txtTonGiao);
+            this.panel2.Controls.Add(this.txtNgayCap);
+            this.panel2.Controls.Add(this.txtCMT);
+            this.panel2.Controls.Add(this.txtNguyenQuan);
+            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.txtGioiTinh);
+            this.panel2.Controls.Add(this.txtQuocTich);
+            this.panel2.Controls.Add(this.txtEmail);
+            this.panel2.Controls.Add(this.txtDienThoai);
+            this.panel2.Controls.Add(this.txtHonNhan);
+            this.panel2.Controls.Add(this.txtNgaySinh);
+            this.panel2.Controls.Add(this.panel5);
+            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.bunifuImageButton1);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.bunifuCustomLabel20);
             this.panel2.Controls.Add(this.bunifuCustomLabel6);
-            this.panel2.Controls.Add(this.lblDienThoai);
             this.panel2.Controls.Add(this.bunifuCustomLabel5);
             this.panel2.Controls.Add(this.bunifuCustomLabel17);
-            this.panel2.Controls.Add(this.lblHonNhan);
             this.panel2.Controls.Add(this.bunifuCustomLabel4);
             this.panel2.Controls.Add(this.bunifuCustomLabel19);
             this.panel2.Controls.Add(this.bunifuCustomLabel15);
             this.panel2.Controls.Add(this.bunifuCustomLabel14);
             this.panel2.Controls.Add(this.bunifuCustomLabel9);
             this.panel2.Controls.Add(this.bunifuCustomLabel13);
-            this.panel2.Controls.Add(this.lblNgaySinh);
             this.panel2.Controls.Add(this.bunifuCustomLabel3);
             this.panel2.Controls.Add(this.bunifuCustomLabel12);
             this.panel2.Controls.Add(this.abc);
             this.panel2.Controls.Add(this.bunifuCustomLabel11);
-            this.panel2.Controls.Add(this.lblEmail);
-            this.panel2.Controls.Add(this.bunifuCustomLabel8);
-            this.panel2.Controls.Add(this.lblNoiSinh);
-            this.panel2.Controls.Add(this.lblCMT);
-            this.panel2.Controls.Add(this.lblNgayCap);
-            this.panel2.Controls.Add(this.lblDanToc);
-            this.panel2.Controls.Add(this.lblQuocTich);
-            this.panel2.Controls.Add(this.lblTonGiao);
-            this.panel2.Controls.Add(this.lblGioiTinh);
-            this.panel2.Controls.Add(this.lblMaNV);
             this.panel2.Controls.Add(this.bunifuCustomLabel7);
-            this.panel2.Controls.Add(this.lblTenNV);
             this.panel2.Controls.Add(this.bunifuCustomLabel2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 58);
@@ -165,7 +173,7 @@
             this.bunifuCustomLabel10.ForeColor = System.Drawing.Color.Red;
             this.bunifuCustomLabel10.Location = new System.Drawing.Point(18, 9);
             this.bunifuCustomLabel10.Name = "bunifuCustomLabel10";
-            this.bunifuCustomLabel10.Size = new System.Drawing.Size(165, 31);
+            this.bunifuCustomLabel10.Size = new System.Drawing.Size(155, 30);
             this.bunifuCustomLabel10.TabIndex = 0;
             this.bunifuCustomLabel10.Text = "Thông tin khác";
             // 
@@ -184,18 +192,6 @@
             this.bunifuCustomLabel6.Name = "bunifuCustomLabel6";
             this.bunifuCustomLabel6.Size = new System.Drawing.Size(0, 17);
             this.bunifuCustomLabel6.TabIndex = 4;
-            // 
-            // lblDienThoai
-            // 
-            this.lblDienThoai.AutoSize = true;
-            this.lblDienThoai.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDienThoai.ForeColor = System.Drawing.Color.Black;
-            this.lblDienThoai.Location = new System.Drawing.Point(423, 202);
-            this.lblDienThoai.Name = "lblDienThoai";
-            this.lblDienThoai.Size = new System.Drawing.Size(100, 23);
-            this.lblDienThoai.TabIndex = 0;
-            this.lblDienThoai.Text = "0333999999";
-            this.lblDienThoai.Click += new System.EventHandler(this.bunifuCustomLabel5_Click);
             // 
             // bunifuCustomLabel5
             // 
@@ -219,17 +215,6 @@
             this.bunifuCustomLabel17.Size = new System.Drawing.Size(82, 23);
             this.bunifuCustomLabel17.TabIndex = 0;
             this.bunifuCustomLabel17.Text = "Nơi sinh :";
-            // 
-            // lblHonNhan
-            // 
-            this.lblHonNhan.AutoSize = true;
-            this.lblHonNhan.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHonNhan.ForeColor = System.Drawing.Color.Black;
-            this.lblHonNhan.Location = new System.Drawing.Point(423, 155);
-            this.lblHonNhan.Name = "lblHonNhan";
-            this.lblHonNhan.Size = new System.Drawing.Size(83, 23);
-            this.lblHonNhan.TabIndex = 0;
-            this.lblHonNhan.Text = "Độc Thân";
             // 
             // bunifuCustomLabel4
             // 
@@ -297,17 +282,6 @@
             this.bunifuCustomLabel13.TabIndex = 0;
             this.bunifuCustomLabel13.Text = "Ngày cấp :";
             // 
-            // lblNgaySinh
-            // 
-            this.lblNgaySinh.AutoSize = true;
-            this.lblNgaySinh.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNgaySinh.ForeColor = System.Drawing.Color.Black;
-            this.lblNgaySinh.Location = new System.Drawing.Point(423, 102);
-            this.lblNgaySinh.Name = "lblNgaySinh";
-            this.lblNgaySinh.Size = new System.Drawing.Size(96, 23);
-            this.lblNgaySinh.TabIndex = 0;
-            this.lblNgaySinh.Text = "26/04/2000";
-            // 
             // bunifuCustomLabel3
             // 
             this.bunifuCustomLabel3.AutoSize = true;
@@ -352,18 +326,6 @@
             this.bunifuCustomLabel11.TabIndex = 0;
             this.bunifuCustomLabel11.Text = "Dân tộc :";
             // 
-            // lblMaNV
-            // 
-            this.lblMaNV.AutoSize = true;
-            this.lblMaNV.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMaNV.ForeColor = System.Drawing.Color.Black;
-            this.lblMaNV.Location = new System.Drawing.Point(789, 45);
-            this.lblMaNV.Name = "lblMaNV";
-            this.lblMaNV.Size = new System.Drawing.Size(28, 23);
-            this.lblMaNV.TabIndex = 0;
-            this.lblMaNV.Text = "01";
-            this.lblMaNV.Click += new System.EventHandler(this.lblMaNV_Click);
-            // 
             // bunifuCustomLabel7
             // 
             this.bunifuCustomLabel7.AutoSize = true;
@@ -374,17 +336,6 @@
             this.bunifuCustomLabel7.Size = new System.Drawing.Size(72, 23);
             this.bunifuCustomLabel7.TabIndex = 0;
             this.bunifuCustomLabel7.Text = "Mã NV :";
-            // 
-            // lblTenNV
-            // 
-            this.lblTenNV.AutoSize = true;
-            this.lblTenNV.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenNV.ForeColor = System.Drawing.Color.Black;
-            this.lblTenNV.Location = new System.Drawing.Point(423, 35);
-            this.lblTenNV.Name = "lblTenNV";
-            this.lblTenNV.Size = new System.Drawing.Size(120, 23);
-            this.lblTenNV.TabIndex = 0;
-            this.lblTenNV.Text = "Nguyễn Văn A";
             // 
             // bunifuCustomLabel2
             // 
@@ -397,113 +348,205 @@
             this.bunifuCustomLabel2.TabIndex = 0;
             this.bunifuCustomLabel2.Text = "Họ và tên :";
             // 
-            // lblGioiTinh
+            // textBox1
             // 
-            this.lblGioiTinh.AutoSize = true;
-            this.lblGioiTinh.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGioiTinh.ForeColor = System.Drawing.Color.Black;
-            this.lblGioiTinh.Location = new System.Drawing.Point(789, 102);
-            this.lblGioiTinh.Name = "lblGioiTinh";
-            this.lblGioiTinh.Size = new System.Drawing.Size(47, 23);
-            this.lblGioiTinh.TabIndex = 0;
-            this.lblGioiTinh.Text = "Nam";
-            this.lblGioiTinh.Click += new System.EventHandler(this.lblMaNV_Click);
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(427, 45);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(226, 44);
+            this.textBox1.TabIndex = 64;
+            this.textBox1.Text = "Nguyễn Văn A";
             // 
-            // lblQuocTich
+            // txtNgaySinh
             // 
-            this.lblQuocTich.AutoSize = true;
-            this.lblQuocTich.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuocTich.ForeColor = System.Drawing.Color.Black;
-            this.lblQuocTich.Location = new System.Drawing.Point(789, 155);
-            this.lblQuocTich.Name = "lblQuocTich";
-            this.lblQuocTich.Size = new System.Drawing.Size(82, 23);
-            this.lblQuocTich.TabIndex = 0;
-            this.lblQuocTich.Text = "Việt Nam";
-            this.lblQuocTich.Click += new System.EventHandler(this.lblMaNV_Click);
+            this.txtNgaySinh.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNgaySinh.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNgaySinh.Location = new System.Drawing.Point(427, 102);
+            this.txtNgaySinh.Multiline = true;
+            this.txtNgaySinh.Name = "txtNgaySinh";
+            this.txtNgaySinh.Size = new System.Drawing.Size(226, 22);
+            this.txtNgaySinh.TabIndex = 64;
+            this.txtNgaySinh.Text = "26/04/2000";
             // 
-            // lblEmail
+            // txtHonNhan
             // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.ForeColor = System.Drawing.Color.Black;
-            this.lblEmail.Location = new System.Drawing.Point(789, 202);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(208, 23);
-            this.lblEmail.TabIndex = 0;
-            this.lblEmail.Text = "quanlinhansu@gmail.com";
-            this.lblEmail.Click += new System.EventHandler(this.lblMaNV_Click);
+            this.txtHonNhan.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtHonNhan.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHonNhan.Location = new System.Drawing.Point(427, 156);
+            this.txtHonNhan.Multiline = true;
+            this.txtHonNhan.Name = "txtHonNhan";
+            this.txtHonNhan.Size = new System.Drawing.Size(226, 22);
+            this.txtHonNhan.TabIndex = 64;
+            this.txtHonNhan.Text = "Độc Thân";
             // 
-            // lblTonGiao
+            // txtDienThoai
             // 
-            this.lblTonGiao.AutoSize = true;
-            this.lblTonGiao.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTonGiao.ForeColor = System.Drawing.Color.Black;
-            this.lblTonGiao.Location = new System.Drawing.Point(811, 367);
-            this.lblTonGiao.Name = "lblTonGiao";
-            this.lblTonGiao.Size = new System.Drawing.Size(60, 23);
-            this.lblTonGiao.TabIndex = 0;
-            this.lblTonGiao.Text = "Không";
-            this.lblTonGiao.Click += new System.EventHandler(this.lblMaNV_Click);
+            this.txtDienThoai.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDienThoai.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDienThoai.Location = new System.Drawing.Point(427, 203);
+            this.txtDienThoai.Multiline = true;
+            this.txtDienThoai.Name = "txtDienThoai";
+            this.txtDienThoai.Size = new System.Drawing.Size(226, 29);
+            this.txtDienThoai.TabIndex = 64;
+            this.txtDienThoai.Text = "0333999999";
             // 
-            // lblNgayCap
+            // txtEmail
             // 
-            this.lblNgayCap.AutoSize = true;
-            this.lblNgayCap.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNgayCap.ForeColor = System.Drawing.Color.Black;
-            this.lblNgayCap.Location = new System.Drawing.Point(811, 442);
-            this.lblNgayCap.Name = "lblNgayCap";
-            this.lblNgayCap.Size = new System.Drawing.Size(87, 23);
-            this.lblNgayCap.TabIndex = 0;
-            this.lblNgayCap.Text = "25/5/2015";
-            this.lblNgayCap.Click += new System.EventHandler(this.lblMaNV_Click);
+            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(788, 203);
+            this.txtEmail.Multiline = true;
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(315, 66);
+            this.txtEmail.TabIndex = 64;
+            this.txtEmail.Text = "Quanlinhansu@gmail.com";
             // 
-            // lblDanToc
+            // txtQuocTich
             // 
-            this.lblDanToc.AutoSize = true;
-            this.lblDanToc.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDanToc.ForeColor = System.Drawing.Color.Black;
-            this.lblDanToc.Location = new System.Drawing.Point(274, 370);
-            this.lblDanToc.Name = "lblDanToc";
-            this.lblDanToc.Size = new System.Drawing.Size(44, 23);
-            this.lblDanToc.TabIndex = 0;
-            this.lblDanToc.Text = "Kinh";
-            this.lblDanToc.Click += new System.EventHandler(this.lblMaNV_Click);
+            this.txtQuocTich.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtQuocTich.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQuocTich.Location = new System.Drawing.Point(788, 155);
+            this.txtQuocTich.Multiline = true;
+            this.txtQuocTich.Name = "txtQuocTich";
+            this.txtQuocTich.Size = new System.Drawing.Size(226, 22);
+            this.txtQuocTich.TabIndex = 64;
+            this.txtQuocTich.Text = "Việt Nam";
             // 
-            // lblCMT
+            // txtGioiTinh
             // 
-            this.lblCMT.AutoSize = true;
-            this.lblCMT.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCMT.ForeColor = System.Drawing.Color.Black;
-            this.lblCMT.Location = new System.Drawing.Point(274, 442);
-            this.lblCMT.Name = "lblCMT";
-            this.lblCMT.Size = new System.Drawing.Size(82, 23);
-            this.lblCMT.TabIndex = 0;
-            this.lblCMT.Text = "00123456";
-            this.lblCMT.Click += new System.EventHandler(this.lblMaNV_Click);
+            this.txtGioiTinh.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtGioiTinh.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGioiTinh.Location = new System.Drawing.Point(788, 103);
+            this.txtGioiTinh.Multiline = true;
+            this.txtGioiTinh.Name = "txtGioiTinh";
+            this.txtGioiTinh.Size = new System.Drawing.Size(226, 22);
+            this.txtGioiTinh.TabIndex = 64;
+            this.txtGioiTinh.Text = "Nam";
             // 
-            // lblNoiSinh
+            // txtMaNV
             // 
-            this.lblNoiSinh.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNoiSinh.ForeColor = System.Drawing.Color.Black;
-            this.lblNoiSinh.Location = new System.Drawing.Point(274, 516);
-            this.lblNoiSinh.Name = "lblNoiSinh";
-            this.lblNoiSinh.Size = new System.Drawing.Size(383, 85);
-            this.lblNoiSinh.TabIndex = 0;
-            this.lblNoiSinh.Text = "Phường Bình Thắng, Dĩ An , Bình Dương";
-            this.lblNoiSinh.Click += new System.EventHandler(this.lblMaNV_Click);
+            this.txtMaNV.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMaNV.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaNV.Location = new System.Drawing.Point(788, 45);
+            this.txtMaNV.Multiline = true;
+            this.txtMaNV.Name = "txtMaNV";
+            this.txtMaNV.Size = new System.Drawing.Size(226, 22);
+            this.txtMaNV.TabIndex = 64;
+            this.txtMaNV.Text = "01";
             // 
-            // bunifuCustomLabel8
+            // panel4
             // 
-            this.bunifuCustomLabel8.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel8.ForeColor = System.Drawing.Color.Black;
-            this.bunifuCustomLabel8.Location = new System.Drawing.Point(811, 516);
-            this.bunifuCustomLabel8.Name = "bunifuCustomLabel8";
-            this.bunifuCustomLabel8.Size = new System.Drawing.Size(339, 85);
-            this.bunifuCustomLabel8.TabIndex = 0;
-            this.bunifuCustomLabel8.Text = "Phường Bình Thắng, Dĩ An , Bình Dương";
-            this.bunifuCustomLabel8.Click += new System.EventHandler(this.lblMaNV_Click);
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
+            this.panel4.Controls.Add(this.bunifuCustomLabel16);
+            this.panel4.Location = new System.Drawing.Point(-358, 581);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1150, 58);
+            this.panel4.TabIndex = 8;
             // 
-            // frminfonhanvien
+            // bunifuCustomLabel16
+            // 
+            this.bunifuCustomLabel16.AutoSize = true;
+            this.bunifuCustomLabel16.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel16.ForeColor = System.Drawing.Color.Red;
+            this.bunifuCustomLabel16.Location = new System.Drawing.Point(18, 9);
+            this.bunifuCustomLabel16.Name = "bunifuCustomLabel16";
+            this.bunifuCustomLabel16.Size = new System.Drawing.Size(155, 30);
+            this.bunifuCustomLabel16.TabIndex = 0;
+            this.bunifuCustomLabel16.Text = "Thông tin khác";
+            // 
+            // textBox2
+            // 
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(254, 516);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(405, 59);
+            this.textBox2.TabIndex = 64;
+            this.textBox2.Text = "Bình Thắng Dĩ an BÌnh Dương";
+            // 
+            // txtCMT
+            // 
+            this.txtCMT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCMT.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCMT.Location = new System.Drawing.Point(254, 448);
+            this.txtCMT.Multiline = true;
+            this.txtCMT.Name = "txtCMT";
+            this.txtCMT.Size = new System.Drawing.Size(226, 22);
+            this.txtCMT.TabIndex = 64;
+            this.txtCMT.Text = "035123456";
+            // 
+            // txtDanToc
+            // 
+            this.txtDanToc.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDanToc.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDanToc.Location = new System.Drawing.Point(254, 371);
+            this.txtDanToc.Multiline = true;
+            this.txtDanToc.Name = "txtDanToc";
+            this.txtDanToc.Size = new System.Drawing.Size(226, 22);
+            this.txtDanToc.TabIndex = 64;
+            this.txtDanToc.Text = "Kinh";
+            // 
+            // panel5
+            // 
+            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
+            this.panel5.Controls.Add(this.bunifuCustomLabel18);
+            this.panel5.Location = new System.Drawing.Point(39, 581);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1150, 58);
+            this.panel5.TabIndex = 8;
+            // 
+            // bunifuCustomLabel18
+            // 
+            this.bunifuCustomLabel18.AutoSize = true;
+            this.bunifuCustomLabel18.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel18.ForeColor = System.Drawing.Color.Red;
+            this.bunifuCustomLabel18.Location = new System.Drawing.Point(18, 9);
+            this.bunifuCustomLabel18.Name = "bunifuCustomLabel18";
+            this.bunifuCustomLabel18.Size = new System.Drawing.Size(155, 30);
+            this.bunifuCustomLabel18.TabIndex = 0;
+            this.bunifuCustomLabel18.Text = "Thông tin khác";
+            // 
+            // txtNgayCap
+            // 
+            this.txtNgayCap.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNgayCap.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNgayCap.Location = new System.Drawing.Point(788, 448);
+            this.txtNgayCap.Multiline = true;
+            this.txtNgayCap.Name = "txtNgayCap";
+            this.txtNgayCap.Size = new System.Drawing.Size(226, 22);
+            this.txtNgayCap.TabIndex = 64;
+            this.txtNgayCap.Text = "25/5/2015";
+            // 
+            // txtTonGiao
+            // 
+            this.txtTonGiao.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTonGiao.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTonGiao.Location = new System.Drawing.Point(788, 370);
+            this.txtTonGiao.Multiline = true;
+            this.txtTonGiao.Name = "txtTonGiao";
+            this.txtTonGiao.Size = new System.Drawing.Size(226, 22);
+            this.txtTonGiao.TabIndex = 64;
+            this.txtTonGiao.Text = "Không";
+            // 
+            // txtNguyenQuan
+            // 
+            this.txtNguyenQuan.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNguyenQuan.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNguyenQuan.Location = new System.Drawing.Point(788, 516);
+            this.txtNguyenQuan.Multiline = true;
+            this.txtNguyenQuan.Name = "txtNguyenQuan";
+            this.txtNguyenQuan.Size = new System.Drawing.Size(365, 59);
+            this.txtNguyenQuan.TabIndex = 64;
+            this.txtNguyenQuan.Text = "Bình Thắng Dĩ an BÌnh Dương";
+            // 
+            // frmInfoNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -511,7 +554,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frminfonhanvien";
+            this.Name = "frmInfoNhanVien";
             this.Text = "frminfonhanvien";
             this.Load += new System.EventHandler(this.frminfonhanvien_Load);
             this.panel1.ResumeLayout(false);
@@ -521,6 +564,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -549,19 +596,23 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel11;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel7;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel10;
-        private Bunifu.Framework.UI.BunifuCustomLabel lblDienThoai;
-        private Bunifu.Framework.UI.BunifuCustomLabel lblHonNhan;
-        private Bunifu.Framework.UI.BunifuCustomLabel lblNgaySinh;
-        private Bunifu.Framework.UI.BunifuCustomLabel lblMaNV;
-        private Bunifu.Framework.UI.BunifuCustomLabel lblTenNV;
-        private Bunifu.Framework.UI.BunifuCustomLabel lblEmail;
-        private Bunifu.Framework.UI.BunifuCustomLabel lblQuocTich;
-        private Bunifu.Framework.UI.BunifuCustomLabel lblGioiTinh;
-        private Bunifu.Framework.UI.BunifuCustomLabel lblNoiSinh;
-        private Bunifu.Framework.UI.BunifuCustomLabel lblCMT;
-        private Bunifu.Framework.UI.BunifuCustomLabel lblNgayCap;
-        private Bunifu.Framework.UI.BunifuCustomLabel lblDanToc;
-        private Bunifu.Framework.UI.BunifuCustomLabel lblTonGiao;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel8;
+        private System.Windows.Forms.TextBox txtDanToc;
+        private System.Windows.Forms.TextBox txtMaNV;
+        private System.Windows.Forms.TextBox txtTonGiao;
+        private System.Windows.Forms.TextBox txtNgayCap;
+        private System.Windows.Forms.TextBox txtCMT;
+        private System.Windows.Forms.TextBox txtNguyenQuan;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtGioiTinh;
+        private System.Windows.Forms.TextBox txtQuocTich;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtDienThoai;
+        private System.Windows.Forms.TextBox txtHonNhan;
+        private System.Windows.Forms.TextBox txtNgaySinh;
+        private System.Windows.Forms.Panel panel5;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel18;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Panel panel4;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel16;
     }
 }
