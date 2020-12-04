@@ -25,7 +25,13 @@ namespace QuanLyNhanSu_Master.Module
         public static System.Data.DataTable dataTable;
         public static System.Data.DataTable dataTable2;
         private bool IsExport;
-        public bool IsExport1 { get => IsExport; set => IsExport = value; }
+
+        public bool IsExport1
+        {
+            get { return IsExport; }
+            set { IsExport = value; }
+        }
+        //public bool IsExport1 { get => IsExport; set => IsExport = value; }
       
         public static string Action = "";
         public static string TenNhanVien = "";
@@ -148,7 +154,7 @@ namespace QuanLyNhanSu_Master.Module
 
         private void buniDataGridHoSoNhanVien_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            frminfonhanvien frminfonhanvien = new frminfonhanvien();
+            frmInfoNhanVien frminfonhanvien = new frmInfoNhanVien();
             frminfonhanvien.TopLevel = false;
             frminfonhanvien.MdiParent = this.MdiParent;
             panel1.Controls.Add(frminfonhanvien);

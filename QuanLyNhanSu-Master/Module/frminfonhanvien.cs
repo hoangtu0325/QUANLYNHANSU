@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QuanLyNhanSu_Master.Module
 {
-    public partial class frminfonhanvien : Form
+    public partial class frmInfoNhanVien : Form
     {
-        public frminfonhanvien()
+        public frmInfoNhanVien()
         {
             InitializeComponent();
         }
@@ -23,6 +23,11 @@ namespace QuanLyNhanSu_Master.Module
         }
 
         private void bunifuCustomLabel5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblMaNV_Click(object sender, EventArgs e)
         {
 
         }
