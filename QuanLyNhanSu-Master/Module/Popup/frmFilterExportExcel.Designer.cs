@@ -36,18 +36,24 @@
             this.btnMinimized = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnExit = new Bunifu.Framework.UI.BunifuImageButton();
             this.PanelCenter = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cbAllPhongBan = new System.Windows.Forms.CheckedListBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnExportExcel = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.cbTinhTrangLamViec = new System.Windows.Forms.CheckedListBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.cbAllGender = new System.Windows.Forms.CheckedListBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbAllPhongBan = new System.Windows.Forms.CheckedListBox();
+            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.paneltop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LogoACB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimized)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             this.PanelCenter.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // DragControl
@@ -67,7 +73,7 @@
             this.paneltop.Location = new System.Drawing.Point(0, 0);
             this.paneltop.Margin = new System.Windows.Forms.Padding(2);
             this.paneltop.Name = "paneltop";
-            this.paneltop.Size = new System.Drawing.Size(711, 58);
+            this.paneltop.Size = new System.Drawing.Size(664, 58);
             this.paneltop.TabIndex = 11;
             // 
             // LogoACB
@@ -90,7 +96,7 @@
             this.btnMinimized.BackColor = System.Drawing.Color.Transparent;
             this.btnMinimized.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimized.Image")));
             this.btnMinimized.ImageActive = ((System.Drawing.Image)(resources.GetObject("btnMinimized.ImageActive")));
-            this.btnMinimized.Location = new System.Drawing.Point(620, 3);
+            this.btnMinimized.Location = new System.Drawing.Point(573, 3);
             this.btnMinimized.Name = "btnMinimized";
             this.btnMinimized.Size = new System.Drawing.Size(50, 50);
             this.btnMinimized.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -105,7 +111,7 @@
             this.btnExit.BackColor = System.Drawing.Color.Transparent;
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
             this.btnExit.ImageActive = ((System.Drawing.Image)(resources.GetObject("btnExit.ImageActive")));
-            this.btnExit.Location = new System.Drawing.Point(658, 3);
+            this.btnExit.Location = new System.Drawing.Point(611, 3);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(50, 50);
             this.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -116,95 +122,165 @@
             // 
             // PanelCenter
             // 
-            this.PanelCenter.Controls.Add(this.groupBox2);
-            this.PanelCenter.Controls.Add(this.groupBox1);
+            this.PanelCenter.Controls.Add(this.panel1);
+            this.PanelCenter.Controls.Add(this.bunifuCustomLabel1);
             this.PanelCenter.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelCenter.Location = new System.Drawing.Point(0, 58);
             this.PanelCenter.Name = "PanelCenter";
-            this.PanelCenter.Size = new System.Drawing.Size(711, 557);
+            this.PanelCenter.Size = new System.Drawing.Size(664, 528);
             this.PanelCenter.TabIndex = 12;
             // 
-            // groupBox1
+            // panel1
             // 
-            this.groupBox1.Controls.Add(this.cbAllPhongBan);
-            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 16);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(269, 213);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Phòng ban";
+            this.panel1.Controls.Add(this.btnExportExcel);
+            this.panel1.Controls.Add(this.groupBox3);
+            this.panel1.Controls.Add(this.groupBox2);
+            this.panel1.Controls.Add(this.groupBox1);
+            this.panel1.Location = new System.Drawing.Point(60, 39);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(545, 445);
+            this.panel1.TabIndex = 63;
             // 
-            // cbAllPhongBan
+            // btnExportExcel
             // 
-            this.cbAllPhongBan.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.cbAllPhongBan.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cbAllPhongBan.FormattingEnabled = true;
-            this.cbAllPhongBan.Items.AddRange(new object[] {
-            "All phòng ban"});
-            this.cbAllPhongBan.Location = new System.Drawing.Point(3, 26);
-            this.cbAllPhongBan.Name = "cbAllPhongBan";
-            this.cbAllPhongBan.Size = new System.Drawing.Size(263, 184);
-            this.cbAllPhongBan.TabIndex = 0;
-            this.cbAllPhongBan.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.cbAllPhongBan_ItemCheck);
+            this.btnExportExcel.ActiveBorderThickness = 1;
+            this.btnExportExcel.ActiveCornerRadius = 20;
+            this.btnExportExcel.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(65)))), ((int)(((byte)(155)))));
+            this.btnExportExcel.ActiveForecolor = System.Drawing.Color.White;
+            this.btnExportExcel.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(65)))), ((int)(((byte)(155)))));
+            this.btnExportExcel.BackColor = System.Drawing.Color.White;
+            this.btnExportExcel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnExportExcel.BackgroundImage")));
+            this.btnExportExcel.ButtonText = "Xuất Excel";
+            this.btnExportExcel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExportExcel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExportExcel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(184)))));
+            this.btnExportExcel.IdleBorderThickness = 1;
+            this.btnExportExcel.IdleCornerRadius = 20;
+            this.btnExportExcel.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(184)))));
+            this.btnExportExcel.IdleForecolor = System.Drawing.Color.White;
+            this.btnExportExcel.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(184)))));
+            this.btnExportExcel.Location = new System.Drawing.Point(340, 319);
+            this.btnExportExcel.Margin = new System.Windows.Forms.Padding(5);
+            this.btnExportExcel.Name = "btnExportExcel";
+            this.btnExportExcel.Size = new System.Drawing.Size(146, 65);
+            this.btnExportExcel.TabIndex = 65;
+            this.btnExportExcel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnExportExcel.Click += new System.EventHandler(this.btnExportExcel_Click);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.cbTinhTrangLamViec);
+            this.groupBox3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Location = new System.Drawing.Point(62, 279);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(267, 105);
+            this.groupBox3.TabIndex = 62;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Tình trạng làm việc";
+            // 
+            // cbTinhTrangLamViec
+            // 
+            this.cbTinhTrangLamViec.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.cbTinhTrangLamViec.CheckOnClick = true;
+            this.cbTinhTrangLamViec.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cbTinhTrangLamViec.FormattingEnabled = true;
+            this.cbTinhTrangLamViec.Items.AddRange(new object[] {
+            "All",
+            "Đang làm",
+            "Đã nghỉ"});
+            this.cbTinhTrangLamViec.Location = new System.Drawing.Point(3, 26);
+            this.cbTinhTrangLamViec.Name = "cbTinhTrangLamViec";
+            this.cbTinhTrangLamViec.Size = new System.Drawing.Size(261, 76);
+            this.cbTinhTrangLamViec.TabIndex = 0;
+            this.cbTinhTrangLamViec.ThreeDCheckBoxes = true;
+            this.cbTinhTrangLamViec.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.cbTinhTrangLamViec_ItemCheck);
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.checkBox1);
             this.groupBox2.Controls.Add(this.cbAllGender);
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(304, 16);
+            this.groupBox2.Location = new System.Drawing.Point(334, 33);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(269, 213);
-            this.groupBox2.TabIndex = 0;
+            this.groupBox2.Size = new System.Drawing.Size(152, 240);
+            this.groupBox2.TabIndex = 63;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Giới tính";
             // 
             // cbAllGender
             // 
             this.cbAllGender.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.cbAllGender.CheckOnClick = true;
             this.cbAllGender.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cbAllGender.FormattingEnabled = true;
             this.cbAllGender.Items.AddRange(new object[] {
-            "Nam/Nữ",
+            "Nam & Nữ",
             "Nam",
             "Nữ"});
             this.cbAllGender.Location = new System.Drawing.Point(3, 26);
             this.cbAllGender.Name = "cbAllGender";
-            this.cbAllGender.Size = new System.Drawing.Size(263, 184);
+            this.cbAllGender.Size = new System.Drawing.Size(146, 211);
             this.cbAllGender.TabIndex = 0;
             this.cbAllGender.ThreeDCheckBoxes = true;
+            this.cbAllGender.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.cbAllGender_ItemCheck);
             // 
-            // checkBox1
+            // groupBox1
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(7, 109);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(112, 27);
-            this.checkBox1.TabIndex = 1;
-            this.checkBox1.Text = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.groupBox1.Controls.Add(this.cbAllPhongBan);
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(59, 33);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(269, 240);
+            this.groupBox1.TabIndex = 64;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Phòng ban";
+            // 
+            // cbAllPhongBan
+            // 
+            this.cbAllPhongBan.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.cbAllPhongBan.CheckOnClick = true;
+            this.cbAllPhongBan.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cbAllPhongBan.FormattingEnabled = true;
+            this.cbAllPhongBan.Items.AddRange(new object[] {
+            "All phòng ban"});
+            this.cbAllPhongBan.Location = new System.Drawing.Point(3, 26);
+            this.cbAllPhongBan.Name = "cbAllPhongBan";
+            this.cbAllPhongBan.Size = new System.Drawing.Size(263, 211);
+            this.cbAllPhongBan.TabIndex = 0;
+            this.cbAllPhongBan.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.cbAllPhongBan_ItemCheck);
+            // 
+            // bunifuCustomLabel1
+            // 
+            this.bunifuCustomLabel1.AutoSize = true;
+            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(212, 4);
+            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(240, 32);
+            this.bunifuCustomLabel1.TabIndex = 62;
+            this.bunifuCustomLabel1.Text = "Tùy chọn xuất Excel";
             // 
             // frmFilterExportExcel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(711, 615);
+            this.ClientSize = new System.Drawing.Size(664, 586);
             this.Controls.Add(this.PanelCenter);
             this.Controls.Add(this.paneltop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmFilterExportExcel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmFilterExportExcel";
+            this.Load += new System.EventHandler(this.frmFilterExportExcel_Load);
             this.paneltop.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.LogoACB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimized)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
             this.PanelCenter.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
+            this.PanelCenter.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -217,10 +293,14 @@
         private Bunifu.Framework.UI.BunifuImageButton btnExit;
         public Bunifu.Framework.UI.BunifuImageButton LogoACB;
         private System.Windows.Forms.Panel PanelCenter;
+        private System.Windows.Forms.Panel panel1;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnExportExcel;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.CheckedListBox cbTinhTrangLamViec;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.CheckedListBox cbAllGender;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.CheckedListBox cbAllPhongBan;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
     }
 }

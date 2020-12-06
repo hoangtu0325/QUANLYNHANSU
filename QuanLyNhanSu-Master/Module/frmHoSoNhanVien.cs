@@ -18,9 +18,12 @@ namespace QuanLyNhanSu_Master.Module
 {
     public partial class frmHoSoNhanVien : Form
     {
-        public frmHoSoNhanVien()
+        public frmHoSoNhanVien(bool IsVisibleGrid)
         {
             InitializeComponent();
+            buniDataGridHoSoNhanVien.Dock = DockStyle.Fill;
+            buniDataGridHoSoNhanVien.Visible = IsVisibleGrid;
+            buniDataGridHoSoNhanVien.BringToFront();
         }
         public static System.Data.DataTable dataTable;
         public static System.Data.DataTable dataTable2;
@@ -41,7 +44,6 @@ namespace QuanLyNhanSu_Master.Module
             buniDataGridHoSoNhanVien.Columns["Họ tên"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             buniDataGridHoSoNhanVien.Columns["Tên phòng ban"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             buniDataGridHoSoNhanVien.Columns["Giới tính"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            // buniDataGridHoSoNhanVien.Columns["Hình ảnh"].Visible = false;
             
             foreach (DataGridViewRow item in buniDataGridHoSoNhanVien.Rows)
             {
@@ -154,15 +156,25 @@ namespace QuanLyNhanSu_Master.Module
 
         private void buniDataGridHoSoNhanVien_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            frmInfoNhanVien frminfonhanvien = new frmInfoNhanVien();
-            frminfonhanvien.TopLevel = false;
-            frminfonhanvien.MdiParent = this.MdiParent;
-            panel1.Controls.Add(frminfonhanvien);
-            buniDataGridHoSoNhanVien.Visible = false;
-            frminfonhanvien.Dock = DockStyle.Fill;
-            frminfonhanvien.TopMost = true;
-            frminfonhanvien.Show();
-            frminfonhanvien.BringToFront();
+            if (e.RowIndex != -1)
+            {
+                if (e.ColumnIndex != 0)
+                {
+                    int ID = (int)buniDataGridHoSoNhanVien.Rows[e.RowIndex].Cells["Mã NV"].Value;
+                    frmInfoNhanVien frminfonhanvien = new frmInfoNhanVien(ID);
+                    frminfonhanvien.TopLevel = false;
+                    frminfonhanvien.MdiParent = this.MdiParent;
+                    panel1.Controls.Add(frminfonhanvien);
+                    buniDataGridHoSoNhanVien.Visible = false;
+                    //buniDataGridHoSoNhanVien.SendToBack();
+                    frminfonhanvien.Dock = DockStyle.Fill;
+                    //frminfonhanvien.TopMost = true;
+                    frminfonhanvien.Show();
+                    //frminfonhanvien.BringToFront();
+                }
+
+            }
+
         }
     }
 }

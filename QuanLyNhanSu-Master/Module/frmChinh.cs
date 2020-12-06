@@ -37,7 +37,7 @@ namespace QuanLyNhanSu_Master
             this.loginAccount = acc;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             this.WindowState = FormWindowState.Maximized;
-            ChangeAccount(loginAccount.Role);
+            ChangeAccount(Account.Role);
 
         }
 
@@ -98,7 +98,7 @@ namespace QuanLyNhanSu_Master
             if (bt.Name == "btnNhanVien" || bt.Name == "btnImport")
             {
                 lblStatus.Text = "HỒ SƠ NHÂN VIÊN";
-                frmHoSoNhanVien frmHoSoNhanVien = new frmHoSoNhanVien();
+                frmHoSoNhanVien frmHoSoNhanVien = new frmHoSoNhanVien(true);
                 frmHoSoNhanVien.Action = "Không tìm kiếm";
                 frmHoSoNhanVien.TopLevel = false;
                 frmHoSoNhanVien.MdiParent = this.MdiParent;
@@ -348,7 +348,7 @@ namespace QuanLyNhanSu_Master
                 if (cbSearch.SelectedItem != null)
                 {
                     lblStatus.Text = "TÌM NHÂN VIÊN - " + cbSearch.SelectedValue.ToString();
-                    frmHoSoNhanVien frmHoSoNhanVien = new frmHoSoNhanVien();
+                    frmHoSoNhanVien frmHoSoNhanVien = new frmHoSoNhanVien(true);
                     frmHoSoNhanVien.Action = "Tìm kiếm";
                     //frmHoSoNhanVien.TenNhanVien = txtSearch.Text;
                     string MaNV = cbSearch.SelectedValue.ToString();
@@ -414,7 +414,7 @@ namespace QuanLyNhanSu_Master
                     try
                     {
                         frmHoSoNhanVien.Action = "Export";
-                        frmHoSoNhanVien hoSoNhanVien = new frmHoSoNhanVien();
+                        frmHoSoNhanVien hoSoNhanVien = new frmHoSoNhanVien(true);
                         hoSoNhanVien.IsExport1 = true;
                        
                         hoSoNhanVien.ExportExcel();

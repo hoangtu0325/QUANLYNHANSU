@@ -515,10 +515,10 @@ namespace QuanLyNhanSu_Master
             this.panel1.Controls.Add(this.menuStrip2);
             this.panel1.Controls.Add(this.menuStrip1);
             this.panel1.Controls.Add(this.btnRefresh);
-            this.panel1.Controls.Add(this.btnExport);
             this.panel1.Controls.Add(this.bunifuBtnSetting);
             this.panel1.Controls.Add(this.btnImport);
             this.panel1.Controls.Add(this.imgBtnAddNew);
+            this.panel1.Controls.Add(this.btnExport);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 53);
             this.panel1.Name = "panel1";
