@@ -101,10 +101,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\AccountDAO.cs" />
+    <Compile Include="DAO\ChamCongDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\HoSoNhanVienDAO.cs" />
     <Compile Include="DTO\Account.cs" />
+    <Compile Include="DTO\BangChamCong.cs" />
     <Compile Include="DTO\NhanVien.cs" />
+    <Compile Include="DTO\PhongBan.cs" />
     <Compile Include="Module\frmAddInfoNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +119,18 @@
     </Compile>
     <Compile Include="Module\frmAddNewUser.Designer.cs">
       <DependentUpon>frmAddNewUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Module\frmBangChamCong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module\frmBangChamCong.Designer.cs">
+      <DependentUpon>frmBangChamCong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Module\frmChiLuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module\frmChiLuong.Designer.cs">
+      <DependentUpon>frmChiLuong.cs</DependentUpon>
     </Compile>
     <Compile Include="Module\frmDoiMatKhau.cs">
       <SubType>Form</SubType>
@@ -140,6 +155,12 @@
     </Compile>
     <Compile Include="Module\frmImportExcelNhanVien.Designer.cs">
       <DependentUpon>frmImportExcelNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Module\frminfonhanvien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module\frminfonhanvien.Designer.cs">
+      <DependentUpon>frminfonhanvien.cs</DependentUpon>
     </Compile>
     <Compile Include="Module\frmLayout.cs">
       <SubType>Form</SubType>
@@ -172,11 +193,11 @@
       <DependentUpon>frmResetPass.cs</DependentUpon>
     </Compile>
     <Compile Include="DropShadow.cs" />
-    <Compile Include="Module\Popup\Form1.cs">
+    <Compile Include="Module\Popup\frmFilterExportExcel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Module\Popup\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Module\Popup\frmFilterExportExcel.Designer.cs">
+      <DependentUpon>frmFilterExportExcel.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -185,6 +206,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Module\frmAddNewUser.resx">
       <DependentUpon>frmAddNewUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\frmBangChamCong.resx">
+      <DependentUpon>frmBangChamCong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\frmChiLuong.resx">
+      <DependentUpon>frmChiLuong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Module\frmDoiMatKhau.resx">
       <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
@@ -197,6 +224,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Module\frmImportExcelNhanVien.resx">
       <DependentUpon>frmImportExcelNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\frminfonhanvien.resx">
+      <DependentUpon>frminfonhanvien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Module\frmLayout.resx">
       <DependentUpon>frmLayout.cs</DependentUpon>
@@ -213,8 +243,8 @@
     <EmbeddedResource Include="Module\frmResetPass.resx">
       <DependentUpon>frmResetPass.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Module\Popup\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Module\Popup\frmFilterExportExcel.resx">
+      <DependentUpon>frmFilterExportExcel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
