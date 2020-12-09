@@ -353,6 +353,7 @@
             this.btnCancel.Size = new System.Drawing.Size(162, 52);
             this.btnCancel.TabIndex = 50;
             this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // bunifuCustomLabel1
             // 

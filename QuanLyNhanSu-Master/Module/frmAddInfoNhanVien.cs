@@ -59,10 +59,15 @@ namespace QuanLyNhanSu_Master.Module
             }
             else
             {
-                MessageBox.Show("Lỗi");
+                MessageBox.Show("Lỗi, Vui lòng nhập đủ thông tin Nhân Viên");
             }
 
 
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 
