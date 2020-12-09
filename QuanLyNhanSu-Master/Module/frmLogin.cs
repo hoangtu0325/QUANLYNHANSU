@@ -28,7 +28,7 @@ namespace QuanLyNhanSu_Master
        
         private string storeConfig = "config.ini";
         private string init = "init";
-
+        private bool IsAdmin = false;
         #region Methods
         private void LoadData()
         {
@@ -129,12 +129,17 @@ namespace QuanLyNhanSu_Master
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            
+ 
             string userName = txtUsername.Text;
             string passWord = txtPassword.Text;
 
             if (ValidateTextBox())
             {
+                if (AccountDAO.Instance.IsAdmin(userName))
+                {
+                    IsAdmin = true;
+                }
+
                 if (Login(userName, passWord))
                 {
                     if (CbSaveAccount.Checked == true)
@@ -170,9 +175,15 @@ namespace QuanLyNhanSu_Master
 
         private void lblQuenMatKhau_Click(object sender, EventArgs e)
         {
+            
             frmDoiMatKhau frmDoiMatKhau = new frmDoiMatKhau();
             frmDoiMatKhau.StartPosition = FormStartPosition.CenterParent;
+            if (IsAdmin)
+            {
+                frmDoiMatKhau.SendCodeXacThucToAdmin(IsAdmin,txtUsername.Text);
+            }
             var result = frmDoiMatKhau.ShowDialog();
+            
             if (result == DialogResult.OK)
             {
                 this.txtUsername.Text = frmDoiMatKhau.UserName;  //values preserved after close

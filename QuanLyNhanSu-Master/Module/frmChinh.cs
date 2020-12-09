@@ -11,6 +11,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -462,6 +463,77 @@ namespace QuanLyNhanSu_Master
             frmFilterExportExcel frmFilterExportExcel = new frmFilterExportExcel();
             frmFilterExportExcel.StartPosition = FormStartPosition.CenterScreen;
             frmFilterExportExcel.Show();
+        }
+
+        private void toolStripImportBangChamCong_Click(object sender, EventArgs e)
+        {
+            ImportBangChamCongToDataTable();
+            AddBangChamCongToCSDL(tableBangChamCong);
+        }
+        public DataTable tableBangChamCong;
+        public DataTable ImportBangChamCongToDataTable()
+        {
+
+            string tableName = "";
+            using (OpenFileDialog openFileDialog = new OpenFileDialog() { Filter = "Excel Workbook|*.xlsx|Excel 97-2020 Workbook|*.xls*" })
+            {
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    this.lblStatus.Text = "Import bảng chấm công từ File - " + openFileDialog.SafeFileName;
+                    using (var stream = File.Open(openFileDialog.FileName, FileMode.Open, FileAccess.Read))
+                    {
+                        using (IExcelDataReader reader = ExcelReaderFactory.CreateReader(stream))
+                        {
+                            DataSet result = reader.AsDataSet(new ExcelDataSetConfiguration()
+                            {
+                                ConfigureDataTable = (_) => new ExcelDataTableConfiguration() { UseHeaderRow = true }
+                            });
+                            TableCollection = result.Tables;
+                            tableName = TableCollection[0].TableName;
+                        }
+                    }
+                    return tableBangChamCong = TableCollection[tableName.ToString()];
+                   
+                }
+                else
+                {
+                    //MessageBox.Show("Vui lòng chọn file để Import");
+                    this.lblStatus.Text = "None Import Excel";
+                    return tableBangChamCong = null;
+                }
+            }
+
+        }
+        public void AddBangChamCongToCSDL(DataTable table)
+        {
+            if (lblStatus.Text.Contains("Import bảng chấm công từ File"))
+            {
+                DataTable dataGrid = new DataTable();
+                BindingSource SBind = new BindingSource();
+                SBind.DataSource = table;
+                dataGrid = table;
+                int ss = dataGrid.Rows.Count;
+
+                //Lấy ra tháng xuất bảng chấm công
+                string date;
+                date = dataGrid.Rows[5][0].ToString();
+                date = date.Substring(date.Length - 7, 7);
+                
+                for (int i = 12; i <= dataGrid.Rows.Count - 3; i++)
+                {
+                    try
+                    {
+                        
+                       // HoSoNhanVienDAO.Instance.AddNewImployee(dataGrid.Rows[i][0].ToString(), (DateTime)dataGrid.Rows[i][1], dataGrid.Rows[i][2].ToString(), dataGrid.Rows[i][3].ToString(), dataGrid.Rows[i][4].ToString(), dataGrid.Rows[i][5].ToString(), dataGrid.Rows[i][6].ToString(), (DateTime)dataGrid.Rows[i][7], dataGrid.Rows[i][8].ToString(), dataGrid.Rows[i][9].ToString(), dataGrid.Rows[i][10].ToString(), dataGrid.Rows[i][11].ToString(), dataGrid.Rows[i][12].ToString(), dataGrid.Rows[i][13].ToString(), dataGrid.Rows[i][14].ToString(), dataGrid.Rows[i][15].ToString(), dataGrid.Rows[i][16].ToString());
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("" + ex);
+                    }
+                }
+                MessageBox.Show("Import bảng chấm công thành công");
+                
+            }
         }
     }
 }

@@ -21,7 +21,7 @@ namespace QuanLyNhanSu_Master.DAO
 
         public DataTable GetNhanVien()
         {
-            string query = "SELECT NV.MaNV AS [Mã NV], NV.TenNV AS [Họ tên], (CASE NV.GioiTinh WHEN 1 THEN 'Nam' ELSE N'Nữ' END) AS [Giới tính], CV.TenChucVu AS [Chức vụ], PB.TenPhongBan AS [Tên phòng ban], NV.Cmnd AS CMND, NV.NgaySinh AS [Ngày sinh], NV.DiaChi AS [Địa chỉ], NV.Email, NV.Sdt AS SĐT, ";
+            string query = "SELECT  ROW_NUMBER()OVER (ORDER BY TenNV) as [STT], NV.MaNV AS [Mã NV], NV.TenNV AS [Họ tên], (CASE NV.GioiTinh WHEN 1 THEN 'Nam' ELSE N'Nữ' END) AS [Giới tính], CV.TenChucVu AS [Chức vụ], PB.TenPhongBan AS [Tên phòng ban], NV.Cmnd AS CMND, NV.NgaySinh AS [Ngày sinh], NV.DiaChi AS [Địa chỉ], NV.Email, NV.Sdt AS SĐT, ";
             query += "  NV.ThamNien AS[Thâm niên], NV.HeSoLuong AS[Hệ số lương], NV.TinhTrangLamViec AS[Tình trạng làm việc], NV.SoBHXH AS BHXH, NV.SoBHYT AS BHYT, ";
             query += " NV.TaikhoanNH AS[Số tài khoản], NV.DanToc AS[Dân tộc], NV.NgayBatDau AS[Ngày vào làm], NV.NgayKetThuc AS[Ngày nghỉ] ";
             query += " FROM NhanVien AS NV INNER JOIN ";

@@ -22,8 +22,6 @@ namespace QuanLyNhanSu_Master.DAO
         }
         private AccountDAO() { }
 
-       
-
         public bool Login(string userName, string passWord)
         {
             try
@@ -42,7 +40,7 @@ namespace QuanLyNhanSu_Master.DAO
 
                 string query = "SP_Login @userName , @passWord";
                
-                hasPass = EnCrypt(passWord, "%4oPNbxNwO3Z15CoNCbi");
+                hasPass = EnCrypt(hasPass, "%4oPNbxNwO3Z15CoNCbi");
                 DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { userName, hasPass /*list*/});
                 return result.Rows.Count > 0;
             }
@@ -78,7 +76,7 @@ namespace QuanLyNhanSu_Master.DAO
             email = firstRow["Email"].ToString();
 
             Random rnd = new Random();
-            int code = rnd.Next(1000, 9999);
+            int code = rnd.Next(100000, 999999);
             DataProvider.Instance.ExecuteQuery("update NguoiDung set CodeXacThuc = '" + code + "' where UserName = '" + userName + "'");
 
             try
@@ -104,16 +102,42 @@ namespace QuanLyNhanSu_Master.DAO
             }
             
         }
+        public bool IsAdmin(string userName)
+        {
+            try
+            {
+                DataTable data = DataProvider.Instance.ExecuteQuery("SP_CheckUserAdmin @userName", new object[] { userName });
+                DataRow firstRow = data.Rows[0];
+                string Role = firstRow["Role"].ToString();
+                if (Role == "Admin")
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception)
+            {
 
+                return false;
+            }
+            
+            
+        }
         public void AllowChagePassword(string userName, string passWord)
         {
             byte[] temp = ASCIIEncoding.ASCII.GetBytes(passWord);
             byte[] hasData = new MD5CryptoServiceProvider().ComputeHash(temp);
             string hasPass = "";
-
+            foreach (byte item in hasData)
+            {
+                hasPass += item;
+            }
             string query = "SP_ChangePassFromUserName @userName , @passWord";
 
-            hasPass = EnCrypt(passWord, "%4oPNbxNwO3Z15CoNCbi");
+            hasPass = EnCrypt(hasPass, "%4oPNbxNwO3Z15CoNCbi");
 
             DataProvider.Instance.ExecuteQuery(query, new object[] { userName, hasPass });
         }
@@ -131,7 +155,7 @@ namespace QuanLyNhanSu_Master.DAO
                 {
 
                     Random rnd = new Random();
-                    int code = rnd.Next(1000, 9999);
+                    int code = rnd.Next(100000, 999999);
                     DataProvider.Instance.ExecuteQuery("update NguoiDung set CodeXacThuc = '" + code + "' where UserName = '" + userName + "'");
                     return true;
                 }
@@ -213,10 +237,17 @@ namespace QuanLyNhanSu_Master.DAO
             try
             {
                 Random rnd = new Random();
-                int code = rnd.Next(1000, 9999);
+                int code = rnd.Next(100000, 999999);
                 byte[] temp = ASCIIEncoding.ASCII.GetBytes(passWord);
                 byte[] hasData = new MD5CryptoServiceProvider().ComputeHash(temp);
-                string hasPass = EnCrypt(passWord, "%4oPNbxNwO3Z15CoNCbi");
+
+                string hasPass = "";
+
+                foreach (byte item in hasData)
+                {
+                    hasPass += item;
+                }
+                 hasPass = EnCrypt(hasPass, "%4oPNbxNwO3Z15CoNCbi");
                 string query = string.Format("INSERT dbo.NguoiDung ( UserName, PassWord, Email, ID, CodeXacThuc, Role) VALUES  ( '{0}', '{1}', N'{2}', (select MAX(ID)+ 1 from NguoiDung),{3}, 'User')", userName, hasPass, email , code);
 
                 int result = DataProvider.Instance.ExecuteNonQuery(query);

@@ -1,4 +1,5 @@
 ﻿using QuanLyNhanSu_Master.DAO;
+using QuanLyNhanSu_Master.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,14 +20,20 @@ namespace QuanLyNhanSu_Master.Module
         }
         public string UserName;
         public string PassWord;
-
+        public void SendCodeXacThucToAdmin(bool IsAdmin,string username)
+        {
+            if (IsAdmin)
+            {
+                AccountDAO.Instance.ResetPassAccount(username);
+            }
+        }
         private void btnDoiMatKhau_Click(object sender, EventArgs e)
         {
             string userName = txtUserName.Text.Trim();
             string passWord = txtPassword.Text.Trim();
             string RePassword = txtRePassword.Text.Trim();
             string CodeVerify = txtCodeXacThuc.Text.Trim();
-
+            
             if (userName == "" || passWord == "" || RePassword == "" || CodeVerify == "")
             {
                 MessageBox.Show("Chưa nhập đủ thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
