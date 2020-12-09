@@ -518,21 +518,25 @@ namespace QuanLyNhanSu_Master
                 string date;
                 date = dataGrid.Rows[5][0].ToString();
                 date = date.Substring(date.Length - 7, 7);
-                
-                for (int i = 12; i <= dataGrid.Rows.Count - 3; i++)
+                DateTime dateTime = DateTime.Parse(date);
+                bool status = false;
+                for (int i = 11; i <= dataGrid.Rows.Count - 4; i++)
                 {
                     try
                     {
-                        
-                       // HoSoNhanVienDAO.Instance.AddNewImployee(dataGrid.Rows[i][0].ToString(), (DateTime)dataGrid.Rows[i][1], dataGrid.Rows[i][2].ToString(), dataGrid.Rows[i][3].ToString(), dataGrid.Rows[i][4].ToString(), dataGrid.Rows[i][5].ToString(), dataGrid.Rows[i][6].ToString(), (DateTime)dataGrid.Rows[i][7], dataGrid.Rows[i][8].ToString(), dataGrid.Rows[i][9].ToString(), dataGrid.Rows[i][10].ToString(), dataGrid.Rows[i][11].ToString(), dataGrid.Rows[i][12].ToString(), dataGrid.Rows[i][13].ToString(), dataGrid.Rows[i][14].ToString(), dataGrid.Rows[i][15].ToString(), dataGrid.Rows[i][16].ToString());
+                        int MaNV = Convert.ToInt32(dataGrid.Rows[i][2]);
+                        status = ChamCongDAO.Instance.AddNewBangChamCong(Convert.ToInt32(dataGrid.Rows[i][2]), dateTime, dataGrid.Rows[i][4].ToString(), dataGrid.Rows[i][5].ToString(), dataGrid.Rows[i][6].ToString(), dataGrid.Rows[i][7].ToString(), dataGrid.Rows[i][8].ToString(), dataGrid.Rows[i][9].ToString(), dataGrid.Rows[i][10].ToString(), dataGrid.Rows[i][11].ToString(), dataGrid.Rows[i][12].ToString(), dataGrid.Rows[i][13].ToString(), dataGrid.Rows[i][14].ToString(), dataGrid.Rows[i][15].ToString(), dataGrid.Rows[i][16].ToString(), dataGrid.Rows[i][17].ToString(), dataGrid.Rows[i][18].ToString(), dataGrid.Rows[i][19].ToString(), dataGrid.Rows[i][20].ToString(), dataGrid.Rows[i][21].ToString(), dataGrid.Rows[i][22].ToString(), dataGrid.Rows[i][23].ToString(), dataGrid.Rows[i][24].ToString(), dataGrid.Rows[i][25].ToString(), dataGrid.Rows[i][26].ToString(), dataGrid.Rows[i][27].ToString(), dataGrid.Rows[i][28].ToString(), dataGrid.Rows[i][29].ToString(), dataGrid.Rows[i][30].ToString(), dataGrid.Rows[i][31].ToString(), dataGrid.Rows[i][32].ToString(), dataGrid.Rows[i][33].ToString(), dataGrid.Rows[i][34].ToString(), float.Parse(dataGrid.Rows[i][35].ToString()), float.Parse(dataGrid.Rows[i][36].ToString()), Account.UserName);
                     }
                     catch (Exception ex)
                     {
                         MessageBox.Show("" + ex);
                     }
                 }
-                MessageBox.Show("Import bảng chấm công thành công");
-                
+                if (status)
+                {
+                    MessageBox.Show("Import bảng chấm công thành công");
+                }
+
             }
         }
     }
