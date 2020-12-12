@@ -12,6 +12,7 @@ namespace QuanLyNhanSu_Master.DTO
         private int maChamCong;
         private int maNV;
         private DateTime thangChamCong;
+        private string tenNV;
         private string ngay1;
         private string ngay2;
         private string ngay3;
@@ -44,6 +45,7 @@ namespace QuanLyNhanSu_Master.DTO
         private string ngay30;
         private string ngay31;
         private float tongSoNgay;
+        private float soGioTangCa;
         private float ngayDiLam;
         private float vang;
         private string userModified;
@@ -51,6 +53,7 @@ namespace QuanLyNhanSu_Master.DTO
 
         public int MaChamCong { get => maChamCong; set => maChamCong = value; }
         public int MaNV { get => maNV; set => maNV = value; }
+        public string TenNV { get => tenNV; set => tenNV = value; }
         public DateTime ThangChamCong { get => thangChamCong; set => thangChamCong = value; }
         public string Ngay1 { get => ngay1; set => ngay1 = value; }
         public string Ngay2 { get => ngay2; set => ngay2 = value; }
@@ -84,50 +87,57 @@ namespace QuanLyNhanSu_Master.DTO
         public string Ngay18 { get => ngay18; set => ngay18 = value; }
         public string Ngay19 { get => ngay19; set => ngay19 = value; }
         public float TongSoNgay { get => tongSoNgay; set => tongSoNgay = value; }
-        public float NgayDiLam { get => ngayDiLam; set => ngayDiLam = value; }
-        public float Vang { get => vang; set => vang = value; }
+        public float SoGioTangCa { get => soGioTangCa; set => soGioTangCa = value; }
+        //public float NgayDiLam { get => ngayDiLam; set => ngayDiLam = value; }
+        //public float Vang { get => vang; set => vang = value; }
         public string UserModified { get => userModified; set => userModified = value; }
         public string DateModified { get => dateModified; set => dateModified = value; }
+       
+    
 
+        public BangChamCong() { }
 
+        
         public BangChamCong(DataRow row)
         {
-            MaNV = Convert.ToInt32(row["MaNV"]);
-            ThangChamCong = Convert.ToDateTime(row["ThangChamCong"]);
-            Ngay1 = row["Ngay1"].ToString();
-            Ngay2 = row["Ngay2"].ToString();
-            Ngay3 = row["Ngay3"].ToString();
-            Ngay4 = row["Ngay4"].ToString();
-            Ngay5 = row["Ngay5"].ToString();
-            Ngay6 = row["Ngay6"].ToString();
-            Ngay7 = row["Ngay7"].ToString();
-            Ngay8 = row["Ngay8"].ToString();
-            Ngay9 = row["Ngay9"].ToString();
-            Ngay10 = row["Ngay10"].ToString();
-            Ngay11 = row["Ngay11"].ToString();
-            Ngay12 = row["Ngay12"].ToString();
-            Ngay13 = row["Ngay13"].ToString();
-            Ngay14 = row["Ngay14"].ToString();
-            Ngay15 = row["Ngay15"].ToString();
-            Ngay16 = row["Ngay16"].ToString();
-            Ngay17 = row["Ngay17"].ToString();
-            Ngay18 = row["Ngay18"].ToString();
-            Ngay19 = row["Ngay19"].ToString();
-            Ngay20 = row["Ngay20"].ToString();
-            Ngay21 = row["Ngay21"].ToString();
-            Ngay22 = row["Ngay22"].ToString();
-            Ngay23 = row["Ngay23"].ToString();
-            Ngay24 = row["Ngay24"].ToString();
-            Ngay25 = row["Ngay25"].ToString();
-            Ngay26 = row["Ngay26"].ToString();
-            Ngay27 = row["Ngay27"].ToString();
-            Ngay28 = row["Ngay28"].ToString();
-            Ngay29 = row["Ngay29"].ToString();
-            Ngay30 = row["Ngay30"].ToString();
-            Ngay31 = row["Ngay31"].ToString();
-            TongSoNgay = float.Parse(row["TongSoNgay"].ToString());
-            NgayDiLam = float.Parse(row["NgayDiLam"].ToString());
-            Vang = float.Parse(row["Vang"].ToString());
+            MaNV = Convert.ToInt32(row["Mã NV"]);
+            TenNV = row["Tên nhân viên"].ToString();
+            ThangChamCong = Convert.ToDateTime(row["Tháng chấm công"]);
+            Ngay1 = row["1"].ToString();
+            Ngay2 = row["2"].ToString();
+            Ngay3 = row["3"].ToString();
+            Ngay4 = row["4"].ToString();
+            Ngay5 = row["5"].ToString();
+            Ngay6 = row["6"].ToString();
+            Ngay7 = row["7"].ToString();
+            Ngay8 = row["8"].ToString();
+            Ngay9 = row["9"].ToString();
+            Ngay10 = row["10"].ToString();
+            Ngay11 = row["11"].ToString();
+            Ngay12 = row["12"].ToString();
+            Ngay13 = row["13"].ToString();
+            Ngay14 = row["14"].ToString();
+            Ngay15 = row["15"].ToString();
+            Ngay16 = row["16"].ToString();
+            Ngay17 = row["17"].ToString();
+            Ngay18 = row["18"].ToString();
+            Ngay19 = row["19"].ToString();
+            Ngay20 = row["20"].ToString();
+            Ngay21 = row["21"].ToString();
+            Ngay22 = row["22"].ToString();
+            Ngay23 = row["23"].ToString();
+            Ngay24 = row["24"].ToString();
+            Ngay25 = row["25"].ToString();
+            Ngay26 = row["26"].ToString();
+            Ngay27 = row["27"].ToString();
+            Ngay28 = row["28"].ToString();
+            Ngay29 = row["29"].ToString();
+            Ngay30 = row["30"].ToString();
+            Ngay31 = row["31"].ToString();
+            TongSoNgay = float.Parse(row["Tổng số ngày"].ToString());
+            SoGioTangCa = float.Parse(row["Số giờ tăng ca"].ToString());
+           // NgayDiLam = float.Parse(row["NgayDiLam"].ToString());
+           // Vang = float.Parse(row["Vang"].ToString());
             //UserModified = row["UserModified"].ToString();
             //DateModified = row["DateModified"].ToString();
 

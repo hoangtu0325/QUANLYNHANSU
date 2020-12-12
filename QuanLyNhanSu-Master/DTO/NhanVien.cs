@@ -23,7 +23,7 @@ namespace QuanLyNhanSu_Master.DTO
             this.HinhAnh = row["HinhAnh"].ToString();
             this.Sdt = (string)row["Sdt"];
             this.TenChucVu = (string)row["TenChucVu"];
-            this.HeSoLuong = float.Parse(row["HeSoLuong"].ToString());
+            this.MaBacLuong = float.Parse(row["MaBacLuong"].ToString());
             this.ThamNien = (int)row["ThamNien"];
             this.TinhTrangLamViec = (string)row["TinhTrangLamViec"];
             this.SoBHXH = (string)row["SoBHXH"];
@@ -48,7 +48,7 @@ namespace QuanLyNhanSu_Master.DTO
         private string sdt;
         private string tenChucVu;
         private int thamNien;
-        private float heSoLuong;
+        private float maBacLuong;
         private string tinhTrangLamViec;
         private string hinhAnh;
         private string soBHXH;
@@ -83,7 +83,7 @@ namespace QuanLyNhanSu_Master.DTO
         public string Email { get => email; set => email = value; }
         public string Sdt { get => sdt; set => sdt = value; }
         public string TenChucVu { get => tenChucVu; set => tenChucVu = value; }
-        public float HeSoLuong { get => heSoLuong; set => heSoLuong = value; }
+        public float MaBacLuong { get => maBacLuong; set => maBacLuong = value; }
         public int ThamNien { get => thamNien; set => thamNien = value; }
         public string TinhTrangLamViec { get => tinhTrangLamViec; set => tinhTrangLamViec = value; }
         public string HinhAnh { get => hinhAnh; set => hinhAnh = value; }
