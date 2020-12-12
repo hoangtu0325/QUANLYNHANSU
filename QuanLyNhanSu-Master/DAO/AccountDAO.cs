@@ -28,25 +28,18 @@ namespace QuanLyNhanSu_Master.DAO
             {
                 byte[] temp = ASCIIEncoding.ASCII.GetBytes(passWord);
                 byte[] hasData = new MD5CryptoServiceProvider().ComputeHash(temp);
-
                 string hasPass = "";
-
                 foreach (byte item in hasData)
                 {
                     hasPass += item;
                 }
-                //var list = hasData.ToString();
-                //list.Reverse();
-
                 string query = "SP_Login @userName , @passWord";
-               
                 hasPass = EnCrypt(hasPass, "%4oPNbxNwO3Z15CoNCbi");
                 DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { userName, hasPass /*list*/});
                 return result.Rows.Count > 0;
             }
             catch (Exception ex)
             {
-
                 return false;
             } 
         }
@@ -59,14 +52,12 @@ namespace QuanLyNhanSu_Master.DAO
             {
                 return new Account(item);
             }
-
             return null;
         }
 
         public int ResetPassAccount(string userName)
         {
             string email;
-
             DataTable data = DataProvider.Instance.ExecuteQuery("SP_GetUserFromUserName @userName", new object[] { userName });
             if (data.Rows.Count == 0)
             {
@@ -74,25 +65,20 @@ namespace QuanLyNhanSu_Master.DAO
             }
             DataRow firstRow = data.Rows[0];
             email = firstRow["Email"].ToString();
-
             Random rnd = new Random();
             int code = rnd.Next(100000, 999999);
             DataProvider.Instance.ExecuteQuery("update NguoiDung set CodeXacThuc = '" + code + "' where UserName = '" + userName + "'");
-
             try
             {
                 MailMessage mail = new MailMessage();
                 SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
-
                 mail.From = new MailAddress("tranthai2258@gmail.com");
                 mail.To.Add(email);
                 mail.Subject = "Mail xác thực";
                 mail.Body = "Mã xác thực để reset pass là " + code;
-
                 SmtpServer.Port = 587;
                 SmtpServer.Credentials = new System.Net.NetworkCredential("tranthai2258@gmail.com", "beakbrwobscypcjl");
                 SmtpServer.EnableSsl = true;
-
                 SmtpServer.Send(mail);
                 return 1;
             }
@@ -120,11 +106,8 @@ namespace QuanLyNhanSu_Master.DAO
             }
             catch (Exception)
             {
-
                 return false;
             }
-            
-            
         }
         public void AllowChagePassword(string userName, string passWord)
         {
@@ -213,15 +196,15 @@ namespace QuanLyNhanSu_Master.DAO
             return "";
         }
 
-        public bool AddNewImployee(string txtTenNhanVien, string txtNgaySinh, string txtGioiTinh,string txtDiaChi,string txtEmail, string txtSdt, string txtCmnd,string txtNgayCap, string txtTenTinhThanh, string txtDanToc,string txtPhongBan,string txtTenChucVu,float txtHeSoLuong,string txtTinhTrangLamViec,string txtSoBHXH,string txtSoBHYT,string txtTaiKhoanNH)
+        public bool AddNewImployee(string txtTenNhanVien, string txtNgaySinh, string txtGioiTinh,string txtDiaChi,string txtEmail, string txtSdt, string txtCmnd,string txtNgayCap, string txtTenTinhThanh, string txtDanToc,string txtPhongBan,string txtTenChucVu,float txtMaBacLuong,string txtTinhTrangLamViec,string txtSoBHXH,string txtSoBHYT,string txtTaiKhoanNH)
         {
             string query = string.Empty;
             try
             {
 
-                query = "INSERT INTO NhanVien(MaNV, TenNV, NgaySinh, GioiTinh, DiaChi, Email, Sdt, Cmnd, NgayCap, MaTinhThanh, DanToc, MaPhongBan, MaChucVu, HeSoLuong, TinhTrangLamViec, SoBHXH, SoBHYT, TaiKhoanNH) ";
-                query += " VALUES((select max(MaNV) + 1 from NhanVien),N'" +txtTenNhanVien+"', N'"+ txtNgaySinh + "' , N'"+ txtGioiTinh + "', N'"+ txtDiaChi + "', N'"+ txtEmail + "', N'"+ txtSdt + "', N'"+ txtCmnd + "', N'"+ txtNgayCap + "', (select MaTinhThanh from TinhThanh where TenTinhThanh like CONCAT(N'"+ txtTenTinhThanh + "', '%')) ,N'"+ txtDanToc + "', (select MaPhongBan from PhongBan where TenPhongBan like CONCAT( N'"+ txtPhongBan + "', '%')), (select MaChucVu from ChucVu where TenChucVu like CONCAT(N'"+ txtTenChucVu + "', '%')) , N'"+ txtHeSoLuong + "', N'"+ txtTinhTrangLamViec + "', N'"+ txtSoBHXH + "', N'"+ txtSoBHYT+"', N'"+txtTaiKhoanNH +"')";
-                //string query = " exec SP_AddNewImployee @TenNV , @NgaySinh , @GioiTinh , @DiaChi , @Email , @Sdt , @Cmnd , @NgayCap , @TenTinhThanh , @DanToc , @TenPhongBan , @TenChucVu , @HeSoLuong , @TinhTrangLamViec , @SoBHXH , @SoBHYT , @TaiKhoanNH";
+                query = "INSERT INTO NhanVien(MaNV, TenNV, NgaySinh, GioiTinh, DiaChi, Email, Sdt, Cmnd, NgayCap, MaTinhThanh, DanToc, MaPhongBan, MaChucVu, MaBacLuong, TinhTrangLamViec, SoBHXH, SoBHYT, TaiKhoanNH) ";
+                query += " VALUES((select max(MaNV) + 1 from NhanVien),N'" +txtTenNhanVien+"', N'"+ txtNgaySinh + "' , N'"+ txtGioiTinh + "', N'"+ txtDiaChi + "', N'"+ txtEmail + "', N'"+ txtSdt + "', N'"+ txtCmnd + "', N'"+ txtNgayCap + "', (select MaTinhThanh from TinhThanh where TenTinhThanh like CONCAT(N'"+ txtTenTinhThanh + "', '%')) ,N'"+ txtDanToc + "', (select MaPhongBan from PhongBan where TenPhongBan like CONCAT( N'"+ txtPhongBan + "', '%')), (select MaChucVu from ChucVu where TenChucVu like CONCAT(N'"+ txtTenChucVu + "', '%')) , N'"+ txtMaBacLuong + "', N'"+ txtTinhTrangLamViec + "', N'"+ txtSoBHXH + "', N'"+ txtSoBHYT+"', N'"+txtTaiKhoanNH +"')";
+                //string query = " exec SP_AddNewImployee @TenNV , @NgaySinh , @GioiTinh , @DiaChi , @Email , @Sdt , @Cmnd , @NgayCap , @TenTinhThanh , @DanToc , @TenPhongBan , @TenChucVu , @MaBacLuong , @TinhTrangLamViec , @SoBHXH , @SoBHYT , @TaiKhoanNH";
                 int result = DataProvider.Instance.ExecuteNonQuery(query);
                 return result > 0;
 
@@ -232,7 +215,7 @@ namespace QuanLyNhanSu_Master.DAO
             }
         }
 
-        public bool IsAddNewUser(string userName, string passWord, string email)
+        public bool IsAddNewUser(string userName, string passWord, string email, string hoTen)
         {
             try
             {
@@ -248,7 +231,7 @@ namespace QuanLyNhanSu_Master.DAO
                     hasPass += item;
                 }
                  hasPass = EnCrypt(hasPass, "%4oPNbxNwO3Z15CoNCbi");
-                string query = string.Format("INSERT dbo.NguoiDung ( UserName, PassWord, Email, ID, CodeXacThuc, Role) VALUES  ( '{0}', '{1}', N'{2}', (select MAX(ID)+ 1 from NguoiDung),{3}, 'User')", userName, hasPass, email , code);
+                string query = string.Format("INSERT dbo.NguoiDung ( UserName, PassWord, Email, ID, CodeXacThuc, Role, AllowResetPass, HoTen) VALUES  ( '{0}', '{1}', N'{2}', (select MAX(ID)+ 1 from NguoiDung),{3}, 'User', 0)", userName, hasPass, email , code);
 
                 int result = DataProvider.Instance.ExecuteNonQuery(query);
                 return result > 0;
