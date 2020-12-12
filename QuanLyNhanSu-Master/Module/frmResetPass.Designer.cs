@@ -47,6 +47,7 @@
             // 
             // txtUserName
             // 
+            this.txtUserName.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.txtUserName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtUserName.HintForeColor = System.Drawing.Color.Empty;
@@ -56,10 +57,10 @@
             this.txtUserName.LineIdleColor = System.Drawing.Color.Gray;
             this.txtUserName.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.txtUserName.LineThickness = 3;
-            this.txtUserName.Location = new System.Drawing.Point(184, 236);
+            this.txtUserName.Location = new System.Drawing.Point(191, 195);
             this.txtUserName.Margin = new System.Windows.Forms.Padding(4);
             this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(301, 44);
+            this.txtUserName.Size = new System.Drawing.Size(222, 44);
             this.txtUserName.TabIndex = 61;
             this.txtUserName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -81,7 +82,7 @@
             this.btnResetPass.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(184)))));
             this.btnResetPass.IdleForecolor = System.Drawing.Color.White;
             this.btnResetPass.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(184)))));
-            this.btnResetPass.Location = new System.Drawing.Point(251, 289);
+            this.btnResetPass.Location = new System.Drawing.Point(218, 298);
             this.btnResetPass.Margin = new System.Windows.Forms.Padding(5);
             this.btnResetPass.Name = "btnResetPass";
             this.btnResetPass.Size = new System.Drawing.Size(162, 52);
@@ -103,7 +104,7 @@
             // 
             this.bunifuCustomLabel1.AutoSize = true;
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(46, 252);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(53, 211);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
             this.bunifuCustomLabel1.Size = new System.Drawing.Size(131, 28);
             this.bunifuCustomLabel1.TabIndex = 59;
@@ -115,7 +116,7 @@
             this.btnMinimized.BackColor = System.Drawing.Color.Transparent;
             this.btnMinimized.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimized.Image")));
             this.btnMinimized.ImageActive = ((System.Drawing.Image)(resources.GetObject("btnMinimized.ImageActive")));
-            this.btnMinimized.Location = new System.Drawing.Point(442, 3);
+            this.btnMinimized.Location = new System.Drawing.Point(417, 3);
             this.btnMinimized.Name = "btnMinimized";
             this.btnMinimized.Size = new System.Drawing.Size(50, 50);
             this.btnMinimized.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -130,7 +131,7 @@
             this.btnExit.BackColor = System.Drawing.Color.Transparent;
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
             this.btnExit.ImageActive = ((System.Drawing.Image)(resources.GetObject("btnExit.ImageActive")));
-            this.btnExit.Location = new System.Drawing.Point(480, 3);
+            this.btnExit.Location = new System.Drawing.Point(455, 3);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(50, 50);
             this.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -149,7 +150,7 @@
             this.paneltop.Location = new System.Drawing.Point(0, 0);
             this.paneltop.Margin = new System.Windows.Forms.Padding(2);
             this.paneltop.Name = "paneltop";
-            this.paneltop.Size = new System.Drawing.Size(533, 58);
+            this.paneltop.Size = new System.Drawing.Size(508, 58);
             this.paneltop.TabIndex = 62;
             // 
             // LogoACB
@@ -176,7 +177,7 @@
             // frmResetPass
             // 
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(533, 422);
+            this.ClientSize = new System.Drawing.Size(508, 422);
             this.Controls.Add(this.paneltop);
             this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.btnResetPass);

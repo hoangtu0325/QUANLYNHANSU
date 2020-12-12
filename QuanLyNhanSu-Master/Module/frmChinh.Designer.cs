@@ -80,7 +80,7 @@ namespace QuanLyNhanSu_Master
             this.ToolStripAddNewPhongBan = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripAddTKAdmin = new System.Windows.Forms.ToolStripMenuItem();
             this.btnRefresh = new Bunifu.Framework.UI.BunifuTileButton();
-            this.bunifuBtnSetting = new Bunifu.Framework.UI.BunifuTileButton();
+            this.BtnSetting = new Bunifu.Framework.UI.BunifuTileButton();
             this.btnImport = new Bunifu.Framework.UI.BunifuTileButton();
             this.imgBtnAddNew = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnExport = new Bunifu.Framework.UI.BunifuTileButton();
@@ -331,6 +331,7 @@ namespace QuanLyNhanSu_Master
             // 
             // btnNghiepVu
             // 
+            this.btnNghiepVu.BackColor = System.Drawing.Color.White;
             this.btnNghiepVu.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnNghiepVu.FlatAppearance.BorderSize = 0;
             this.btnNghiepVu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
@@ -341,7 +342,7 @@ namespace QuanLyNhanSu_Master
             this.btnNghiepVu.Size = new System.Drawing.Size(229, 71);
             this.btnNghiepVu.TabIndex = 0;
             this.btnNghiepVu.Text = "Nghiệp vụ";
-            this.btnNghiepVu.UseVisualStyleBackColor = true;
+            this.btnNghiepVu.UseVisualStyleBackColor = false;
             this.btnNghiepVu.Click += new System.EventHandler(this.btnNghiepVu_Click);
             // 
             // iconDashboard
@@ -368,7 +369,7 @@ namespace QuanLyNhanSu_Master
             // 
             // PanelCenter
             // 
-            this.PanelCenter.BackColor = System.Drawing.Color.Transparent;
+            this.PanelCenter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(245)))));
             this.PanelCenter.Controls.Add(this.PanelLeft);
             this.PanelCenter.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelCenter.Location = new System.Drawing.Point(0, 125);
@@ -378,7 +379,7 @@ namespace QuanLyNhanSu_Master
             // 
             // PanelLeft
             // 
-            this.PanelLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
+            this.PanelLeft.BackColor = System.Drawing.Color.White;
             this.PanelLeft.Controls.Add(this.PanelNghiepVu);
             this.PanelLeft.Controls.Add(this.iconBangLuong);
             this.PanelLeft.Controls.Add(this.iconChamCong);
@@ -515,7 +516,7 @@ namespace QuanLyNhanSu_Master
             this.panel1.Controls.Add(this.menuStrip2);
             this.panel1.Controls.Add(this.menuStrip1);
             this.panel1.Controls.Add(this.btnRefresh);
-            this.panel1.Controls.Add(this.bunifuBtnSetting);
+            this.panel1.Controls.Add(this.BtnSetting);
             this.panel1.Controls.Add(this.btnImport);
             this.panel1.Controls.Add(this.imgBtnAddNew);
             this.panel1.Controls.Add(this.btnExport);
@@ -730,7 +731,7 @@ namespace QuanLyNhanSu_Master
             this.ToolStripAddNewNhanVien.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ToolStripAddNewNhanVien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(34)))), ((int)(((byte)(110)))));
             this.ToolStripAddNewNhanVien.Name = "ToolStripAddNewNhanVien";
-            this.ToolStripAddNewNhanVien.Size = new System.Drawing.Size(216, 28);
+            this.ToolStripAddNewNhanVien.Size = new System.Drawing.Size(172, 28);
             this.ToolStripAddNewNhanVien.Text = "Nhân viên";
             this.ToolStripAddNewNhanVien.Click += new System.EventHandler(this.ToolStripAddNewNhanVien_Click);
             // 
@@ -740,7 +741,7 @@ namespace QuanLyNhanSu_Master
             this.ToolStripAddNewPhongBan.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ToolStripAddNewPhongBan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(34)))), ((int)(((byte)(110)))));
             this.ToolStripAddNewPhongBan.Name = "ToolStripAddNewPhongBan";
-            this.ToolStripAddNewPhongBan.Size = new System.Drawing.Size(216, 28);
+            this.ToolStripAddNewPhongBan.Size = new System.Drawing.Size(172, 28);
             this.ToolStripAddNewPhongBan.Text = "Phòng ban";
             // 
             // ToolStripAddTKAdmin
@@ -748,8 +749,8 @@ namespace QuanLyNhanSu_Master
             this.ToolStripAddTKAdmin.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.ToolStripAddTKAdmin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(34)))), ((int)(((byte)(110)))));
             this.ToolStripAddTKAdmin.Name = "ToolStripAddTKAdmin";
-            this.ToolStripAddTKAdmin.Size = new System.Drawing.Size(216, 28);
-            this.ToolStripAddTKAdmin.Text = "Tài khoản Admin";
+            this.ToolStripAddTKAdmin.Size = new System.Drawing.Size(172, 28);
+            this.ToolStripAddTKAdmin.Text = "Tài khoản";
             this.ToolStripAddTKAdmin.Click += new System.EventHandler(this.ToolStripAddTKAdmin_Click);
             // 
             // btnRefresh
@@ -774,26 +775,26 @@ namespace QuanLyNhanSu_Master
             this.btnRefresh.MouseEnter += new System.EventHandler(this.btnRefresh_MouseEnter);
             this.btnRefresh.MouseLeave += new System.EventHandler(this.btnRefresh_MouseLeave);
             // 
-            // bunifuBtnSetting
+            // BtnSetting
             // 
-            this.bunifuBtnSetting.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.BtnSetting.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuBtnSetting.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuBtnSetting.color = System.Drawing.Color.Transparent;
-            this.bunifuBtnSetting.colorActive = System.Drawing.Color.Transparent;
-            this.bunifuBtnSetting.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuBtnSetting.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuBtnSetting.ForeColor = System.Drawing.Color.Black;
-            this.bunifuBtnSetting.Image = ((System.Drawing.Image)(resources.GetObject("bunifuBtnSetting.Image")));
-            this.bunifuBtnSetting.ImagePosition = 0;
-            this.bunifuBtnSetting.ImageZoom = 40;
-            this.bunifuBtnSetting.LabelPosition = 21;
-            this.bunifuBtnSetting.LabelText = "  ";
-            this.bunifuBtnSetting.Location = new System.Drawing.Point(1311, 17);
-            this.bunifuBtnSetting.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.bunifuBtnSetting.Name = "bunifuBtnSetting";
-            this.bunifuBtnSetting.Size = new System.Drawing.Size(61, 46);
-            this.bunifuBtnSetting.TabIndex = 0;
+            this.BtnSetting.BackColor = System.Drawing.Color.Transparent;
+            this.BtnSetting.color = System.Drawing.Color.Transparent;
+            this.BtnSetting.colorActive = System.Drawing.Color.Transparent;
+            this.BtnSetting.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnSetting.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSetting.ForeColor = System.Drawing.Color.Black;
+            this.BtnSetting.Image = ((System.Drawing.Image)(resources.GetObject("BtnSetting.Image")));
+            this.BtnSetting.ImagePosition = 0;
+            this.BtnSetting.ImageZoom = 40;
+            this.BtnSetting.LabelPosition = 21;
+            this.BtnSetting.LabelText = "  ";
+            this.BtnSetting.Location = new System.Drawing.Point(1311, 17);
+            this.BtnSetting.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BtnSetting.Name = "BtnSetting";
+            this.BtnSetting.Size = new System.Drawing.Size(61, 46);
+            this.BtnSetting.TabIndex = 0;
             // 
             // btnImport
             // 
@@ -927,7 +928,7 @@ namespace QuanLyNhanSu_Master
         private BunifuTileButton btnImport;
         private BunifuTileButton btnExport;
         private BunifuTileButton LogoACB;
-        private BunifuTileButton bunifuBtnSetting;
+        private BunifuTileButton BtnSetting;
         private BunifuCustomLabel lblStatus;
         private System.Windows.Forms.Button btnDashboard;
         private System.Windows.Forms.Panel PanelLeft;

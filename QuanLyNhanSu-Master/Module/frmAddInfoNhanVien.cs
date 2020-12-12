@@ -23,9 +23,9 @@ namespace QuanLyNhanSu_Master.Module
             InitializeComponent();
         }
         public bool IsShowfrmHoSoNhanVien = false;
-        public bool AddNewImployee(string txtTenNhanVien, string txtNgaySinh, string txtGioiTinh, string txtDiaChi, string txtEmail, string txtSdt, string txtCmnd, string txtNgayCap, string txtTenTinhThanh, string txtDanToc, string txtPhongBan, string txtTenChucVu, float txtHeSoLuong, string txtTinhTrangLamViec, string txtSoBHXH, string txtSoBHYT, string txtTaiKhoanNH)
+        public bool AddNewImployee(string txtTenNhanVien, string txtNgaySinh, string txtGioiTinh, string txtDiaChi, string txtEmail, string txtSdt, string txtCmnd, string txtNgayCap, string txtTenTinhThanh, string txtDanToc, string txtPhongBan, string txtTenChucVu, float txtMaBacLuong, string txtTinhTrangLamViec, string txtSoBHXH, string txtSoBHYT, string txtTaiKhoanNH)
         {
-            return AccountDAO.Instance.AddNewImployee(txtTenNhanVien, txtNgaySinh, txtGioiTinh, txtDiaChi, txtEmail, txtSdt, txtCmnd, txtNgayCap, txtTenTinhThanh, txtDanToc, txtPhongBan, txtTenChucVu, txtHeSoLuong, txtTinhTrangLamViec, txtSoBHXH, txtSoBHYT, txtTaiKhoanNH);
+            return AccountDAO.Instance.AddNewImployee(txtTenNhanVien, txtNgaySinh, txtGioiTinh, txtDiaChi, txtEmail, txtSdt, txtCmnd, txtNgayCap, txtTenTinhThanh, txtDanToc, txtPhongBan, txtTenChucVu, txtMaBacLuong, txtTinhTrangLamViec, txtSoBHXH, txtSoBHYT, txtTaiKhoanNH);
 
         }
 
@@ -42,7 +42,7 @@ namespace QuanLyNhanSu_Master.Module
             string Email = txtEmail.Text;
             string Sdt = txtSdt.Text;
             string TenCV = txtTenChucVu.Text;
-            float HSLuong = (float)Convert.ToDouble(txtHeSoLuong.Text);
+            float HSLuong = (float)Convert.ToDouble(txtMaBacLuong.Text);
             string TTLV = txtTinhTrangLamViec.Text;
             string BHXH = txtSoBHXH.Text;
             string BHYT = txtSoBHYT.Text;

@@ -44,7 +44,7 @@ namespace QuanLyNhanSu_Master.Module
             buniDataGridHoSoNhanVien.Columns["Họ tên"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             buniDataGridHoSoNhanVien.Columns["Tên phòng ban"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             buniDataGridHoSoNhanVien.Columns["Giới tính"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            
+            buniDataGridHoSoNhanVien.Columns["Họ tên"].Frozen = true;
             foreach (DataGridViewRow item in buniDataGridHoSoNhanVien.Rows)
             {
                 if (item.Index == 1)

@@ -1,5 +1,6 @@
 ﻿using QuanLyNhanSu_Master.DAO;
 using QuanLyNhanSu_Master.DTO;
+using QuanLyNhanSu_Master.Module.Popup;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,6 +18,7 @@ namespace QuanLyNhanSu_Master.Module
         public frmDoiMatKhau()
         {
             InitializeComponent();
+            (new DropShadow()).ApplyShadows(this);
         }
         public string UserName;
         public string PassWord;

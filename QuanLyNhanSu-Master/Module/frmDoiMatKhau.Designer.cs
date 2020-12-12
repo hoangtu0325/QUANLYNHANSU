@@ -47,6 +47,10 @@
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 5;
+            // 
             // PanelHeader
             // 
             this.PanelHeader.Size = new System.Drawing.Size(565, 67);
@@ -55,15 +59,13 @@
             // 
             this.btnMinimized.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMinimized.Location = new System.Drawing.Point(-231, 0);
+            this.btnMinimized.Location = new System.Drawing.Point(-466, 0);
             this.btnMinimized.Visible = false;
             // 
             // btnExit
             // 
-            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnExit.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnExit.Location = new System.Drawing.Point(515, 0);
-            this.btnExit.Size = new System.Drawing.Size(50, 67);
+            this.btnExit.Location = new System.Drawing.Point(508, 0);
+            this.btnExit.Size = new System.Drawing.Size(54, 64);
             // 
             // panel1
             // 
@@ -85,6 +87,7 @@
             // 
             // txtUserName
             // 
+            this.txtUserName.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.txtUserName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtUserName.HintForeColor = System.Drawing.Color.Empty;
@@ -103,6 +106,7 @@
             // 
             // txtCodeXacThuc
             // 
+            this.txtCodeXacThuc.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtCodeXacThuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.txtCodeXacThuc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtCodeXacThuc.HintForeColor = System.Drawing.Color.Empty;
@@ -121,6 +125,7 @@
             // 
             // txtPassword
             // 
+            this.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtPassword.HintForeColor = System.Drawing.Color.Empty;
@@ -140,6 +145,7 @@
             // 
             // txtRePassword
             // 
+            this.txtRePassword.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtRePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.txtRePassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtRePassword.HintForeColor = System.Drawing.Color.Empty;

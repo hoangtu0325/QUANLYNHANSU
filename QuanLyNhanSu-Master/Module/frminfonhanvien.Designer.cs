@@ -33,7 +33,7 @@
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btnLuu = new Bunifu.Framework.UI.BunifuThinButton2();
             this.Panels = new System.Windows.Forms.Panel();
-            this.txtHeSoLuong = new System.Windows.Forms.Label();
+            this.txtMaBacLuong = new System.Windows.Forms.Label();
             this.txtMaNV = new System.Windows.Forms.Label();
             this.txtDanToc = new System.Windows.Forms.TextBox();
             this.txtTonGiao = new System.Windows.Forms.TextBox();
@@ -145,7 +145,7 @@
             this.Panels.BackColor = System.Drawing.Color.White;
             this.Panels.Controls.Add(this.txtChucVu);
             this.Panels.Controls.Add(this.txtPhongBan);
-            this.Panels.Controls.Add(this.txtHeSoLuong);
+            this.Panels.Controls.Add(this.txtMaBacLuong);
             this.Panels.Controls.Add(this.txtMaNV);
             this.Panels.Controls.Add(this.btnLuu);
             this.Panels.Controls.Add(this.txtDanToc);
@@ -199,16 +199,16 @@
             this.Panels.Size = new System.Drawing.Size(1584, 737);
             this.Panels.TabIndex = 1;
             // 
-            // txtHeSoLuong
+            // txtMaBacLuong
             // 
-            this.txtHeSoLuong.AutoSize = true;
-            this.txtHeSoLuong.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.txtHeSoLuong.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.txtHeSoLuong.Location = new System.Drawing.Point(1231, 156);
-            this.txtHeSoLuong.Name = "txtHeSoLuong";
-            this.txtHeSoLuong.Size = new System.Drawing.Size(28, 23);
-            this.txtHeSoLuong.TabIndex = 66;
-            this.txtHeSoLuong.Text = "01";
+            this.txtMaBacLuong.AutoSize = true;
+            this.txtMaBacLuong.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.txtMaBacLuong.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtMaBacLuong.Location = new System.Drawing.Point(1231, 156);
+            this.txtMaBacLuong.Name = "txtMaBacLuong";
+            this.txtMaBacLuong.Size = new System.Drawing.Size(28, 23);
+            this.txtMaBacLuong.TabIndex = 66;
+            this.txtMaBacLuong.Text = "01";
             // 
             // txtMaNV
             // 
@@ -832,7 +832,7 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel8;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel18;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel16;
-        private System.Windows.Forms.Label txtHeSoLuong;
+        private System.Windows.Forms.Label txtMaBacLuong;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel21;
         private System.Windows.Forms.TextBox txtTinhTrangLamViec;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel22;

@@ -59,7 +59,7 @@
             this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.txtTenChucVu = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuCustomLabel11 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.txtHeSoLuong = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txtMaBacLuong = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtTinhTrangLamViec = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuCustomLabel12 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.txtSoBHYT = new Bunifu.Framework.UI.BunifuMaterialTextbox();
@@ -504,25 +504,25 @@
             this.bunifuCustomLabel11.TabIndex = 65;
             this.bunifuCustomLabel11.Text = "Hệ Số Lương:";
             // 
-            // txtHeSoLuong
+            // txtMaBacLuong
             // 
-            this.txtHeSoLuong.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtHeSoLuong.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHeSoLuong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(65)))), ((int)(((byte)(155)))));
-            this.txtHeSoLuong.HintForeColor = System.Drawing.Color.Gray;
-            this.txtHeSoLuong.HintText = "Hệ Số Lương";
-            this.txtHeSoLuong.isPassword = false;
-            this.txtHeSoLuong.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(239)))));
-            this.txtHeSoLuong.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(65)))), ((int)(((byte)(155)))));
-            this.txtHeSoLuong.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.txtHeSoLuong.LineThickness = 3;
-            this.txtHeSoLuong.Location = new System.Drawing.Point(402, 399);
-            this.txtHeSoLuong.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.txtHeSoLuong.Name = "txtHeSoLuong";
-            this.txtHeSoLuong.Size = new System.Drawing.Size(343, 48);
-            this.txtHeSoLuong.TabIndex = 11;
-            this.txtHeSoLuong.Text = "1";
-            this.txtHeSoLuong.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtMaBacLuong.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMaBacLuong.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaBacLuong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(65)))), ((int)(((byte)(155)))));
+            this.txtMaBacLuong.HintForeColor = System.Drawing.Color.Gray;
+            this.txtMaBacLuong.HintText = "Hệ Số Lương";
+            this.txtMaBacLuong.isPassword = false;
+            this.txtMaBacLuong.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(239)))));
+            this.txtMaBacLuong.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(65)))), ((int)(((byte)(155)))));
+            this.txtMaBacLuong.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.txtMaBacLuong.LineThickness = 3;
+            this.txtMaBacLuong.Location = new System.Drawing.Point(402, 399);
+            this.txtMaBacLuong.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.txtMaBacLuong.Name = "txtMaBacLuong";
+            this.txtMaBacLuong.Size = new System.Drawing.Size(343, 48);
+            this.txtMaBacLuong.TabIndex = 11;
+            this.txtMaBacLuong.Text = "1";
+            this.txtMaBacLuong.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // txtTinhTrangLamViec
             // 
@@ -622,7 +622,7 @@
             this.Controls.Add(this.bunifuCustomLabel14);
             this.Controls.Add(this.txtTinhTrangLamViec);
             this.Controls.Add(this.bunifuCustomLabel12);
-            this.Controls.Add(this.txtHeSoLuong);
+            this.Controls.Add(this.txtMaBacLuong);
             this.Controls.Add(this.bunifuCustomLabel11);
             this.Controls.Add(this.txtTenChucVu);
             this.Controls.Add(this.bunifuCustomLabel7);
@@ -696,7 +696,7 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel14;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtTinhTrangLamViec;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel12;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtHeSoLuong;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtMaBacLuong;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel11;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtTenChucVu;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel7;

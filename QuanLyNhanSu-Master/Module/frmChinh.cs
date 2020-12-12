@@ -122,7 +122,13 @@ namespace QuanLyNhanSu_Master
             if (bt.Name == "btnChamCong")
             {
                 lblStatus.Text = "CHẤM CÔNG";
-                //FormChild<frmLogin>();
+                frmBangChamCong frmBangChamCong = new frmBangChamCong();
+                frmBangChamCong.TopLevel = false;
+                frmBangChamCong.MdiParent = this.MdiParent;
+                PanelCenter.Controls.Add(frmBangChamCong);
+                frmBangChamCong.Dock = DockStyle.Fill;
+                frmBangChamCong.Show();
+                frmBangChamCong.BringToFront();
                 btnChamCong.BackColor = Color.FromArgb(81, 136, 202);
                 btnChamCong.ForeColor = Color.White;
                 iconChamCong.Image = ((System.Drawing.Image)(resources.GetObject("iconChamCong.ImageActive")));
@@ -284,7 +290,7 @@ namespace QuanLyNhanSu_Master
         private void ToolStripAddTKAdmin_Click(object sender, EventArgs e)
         {
             frmAddNewUser frmAddNewUser = new frmAddNewUser();
-            frmAddNewUser.StartPosition = FormStartPosition.CenterParent;
+            frmAddNewUser.StartPosition = FormStartPosition.CenterScreen;
             frmAddNewUser.Show();
         }
 
@@ -467,11 +473,109 @@ namespace QuanLyNhanSu_Master
 
         private void toolStripImportBangChamCong_Click(object sender, EventArgs e)
         {
-            ImportBangChamCongToDataTable();
-            AddBangChamCongToCSDL(tableBangChamCong);
+            string tableName = "";
+            bool IsError = false;
+            using (OpenFileDialog openFileDialog = new OpenFileDialog() { Filter = "Excel Workbook|*.xlsx|Excel 97-2020 Workbook|*.xls*" })
+            {
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    this.lblStatus.Text = "Import bảng chấm công từ File - " + openFileDialog.SafeFileName;
+                    HaveFileImportBangChamCong = true;
+                    using (var stream = File.Open(openFileDialog.FileName, FileMode.Open, FileAccess.Read))
+                    {
+                        using (IExcelDataReader reader = ExcelReaderFactory.CreateReader(stream))
+                        {
+                            DataSet result = reader.AsDataSet(new ExcelDataSetConfiguration()
+                            {
+                                ConfigureDataTable = (_) => new ExcelDataTableConfiguration() { UseHeaderRow = true }
+                            });
+                            TableCollection = result.Tables;
+                            tableName = TableCollection[0].TableName;
+                        }
+                    }
+                     tableBangChamCong = TableCollection[tableName.ToString()];
+                    string date;
+                    date = tableBangChamCong.Rows[5][0].ToString();
+                    date = date.Substring(date.Length - 7, 7);
+                    DateTime dateTime = DateTime.Parse(date);
+                    List<BangChamCong> bangChamCongs = new List<BangChamCong>();
+                    for (int i = 11; i <= tableBangChamCong.Rows.Count - 4; i++)
+                    {
+                        try
+                        {
+                            int MaNV = Convert.ToInt32(tableBangChamCong.Rows[i][2]);
+                            BangChamCong bangChamCong = new BangChamCong();
+                            bangChamCong.MaNV = MaNV;
+                            bangChamCong.TenNV = tableBangChamCong.Rows[i][3].ToString(); ;
+                            bangChamCong.ThangChamCong = dateTime;
+                            bangChamCong.Ngay1 = tableBangChamCong.Rows[i][4].ToString();
+                            bangChamCong.Ngay2 = tableBangChamCong.Rows[i][5].ToString();
+                            bangChamCong.Ngay3 = tableBangChamCong.Rows[i][6].ToString();
+                            bangChamCong.Ngay4 = tableBangChamCong.Rows[i][7].ToString();
+                            bangChamCong.Ngay5 = tableBangChamCong.Rows[i][8].ToString();
+                            bangChamCong.Ngay6 = tableBangChamCong.Rows[i][9].ToString();
+                            bangChamCong.Ngay7 = tableBangChamCong.Rows[i][10].ToString();
+                            bangChamCong.Ngay8 = tableBangChamCong.Rows[i][11].ToString();
+                            bangChamCong.Ngay9 = tableBangChamCong.Rows[i][12].ToString();
+                            bangChamCong.Ngay10 = tableBangChamCong.Rows[i][13].ToString();
+                            bangChamCong.Ngay11 = tableBangChamCong.Rows[i][14].ToString();
+                            bangChamCong.Ngay12 = tableBangChamCong.Rows[i][15].ToString();
+                            bangChamCong.Ngay13 = tableBangChamCong.Rows[i][16].ToString();
+                            bangChamCong.Ngay14 = tableBangChamCong.Rows[i][17].ToString();
+                            bangChamCong.Ngay15 = tableBangChamCong.Rows[i][18].ToString();
+                            bangChamCong.Ngay16 = tableBangChamCong.Rows[i][19].ToString();
+                            bangChamCong.Ngay17 = tableBangChamCong.Rows[i][20].ToString();
+                            bangChamCong.Ngay18 = tableBangChamCong.Rows[i][21].ToString();
+                            bangChamCong.Ngay19 = tableBangChamCong.Rows[i][22].ToString();
+                            bangChamCong.Ngay20 = tableBangChamCong.Rows[i][23].ToString();
+                            bangChamCong.Ngay21 = tableBangChamCong.Rows[i][24].ToString();
+                            bangChamCong.Ngay22 = tableBangChamCong.Rows[i][25].ToString();
+                            bangChamCong.Ngay23 = tableBangChamCong.Rows[i][26].ToString();
+                            bangChamCong.Ngay24 = tableBangChamCong.Rows[i][27].ToString();
+                            bangChamCong.Ngay25 = tableBangChamCong.Rows[i][28].ToString();
+                            bangChamCong.Ngay26 = tableBangChamCong.Rows[i][29].ToString();
+                            bangChamCong.Ngay27 = tableBangChamCong.Rows[i][30].ToString();
+                            bangChamCong.Ngay28 = tableBangChamCong.Rows[i][31].ToString();
+                            bangChamCong.Ngay29 = tableBangChamCong.Rows[i][32].ToString();
+                            bangChamCong.Ngay30 = tableBangChamCong.Rows[i][33].ToString();
+                            bangChamCong.Ngay31 = tableBangChamCong.Rows[i][34].ToString();
+                            bangChamCong.TongSoNgay = float.Parse(tableBangChamCong.Rows[i][35].ToString());
+                            bangChamCong.SoGioTangCa = float.Parse(tableBangChamCong.Rows[i][36].ToString());
+                            bangChamCong.UserModified = Account.UserName;
+                            bangChamCong.DateModified = DateTime.Now.ToString("dd/MM/yyyy");
+
+                            bangChamCongs.Add(bangChamCong);
+                            IsError = false;
+                        }
+                        catch (Exception ex)
+                        {
+                            int Error = i - 10;
+                            MessageBox.Show("Lỗi dữ liệu nhân viên thứ " + Error + "\nVui lòng kiểm tra lại dữ liệu Import");
+                            IsError = true;
+                            break;
+                        }
+                    }
+                    if (!IsError)
+                    {
+                        frmImportBangChamCong frmImport = new frmImportBangChamCong();
+                        frmImport.GridImportBangChamCong.DataSource = bangChamCongs;
+                        frmImport.LoadDataGrid(frmImport.GridImportBangChamCong);
+                        frmImport.StartPosition = FormStartPosition.CenterScreen;
+                        frmImport.ShowDialog();
+                    }
+                }
+                else
+                {
+                    this.lblStatus.Text = "None Import Excel";
+                     tableBangChamCong = null;
+                }
+            }
+
+           // AddBangChamCongToCSDL(tableBangChamCong);
         }
-        public DataTable tableBangChamCong;
-        public DataTable ImportBangChamCongToDataTable()
+        private DataTable tableBangChamCong;
+        private bool HaveFileImportBangChamCong = false;
+        private DataTable ImportBangChamCongToDataTable()
         {
 
             string tableName = "";
@@ -480,6 +584,7 @@ namespace QuanLyNhanSu_Master
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     this.lblStatus.Text = "Import bảng chấm công từ File - " + openFileDialog.SafeFileName;
+                    HaveFileImportBangChamCong = true;
                     using (var stream = File.Open(openFileDialog.FileName, FileMode.Open, FileAccess.Read))
                     {
                         using (IExcelDataReader reader = ExcelReaderFactory.CreateReader(stream))
@@ -493,17 +598,16 @@ namespace QuanLyNhanSu_Master
                         }
                     }
                     return tableBangChamCong = TableCollection[tableName.ToString()];
-                   
                 }
                 else
                 {
-                    //MessageBox.Show("Vui lòng chọn file để Import");
                     this.lblStatus.Text = "None Import Excel";
                     return tableBangChamCong = null;
                 }
             }
-
         }
+
+       
         public void AddBangChamCongToCSDL(DataTable table)
         {
             if (lblStatus.Text.Contains("Import bảng chấm công từ File"))
@@ -535,6 +639,13 @@ namespace QuanLyNhanSu_Master
                 if (status)
                 {
                     MessageBox.Show("Import bảng chấm công thành công");
+                    frmBangChamCong frmBangChamCong = new frmBangChamCong();
+                    frmBangChamCong.TopLevel = false;
+                    frmBangChamCong.MdiParent = this.MdiParent;
+                    PanelCenter.Controls.Add(frmBangChamCong);
+                    frmBangChamCong.Dock = DockStyle.Fill;
+                    frmBangChamCong.Show();
+                    frmBangChamCong.BringToFront();
                 }
 
             }
