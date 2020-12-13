@@ -43,6 +43,19 @@ namespace QuanLyNhanSu_Master.DAO
                 return false;
             } 
         }
+        public DataTable GetInfoAccount()
+        {
+            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT ID AS STT, HoTen AS [Họ tên], UserName AS [Tên tài khoản], Email, Role AS [Quyền truy cập], LastLogin AS [Đăng nhập gần đây] FROM  NguoiDung");
+            return data;
+        }
+          public string GetCountNV()
+        {
+            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT COUNT(MaNV) as [CountNV] FROM NhanVien");
+            DataRow firstRow = data.Rows[0];
+            string Role = firstRow["CountNV"].ToString();
+            return Role;
+        }
+
 
         public Account GetAccountByUserName(string userName)
         {
@@ -54,7 +67,10 @@ namespace QuanLyNhanSu_Master.DAO
             }
             return null;
         }
-
+        public void LastLogin(string userName)
+        {
+            DataProvider.Instance.ExecuteQuery("Update NguoiDung set LastLogin = '"+ DateTime.Now.ToString("yyyy/MM/dd") +"' where UserName = '" + userName + "'");
+        }
         public int ResetPassAccount(string userName)
         {
             string email;
