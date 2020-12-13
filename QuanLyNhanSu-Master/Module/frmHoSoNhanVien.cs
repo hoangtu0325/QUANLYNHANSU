@@ -21,9 +21,6 @@ namespace QuanLyNhanSu_Master.Module
         public frmHoSoNhanVien(bool IsVisibleGrid)
         {
             InitializeComponent();
-            buniDataGridHoSoNhanVien.Dock = DockStyle.Fill;
-            buniDataGridHoSoNhanVien.Visible = IsVisibleGrid;
-            buniDataGridHoSoNhanVien.BringToFront();
         }
         public static System.Data.DataTable dataTable;
         public static System.Data.DataTable dataTable2;
@@ -34,8 +31,6 @@ namespace QuanLyNhanSu_Master.Module
             get { return IsExport; }
             set { IsExport = value; }
         }
-        //public bool IsExport1 { get => IsExport; set => IsExport = value; }
-      
         public static string Action = "";
         public static string TenNhanVien = "";
         public static int MaNhanVien;
@@ -51,8 +46,8 @@ namespace QuanLyNhanSu_Master.Module
                 {
                     item.DefaultCellStyle.BackColor = Color.FromArgb(31, 65, 155);
                 }
-              //  item.Cells["Giới tính"].Value = (bool)item.Cells["Giới tính"].Value ? "Nam" : "Nữ";
             }
+            lblCountNhanVien.Text = buniDataGridHoSoNhanVien.RowCount.ToString();
             return buniDataGridHoSoNhanVien;
         }
 
@@ -138,8 +133,6 @@ namespace QuanLyNhanSu_Master.Module
                 if (xlWorkSheet != null) System.Runtime.InteropServices.Marshal.ReleaseComObject(xlWorkSheet);
                 if (xlWorkBook != null) System.Runtime.InteropServices.Marshal.ReleaseComObject(xlWorkBook);
                 if (xl != null) System.Runtime.InteropServices.Marshal.ReleaseComObject(xl);
-                // Exit from the application  
-                // xl.Quit();
             }
 
         }
@@ -166,15 +159,17 @@ namespace QuanLyNhanSu_Master.Module
                     frminfonhanvien.MdiParent = this.MdiParent;
                     panel1.Controls.Add(frminfonhanvien);
                     buniDataGridHoSoNhanVien.Visible = false;
-                    //buniDataGridHoSoNhanVien.SendToBack();
                     frminfonhanvien.Dock = DockStyle.Fill;
-                    //frminfonhanvien.TopMost = true;
                     frminfonhanvien.Show();
-                    //frminfonhanvien.BringToFront();
+                    frminfonhanvien.BringToFront();
                 }
 
             }
 
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
         }
     }
 }

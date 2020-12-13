@@ -96,17 +96,13 @@ namespace QuanLyNhanSu_Master.Module
                 }
                 for (int j = 4; j < GridImportBangChamCong.Columns.Count - 3; j++)
                 {
-                    if (GridImportBangChamCong.Rows[i].Cells[j].Value.ToString() != "x" && GridImportBangChamCong.Rows[i].Cells[j].Value.ToString() != "x/2" && GridImportBangChamCong.Rows[i].Cells[j].Value.ToString() != "cn")
+                    if (GridImportBangChamCong.Rows[i].Cells[j].Value.ToString() != "x" && GridImportBangChamCong.Rows[i].Cells[j].Value.ToString() != "x/2" && GridImportBangChamCong.Rows[i].Cells[j].Value.ToString() != "cn" )
                     {
                         MessageBox.Show("Lỗi dữ liệu cột " + GridImportBangChamCong.Columns[j].HeaderText + " của nhân viên " + GridImportBangChamCong.Rows[i].Cells["MaNV"].Value.ToString());
                         break;
                     }
                 }
-                //if (GridImportBangChamCong.Rows[i].Cells["Ngay1"].Value.ToString() != "x")
-                //{
-                //    MessageBox.Show("Lỗi dữ liệu cột Ngày 1 của nhân viên " + GridImportBangChamCong.Rows[i].Cells["MaNV"].Value.ToString());
-                //    break;
-                //}
+            
             }
         }
     }

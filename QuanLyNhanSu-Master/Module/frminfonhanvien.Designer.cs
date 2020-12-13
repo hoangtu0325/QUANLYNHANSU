@@ -30,9 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInfoNhanVien));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnReturn = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btnLuu = new Bunifu.Framework.UI.BunifuThinButton2();
             this.Panels = new System.Windows.Forms.Panel();
+            this.txtChucVu = new System.Windows.Forms.Label();
+            this.txtPhongBan = new System.Windows.Forms.Label();
             this.txtMaBacLuong = new System.Windows.Forms.Label();
             this.txtMaNV = new System.Windows.Forms.Label();
             this.txtDanToc = new System.Windows.Forms.TextBox();
@@ -81,14 +84,11 @@
             this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btnChangeImage = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.txtPhongBan = new System.Windows.Forms.Label();
-            this.txtChucVu = new System.Windows.Forms.Label();
-            this.btnReturn = new Bunifu.Framework.UI.BunifuImageButton();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnReturn)).BeginInit();
             this.Panels.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnImageNhanVien)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnReturn)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -101,6 +101,20 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1584, 58);
             this.panel1.TabIndex = 0;
+            // 
+            // btnReturn
+            // 
+            this.btnReturn.BackColor = System.Drawing.Color.Transparent;
+            this.btnReturn.Image = ((System.Drawing.Image)(resources.GetObject("btnReturn.Image")));
+            this.btnReturn.ImageActive = null;
+            this.btnReturn.Location = new System.Drawing.Point(12, 13);
+            this.btnReturn.Name = "btnReturn";
+            this.btnReturn.Size = new System.Drawing.Size(30, 30);
+            this.btnReturn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnReturn.TabIndex = 1;
+            this.btnReturn.TabStop = false;
+            this.btnReturn.Zoom = 10;
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
             // bunifuCustomLabel1
             // 
@@ -132,7 +146,7 @@
             this.btnLuu.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(184)))));
             this.btnLuu.IdleForecolor = System.Drawing.Color.White;
             this.btnLuu.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(184)))));
-            this.btnLuu.Location = new System.Drawing.Point(451, 670);
+            this.btnLuu.Location = new System.Drawing.Point(23, 661);
             this.btnLuu.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(77, 58);
@@ -198,6 +212,28 @@
             this.Panels.Name = "Panels";
             this.Panels.Size = new System.Drawing.Size(1584, 737);
             this.Panels.TabIndex = 1;
+            // 
+            // txtChucVu
+            // 
+            this.txtChucVu.AutoSize = true;
+            this.txtChucVu.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.txtChucVu.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtChucVu.Location = new System.Drawing.Point(1231, 103);
+            this.txtChucVu.Name = "txtChucVu";
+            this.txtChucVu.Size = new System.Drawing.Size(88, 23);
+            this.txtChucVu.TabIndex = 66;
+            this.txtChucVu.Text = "Nhân viên";
+            // 
+            // txtPhongBan
+            // 
+            this.txtPhongBan.AutoSize = true;
+            this.txtPhongBan.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.txtPhongBan.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtPhongBan.Location = new System.Drawing.Point(1231, 45);
+            this.txtPhongBan.Name = "txtPhongBan";
+            this.txtPhongBan.Size = new System.Drawing.Size(126, 23);
+            this.txtPhongBan.TabIndex = 66;
+            this.txtPhongBan.Text = "Phòng nhân sự";
             // 
             // txtMaBacLuong
             // 
@@ -729,42 +765,6 @@
             this.bunifuCustomLabel2.TabIndex = 0;
             this.bunifuCustomLabel2.Text = "Họ và tên :";
             // 
-            // txtPhongBan
-            // 
-            this.txtPhongBan.AutoSize = true;
-            this.txtPhongBan.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.txtPhongBan.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.txtPhongBan.Location = new System.Drawing.Point(1231, 45);
-            this.txtPhongBan.Name = "txtPhongBan";
-            this.txtPhongBan.Size = new System.Drawing.Size(126, 23);
-            this.txtPhongBan.TabIndex = 66;
-            this.txtPhongBan.Text = "Phòng nhân sự";
-            // 
-            // txtChucVu
-            // 
-            this.txtChucVu.AutoSize = true;
-            this.txtChucVu.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.txtChucVu.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.txtChucVu.Location = new System.Drawing.Point(1231, 103);
-            this.txtChucVu.Name = "txtChucVu";
-            this.txtChucVu.Size = new System.Drawing.Size(88, 23);
-            this.txtChucVu.TabIndex = 66;
-            this.txtChucVu.Text = "Nhân viên";
-            // 
-            // btnReturn
-            // 
-            this.btnReturn.BackColor = System.Drawing.Color.Transparent;
-            this.btnReturn.Image = ((System.Drawing.Image)(resources.GetObject("btnReturn.Image")));
-            this.btnReturn.ImageActive = null;
-            this.btnReturn.Location = new System.Drawing.Point(12, 13);
-            this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(30, 30);
-            this.btnReturn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnReturn.TabIndex = 1;
-            this.btnReturn.TabStop = false;
-            this.btnReturn.Zoom = 10;
-            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
-            // 
             // frmInfoNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -778,12 +778,12 @@
             this.Load += new System.EventHandler(this.frminfonhanvien_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnReturn)).EndInit();
             this.Panels.ResumeLayout(false);
             this.Panels.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnImageNhanVien)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnReturn)).EndInit();
             this.ResumeLayout(false);
 
         }

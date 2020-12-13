@@ -44,17 +44,17 @@ namespace QuanLyNhanSu_Master.Module
             else
             {
 
-                if (AccountDAO.Instance.IsAddNewPhongBan(MaPB, TenPB))
-                {
+                //if (AccountDAO.Instance.IsAddNewPhongBan(MaPB, TenPB))
+                //{
 
-                    MessageBox.Show("Thêm Phòng Ban thành công");
-                    this.DialogResult = DialogResult.OK;
-                    this.Close();
-                }
-                else
-                {
-                    MessageBox.Show("Tài khoản đã khai báo hoặc không kết nối được server!!");
-                }
+                //    MessageBox.Show("Thêm Phòng Ban thành công");
+                //    this.DialogResult = DialogResult.OK;
+                //    this.Close();
+                //}
+                //else
+                //{
+                //    MessageBox.Show("Tài khoản đã khai báo hoặc không kết nối được server!!");
+                //}
             }
         }
     }

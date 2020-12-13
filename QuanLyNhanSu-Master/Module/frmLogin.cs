@@ -147,8 +147,10 @@ namespace QuanLyNhanSu_Master
                         SaveData();
                     }
                     Account loginAccount = AccountDAO.Instance.GetAccountByUserName(userName);
+                    AccountDAO.Instance.LastLogin(userName);
                     frmChinh frmChinh = new frmChinh(loginAccount);
                     frmChinh.Show();
+                
                     this.Hide();
                 }
                 else
