@@ -112,6 +112,49 @@ namespace QuanLyNhanSu_Master.DAO
             return listPhongBan;
         }
 
+        public List<BacLuong> GetAllBacLuong()
+        {
+            List<BacLuong> listBacLuong = new List<BacLuong>();
+            string query = "select * from BacLuong";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            foreach (DataRow item in data.Rows)
+            {
+                BacLuong menu = new BacLuong(item);
+                listBacLuong.Add(menu);
+            }
+            return listBacLuong;
+        }
+
+
+        public List<TinhThanh> GetListTinhThanh()
+        {
+            List<TinhThanh> tinhThanhs = new List<TinhThanh>();
+            string query = "select * from TinhThanh";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            foreach (DataRow item in data.Rows)
+            {
+                TinhThanh menu = new TinhThanh(item);
+                tinhThanhs.Add(menu);
+            }
+            return tinhThanhs;
+        }
+
+        public List<ChucVu> GetListChucVu()
+        {
+            List<ChucVu> chucVu = new List<ChucVu>();
+            string query = "select * from ChucVu";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            foreach (DataRow item in data.Rows)
+            {
+                ChucVu menu = new ChucVu(item);
+                chucVu.Add(menu);
+            }
+            return chucVu;
+        }
+
         public string GetAllPhongBanToString()
         {
             string listPhongBan = "";
@@ -174,5 +217,12 @@ namespace QuanLyNhanSu_Master.DAO
             return result;
         }
 
+        public DataTable GetListProvinces()
+        {
+            string query = string.Empty;
+            query = "select * from TinhThanh";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            return data;
+        }
     }
 }

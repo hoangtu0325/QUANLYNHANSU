@@ -74,7 +74,8 @@ namespace QuanLyNhanSu_Master.DAO
         public DataTable GetAllBangChamCong(string date)
         {
             //List<BangChamCong> listBangChamCong = new List<BangChamCong>();
-            string query = "SELECT CC.MaNV AS [Mã NV], NV.TenNV AS [Tên nhân viên],CC.ThangChamCong AS [Tháng chấm công], CC.Ngay1 AS [1], CC.Ngay2 AS [2], CC.Ngay3 AS [3], CC.Ngay4 AS [4], CC.Ngay5 AS [5], CC.Ngay6 AS [6], CC.Ngay7 AS [7], CC.Ngay8 AS [8], CC.Ngay9 AS [9], CC.Ngay10 AS [10], ";
+            date = date + "/01";
+            string query = "SELECT CC.MaNV AS [Mã NV], NV.TenNV AS [Tên nhân viên], CC.Ngay1 AS [1], CC.Ngay2 AS [2], CC.Ngay3 AS [3], CC.Ngay4 AS [4], CC.Ngay5 AS [5], CC.Ngay6 AS [6], CC.Ngay7 AS [7], CC.Ngay8 AS [8], CC.Ngay9 AS [9], CC.Ngay10 AS [10], ";
             query += " CC.Ngay11 AS[11], CC.Ngay12 AS[12], CC.Ngay13 AS[13], CC.Ngay14 AS[14], CC.Ngay15 AS[15], CC.Ngay16 AS[16], CC.Ngay17 AS[17], CC.Ngay18 AS[18], CC.Ngay19 AS[19], CC.Ngay20 AS[20], CC.Ngay21 AS[21], CC.Ngay22 AS[22], ";
             query += " CC.Ngay23 AS[23], CC.Ngay24 AS[24], CC.Ngay25 AS[25], CC.Ngay26 AS[26], CC.Ngay27 AS[27], CC.Ngay28 AS[28], CC.Ngay29 AS[29], CC.Ngay30 AS[30], CC.Ngay31 AS[31], CC.TongSoNgay AS[Tổng số ngày], ";
             query += " CC.SoGioTangCa AS[Số giờ tăng ca], CC.UserModified AS[Người sửa], CC.DateModified AS[Ngày sửa] ";
