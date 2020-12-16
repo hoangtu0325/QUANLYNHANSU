@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using QuanLyNhanSu_Master.DAO;
-
+using QuanLyNhanSu_Master.DTO;
 
 namespace QuanLyNhanSu_Master.Module
 {
@@ -36,38 +36,79 @@ namespace QuanLyNhanSu_Master.Module
             string NgaySinh = txtNgaySinh.Text;
             string Cmnd = txtCmnd.Text;
             string NgayCap = txtNgayCap.Text;
-            string TenTT = txtTenTinhThanh.Text;
+            string TenTT = cbListTinhThanh.GetItemText(cbListTinhThanh.SelectedItem);
             string GT = txtGioiTinh.Text;
             string DiaChi = txtDiaChi.Text;
             string Email = txtEmail.Text;
             string Sdt = txtSdt.Text;
-            string TenCV = txtTenChucVu.Text;
-            float HSLuong = (float)Convert.ToDouble(txtMaBacLuong.Text);
+            string TenCV = cbListChucVu.GetItemText(cbListChucVu.SelectedItem);
+            float HSLuong = (float)Convert.ToDouble(cbListBacLuong.GetItemText(cbListBacLuong.SelectedValue.ToString()));
             string TTLV = txtTinhTrangLamViec.Text;
             string BHXH = txtSoBHXH.Text;
             string BHYT = txtSoBHYT.Text;
             string TKNH = txtTaiKhoanNH.Text;
             string DanToc = txtDanToc.Text;
-            string PB = txtPhongBan.Text;
+            string PB = cbListPhongBan.GetItemText(cbListPhongBan.SelectedItem);
 
             bool flag = AddNewImployee(TenNV, NgaySinh, GT, DiaChi, Email, Sdt, Cmnd, NgayCap, TenTT, DanToc, PB, TenCV, HSLuong, TTLV, BHXH, BHYT, TKNH);
             if (flag)
             {
                 MessageBox.Show("Thêm thông tin nhân viên thành công");
                 IsShowfrmHoSoNhanVien = true;
-                //this.Hide();
             }
             else
             {
                 MessageBox.Show("Lỗi, Vui lòng nhập đủ thông tin Nhân Viên");
             }
-
-
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void frmAddInfoNhanVien_Load(object sender, EventArgs e)
+        {
+            LoadData();
+        }
+
+        private void LoadData()
+        {
+
+            List<TinhThanh> tinhThanh = HoSoNhanVienDAO.Instance.GetListTinhThanh();
+            BindingList<TinhThanh> bl = new BindingList<TinhThanh>(tinhThanh);
+            cbListTinhThanh.DataSource = bl;
+            cbListTinhThanh.ValueMember = "MaTinhThanh";
+            cbListTinhThanh.DisplayMember = "TenTinhThanh";
+            cbListTinhThanh.SelectedItem = null;
+            cbListTinhThanh.SelectedIndex = 0;
+
+            List<PhongBan> phongBan = HoSoNhanVienDAO.Instance.GetAllPhongBan();
+            foreach (PhongBan item in phongBan)
+            {
+                cbListPhongBan.Items.Add(item.TenPhongBan);
+            }
+            cbListPhongBan.ValueMember = "MaPhongBan";
+            cbListPhongBan.DisplayMember = "TenPhongBan";
+            cbListPhongBan.SelectedItem = null;
+            cbListPhongBan.SelectedIndex = 0;
+
+            List<BacLuong> bacLuong = HoSoNhanVienDAO.Instance.GetAllBacLuong();
+            BindingList<BacLuong> binding = new BindingList<BacLuong>(bacLuong);
+            cbListBacLuong.DataSource = binding;
+            cbListBacLuong.ValueMember = "MaBacLuong";
+            cbListBacLuong.DisplayMember = "BacLuong1";
+            cbListBacLuong.SelectedItem = null;
+            cbListBacLuong.SelectedIndex = 0;
+
+            List<ChucVu> chucVu = HoSoNhanVienDAO.Instance.GetListChucVu();
+            BindingList<ChucVu> bindingChucVu = new BindingList<ChucVu>(chucVu);
+            cbListChucVu.DataSource = bindingChucVu;
+            cbListChucVu.ValueMember = "MaChucVu";
+            cbListChucVu.DisplayMember = "TenChucVu";
+            cbListChucVu.SelectedItem = null;
+            cbListChucVu.SelectedIndex = 0;
+
         }
     }
 

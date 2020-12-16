@@ -60,7 +60,6 @@ namespace QuanLyNhanSu_Master
             this.btnNhanVien = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -69,11 +68,10 @@ namespace QuanLyNhanSu_Master
             this.ToolstripCaiDat = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripReSetPass = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripReLogin = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripExit = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripImportBangChamCong1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripImportListNhanVien = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripImportBangChamCong = new System.Windows.Forms.ToolStripMenuItem();
-            this.exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ToolStripExportNhanVien = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.ToolStripAddNew = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripAddNewNhanVien = new System.Windows.Forms.ToolStripMenuItem();
@@ -83,7 +81,6 @@ namespace QuanLyNhanSu_Master
             this.BtnSetting = new Bunifu.Framework.UI.BunifuTileButton();
             this.btnImport = new Bunifu.Framework.UI.BunifuTileButton();
             this.imgBtnAddNew = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btnExport = new Bunifu.Framework.UI.BunifuTileButton();
             this.TimerNghiepVu = new System.Windows.Forms.Timer(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -172,21 +169,18 @@ namespace QuanLyNhanSu_Master
             // 
             // cbSearch
             // 
-            this.cbSearch.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cbSearch.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbSearch.Dock = System.Windows.Forms.DockStyle.Right;
-            this.cbSearch.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbSearch.DropDownWidth = 370;
             this.cbSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbSearch.FormattingEnabled = true;
-            this.cbSearch.ItemHeight = 31;
+            this.cbSearch.ItemHeight = 28;
             this.cbSearch.Items.AddRange(new object[] {
             "sdfsdfsd",
             "dfsdfsdf"});
             this.cbSearch.Location = new System.Drawing.Point(34, 0);
             this.cbSearch.Name = "cbSearch";
-            this.cbSearch.Size = new System.Drawing.Size(348, 37);
+            this.cbSearch.Size = new System.Drawing.Size(348, 36);
             this.cbSearch.TabIndex = 25;
             this.cbSearch.Click += new System.EventHandler(this.cbSearch_Click);
             this.cbSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cbSearch_KeyDown);
@@ -254,7 +248,7 @@ namespace QuanLyNhanSu_Master
             this.btnExit.TabIndex = 4;
             this.btnExit.TabStop = false;
             this.btnExit.Zoom = 10;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.btnExit.Click += new System.EventHandler(this.toolStripExit_Click);
             // 
             // PanelNghiepVu
             // 
@@ -339,9 +333,10 @@ namespace QuanLyNhanSu_Master
             this.btnNghiepVu.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNghiepVu.Location = new System.Drawing.Point(0, 0);
             this.btnNghiepVu.Name = "btnNghiepVu";
+            this.btnNghiepVu.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
             this.btnNghiepVu.Size = new System.Drawing.Size(229, 71);
             this.btnNghiepVu.TabIndex = 0;
-            this.btnNghiepVu.Text = "Nghiệp vụ";
+            this.btnNghiepVu.Text = "Cập nhật";
             this.btnNghiepVu.UseVisualStyleBackColor = false;
             this.btnNghiepVu.Click += new System.EventHandler(this.btnNghiepVu_Click);
             // 
@@ -508,7 +503,6 @@ namespace QuanLyNhanSu_Master
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label1);
@@ -519,24 +513,11 @@ namespace QuanLyNhanSu_Master
             this.panel1.Controls.Add(this.BtnSetting);
             this.panel1.Controls.Add(this.btnImport);
             this.panel1.Controls.Add(this.imgBtnAddNew);
-            this.panel1.Controls.Add(this.btnExport);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 53);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1379, 72);
             this.panel1.TabIndex = 3;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.DimGray;
-            this.label2.Location = new System.Drawing.Point(1148, 22);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(13, 20);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "|";
             // 
             // comboBox1
             // 
@@ -605,14 +586,13 @@ namespace QuanLyNhanSu_Master
             this.menuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ToolstripCaiDat,
-            this.toolStripImportBangChamCong1,
-            this.exportToolStripMenuItem});
+            this.toolStripImportBangChamCong1});
             this.menuStrip2.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
-            this.menuStrip2.Location = new System.Drawing.Point(1157, 41);
+            this.menuStrip2.Location = new System.Drawing.Point(1229, 41);
             this.menuStrip2.Name = "menuStrip2";
             this.menuStrip2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.menuStrip2.ShowItemToolTips = true;
-            this.menuStrip2.Size = new System.Drawing.Size(222, 28);
+            this.menuStrip2.Size = new System.Drawing.Size(150, 28);
             this.menuStrip2.TabIndex = 1;
             this.menuStrip2.Text = "TẠO MỚI";
             // 
@@ -621,7 +601,8 @@ namespace QuanLyNhanSu_Master
             this.ToolstripCaiDat.BackColor = System.Drawing.Color.Transparent;
             this.ToolstripCaiDat.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ToolStripReSetPass,
-            this.toolStripReLogin});
+            this.toolStripReLogin,
+            this.toolStripExit});
             this.ToolstripCaiDat.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ToolstripCaiDat.ForeColor = System.Drawing.Color.Black;
             this.ToolstripCaiDat.Name = "ToolstripCaiDat";
@@ -647,6 +628,15 @@ namespace QuanLyNhanSu_Master
             this.toolStripReLogin.Size = new System.Drawing.Size(202, 28);
             this.toolStripReLogin.Text = "Đăng nhập lại";
             this.toolStripReLogin.Click += new System.EventHandler(this.toolStripReLogin_Click);
+            // 
+            // toolStripExit
+            // 
+            this.toolStripExit.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.toolStripExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(34)))), ((int)(((byte)(110)))));
+            this.toolStripExit.Name = "toolStripExit";
+            this.toolStripExit.Size = new System.Drawing.Size(202, 28);
+            this.toolStripExit.Text = "Thoát";
+            this.toolStripExit.Click += new System.EventHandler(this.toolStripExit_Click);
             // 
             // toolStripImportBangChamCong1
             // 
@@ -679,22 +669,6 @@ namespace QuanLyNhanSu_Master
             this.toolStripImportBangChamCong.Size = new System.Drawing.Size(245, 28);
             this.toolStripImportBangChamCong.Text = "Bảng chấm công";
             this.toolStripImportBangChamCong.Click += new System.EventHandler(this.toolStripImportBangChamCong_Click);
-            // 
-            // exportToolStripMenuItem
-            // 
-            this.exportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ToolStripExportNhanVien});
-            this.exportToolStripMenuItem.Margin = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
-            this.exportToolStripMenuItem.Size = new System.Drawing.Size(64, 24);
-            this.exportToolStripMenuItem.Text = "Export";
-            // 
-            // ToolStripExportNhanVien
-            // 
-            this.ToolStripExportNhanVien.Name = "ToolStripExportNhanVien";
-            this.ToolStripExportNhanVien.Size = new System.Drawing.Size(150, 26);
-            this.ToolStripExportNhanVien.Text = "Nhân viên";
-            this.ToolStripExportNhanVien.Click += new System.EventHandler(this.ToolStripExportNhanVien_Click);
             // 
             // menuStrip1
             // 
@@ -741,8 +715,9 @@ namespace QuanLyNhanSu_Master
             this.ToolStripAddNewPhongBan.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ToolStripAddNewPhongBan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(34)))), ((int)(((byte)(110)))));
             this.ToolStripAddNewPhongBan.Name = "ToolStripAddNewPhongBan";
-            this.ToolStripAddNewPhongBan.Size = new System.Drawing.Size(172, 28);
+            this.ToolStripAddNewPhongBan.Size = new System.Drawing.Size(216, 28);
             this.ToolStripAddNewPhongBan.Text = "Phòng ban";
+            this.ToolStripAddNewPhongBan.Click += new System.EventHandler(this.ToolStripAddNewPhongBan_Click);
             // 
             // ToolStripAddTKAdmin
             // 
@@ -767,7 +742,7 @@ namespace QuanLyNhanSu_Master
             this.btnRefresh.ImageZoom = 45;
             this.btnRefresh.LabelPosition = 21;
             this.btnRefresh.LabelText = "Refresh";
-            this.btnRefresh.Location = new System.Drawing.Point(1083, 9);
+            this.btnRefresh.Location = new System.Drawing.Point(1155, 14);
             this.btnRefresh.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(64, 54);
@@ -832,27 +807,6 @@ namespace QuanLyNhanSu_Master
             this.imgBtnAddNew.TabStop = false;
             this.imgBtnAddNew.Zoom = 5;
             this.imgBtnAddNew.Click += new System.EventHandler(this.btnAddNew_Click);
-            // 
-            // btnExport
-            // 
-            this.btnExport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExport.BackColor = System.Drawing.Color.Transparent;
-            this.btnExport.color = System.Drawing.Color.Transparent;
-            this.btnExport.colorActive = System.Drawing.Color.Transparent;
-            this.btnExport.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExport.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExport.ForeColor = System.Drawing.Color.Black;
-            this.btnExport.Image = ((System.Drawing.Image)(resources.GetObject("btnExport.Image")));
-            this.btnExport.ImagePosition = 5;
-            this.btnExport.ImageZoom = 50;
-            this.btnExport.LabelPosition = 21;
-            this.btnExport.LabelText = "";
-            this.btnExport.Location = new System.Drawing.Point(1162, 9);
-            this.btnExport.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(56, 54);
-            this.btnExport.TabIndex = 0;
-            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
             // TimerNghiepVu
             // 
@@ -926,7 +880,6 @@ namespace QuanLyNhanSu_Master
         private System.Windows.Forms.Panel panel1;
         private BunifuImageButton imgBtnAddNew;
         private BunifuTileButton btnImport;
-        private BunifuTileButton btnExport;
         private BunifuTileButton LogoACB;
         private BunifuTileButton BtnSetting;
         private BunifuCustomLabel lblStatus;
@@ -956,7 +909,6 @@ namespace QuanLyNhanSu_Master
         private System.Windows.Forms.ComboBox cbSearch;
         private System.Windows.Forms.Panel panel2;
         private BunifuTileButton btnRefresh;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBox1;
@@ -965,8 +917,7 @@ namespace QuanLyNhanSu_Master
         private System.Windows.Forms.ToolStripMenuItem toolStripImportBangChamCong1;
         private System.Windows.Forms.ToolStripMenuItem toolStripImportListNhanVien;
         private System.Windows.Forms.ToolStripMenuItem toolStripImportBangChamCong;
-        private System.Windows.Forms.ToolStripMenuItem exportToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ToolStripExportNhanVien;
+        private System.Windows.Forms.ToolStripMenuItem toolStripExit;
     }
 }
 

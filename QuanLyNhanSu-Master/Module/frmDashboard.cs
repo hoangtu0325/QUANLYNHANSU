@@ -23,7 +23,10 @@ namespace QuanLyNhanSu_Master.Module
         {
             GridDashboard.DataSource = AccountDAO.Instance.GetInfoAccount();
             lblCountNV.Text = AccountDAO.Instance.GetCountNV();
-            lblCountUser.Text = "Tổng Users : " + GridDashboard.RowCount.ToString();
+            lblCountUser.Text =  GridDashboard.RowCount.ToString();
+            string lastMonth = DateTime.Now.AddMonths(-1).ToString("yyyy/MM");
+             lastMonth += "/01";
+            lblCountMoney.Text = ChiLuongDAO.Instance.CountMoneyByMonth(lastMonth).ToString();
         }
     }
 }

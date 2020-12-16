@@ -56,7 +56,7 @@ namespace QuanLyNhanSu_Master.Module
             string productId = cbListMonth.SelectedItem as string;
             if (productId != null)
             {
-                string lastMonth = Convert.ToDateTime(cbListMonth.SelectedItem).ToString("yyyy/MM/dd");
+                string lastMonth = Convert.ToDateTime(cbListMonth.SelectedItem).ToString("yyyy/MM");
                 GridBangChamCong.DataSource = ChamCongDAO.Instance.GetAllBangChamCong(lastMonth);
              
                 

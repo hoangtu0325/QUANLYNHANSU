@@ -12,6 +12,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -104,9 +105,10 @@ namespace QuanLyNhanSu_Master
                 dashboard.Dock = DockStyle.Fill;
                 dashboard.Show();
                 dashboard.BringToFront();
-                btnDashboard.BackColor = Color.FromArgb(81, 136, 202);
+                btnDashboard.BackColor = Color.FromArgb(32, 71, 173);
                 btnDashboard.ForeColor = Color.White;
                 iconDashboard.Image = ((System.Drawing.Image)(resources.GetObject("iconDashboard.ImageActive")));
+             
             }
             else
             {
@@ -127,9 +129,10 @@ namespace QuanLyNhanSu_Master
                 frmHoSoNhanVien.Show();
                 frmHoSoNhanVien.BringToFront();
 
-                btnNhanVien.BackColor = Color.FromArgb(81, 136, 202);
+                btnNhanVien.BackColor = Color.FromArgb(32, 71, 173);
                 btnNhanVien.ForeColor = Color.White;
                 iconNhanVien.Image = ((System.Drawing.Image)(resources.GetObject("iconNhanVien.ImageActive")));
+
             }
             else
             {
@@ -148,9 +151,10 @@ namespace QuanLyNhanSu_Master
                 frmBangChamCong.Dock = DockStyle.Fill;
                 frmBangChamCong.Show();
                 frmBangChamCong.BringToFront();
-                btnChamCong.BackColor = Color.FromArgb(81, 136, 202);
+                btnChamCong.BackColor = Color.FromArgb(32, 71, 173);
                 btnChamCong.ForeColor = Color.White;
                 iconChamCong.Image = ((System.Drawing.Image)(resources.GetObject("iconChamCong.ImageActive")));
+               
             }
             else
             {
@@ -163,11 +167,17 @@ namespace QuanLyNhanSu_Master
             if (bt.Name == "btnBangLuong")
             {
                 lblStatus.Text = "BẢNG LƯƠNG";
-                //FormChild<frmLogin>();
-                btnBangLuong.BackColor = Color.FromArgb(81, 136, 202);
+                frmChiLuong chiLuong = new frmChiLuong();
+                chiLuong.TopLevel = false;
+                chiLuong.MdiParent = this.MdiParent; 
+                PanelCenter.Controls.Add(chiLuong);
+                chiLuong.Dock = DockStyle.Fill;
+                chiLuong.Show();
+                chiLuong.BringToFront();
+                btnBangLuong.BackColor = Color.FromArgb(32, 71, 173);
                 btnBangLuong.ForeColor = Color.White;
                 iconBangLuong.Image = ((System.Drawing.Image)(resources.GetObject("iconChamCong.ImageActive")));
-
+             
             }
             else
             {
@@ -176,6 +186,7 @@ namespace QuanLyNhanSu_Master
                 iconBangLuong.Image = ((System.Drawing.Image)(resources.GetObject("iconChamCong.Image")));
 
             }
+            
         }
 
 
@@ -256,9 +267,6 @@ namespace QuanLyNhanSu_Master
             frmAddInfoNhanVien.Dock = DockStyle.Fill;
             frmAddInfoNhanVien.Show();
             frmAddInfoNhanVien.BringToFront();
-
-
-
         }
 
         private void TimerNghiepVu_Tick(object sender, EventArgs e)
@@ -527,7 +535,7 @@ namespace QuanLyNhanSu_Master
                                 int MaNV = Convert.ToInt32(tableBangChamCong.Rows[i][2]);
                                 BangChamCong bangChamCong = new BangChamCong();
                                 bangChamCong.MaNV = MaNV;
-                                bangChamCong.TenNV = tableBangChamCong.Rows[i][3].ToString(); ;
+                                bangChamCong.TenNV = tableBangChamCong.Rows[i][1].ToString(); ;
                                 bangChamCong.ThangChamCong = dateTime;
                                 bangChamCong.Ngay1 = tableBangChamCong.Rows[i][4].ToString();
                                 bangChamCong.Ngay2 = tableBangChamCong.Rows[i][5].ToString();
@@ -682,6 +690,15 @@ namespace QuanLyNhanSu_Master
             addNewPhongBan.StartPosition = FormStartPosition.CenterScreen;
             addNewPhongBan.ShowDialog();
 
+        }
+
+        private void toolStripExit_Click(object sender, EventArgs e)
+        {
+           DialogResult dialogResult =  MessageBox.Show("Bạn có chắc muốn thoát không", "Thông báo",MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            if (dialogResult == DialogResult.OK)
+            {
+                Application.Exit();
+            }
         }
     }
 }

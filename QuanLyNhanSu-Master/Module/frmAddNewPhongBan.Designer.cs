@@ -124,6 +124,7 @@
             // txtMaPhongBan
             // 
             this.txtMaPhongBan.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMaPhongBan.Enabled = false;
             this.txtMaPhongBan.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaPhongBan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtMaPhongBan.HintForeColor = System.Drawing.Color.Empty;
@@ -207,6 +208,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(581, 450);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.txtTenPhongBan);

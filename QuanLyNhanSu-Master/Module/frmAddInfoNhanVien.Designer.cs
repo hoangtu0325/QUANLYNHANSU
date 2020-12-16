@@ -32,13 +32,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddInfoNhanVien));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.txtTenNhanVien = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.txtTenTinhThanh = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtNgaySinh = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtGioiTinh = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtDiaChi = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtTaiKhoanNH = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtDanToc = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.txtPhongBan = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtSdt = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtEmail = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtNgayCap = new Bunifu.Framework.UI.BunifuMaterialTextbox();
@@ -57,15 +55,18 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.txtTenChucVu = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuCustomLabel11 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.txtMaBacLuong = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtTinhTrangLamViec = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuCustomLabel12 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.txtSoBHYT = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuCustomLabel13 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.txtSoBHXH = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuCustomLabel14 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.cbListPhongBan = new System.Windows.Forms.ComboBox();
+            this.bunifuCustomLabel15 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.cbListTinhThanh = new System.Windows.Forms.ComboBox();
+            this.cbListBacLuong = new System.Windows.Forms.ComboBox();
+            this.cbListChucVu = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -93,25 +94,6 @@
             this.txtTenNhanVien.Size = new System.Drawing.Size(343, 48);
             this.txtTenNhanVien.TabIndex = 1;
             this.txtTenNhanVien.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // txtTenTinhThanh
-            // 
-            this.txtTenTinhThanh.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTenTinhThanh.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenTinhThanh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(65)))), ((int)(((byte)(155)))));
-            this.txtTenTinhThanh.HintForeColor = System.Drawing.Color.Gray;
-            this.txtTenTinhThanh.HintText = "Tên Tỉnh Thành";
-            this.txtTenTinhThanh.isPassword = false;
-            this.txtTenTinhThanh.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(239)))));
-            this.txtTenTinhThanh.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(65)))), ((int)(((byte)(155)))));
-            this.txtTenTinhThanh.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.txtTenTinhThanh.LineThickness = 3;
-            this.txtTenTinhThanh.Location = new System.Drawing.Point(402, 211);
-            this.txtTenTinhThanh.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.txtTenTinhThanh.Name = "txtTenTinhThanh";
-            this.txtTenTinhThanh.Size = new System.Drawing.Size(343, 48);
-            this.txtTenTinhThanh.TabIndex = 5;
-            this.txtTenTinhThanh.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // txtNgaySinh
             // 
@@ -182,7 +164,7 @@
             this.txtTaiKhoanNH.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(65)))), ((int)(((byte)(155)))));
             this.txtTaiKhoanNH.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.txtTaiKhoanNH.LineThickness = 3;
-            this.txtTaiKhoanNH.Location = new System.Drawing.Point(402, 590);
+            this.txtTaiKhoanNH.Location = new System.Drawing.Point(402, 307);
             this.txtTaiKhoanNH.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtTaiKhoanNH.Name = "txtTaiKhoanNH";
             this.txtTaiKhoanNH.Size = new System.Drawing.Size(343, 48);
@@ -201,31 +183,12 @@
             this.txtDanToc.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(65)))), ((int)(((byte)(155)))));
             this.txtDanToc.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.txtDanToc.LineThickness = 3;
-            this.txtDanToc.Location = new System.Drawing.Point(774, 211);
+            this.txtDanToc.Location = new System.Drawing.Point(402, 211);
             this.txtDanToc.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtDanToc.Name = "txtDanToc";
             this.txtDanToc.Size = new System.Drawing.Size(343, 48);
             this.txtDanToc.TabIndex = 6;
             this.txtDanToc.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // txtPhongBan
-            // 
-            this.txtPhongBan.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPhongBan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhongBan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(65)))), ((int)(((byte)(155)))));
-            this.txtPhongBan.HintForeColor = System.Drawing.Color.Gray;
-            this.txtPhongBan.HintText = "Phòng Ban";
-            this.txtPhongBan.isPassword = false;
-            this.txtPhongBan.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(239)))));
-            this.txtPhongBan.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(65)))), ((int)(((byte)(155)))));
-            this.txtPhongBan.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.txtPhongBan.LineThickness = 3;
-            this.txtPhongBan.Location = new System.Drawing.Point(402, 307);
-            this.txtPhongBan.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.txtPhongBan.Name = "txtPhongBan";
-            this.txtPhongBan.Size = new System.Drawing.Size(343, 48);
-            this.txtPhongBan.TabIndex = 8;
-            this.txtPhongBan.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // txtSdt
             // 
@@ -239,7 +202,7 @@
             this.txtSdt.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(65)))), ((int)(((byte)(155)))));
             this.txtSdt.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.txtSdt.LineThickness = 3;
-            this.txtSdt.Location = new System.Drawing.Point(14, 589);
+            this.txtSdt.Location = new System.Drawing.Point(16, 599);
             this.txtSdt.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtSdt.Name = "txtSdt";
             this.txtSdt.Size = new System.Drawing.Size(343, 48);
@@ -258,7 +221,7 @@
             this.txtEmail.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(65)))), ((int)(((byte)(155)))));
             this.txtEmail.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.txtEmail.LineThickness = 3;
-            this.txtEmail.Location = new System.Drawing.Point(14, 492);
+            this.txtEmail.Location = new System.Drawing.Point(402, 399);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(343, 48);
@@ -271,7 +234,7 @@
             this.txtNgayCap.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNgayCap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(65)))), ((int)(((byte)(155)))));
             this.txtNgayCap.HintForeColor = System.Drawing.Color.Gray;
-            this.txtNgayCap.HintText = "Ngày/Tháng/Năm";
+            this.txtNgayCap.HintText = "Ngày cấp";
             this.txtNgayCap.isPassword = false;
             this.txtNgayCap.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(239)))));
             this.txtNgayCap.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(65)))), ((int)(((byte)(155)))));
@@ -399,7 +362,7 @@
             // 
             this.bunifuCustomLabel5.AutoSize = true;
             this.bunifuCustomLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel5.Location = new System.Drawing.Point(10, 464);
+            this.bunifuCustomLabel5.Location = new System.Drawing.Point(398, 371);
             this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
             this.bunifuCustomLabel5.Size = new System.Drawing.Size(67, 24);
             this.bunifuCustomLabel5.TabIndex = 55;
@@ -419,7 +382,7 @@
             // 
             this.bunifuCustomLabel8.AutoSize = true;
             this.bunifuCustomLabel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel8.Location = new System.Drawing.Point(398, 279);
+            this.bunifuCustomLabel8.Location = new System.Drawing.Point(771, 371);
             this.bunifuCustomLabel8.Name = "bunifuCustomLabel8";
             this.bunifuCustomLabel8.Size = new System.Drawing.Size(148, 24);
             this.bunifuCustomLabel8.TabIndex = 57;
@@ -429,7 +392,7 @@
             // 
             this.bunifuCustomLabel9.AutoSize = true;
             this.bunifuCustomLabel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel9.Location = new System.Drawing.Point(10, 561);
+            this.bunifuCustomLabel9.Location = new System.Drawing.Point(12, 571);
             this.bunifuCustomLabel9.Name = "bunifuCustomLabel9";
             this.bunifuCustomLabel9.Size = new System.Drawing.Size(135, 24);
             this.bunifuCustomLabel9.TabIndex = 58;
@@ -439,7 +402,7 @@
             // 
             this.bunifuCustomLabel10.AutoSize = true;
             this.bunifuCustomLabel10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel10.Location = new System.Drawing.Point(398, 561);
+            this.bunifuCustomLabel10.Location = new System.Drawing.Point(398, 278);
             this.bunifuCustomLabel10.Name = "bunifuCustomLabel10";
             this.bunifuCustomLabel10.Size = new System.Drawing.Size(203, 24);
             this.bunifuCustomLabel10.TabIndex = 59;
@@ -475,54 +438,15 @@
             this.bunifuCustomLabel7.TabIndex = 63;
             this.bunifuCustomLabel7.Text = "Tên Chức Vụ:";
             // 
-            // txtTenChucVu
-            // 
-            this.txtTenChucVu.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTenChucVu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenChucVu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(65)))), ((int)(((byte)(155)))));
-            this.txtTenChucVu.HintForeColor = System.Drawing.Color.Gray;
-            this.txtTenChucVu.HintText = "Chức Vụ";
-            this.txtTenChucVu.isPassword = false;
-            this.txtTenChucVu.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(239)))));
-            this.txtTenChucVu.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(65)))), ((int)(((byte)(155)))));
-            this.txtTenChucVu.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.txtTenChucVu.LineThickness = 3;
-            this.txtTenChucVu.Location = new System.Drawing.Point(774, 307);
-            this.txtTenChucVu.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.txtTenChucVu.Name = "txtTenChucVu";
-            this.txtTenChucVu.Size = new System.Drawing.Size(343, 48);
-            this.txtTenChucVu.TabIndex = 9;
-            this.txtTenChucVu.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
             // bunifuCustomLabel11
             // 
             this.bunifuCustomLabel11.AutoSize = true;
             this.bunifuCustomLabel11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel11.Location = new System.Drawing.Point(398, 371);
+            this.bunifuCustomLabel11.Location = new System.Drawing.Point(771, 464);
             this.bunifuCustomLabel11.Name = "bunifuCustomLabel11";
             this.bunifuCustomLabel11.Size = new System.Drawing.Size(127, 24);
             this.bunifuCustomLabel11.TabIndex = 65;
             this.bunifuCustomLabel11.Text = "Hệ Số Lương:";
-            // 
-            // txtMaBacLuong
-            // 
-            this.txtMaBacLuong.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMaBacLuong.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaBacLuong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(65)))), ((int)(((byte)(155)))));
-            this.txtMaBacLuong.HintForeColor = System.Drawing.Color.Gray;
-            this.txtMaBacLuong.HintText = "Hệ Số Lương";
-            this.txtMaBacLuong.isPassword = false;
-            this.txtMaBacLuong.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(239)))));
-            this.txtMaBacLuong.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(65)))), ((int)(((byte)(155)))));
-            this.txtMaBacLuong.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.txtMaBacLuong.LineThickness = 3;
-            this.txtMaBacLuong.Location = new System.Drawing.Point(402, 399);
-            this.txtMaBacLuong.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.txtMaBacLuong.Name = "txtMaBacLuong";
-            this.txtMaBacLuong.Size = new System.Drawing.Size(343, 48);
-            this.txtMaBacLuong.TabIndex = 11;
-            this.txtMaBacLuong.Text = "1";
-            this.txtMaBacLuong.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // txtTinhTrangLamViec
             // 
@@ -536,7 +460,7 @@
             this.txtTinhTrangLamViec.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(65)))), ((int)(((byte)(155)))));
             this.txtTinhTrangLamViec.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.txtTinhTrangLamViec.LineThickness = 3;
-            this.txtTinhTrangLamViec.Location = new System.Drawing.Point(775, 399);
+            this.txtTinhTrangLamViec.Location = new System.Drawing.Point(16, 492);
             this.txtTinhTrangLamViec.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtTinhTrangLamViec.Name = "txtTinhTrangLamViec";
             this.txtTinhTrangLamViec.Size = new System.Drawing.Size(343, 48);
@@ -547,7 +471,7 @@
             // 
             this.bunifuCustomLabel12.AutoSize = true;
             this.bunifuCustomLabel12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel12.Location = new System.Drawing.Point(771, 371);
+            this.bunifuCustomLabel12.Location = new System.Drawing.Point(12, 464);
             this.bunifuCustomLabel12.Name = "bunifuCustomLabel12";
             this.bunifuCustomLabel12.Size = new System.Drawing.Size(192, 24);
             this.bunifuCustomLabel12.TabIndex = 67;
@@ -565,7 +489,7 @@
             this.txtSoBHYT.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(65)))), ((int)(((byte)(155)))));
             this.txtSoBHYT.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.txtSoBHYT.LineThickness = 3;
-            this.txtSoBHYT.Location = new System.Drawing.Point(775, 492);
+            this.txtSoBHYT.Location = new System.Drawing.Point(402, 599);
             this.txtSoBHYT.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtSoBHYT.Name = "txtSoBHYT";
             this.txtSoBHYT.Size = new System.Drawing.Size(343, 48);
@@ -576,7 +500,7 @@
             // 
             this.bunifuCustomLabel13.AutoSize = true;
             this.bunifuCustomLabel13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel13.Location = new System.Drawing.Point(771, 464);
+            this.bunifuCustomLabel13.Location = new System.Drawing.Point(398, 571);
             this.bunifuCustomLabel13.Name = "bunifuCustomLabel13";
             this.bunifuCustomLabel13.Size = new System.Drawing.Size(93, 24);
             this.bunifuCustomLabel13.TabIndex = 71;
@@ -611,25 +535,94 @@
             this.bunifuCustomLabel14.TabIndex = 69;
             this.bunifuCustomLabel14.Text = "Số BHXH:";
             // 
+            // cbListPhongBan
+            // 
+            this.cbListPhongBan.BackColor = System.Drawing.SystemColors.Menu;
+            this.cbListPhongBan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbListPhongBan.DropDownWidth = 162;
+            this.cbListPhongBan.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.cbListPhongBan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbListPhongBan.FormattingEnabled = true;
+            this.cbListPhongBan.ItemHeight = 28;
+            this.cbListPhongBan.Location = new System.Drawing.Point(775, 411);
+            this.cbListPhongBan.Name = "cbListPhongBan";
+            this.cbListPhongBan.Size = new System.Drawing.Size(343, 36);
+            this.cbListPhongBan.TabIndex = 72;
+            // 
+            // bunifuCustomLabel15
+            // 
+            this.bunifuCustomLabel15.AutoSize = true;
+            this.bunifuCustomLabel15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel15.Location = new System.Drawing.Point(771, 183);
+            this.bunifuCustomLabel15.Name = "bunifuCustomLabel15";
+            this.bunifuCustomLabel15.Size = new System.Drawing.Size(152, 24);
+            this.bunifuCustomLabel15.TabIndex = 57;
+            this.bunifuCustomLabel15.Text = "Tên Tỉnh Thành:";
+            // 
+            // cbListTinhThanh
+            // 
+            this.cbListTinhThanh.BackColor = System.Drawing.SystemColors.Menu;
+            this.cbListTinhThanh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbListTinhThanh.DropDownWidth = 162;
+            this.cbListTinhThanh.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.cbListTinhThanh.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbListTinhThanh.FormattingEnabled = true;
+            this.cbListTinhThanh.ItemHeight = 28;
+            this.cbListTinhThanh.Location = new System.Drawing.Point(775, 223);
+            this.cbListTinhThanh.Name = "cbListTinhThanh";
+            this.cbListTinhThanh.Size = new System.Drawing.Size(343, 36);
+            this.cbListTinhThanh.TabIndex = 72;
+            // 
+            // cbListBacLuong
+            // 
+            this.cbListBacLuong.BackColor = System.Drawing.SystemColors.Menu;
+            this.cbListBacLuong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbListBacLuong.DropDownWidth = 162;
+            this.cbListBacLuong.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.cbListBacLuong.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbListBacLuong.FormattingEnabled = true;
+            this.cbListBacLuong.ItemHeight = 28;
+            this.cbListBacLuong.Location = new System.Drawing.Point(775, 504);
+            this.cbListBacLuong.Name = "cbListBacLuong";
+            this.cbListBacLuong.Size = new System.Drawing.Size(343, 36);
+            this.cbListBacLuong.TabIndex = 72;
+            // 
+            // cbListChucVu
+            // 
+            this.cbListChucVu.BackColor = System.Drawing.SystemColors.Menu;
+            this.cbListChucVu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbListChucVu.DropDownWidth = 162;
+            this.cbListChucVu.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.cbListChucVu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbListChucVu.FormattingEnabled = true;
+            this.cbListChucVu.ItemHeight = 28;
+            this.cbListChucVu.Location = new System.Drawing.Point(775, 319);
+            this.cbListChucVu.Name = "cbListChucVu";
+            this.cbListChucVu.Size = new System.Drawing.Size(343, 36);
+            this.cbListChucVu.TabIndex = 72;
+            // 
             // frmAddInfoNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1499, 655);
+            this.ClientSize = new System.Drawing.Size(1499, 689);
+            this.Controls.Add(this.cbListTinhThanh);
+            this.Controls.Add(this.cbListChucVu);
+            this.Controls.Add(this.cbListBacLuong);
+            this.Controls.Add(this.cbListPhongBan);
             this.Controls.Add(this.txtSoBHYT);
             this.Controls.Add(this.bunifuCustomLabel13);
             this.Controls.Add(this.txtSoBHXH);
             this.Controls.Add(this.bunifuCustomLabel14);
             this.Controls.Add(this.txtTinhTrangLamViec);
             this.Controls.Add(this.bunifuCustomLabel12);
-            this.Controls.Add(this.txtMaBacLuong);
             this.Controls.Add(this.bunifuCustomLabel11);
-            this.Controls.Add(this.txtTenChucVu);
             this.Controls.Add(this.bunifuCustomLabel7);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.bunifuCustomLabel10);
             this.Controls.Add(this.bunifuCustomLabel9);
+            this.Controls.Add(this.bunifuCustomLabel15);
             this.Controls.Add(this.bunifuCustomLabel8);
             this.Controls.Add(this.bunifuCustomLabel6);
             this.Controls.Add(this.bunifuCustomLabel5);
@@ -643,17 +636,16 @@
             this.Controls.Add(this.txtCmnd);
             this.Controls.Add(this.txtTaiKhoanNH);
             this.Controls.Add(this.txtDanToc);
-            this.Controls.Add(this.txtPhongBan);
             this.Controls.Add(this.txtSdt);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtDiaChi);
             this.Controls.Add(this.txtGioiTinh);
             this.Controls.Add(this.txtNgaySinh);
-            this.Controls.Add(this.txtTenTinhThanh);
             this.Controls.Add(this.txtTenNhanVien);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAddInfoNhanVien";
             this.Text = "frmAddInfoNhanVien";
+            this.Load += new System.EventHandler(this.frmAddInfoNhanVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
@@ -667,13 +659,11 @@
         private Bunifu.Framework.UI.BunifuCustomLabel txtNgayVaoLam;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtTaiKhoanNH;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtDanToc;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtPhongBan;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtSdt;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtEmail;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtDiaChi;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtGioiTinh;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtNgaySinh;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtTenTinhThanh;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtNgayCap;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtCmnd;
         private Bunifu.Framework.UI.BunifuThinButton2 btnSave;
@@ -696,9 +686,12 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel14;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtTinhTrangLamViec;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel12;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtMaBacLuong;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel11;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtTenChucVu;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel7;
+        private System.Windows.Forms.ComboBox cbListPhongBan;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel15;
+        private System.Windows.Forms.ComboBox cbListTinhThanh;
+        private System.Windows.Forms.ComboBox cbListBacLuong;
+        private System.Windows.Forms.ComboBox cbListChucVu;
     }
 }

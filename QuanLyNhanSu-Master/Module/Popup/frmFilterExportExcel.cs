@@ -35,11 +35,7 @@ namespace QuanLyNhanSu_Master.Module.Popup
             //else
             //    for (int i = 0; i < cbAllPhongBan.Items.Count; i++)
             //        cbAllPhongBan.SetItemChecked(i, false);
-
-
-
         }
-
 
         private void cbAllGender_ItemCheck(object sender, ItemCheckEventArgs e)
         {

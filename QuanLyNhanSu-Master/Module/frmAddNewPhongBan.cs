@@ -18,6 +18,7 @@ namespace QuanLyNhanSu_Master.Module
         {
             InitializeComponent();
             (new DropShadow()).ApplyShadows(this);
+            txtMaPhongBan.Text = PhongBanDAO.Instance.GetIdNewPhongBan();
         }
 
         private void btnMinimized_Click(object sender, EventArgs e)
@@ -44,17 +45,17 @@ namespace QuanLyNhanSu_Master.Module
             else
             {
 
-                //if (AccountDAO.Instance.IsAddNewPhongBan(MaPB, TenPB))
-                //{
+                if (PhongBanDAO.Instance.AddNewPhongBan(MaPB, TenPB))
+                {
 
-                //    MessageBox.Show("Thêm Phòng Ban thành công");
-                //    this.DialogResult = DialogResult.OK;
-                //    this.Close();
-                //}
-                //else
-                //{
-                //    MessageBox.Show("Tài khoản đã khai báo hoặc không kết nối được server!!");
-                //}
+                    MessageBox.Show("Thêm Phòng Ban thành công");
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Thêm Phòng Ban không thành công!!");
+                }
             }
         }
     }
