@@ -105,7 +105,7 @@ namespace QuanLyNhanSu_Master
                 dashboard.Dock = DockStyle.Fill;
                 dashboard.Show();
                 dashboard.BringToFront();
-                btnDashboard.BackColor = Color.FromArgb(32, 71, 173);
+                btnDashboard.BackColor = Color.FromArgb(81, 136, 202);
                 btnDashboard.ForeColor = Color.White;
                 iconDashboard.Image = ((System.Drawing.Image)(resources.GetObject("iconDashboard.ImageActive")));
              
@@ -129,7 +129,7 @@ namespace QuanLyNhanSu_Master
                 frmHoSoNhanVien.Show();
                 frmHoSoNhanVien.BringToFront();
 
-                btnNhanVien.BackColor = Color.FromArgb(32, 71, 173);
+                btnNhanVien.BackColor = Color.FromArgb(81, 136, 202);
                 btnNhanVien.ForeColor = Color.White;
                 iconNhanVien.Image = ((System.Drawing.Image)(resources.GetObject("iconNhanVien.ImageActive")));
 
@@ -151,7 +151,7 @@ namespace QuanLyNhanSu_Master
                 frmBangChamCong.Dock = DockStyle.Fill;
                 frmBangChamCong.Show();
                 frmBangChamCong.BringToFront();
-                btnChamCong.BackColor = Color.FromArgb(32, 71, 173);
+                btnChamCong.BackColor = Color.FromArgb(81, 136, 202);
                 btnChamCong.ForeColor = Color.White;
                 iconChamCong.Image = ((System.Drawing.Image)(resources.GetObject("iconChamCong.ImageActive")));
                
@@ -174,7 +174,7 @@ namespace QuanLyNhanSu_Master
                 chiLuong.Dock = DockStyle.Fill;
                 chiLuong.Show();
                 chiLuong.BringToFront();
-                btnBangLuong.BackColor = Color.FromArgb(32, 71, 173);
+                btnBangLuong.BackColor = Color.FromArgb(81, 136, 202);
                 btnBangLuong.ForeColor = Color.White;
                 iconBangLuong.Image = ((System.Drawing.Image)(resources.GetObject("iconChamCong.ImageActive")));
              
@@ -304,9 +304,9 @@ namespace QuanLyNhanSu_Master
 
         private void ToolStripReSetPass_Click(object sender, EventArgs e)
         {
-            frmResetPass frmAddNewUser = new frmResetPass();
-            frmAddNewUser.StartPosition = FormStartPosition.CenterParent;
-            var result = frmAddNewUser.ShowDialog();
+            frmResetPass ResetPass = new frmResetPass();
+            ResetPass.StartPosition = FormStartPosition.CenterScreen;
+            var result = ResetPass.ShowDialog();
             if (result == DialogResult.OK)
             {
                 btnAddNew_Click(sender, e);         //values preserved after close
@@ -318,7 +318,7 @@ namespace QuanLyNhanSu_Master
         {
             frmAddNewUser frmAddNewUser = new frmAddNewUser();
             frmAddNewUser.StartPosition = FormStartPosition.CenterScreen;
-            frmAddNewUser.Show();
+            frmAddNewUser.ShowDialog();
         }
 
         DataTableCollection TableCollection;

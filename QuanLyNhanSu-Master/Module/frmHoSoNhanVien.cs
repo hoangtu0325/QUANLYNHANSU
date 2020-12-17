@@ -13,6 +13,7 @@ using Microsoft.Office.Interop.Excel;
 using System.Threading;
 using System.Timers;
 using QuanLyNhanSu_Master.Module.Popup;
+using QuanLyNhanSu_Master.DTO;
 
 namespace QuanLyNhanSu_Master.Module
 {
@@ -51,9 +52,9 @@ namespace QuanLyNhanSu_Master.Module
             return buniDataGridHoSoNhanVien;
         }
 
-        public System.Data.DataTable GetNhanVien()
+        public System.Data.DataTable GetNhanVienByFilter(string filter)
         {
-            return HoSoNhanVienDAO.Instance.GetNhanVien();
+            return HoSoNhanVienDAO.Instance.GetNhanVienByFilter(filter);
         }
 
         public System.Data.DataTable GetNhanVien(int MaNhanVien)
@@ -69,12 +70,23 @@ namespace QuanLyNhanSu_Master.Module
                 //buniDataGridHoSoNhanVien.DataSource = GetNhanVien(TenNhanVien);
                 buniDataGridHoSoNhanVien.DataSource = GetNhanVien(MaNhanVien);
                 dataTable = (System.Data.DataTable)(buniDataGridHoSoNhanVien.DataSource);
+                cbPhongban.Enabled = false;
             }
             if (Action == "Không tìm kiếm")
             {
-                buniDataGridHoSoNhanVien.DataSource = GetNhanVien();
+                buniDataGridHoSoNhanVien.DataSource = GetNhanVienByFilter("All");
                 dataTable = (System.Data.DataTable)(buniDataGridHoSoNhanVien.DataSource);
+                cbPhongban.Items.Insert(0, "All");
+                cbPhongban.SelectedIndex = 0;
+                List<PhongBan> phongBan = HoSoNhanVienDAO.Instance.GetAllPhongBan();
+                foreach (PhongBan item in phongBan)
+                {
+                    cbPhongban.Items.Add(item.TenPhongBan);
+                }
+                cbPhongban.ValueMember = "MaPhongBan";
+                cbPhongban.DisplayMember = "TenPhongBan";
             }
+            
             SetFieldType(buniDataGridHoSoNhanVien);
         }
 
@@ -170,6 +182,18 @@ namespace QuanLyNhanSu_Master.Module
 
         private void btnNext_Click(object sender, EventArgs e)
         {
+        }
+
+        private void cbPhongban_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string PhongBan = cbPhongban.SelectedItem as string;
+            if (PhongBan != null)
+            {
+
+                buniDataGridHoSoNhanVien.DataSource = GetNhanVienByFilter(PhongBan);
+                lblCountNhanVien.Text = buniDataGridHoSoNhanVien.RowCount.ToString();
+
+            }
         }
     }
 }

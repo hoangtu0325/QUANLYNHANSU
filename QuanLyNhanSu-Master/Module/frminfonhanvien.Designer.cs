@@ -134,7 +134,7 @@
             this.btnLuu.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(65)))), ((int)(((byte)(155)))));
             this.btnLuu.ActiveForecolor = System.Drawing.Color.White;
             this.btnLuu.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(65)))), ((int)(((byte)(155)))));
-            this.btnLuu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLuu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLuu.BackColor = System.Drawing.Color.White;
             this.btnLuu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLuu.BackgroundImage")));
             this.btnLuu.ButtonText = "Lưu";
@@ -146,10 +146,10 @@
             this.btnLuu.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(184)))));
             this.btnLuu.IdleForecolor = System.Drawing.Color.White;
             this.btnLuu.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(184)))));
-            this.btnLuu.Location = new System.Drawing.Point(23, 661);
+            this.btnLuu.Location = new System.Drawing.Point(1263, 661);
             this.btnLuu.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(77, 58);
+            this.btnLuu.Size = new System.Drawing.Size(94, 58);
             this.btnLuu.TabIndex = 65;
             this.btnLuu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
@@ -211,7 +211,7 @@
             this.Panels.Location = new System.Drawing.Point(0, 58);
             this.Panels.Name = "Panels";
             this.Panels.Size = new System.Drawing.Size(1584, 737);
-            this.Panels.TabIndex = 1;
+            this.Panels.TabIndex = 6;
             // 
             // txtChucVu
             // 
@@ -276,7 +276,7 @@
             this.txtTonGiao.Multiline = true;
             this.txtTonGiao.Name = "txtTonGiao";
             this.txtTonGiao.Size = new System.Drawing.Size(226, 22);
-            this.txtTonGiao.TabIndex = 12;
+            this.txtTonGiao.TabIndex = 13;
             this.txtTonGiao.Text = "Không";
             // 
             // txtNoiCap
@@ -287,7 +287,7 @@
             this.txtNoiCap.Multiline = true;
             this.txtNoiCap.Name = "txtNoiCap";
             this.txtNoiCap.Size = new System.Drawing.Size(226, 22);
-            this.txtNoiCap.TabIndex = 13;
+            this.txtNoiCap.TabIndex = 17;
             this.txtNoiCap.Text = "25/5/2015";
             // 
             // txtNgayCap
@@ -298,7 +298,7 @@
             this.txtNgayCap.Multiline = true;
             this.txtNgayCap.Name = "txtNgayCap";
             this.txtNgayCap.Size = new System.Drawing.Size(226, 22);
-            this.txtNgayCap.TabIndex = 13;
+            this.txtNgayCap.TabIndex = 14;
             this.txtNgayCap.Text = "25/5/2015";
             // 
             // txtTaiKhoanNH
@@ -309,7 +309,7 @@
             this.txtTaiKhoanNH.Multiline = true;
             this.txtTaiKhoanNH.Name = "txtTaiKhoanNH";
             this.txtTaiKhoanNH.Size = new System.Drawing.Size(226, 22);
-            this.txtTaiKhoanNH.TabIndex = 10;
+            this.txtTaiKhoanNH.TabIndex = 18;
             this.txtTaiKhoanNH.Text = "035123456";
             // 
             // txtSoBHYT
@@ -320,7 +320,7 @@
             this.txtSoBHYT.Multiline = true;
             this.txtSoBHYT.Name = "txtSoBHYT";
             this.txtSoBHYT.Size = new System.Drawing.Size(226, 22);
-            this.txtSoBHYT.TabIndex = 10;
+            this.txtSoBHYT.TabIndex = 16;
             this.txtSoBHYT.Text = "035123456";
             // 
             // txtSoBHXH
@@ -331,7 +331,7 @@
             this.txtSoBHXH.Multiline = true;
             this.txtSoBHXH.Name = "txtSoBHXH";
             this.txtSoBHXH.Size = new System.Drawing.Size(226, 22);
-            this.txtSoBHXH.TabIndex = 10;
+            this.txtSoBHXH.TabIndex = 12;
             this.txtSoBHXH.Text = "035123456";
             // 
             // txtCmnd
@@ -353,7 +353,7 @@
             this.txtNguyenQuan.Multiline = true;
             this.txtNguyenQuan.Name = "txtNguyenQuan";
             this.txtNguyenQuan.Size = new System.Drawing.Size(350, 59);
-            this.txtNguyenQuan.TabIndex = 14;
+            this.txtNguyenQuan.TabIndex = 15;
             this.txtNguyenQuan.Text = "Bình Thắng Dĩ an BÌnh Dương";
             // 
             // txtTinhTrangLamViec
@@ -364,7 +364,7 @@
             this.txtTinhTrangLamViec.Multiline = true;
             this.txtTinhTrangLamViec.Name = "txtTinhTrangLamViec";
             this.txtTinhTrangLamViec.Size = new System.Drawing.Size(226, 22);
-            this.txtTinhTrangLamViec.TabIndex = 6;
+            this.txtTinhTrangLamViec.TabIndex = 8;
             this.txtTinhTrangLamViec.Text = "Nam";
             // 
             // txtDiaChi
@@ -386,7 +386,7 @@
             this.txtGioiTinh.Multiline = true;
             this.txtGioiTinh.Name = "txtGioiTinh";
             this.txtGioiTinh.Size = new System.Drawing.Size(226, 22);
-            this.txtGioiTinh.TabIndex = 6;
+            this.txtGioiTinh.TabIndex = 5;
             this.txtGioiTinh.Text = "Nam";
             // 
             // txtQuocTich
@@ -397,7 +397,7 @@
             this.txtQuocTich.Multiline = true;
             this.txtQuocTich.Name = "txtQuocTich";
             this.txtQuocTich.Size = new System.Drawing.Size(226, 22);
-            this.txtQuocTich.TabIndex = 7;
+            this.txtQuocTich.TabIndex = 6;
             this.txtQuocTich.Text = "Việt Nam";
             // 
             // txtEmail
@@ -408,7 +408,7 @@
             this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(257, 66);
-            this.txtEmail.TabIndex = 8;
+            this.txtEmail.TabIndex = 7;
             this.txtEmail.Text = "Quanlinhansu@gmail.com";
             // 
             // txtSoDienThoai

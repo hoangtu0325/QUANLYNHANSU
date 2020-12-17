@@ -101,7 +101,7 @@
             this.btnExportExcel.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(184)))));
             this.btnExportExcel.IdleForecolor = System.Drawing.Color.White;
             this.btnExportExcel.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(184)))));
-            this.btnExportExcel.Location = new System.Drawing.Point(320, 211);
+            this.btnExportExcel.Location = new System.Drawing.Point(156, 211);
             this.btnExportExcel.Margin = new System.Windows.Forms.Padding(5);
             this.btnExportExcel.Name = "btnExportExcel";
             this.btnExportExcel.Size = new System.Drawing.Size(146, 53);
@@ -136,7 +136,7 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.groupBox4);
-            this.panel1.Location = new System.Drawing.Point(60, 39);
+            this.panel1.Location = new System.Drawing.Point(136, 66);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(187, 137);
             this.panel1.TabIndex = 63;

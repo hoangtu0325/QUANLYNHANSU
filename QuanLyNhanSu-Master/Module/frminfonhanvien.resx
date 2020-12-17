@@ -315,18 +315,18 @@
   </data>
   <data name="btnLuu.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        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
+        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
 </value>
   </data>
   <data name="btnImageNhanVien.ErrorImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

@@ -80,6 +80,7 @@ namespace QuanLyNhanSu_Master.Module
             frmExportBangLuong exportBangLuong = new frmExportBangLuong();
             exportBangLuong.StartPosition = FormStartPosition.CenterScreen;
             frmExportBangLuong.Data = (DataTable)GridBangChiLuong.DataSource;
+            frmExportBangLuong.date = Convert.ToDateTime(cbListMonth.SelectedItem).ToString("MM/yyyy");
             exportBangLuong.ShowDialog();
         }
     }

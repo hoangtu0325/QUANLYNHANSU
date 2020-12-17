@@ -526,6 +526,7 @@ namespace QuanLyNhanSu_Master
             this.comboBox1.BackColor = System.Drawing.Color.White;
             this.comboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.comboBox1.DropDownWidth = 120;
+            this.comboBox1.Enabled = false;
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.ForeColor = System.Drawing.Color.Transparent;
@@ -715,7 +716,7 @@ namespace QuanLyNhanSu_Master
             this.ToolStripAddNewPhongBan.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ToolStripAddNewPhongBan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(34)))), ((int)(((byte)(110)))));
             this.ToolStripAddNewPhongBan.Name = "ToolStripAddNewPhongBan";
-            this.ToolStripAddNewPhongBan.Size = new System.Drawing.Size(216, 28);
+            this.ToolStripAddNewPhongBan.Size = new System.Drawing.Size(172, 28);
             this.ToolStripAddNewPhongBan.Text = "Phòng ban";
             this.ToolStripAddNewPhongBan.Click += new System.EventHandler(this.ToolStripAddNewPhongBan_Click);
             // 

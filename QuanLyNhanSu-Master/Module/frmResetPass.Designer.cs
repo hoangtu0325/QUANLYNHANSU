@@ -48,7 +48,7 @@
             // txtUserName
             // 
             this.txtUserName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtUserName.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUserName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtUserName.HintForeColor = System.Drawing.Color.Empty;
             this.txtUserName.HintText = "";
@@ -61,7 +61,7 @@
             this.txtUserName.Margin = new System.Windows.Forms.Padding(4);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(222, 44);
-            this.txtUserName.TabIndex = 61;
+            this.txtUserName.TabIndex = 1;
             this.txtUserName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // btnResetPass
