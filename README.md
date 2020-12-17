@@ -7,4 +7,4 @@ git clone https://github.com/hoangtu0325/QUANLYNHANSU.git
 
 ```
 ### Ảnh màn hình
-![](File báo cáo/Master/File phụ/Login.jpg)
+![](File%20báo%20cáo/Master/File%20phụ/Login.jpg)
