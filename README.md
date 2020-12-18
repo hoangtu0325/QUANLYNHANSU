@@ -13,8 +13,8 @@ git clone https://github.com/hoangtu0325/QUANLYNHANSU.git
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  <a href="https://github.com/hoangtu0325/QUANLYNHANSU/tree/dev/File%20b%C3%A1o%20c%C3%A1o/Master/File%20ph%E1%BB%A5">
+    <img src="File%20báo%20cáo/Master/File%20phụ/Login.jpg" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Best-README-Template</h3>
