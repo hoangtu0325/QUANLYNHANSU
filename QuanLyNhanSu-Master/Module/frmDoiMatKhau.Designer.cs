@@ -34,6 +34,7 @@
             this.txtCodeXacThuc = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtPassword = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtRePassword = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.btnConfigDatabase = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnDoiMatKhau = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -59,13 +60,13 @@
             // 
             this.btnMinimized.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMinimized.Location = new System.Drawing.Point(-466, 0);
+            this.btnMinimized.Location = new System.Drawing.Point(-936, 0);
             this.btnMinimized.Visible = false;
             // 
             // btnExit
             // 
             this.btnExit.Location = new System.Drawing.Point(508, 0);
-            this.btnExit.Size = new System.Drawing.Size(54, 64);
+            this.btnExit.Size = new System.Drawing.Size(54, 61);
             // 
             // panel1
             // 
@@ -73,6 +74,7 @@
             this.panel1.Controls.Add(this.txtCodeXacThuc);
             this.panel1.Controls.Add(this.txtPassword);
             this.panel1.Controls.Add(this.txtRePassword);
+            this.panel1.Controls.Add(this.btnConfigDatabase);
             this.panel1.Controls.Add(this.btnDoiMatKhau);
             this.panel1.Controls.Add(this.bunifuCustomLabel4);
             this.panel1.Controls.Add(this.bunifuCustomLabel3);
@@ -164,6 +166,32 @@
             this.txtRePassword.OnValueChanged += new System.EventHandler(this.txtPassword_OnValueChanged);
             this.txtRePassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtRePassword_KeyDown);
             // 
+            // btnConfigDatabase
+            // 
+            this.btnConfigDatabase.ActiveBorderThickness = 1;
+            this.btnConfigDatabase.ActiveCornerRadius = 20;
+            this.btnConfigDatabase.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(65)))), ((int)(((byte)(155)))));
+            this.btnConfigDatabase.ActiveForecolor = System.Drawing.Color.White;
+            this.btnConfigDatabase.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(65)))), ((int)(((byte)(155)))));
+            this.btnConfigDatabase.BackColor = System.Drawing.Color.White;
+            this.btnConfigDatabase.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnConfigDatabase.BackgroundImage")));
+            this.btnConfigDatabase.ButtonText = "Cấu hình Database";
+            this.btnConfigDatabase.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConfigDatabase.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfigDatabase.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(184)))));
+            this.btnConfigDatabase.IdleBorderThickness = 1;
+            this.btnConfigDatabase.IdleCornerRadius = 20;
+            this.btnConfigDatabase.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(184)))));
+            this.btnConfigDatabase.IdleForecolor = System.Drawing.Color.White;
+            this.btnConfigDatabase.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(184)))));
+            this.btnConfigDatabase.Location = new System.Drawing.Point(231, 312);
+            this.btnConfigDatabase.Margin = new System.Windows.Forms.Padding(5);
+            this.btnConfigDatabase.Name = "btnConfigDatabase";
+            this.btnConfigDatabase.Size = new System.Drawing.Size(127, 52);
+            this.btnConfigDatabase.TabIndex = 39;
+            this.btnConfigDatabase.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnConfigDatabase.Click += new System.EventHandler(this.btnConfigDatabase_Click);
+            // 
             // btnDoiMatKhau
             // 
             this.btnDoiMatKhau.ActiveBorderThickness = 1;
@@ -173,7 +201,7 @@
             this.btnDoiMatKhau.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(65)))), ((int)(((byte)(155)))));
             this.btnDoiMatKhau.BackColor = System.Drawing.Color.White;
             this.btnDoiMatKhau.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDoiMatKhau.BackgroundImage")));
-            this.btnDoiMatKhau.ButtonText = "Thay Đổi Mật Khẩu";
+            this.btnDoiMatKhau.ButtonText = "Đổi Mật Khẩu";
             this.btnDoiMatKhau.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDoiMatKhau.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDoiMatKhau.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(184)))));
@@ -182,10 +210,10 @@
             this.btnDoiMatKhau.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(184)))));
             this.btnDoiMatKhau.IdleForecolor = System.Drawing.Color.White;
             this.btnDoiMatKhau.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(184)))));
-            this.btnDoiMatKhau.Location = new System.Drawing.Point(345, 312);
+            this.btnDoiMatKhau.Location = new System.Drawing.Point(380, 312);
             this.btnDoiMatKhau.Margin = new System.Windows.Forms.Padding(5);
             this.btnDoiMatKhau.Name = "btnDoiMatKhau";
-            this.btnDoiMatKhau.Size = new System.Drawing.Size(162, 52);
+            this.btnDoiMatKhau.Size = new System.Drawing.Size(127, 52);
             this.btnDoiMatKhau.TabIndex = 39;
             this.btnDoiMatKhau.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnDoiMatKhau.Click += new System.EventHandler(this.btnDoiMatKhau_Click);
@@ -273,5 +301,6 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel5;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnConfigDatabase;
     }
 }

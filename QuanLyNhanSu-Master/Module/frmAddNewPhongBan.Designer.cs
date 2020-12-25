@@ -178,9 +178,9 @@
             this.btnRegister.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(65)))), ((int)(((byte)(155)))));
             this.btnRegister.ActiveForecolor = System.Drawing.Color.White;
             this.btnRegister.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(65)))), ((int)(((byte)(155)))));
-            this.btnRegister.BackColor = System.Drawing.SystemColors.Control;
+            this.btnRegister.BackColor = System.Drawing.Color.White;
             this.btnRegister.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRegister.BackgroundImage")));
-            this.btnRegister.ButtonText = "Đăng Kí";
+            this.btnRegister.ButtonText = "Thêm";
             this.btnRegister.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRegister.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegister.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(184)))));

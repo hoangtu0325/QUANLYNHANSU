@@ -25,7 +25,7 @@ namespace QuanLyNhanSu_Master
             }
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Module.Popup.Form1());
+            //Application.Run(new Module.Popup.frmConfigDatabase());
             Application.Run(new frmLogin());
         }
     }

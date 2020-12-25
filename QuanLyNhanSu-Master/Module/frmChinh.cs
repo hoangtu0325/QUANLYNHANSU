@@ -330,20 +330,42 @@ namespace QuanLyNhanSu_Master
                 BindingSource SBind = new BindingSource();
                 SBind.DataSource = frmImportExcelNhanVien.dataTable;
                 dataGrid = frmImportExcelNhanVien.dataTable;
-                int ss = dataGrid.Rows.Count;
+                int CountRow = dataGrid.Rows.Count;
+                int CountSuccess = 0;
                 for (int i = 0; i <= dataGrid.Rows.Count - 1; i++)
                 {
                     try
                     {
-                        HoSoNhanVienDAO.Instance.AddNewImployee(dataGrid.Rows[i][0].ToString(), (DateTime)dataGrid.Rows[i][1], dataGrid.Rows[i][2].ToString(), dataGrid.Rows[i][3].ToString(), dataGrid.Rows[i][4].ToString(), dataGrid.Rows[i][5].ToString(), dataGrid.Rows[i][6].ToString(), (DateTime)dataGrid.Rows[i][7], dataGrid.Rows[i][8].ToString(), dataGrid.Rows[i][9].ToString(), dataGrid.Rows[i][10].ToString(), dataGrid.Rows[i][11].ToString(), dataGrid.Rows[i][12].ToString(), dataGrid.Rows[i][13].ToString(), dataGrid.Rows[i][14].ToString(), dataGrid.Rows[i][15].ToString(), dataGrid.Rows[i][16].ToString());
+                        string TenNV = dataGrid.Rows[i][0].ToString();
+                        DateTime NgaySinh = (DateTime)dataGrid.Rows[i][1];
+                        string GioiTinh = dataGrid.Rows[i][2].ToString();
+                        string DiaChi = dataGrid.Rows[i][3].ToString();
+                        string Email = dataGrid.Rows[i][4].ToString();
+                        string Sdt = dataGrid.Rows[i][5].ToString();
+                        string Cmnd = dataGrid.Rows[i][6].ToString();
+                        DateTime NgayCap = (DateTime)dataGrid.Rows[i][7];
+                        string TenTinhThanh = dataGrid.Rows[i][8].ToString();
+                        string DanToc = dataGrid.Rows[i][9].ToString();
+                        string PhongBan = dataGrid.Rows[i][10].ToString();
+                        string TenChucVu = dataGrid.Rows[i][11].ToString();
+                        string MaBacLuong = dataGrid.Rows[i][12].ToString();
+                        string TinhTrangLamViec = dataGrid.Rows[i][13].ToString();
+                        string SoBHXH = dataGrid.Rows[i][14].ToString();
+                        string SoBHYT = dataGrid.Rows[i][15].ToString();
+                        string TaiKhoanNH = dataGrid.Rows[i][16].ToString();
+                        HoSoNhanVienDAO.Instance.AddNewImployee(TenNV, NgaySinh, GioiTinh, DiaChi, Email, Sdt, Cmnd, NgayCap, TenTinhThanh, DanToc, PhongBan, TenChucVu, MaBacLuong, TinhTrangLamViec, SoBHXH, SoBHYT, TaiKhoanNH);
+                        CountSuccess++;
                     }
                     catch (Exception ex)
                     {
                         MessageBox.Show("" + ex);
                     }
                 }
-                MessageBox.Show("Import nhân viên thành công");
-                btnDashboard_Click(btnNhanVien, e);
+                if (CountSuccess == CountRow)
+                {
+                    MessageBox.Show("Import nhân viên thành công");
+                    btnDashboard_Click(btnNhanVien, e);
+                }
             }
             else
             {
@@ -483,7 +505,7 @@ namespace QuanLyNhanSu_Master
         private void toolStripReLogin_Click(object sender, EventArgs e)
         {
             DialogResult result =  MessageBox.Show("Bạn có chắc muốn đăng nhập lại không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if(result == DialogResult.OK)
+            if(result == DialogResult.Yes)
             {
                 this.Close();
                 frmLogin frmLogin = new frmLogin();
@@ -528,7 +550,7 @@ namespace QuanLyNhanSu_Master
                         date = date.Substring(date.Length - 7, 7);
                         DateTime dateTime = DateTime.Parse(date);
                         List<BangChamCong> bangChamCongs = new List<BangChamCong>();
-                        for (int i = 11; i <= tableBangChamCong.Rows.Count - 4; i++)
+                        for (int i = 11; i <= tableBangChamCong.Rows.Count - 3; i++)
                         {
                             try
                             {
@@ -641,7 +663,6 @@ namespace QuanLyNhanSu_Master
             }
         }
 
-       
         public void AddBangChamCongToCSDL(DataTable table)
         {
             if (lblStatus.Text.Contains("Import bảng chấm công từ File"))

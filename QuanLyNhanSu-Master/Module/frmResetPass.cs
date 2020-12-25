@@ -19,32 +19,27 @@ namespace QuanLyNhanSu_Master.Module
             InitializeComponent();
             (new DropShadow()).ApplyShadows(this);
         }
-        //private const int CS_DROPSHADOW = 0x00020000;
 
-        //protected override CreateParams CreateParams
-        //{
-        //    get
-        //    {
-        //        CreateParams cp = base.CreateParams;
-        //            cp.ClassStyle |= CS_DROPSHADOW;
-        //        return cp;
-        //    }
-        //}
         private void btnResetPass_Click(object sender, EventArgs e)
         {
-            int flag = AccountDAO.Instance.ResetPassAccount(txtUserName.Text);
-            //MessageBox.Show("" + flag);
-            if (flag == 1)
+            if (!String.IsNullOrEmpty(txtUserName.Text))
             {
-                MessageBox.Show("Reset Pass User thành công");
-                this.DialogResult = DialogResult.OK;
-                this.Close();
+                int flag = AccountDAO.Instance.ResetPassAccount(txtUserName.Text);
+                if (flag == 1)
+                {
+                    MessageBox.Show("Reset Pass User thành công");
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Sai tên tài khoản");
+                }
             }
             else
             {
-                MessageBox.Show("Sai tên tài khoản");
+                MessageBox.Show("Vui lòng nhập tên tài khoản");
             }
-           
         }
 
         private void txtUserName_KeyDown(object sender, KeyEventArgs e)

@@ -78,5 +78,13 @@ namespace QuanLyNhanSu_Master.Module
             Bunifu.Framework.UI.BunifuMaterialTextbox textbox = (Bunifu.Framework.UI.BunifuMaterialTextbox)sender;
             textbox.isPassword = true;
         }
+
+        private void btnConfigDatabase_Click(object sender, EventArgs e)
+        {
+            frmConfigDatabase frmConfig = new frmConfigDatabase();
+            this.Close();
+            
+            frmConfig.Show();
+        }
     }
 }

@@ -36,7 +36,6 @@ namespace QuanLyNhanSu_Master.Module.Popup
                 IsPdf = false;
                 SaveFileDialog saveFileDialog = new SaveFileDialog();
                 saveFileDialog.Filter = "Exel files (*.xlsx)|*.xlsx|All files (*.*)|*.*";
-
                 saveFileDialog.FilterIndex = 0;
                 saveFileDialog.RestoreDirectory = true;
                 saveFileDialog.CreatePrompt = true;
@@ -60,12 +59,8 @@ namespace QuanLyNhanSu_Master.Module.Popup
                         System.Runtime.InteropServices.Marshal.FinalReleaseComObject(myExcelWorkbook);
                         myExcelApplication.Quit();
                         System.Runtime.InteropServices.Marshal.FinalReleaseComObject(myExcelApplication);
-                        MessageBox.Show("Không tìm thấy file template hoặc file đang được mở!!");
+                        MessageBox.Show("Không tìm thấy file template!!");
                     }
-                    ////Thread thread = new Thread(() => ExportExcel(saveFileDialog.FileName, Data));
-                    //Thread thread = new Thread(() => ExportExcel(saveFileDialog.FileName, Data));
-                    //thread.IsBackground = true;
-                    //thread.Start();
                 }
             }
             else
@@ -74,7 +69,6 @@ namespace QuanLyNhanSu_Master.Module.Popup
                 openExcel(PathTemplate, Data);
                 closeExcel(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "\\Template\\Temp.xlsx");
             }
-            
         }
         private int startRowData = 9;
         Excel.Application myExcelApplication;
@@ -111,51 +105,27 @@ namespace QuanLyNhanSu_Master.Module.Popup
             myExcelWorkSheet.PageSetup.Orientation = Excel.XlPageOrientation.xlLandscape;
             myExcelWorkSheet.PageSetup.FitToPagesTall = 1;
             myExcelWorkSheet.PageSetup.FitToPagesWide = 1;
-
             int numberOfSheets = myExcelWorkbook.Worksheets.Count; // get number of worksheets (optional)
             int intColumnCount = dataTable.Columns.Count;
             int intRowCount = dataTable.Rows.Count;
             myExcelWorkSheet.Cells[5, 1] ="BẢNG CHI LƯƠNG THÁNG " + date;
-
-            for (int i = 0; i < intRowCount - 1; i++)
+            for (int i = 0; i < intRowCount; i++)
             {
                 int row = i + startRowData;
                 for (int j = 0; j < intColumnCount; j++)
                 {
-               
-                    if (j == 1) //Tên NV
+                    if (j == 1)
                     {
                         myExcelWorkSheet.Cells[row, 2] = dataTable.Rows[i][j].ToString();
                         myExcelWorkSheet.Cells[row, 2].HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
                     }
-                    if (j == 0) //Mã NV
-                    {
-                        myExcelWorkSheet.Cells[row, 3] = dataTable.Rows[i][j].ToString();
-                    }
-                    if (j == 2) //Chức vụ
-                    {
-                        myExcelWorkSheet.Cells[row, 4] = dataTable.Rows[i][j].ToString();
-                    }
-                    if (j == 4) //Lương cơ bản
-                    {
-                        myExcelWorkSheet.Cells[row, 5] = dataTable.Rows[i][j].ToString();
-                    }
-                    if (j == 3) //Ngày công
-                    {
-                        myExcelWorkSheet.Cells[row, 12] = dataTable.Rows[i][j].ToString();
-                    }
-                    if (j == 10) //trách nhiệm
-                    {
-                        myExcelWorkSheet.Cells[row, 6] = dataTable.Rows[i][j].ToString();
-                    }
-                    if (j == 9) //Xăng xe
-                    {
-                        myExcelWorkSheet.Cells[row, 9] = dataTable.Rows[i][j].ToString();
-                    }
-                    if (j == 8) //Ăn trưa
-                    {
-                        myExcelWorkSheet.Cells[row, 7] = dataTable.Rows[i][j].ToString();
-                    }
+                    if (j == 0) { myExcelWorkSheet.Cells[row, 3] = dataTable.Rows[i][j].ToString();}
+                    if (j == 2) { myExcelWorkSheet.Cells[row, 4] = dataTable.Rows[i][j].ToString(); }
+                    if (j == 4) { myExcelWorkSheet.Cells[row, 5] = dataTable.Rows[i][j].ToString(); }
+                    if (j == 3) { myExcelWorkSheet.Cells[row, 12] = dataTable.Rows[i][j].ToString(); }
+                    if (j == 10) { myExcelWorkSheet.Cells[row, 6] = dataTable.Rows[i][j].ToString(); }
+                    if (j == 9) { myExcelWorkSheet.Cells[row, 9] = dataTable.Rows[i][j].ToString(); }
+                    if (j == 8) { myExcelWorkSheet.Cells[row, 7] = dataTable.Rows[i][j].ToString(); }
                 }
                 myExcelWorkSheet.Cells[row, 11] = "=SUM(E" + row + ":J" + row + ")";
                 myExcelWorkSheet.Cells[row, 13] = "= K" + row + " / 24 * L" + row + "";
@@ -171,9 +141,8 @@ namespace QuanLyNhanSu_Master.Module.Popup
                 myExcelWorkSheet.Cells[row, 23] = "=SUM(T" + row + ":V" + row + ")";
                 myExcelWorkSheet.Cells[row, 25] = "=M" + row + "-W" + row + "-X" + row + "";
                 myExcelWorkSheet.Cells[row, 1] = i;
-
             }
-            int rowAfterData = intRowCount + startRowData -1;
+            int rowAfterData = intRowCount + startRowData;
             Excel.Range all = myExcelApplication.get_Range("A" + rowAfterData + ":X" + rowAfterData + "", Type.Missing);
             all.Merge();
             all.Value = "TỔNG";
@@ -193,6 +162,7 @@ namespace QuanLyNhanSu_Master.Module.Popup
 
             if (IsPdf)
             {
+                string ss = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "\\Template\\Bảng chi lương.pdf";
                 myExcelWorkbook.ExportAsFixedFormat(Excel.XlFixedFormatType.xlTypePDF, Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "\\Template\\Bảng chi lương.pdf");
                 System.Diagnostics.Process.Start(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "\\Template\\Bảng chi lương.pdf");
             }

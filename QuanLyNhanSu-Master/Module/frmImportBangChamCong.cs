@@ -19,13 +19,14 @@ namespace QuanLyNhanSu_Master.Module
         {
             InitializeComponent();
             (new DropShadow()).ApplyShadows(this);
-           
+            
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+        private string Role = Account.Role;
 
         public void LoadDataGrid(Bunifu.Framework.UI.BunifuCustomDataGrid dataGrid)
         {
@@ -36,7 +37,7 @@ namespace QuanLyNhanSu_Master.Module
         private void SetFieldType(Bunifu.Framework.UI.BunifuCustomDataGrid dataGrid)
         {
             int IntRow = dataGrid.Rows.Count;
-            
+            if (Role == "Admin") { cbAllowUpdate.Enabled = true; }else { cbAllowUpdate.Enabled = false; }
             date = dataGrid.Rows[0].Cells["ThangChamCong"].Value.ToString();
             date = date.Substring(3, 7);
             this.bunifuCustomLabel1.Text = "Import Bảng chấm công nhân viên tháng " + date;
@@ -90,9 +91,13 @@ namespace QuanLyNhanSu_Master.Module
         private void btnSaveToDB_Click(object sender, EventArgs e)
         {
             bool DataError = false;
-            bool status = false;
+            bool StatusChamCong = false;
+            bool StatusChiLuong = false;
             DateTime dateTime = DateTime.Parse(date);
             string UserModified = Account.UserName;
+            DataTable table = ChamCongDAO.Instance.IsMaNVHaveChamCong(dateTime.ToString("yyyy-MM-01"));
+            int CountRow = table.Rows.Count;
+            string Role = Account.Role;
             DialogResult dialogResult = MessageBox.Show("Bạn có chắc muốn lưu không ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             if (dialogResult == DialogResult.Yes)
             {
@@ -114,13 +119,23 @@ namespace QuanLyNhanSu_Master.Module
                         }
                     }
                 }
+                bool IsAllowAddNew = true;
                 if (!DataError)
                 {
                     for (int i = 0; i < GridImportBangChamCong.Rows.Count; i++)
                     {
                         try
                         {
+                           
                             int MaNV = Convert.ToInt32(GridImportBangChamCong.Rows[i].Cells["MaNV"].Value);
+                            for (int index = 0; index < CountRow; index++)
+                            {
+                                int MaNVDataTable = Convert.ToInt32(table.Rows[i]["MaNV"].ToString());
+                                if (MaNVDataTable == MaNV)
+                                {
+                                    IsAllowAddNew = false;
+                                }
+                            }
                             string Ngay1 = GridImportBangChamCong.Rows[i].Cells["Ngay1"].Value.ToString();
                             string Ngay2 = GridImportBangChamCong.Rows[i].Cells["Ngay2"].Value.ToString();
                             string Ngay3 = GridImportBangChamCong.Rows[i].Cells["Ngay3"].Value.ToString();
@@ -154,7 +169,6 @@ namespace QuanLyNhanSu_Master.Module
                             string Ngay31 = GridImportBangChamCong.Rows[i].Cells["Ngay31"].Value.ToString();
                             float TongSoNgay = float.Parse(GridImportBangChamCong.Rows[i].Cells["TongSoNgay"].Value.ToString());
                             float SoGioTangCa = float.Parse(GridImportBangChamCong.Rows[i].Cells["SoGioTangCa"].Value.ToString());
-                            status = ChamCongDAO.Instance.AddNewBangChamCong(MaNV, dateTime, Ngay1, Ngay2, Ngay3, Ngay4, Ngay5, Ngay6, Ngay7, Ngay8, Ngay9, Ngay10, Ngay11, Ngay12, Ngay13, Ngay14, Ngay15, Ngay16, Ngay17, Ngay18, Ngay19, Ngay20, Ngay21, Ngay22, Ngay23, Ngay24, Ngay25, Ngay26, Ngay27, Ngay28, Ngay29, Ngay30, Ngay31, TongSoNgay, SoGioTangCa, UserModified);
 
                             float LuongThang = ChiLuongDAO.Instance.GetLuongByMaNV(MaNV);
                             float LuongTangCa1Gio = Convert.ToSingle(LuongThang / 26 / 8 * 1.5);
@@ -162,26 +176,54 @@ namespace QuanLyNhanSu_Master.Module
                             LuongThang = Round(LuongThang / 26 * TongSoNgay);
                             float TongLuong = Round(LuongThang + TongTienTangCa + 1000000);
                             float BHXH = Round(TongLuong * 5 / 100);
-                            float  BHYT = Round(TongLuong / 100);
+                            float BHYT = Round(TongLuong / 100);
                             float CongDoan = Round(TongLuong / 100);
                             float ThucLanh = Round(TongLuong - (BHXH + BHYT + CongDoan));
                             ThucLanh = ThucLanh / 10000;
                             ThucLanh = Convert.ToSingle(Math.Round(ThucLanh, 1));
                             ThucLanh = ThucLanh * 10000;
-                            ChiLuongDAO.Instance.AddNewBangChiLuong(MaNV, dateTime, TongSoNgay, SoGioTangCa, TongTienTangCa, 500000, 500000, 0, 0, TongLuong, BHXH, BHYT, CongDoan, ThucLanh);
+
+                            if (cbAllowUpdate.Checked == true)
+                            {
+                                StatusChamCong = ChamCongDAO.Instance.UpdateBangChamCongByMonth(MaNV, dateTime, Ngay1, Ngay2, Ngay3, Ngay4, Ngay5, Ngay6, Ngay7, Ngay8, Ngay9, Ngay10, Ngay11, Ngay12, Ngay13, Ngay14, Ngay15, Ngay16, Ngay17, Ngay18, Ngay19, Ngay20, Ngay21, Ngay22, Ngay23, Ngay24, Ngay25, Ngay26, Ngay27, Ngay28, Ngay29, Ngay30, Ngay31, TongSoNgay, SoGioTangCa, UserModified);
+                                StatusChiLuong = ChiLuongDAO.Instance.UpdateBangChiLuongByMonth(MaNV, dateTime, TongSoNgay, SoGioTangCa, TongTienTangCa, 500000, 500000, 0, 0, TongLuong, BHXH, BHYT, CongDoan, ThucLanh);
+                            }
+                            else
+                            {
+                                if (IsAllowAddNew)
+                                {
+                                    StatusChamCong = ChamCongDAO.Instance.AddNewBangChamCong(MaNV, dateTime, Ngay1, Ngay2, Ngay3, Ngay4, Ngay5, Ngay6, Ngay7, Ngay8, Ngay9, Ngay10, Ngay11, Ngay12, Ngay13, Ngay14, Ngay15, Ngay16, Ngay17, Ngay18, Ngay19, Ngay20, Ngay21, Ngay22, Ngay23, Ngay24, Ngay25, Ngay26, Ngay27, Ngay28, Ngay29, Ngay30, Ngay31, TongSoNgay, SoGioTangCa, UserModified);
+
+                                    StatusChiLuong = ChiLuongDAO.Instance.AddNewBangChiLuong(MaNV, dateTime, TongSoNgay, SoGioTangCa, TongTienTangCa, 500000, 500000, 0, 0, TongLuong, BHXH, BHYT, CongDoan, ThucLanh);
+
+                                }
+
+                            }
+
                         }
                         catch (Exception ex)
                         {
                             MessageBox.Show("" + ex);
                         }
                     }
-                    if (status)
+                    if (StatusChamCong && StatusChiLuong)
                     {
                         this.Close();
                         MessageBox.Show("Import thành công", "Thông báo");
 
                     }
-                    else { MessageBox.Show("Import thất bại"); }
+                    else
+                    {
+                        if (!IsAllowAddNew)
+                        {
+                            MessageBox.Show("Dữ liệu đã tồn tại, check ô cập nhật để thay thế dữ liệu mới");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Import thất bại!!");
+                        }
+                    
+                    }
                 }
             }
         }

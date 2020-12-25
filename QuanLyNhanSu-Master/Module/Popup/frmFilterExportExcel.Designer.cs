@@ -38,6 +38,9 @@
             this.PanelCenter = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnExportExcel = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.rbExcel = new System.Windows.Forms.RadioButton();
+            this.rbPDF = new System.Windows.Forms.RadioButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.cbTinhTrangLamViec = new System.Windows.Forms.CheckedListBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -45,19 +48,16 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbAllPhongBan = new System.Windows.Forms.CheckedListBox();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.paneltop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LogoACB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimized)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             this.PanelCenter.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // DragControl
@@ -172,6 +172,40 @@
             this.btnExportExcel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnExportExcel.Click += new System.EventHandler(this.btnExportExcel_Click);
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.rbExcel);
+            this.groupBox4.Controls.Add(this.rbPDF);
+            this.groupBox4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.Location = new System.Drawing.Point(337, 279);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(149, 105);
+            this.groupBox4.TabIndex = 62;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Loại File";
+            // 
+            // rbExcel
+            // 
+            this.rbExcel.AutoSize = true;
+            this.rbExcel.Location = new System.Drawing.Point(12, 62);
+            this.rbExcel.Name = "rbExcel";
+            this.rbExcel.Size = new System.Drawing.Size(69, 27);
+            this.rbExcel.TabIndex = 1;
+            this.rbExcel.TabStop = true;
+            this.rbExcel.Text = "Excel";
+            this.rbExcel.UseVisualStyleBackColor = true;
+            // 
+            // rbPDF
+            // 
+            this.rbPDF.AutoSize = true;
+            this.rbPDF.Location = new System.Drawing.Point(12, 29);
+            this.rbPDF.Name = "rbPDF";
+            this.rbPDF.Size = new System.Drawing.Size(55, 27);
+            this.rbPDF.TabIndex = 1;
+            this.rbPDF.TabStop = true;
+            this.rbPDF.Text = "Pdf";
+            this.rbPDF.UseVisualStyleBackColor = true;
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.cbTinhTrangLamViec);
@@ -263,40 +297,6 @@
             this.bunifuCustomLabel1.TabIndex = 62;
             this.bunifuCustomLabel1.Text = "Tùy chọn xuất File";
             // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.radioButton2);
-            this.groupBox4.Controls.Add(this.radioButton1);
-            this.groupBox4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(337, 279);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(149, 105);
-            this.groupBox4.TabIndex = 62;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Loại File";
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(12, 29);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(55, 27);
-            this.radioButton1.TabIndex = 1;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Pdf";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(12, 62);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(69, 27);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Excel";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
             // frmFilterExportExcel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -317,11 +317,11 @@
             this.PanelCenter.ResumeLayout(false);
             this.PanelCenter.PerformLayout();
             this.panel1.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -344,7 +344,7 @@
         private System.Windows.Forms.CheckedListBox cbAllPhongBan;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rbExcel;
+        private System.Windows.Forms.RadioButton rbPDF;
     }
 }

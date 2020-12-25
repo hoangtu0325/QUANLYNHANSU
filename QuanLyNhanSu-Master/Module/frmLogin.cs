@@ -24,8 +24,10 @@ namespace QuanLyNhanSu_Master
             InitializeComponent();
             LoadData();
             (new DropShadow()).ApplyShadows(this);
+
+
         }
-       
+
         private string storeConfig = "config.ini";
         private string init = "init";
         private bool IsAdmin = false;
@@ -39,7 +41,7 @@ namespace QuanLyNhanSu_Master
                 iniFile.Load(this.storeConfig);
                 string pass = this.GetStoreValue(iniFile.GetKeyValue(this.init, "PassWord"));
                 this.txtUsername.Text = this.GetStoreValue(iniFile.GetKeyValue(this.init, "UserName"));
-                this.txtPassword.Text = AccountDAO.Instance.DeCrypt(pass, "%4oPNbxNwO3Z15CoNCbi").ToString(); 
+                this.txtPassword.Text = AccountDAO.Instance.DeCrypt(pass, "%4oPNbxNwO3Z15CoNCbi").ToString();
             }
         }
 
@@ -52,8 +54,17 @@ namespace QuanLyNhanSu_Master
             }
             IniFile iniFile = new IniFile();
             iniFile.Load(this.storeConfig);
-            iniFile.SetKeyValue(this.init, "UserName", this.txtUsername.Text);
-            iniFile.SetKeyValue(this.init, "PassWord", AccountDAO.Instance.EnCrypt(txtPassword.Text, "%4oPNbxNwO3Z15CoNCbi").ToString());
+            if (CbSaveAccount.Checked)
+            {
+                iniFile.SetKeyValue(this.init, "UserName", this.txtUsername.Text);
+                iniFile.SetKeyValue(this.init, "PassWord", AccountDAO.Instance.EnCrypt(txtPassword.Text, "%4oPNbxNwO3Z15CoNCbi").ToString());
+            }
+            else
+            {
+                iniFile.SetKeyValue(this.init, "UserName", "");
+                iniFile.SetKeyValue(this.init, "PassWord", AccountDAO.Instance.EnCrypt("", "%4oPNbxNwO3Z15CoNCbi").ToString());
+            }
+
             iniFile.Save(this.storeConfig);
         }
 
@@ -71,7 +82,7 @@ namespace QuanLyNhanSu_Master
             }
             return result;
         }
- 
+
         public bool ValidateTextBox()
         {
             if (txtUsername.Text.ToString().Trim() == "" && txtPassword.Text.ToString().Trim() == "")
@@ -118,7 +129,7 @@ namespace QuanLyNhanSu_Master
             return AccountDAO.Instance.Login(userName, passWord);
         }
 
-        
+
         #endregion
 
         #region Events
@@ -129,36 +140,55 @@ namespace QuanLyNhanSu_Master
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
- 
+
             string userName = txtUsername.Text;
             string passWord = txtPassword.Text;
-
-            if (ValidateTextBox())
+            bool flag = File.Exists(this.storeConfig);
+            if (flag)
             {
-                if (AccountDAO.Instance.IsAdmin(userName))
+                IniFile iniFile = new IniFile();
+                iniFile.Load(this.storeConfig);
+                string DataSource = DataProvider.Instance.GetStoreValue(iniFile.GetKeyValue("Connect", "DataSource"));
+                string DatabaseName = DataProvider.Instance.GetStoreValue(iniFile.GetKeyValue("Connect", "DatabaseName"));
+                if (DataSource == "" || DatabaseName == "")
                 {
-                    IsAdmin = true;
-                }
-
-                if (Login(userName, passWord))
-                {
-                    if (CbSaveAccount.Checked == true)
-                    {
-                        SaveData();
-                    }
-                    Account loginAccount = AccountDAO.Instance.GetAccountByUserName(userName);
-                    AccountDAO.Instance.LastLogin(userName);
-                    frmChinh frmChinh = new frmChinh(loginAccount);
-                    frmChinh.Show();
-                
+                    MessageBox.Show("Không thể kết nối đến server.Vui lòng xem lại kết nối.");
+                    frmConfigDatabase frmConfig = new frmConfigDatabase();
+                    frmConfig.Show();
                     this.Hide();
+
                 }
                 else
                 {
-                    MessageBox.Show("Sai tên tài khoản hoặc mật khẩu!!");
+                    if (ValidateTextBox())
+                    {
+
+                        if (AccountDAO.Instance.IsAdmin(userName))
+                        {
+                            IsAdmin = true;
+                        }
+
+                        if (Login(userName, passWord))
+                        {
+                            SaveData();
+
+                            DataProvider.Instance.DatabaseName = DatabaseName;
+                            Account loginAccount = AccountDAO.Instance.GetAccountByUserName(userName);
+                            AccountDAO.Instance.LastLogin(userName);
+                            frmChinh frmChinh = new frmChinh(loginAccount);
+                            frmChinh.Show();
+
+                            this.Hide();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Sai tên tài khoản hoặc mật khẩu!!");
+                        }
+
+                    }
                 }
-                
             }
+
         }
 
         private void btnMinimized_Click(object sender, EventArgs e)
@@ -168,24 +198,29 @@ namespace QuanLyNhanSu_Master
 
         private void txtPassword_KeyDown(object sender, KeyEventArgs e)
         {
+            if (sender == txtPassword)
+            {
+                txtPassword.isPassword = true;
+
+            }
             if (e.KeyCode == Keys.Enter)
             {
                 btnLogin_Click(sender, e);
             }
-           
+
         }
 
         private void lblQuenMatKhau_Click(object sender, EventArgs e)
         {
-            
+
             frmDoiMatKhau frmDoiMatKhau = new frmDoiMatKhau();
             frmDoiMatKhau.StartPosition = FormStartPosition.CenterParent;
             if (IsAdmin)
             {
-                frmDoiMatKhau.SendCodeXacThucToAdmin(IsAdmin,txtUsername.Text);
+                frmDoiMatKhau.SendCodeXacThucToAdmin(IsAdmin, txtUsername.Text);
             }
             var result = frmDoiMatKhau.ShowDialog();
-            
+
             if (result == DialogResult.OK)
             {
                 this.txtUsername.Text = frmDoiMatKhau.UserName;  //values preserved after close

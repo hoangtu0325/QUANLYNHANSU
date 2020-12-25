@@ -228,5 +228,25 @@ namespace QuanLyNhanSu_Master.DAO
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             return data;
         }
+        
+        public List<NhanVien> GetMucLuongNhanVien()
+        {
+            List<NhanVien> listNhanVien = new List<NhanVien>();
+
+            string query = string.Empty;
+            query += " select NV.MaNV, NV.TenNV, PB.TenPhongBan, CV.TenChucVu, BL.LuongCoBan from NhanVien NV ";
+            query += " inner join PhongBan PB on NV.MaPhongBan = PB.MaPhongBan ";
+            query += " inner join ChucVu CV on NV.MaChucVu=CV.MaChucVu ";
+            query += " inner join BacLuong BL on NV.MaBacLuong=BL.MaBacLuong ";
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            foreach (DataRow item in data.Rows)
+            {
+                NhanVien nhanVien = new NhanVien(item);
+                listNhanVien.Add(nhanVien);
+            }
+            return listNhanVien;
+        }
     }
 }

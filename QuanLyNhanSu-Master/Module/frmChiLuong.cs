@@ -60,7 +60,7 @@ namespace QuanLyNhanSu_Master.Module
 
         private void cbListMonth_SelectedIndexChanged(object sender, EventArgs e)
         {
-            float Count = 0;
+            double Count = 0;
             string productId = cbListMonth.SelectedItem as string;
             if (productId != null)
             {
@@ -68,11 +68,11 @@ namespace QuanLyNhanSu_Master.Module
                 GridBangChiLuong.DataSource = ChiLuongDAO.Instance.GetAllBangChiLuongByMonth(lastMonth);
                 foreach (DataGridViewRow item in GridBangChiLuong.Rows)
                 {
-                    Count += Convert.ToSingle(item.Cells["ThucLanh"].Value);
+                    Count += Convert.ToDouble(item.Cells["ThucLanh"].Value);
                 }
             }
             CountMoney = String.Format("{0:C}", Count);
-            lblCountMoney.Text = CountMoney;
+            lblCountMoney.Text = GridBangChiLuong.RowCount.ToString();
         }
 
         private void btnExport_Click(object sender, EventArgs e)

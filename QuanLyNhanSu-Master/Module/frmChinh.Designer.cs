@@ -43,8 +43,6 @@ namespace QuanLyNhanSu_Master
             this.btnMinimized = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnExit = new Bunifu.Framework.UI.BunifuImageButton();
             this.PanelNghiepVu = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnKhaiBaoPhongBan = new System.Windows.Forms.Button();
             this.btnNghiepVu = new System.Windows.Forms.Button();
@@ -253,8 +251,6 @@ namespace QuanLyNhanSu_Master
             // PanelNghiepVu
             // 
             this.PanelNghiepVu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
-            this.PanelNghiepVu.Controls.Add(this.button3);
-            this.PanelNghiepVu.Controls.Add(this.button2);
             this.PanelNghiepVu.Controls.Add(this.button1);
             this.PanelNghiepVu.Controls.Add(this.btnKhaiBaoPhongBan);
             this.PanelNghiepVu.Controls.Add(this.btnNghiepVu);
@@ -264,36 +260,8 @@ namespace QuanLyNhanSu_Master
             this.PanelNghiepVu.MaximumSize = new System.Drawing.Size(229, 502);
             this.PanelNghiepVu.MinimumSize = new System.Drawing.Size(229, 71);
             this.PanelNghiepVu.Name = "PanelNghiepVu";
-            this.PanelNghiepVu.Size = new System.Drawing.Size(229, 71);
+            this.PanelNghiepVu.Size = new System.Drawing.Size(229, 73);
             this.PanelNghiepVu.TabIndex = 1;
-            // 
-            // button3
-            // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(0, 284);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(229, 71);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "Khai báo phòng ban";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(0, 213);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(229, 71);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Khai báo phòng ban";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
@@ -306,7 +274,7 @@ namespace QuanLyNhanSu_Master
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(229, 71);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Cập nhật tiền lương";
+            this.button1.Text = "Cập nhật mức lương";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // btnKhaiBaoPhongBan
@@ -589,11 +557,11 @@ namespace QuanLyNhanSu_Master
             this.ToolstripCaiDat,
             this.toolStripImportBangChamCong1});
             this.menuStrip2.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
-            this.menuStrip2.Location = new System.Drawing.Point(1229, 41);
+            this.menuStrip2.Location = new System.Drawing.Point(1079, 41);
             this.menuStrip2.Name = "menuStrip2";
             this.menuStrip2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.menuStrip2.ShowItemToolTips = true;
-            this.menuStrip2.Size = new System.Drawing.Size(150, 28);
+            this.menuStrip2.Size = new System.Drawing.Size(300, 28);
             this.menuStrip2.TabIndex = 1;
             this.menuStrip2.Text = "TẠO MỚI";
             // 
@@ -617,7 +585,7 @@ namespace QuanLyNhanSu_Master
             this.ToolStripReSetPass.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ToolStripReSetPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(34)))), ((int)(((byte)(110)))));
             this.ToolStripReSetPass.Name = "ToolStripReSetPass";
-            this.ToolStripReSetPass.Size = new System.Drawing.Size(202, 28);
+            this.ToolStripReSetPass.Size = new System.Drawing.Size(216, 28);
             this.ToolStripReSetPass.Text = "Reset Pass User";
             this.ToolStripReSetPass.Click += new System.EventHandler(this.ToolStripReSetPass_Click);
             // 
@@ -626,7 +594,7 @@ namespace QuanLyNhanSu_Master
             this.toolStripReLogin.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.toolStripReLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(34)))), ((int)(((byte)(110)))));
             this.toolStripReLogin.Name = "toolStripReLogin";
-            this.toolStripReLogin.Size = new System.Drawing.Size(202, 28);
+            this.toolStripReLogin.Size = new System.Drawing.Size(216, 28);
             this.toolStripReLogin.Text = "Đăng nhập lại";
             this.toolStripReLogin.Click += new System.EventHandler(this.toolStripReLogin_Click);
             // 
@@ -635,7 +603,7 @@ namespace QuanLyNhanSu_Master
             this.toolStripExit.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.toolStripExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(34)))), ((int)(((byte)(110)))));
             this.toolStripExit.Name = "toolStripExit";
-            this.toolStripExit.Size = new System.Drawing.Size(202, 28);
+            this.toolStripExit.Size = new System.Drawing.Size(216, 28);
             this.toolStripExit.Text = "Thoát";
             this.toolStripExit.Click += new System.EventHandler(this.toolStripExit_Click);
             // 
@@ -778,7 +746,7 @@ namespace QuanLyNhanSu_Master
             this.btnImport.BackColor = System.Drawing.Color.Transparent;
             this.btnImport.color = System.Drawing.Color.Transparent;
             this.btnImport.colorActive = System.Drawing.Color.Transparent;
-            this.btnImport.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnImport.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnImport.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImport.ForeColor = System.Drawing.Color.Black;
             this.btnImport.Image = ((System.Drawing.Image)(resources.GetObject("btnImport.Image")));
@@ -791,7 +759,6 @@ namespace QuanLyNhanSu_Master
             this.btnImport.Name = "btnImport";
             this.btnImport.Size = new System.Drawing.Size(56, 54);
             this.btnImport.TabIndex = 0;
-            this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
             this.btnImport.MouseEnter += new System.EventHandler(this.btnRefresh_MouseEnter);
             this.btnImport.MouseLeave += new System.EventHandler(this.btnRefresh_MouseLeave);
             // 
@@ -896,8 +863,6 @@ namespace QuanLyNhanSu_Master
         private System.Windows.Forms.Button btnKhaiBaoPhongBan;
         private System.Windows.Forms.Button btnNghiepVu;
         private System.Windows.Forms.Timer TimerNghiepVu;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem ToolStripAddNew;
         private System.Windows.Forms.ToolStripMenuItem ToolStripAddNewNhanVien;

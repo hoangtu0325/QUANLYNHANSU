@@ -46,6 +46,24 @@ namespace QuanLyNhanSu_Master.DAO
             }
         }
 
+        public bool UpdateBangChiLuongByMonth(int MaNV, DateTime ThangChamCong, float SoNgayLamViec, float SoGioTangCa, float TongTienTangCa, float TroCapAnTrua, float TroCapXangXe, float TroCapTrachNhiem, float TienThuong, float TongLuong, float BHXH, float BHYT, float CongDoan, float ThucLanh)
+        {
+            string query = string.Empty;
+            string thangchamcong = ThangChamCong.ToString("yyyy-MM-dd");
+            try
+            {
+                query = "update top(1) BangChiLuong set SoNgaylamviec = @SoNgaylamviec , MaBacLuong = ( select MaBacLuong from NhanVien where MaNV = @MaNV ) , SoGioTangCa = @SoGioTangCa , TongTienTangCa = @TongTienTangCa , TroCapAnTrua = @TroCapAnTrua , TroCapXangXe = @TroCapXangXe , TroCapTrachNhiem = @TroCapTrachNhiem , TienThuong = @TienThuong , TongLuong = @TongLuong , BHXH = @BHXH , BHYT = @BHYT , CongDoan = @CongDoan ,ThucLanh = @ThucLanh ";
+                query += " where MaNV = @MaNV1 and ThangChi = @ThangChi ";
+                int result = DataProvider.Instance.ExecuteNonQuery(query, new object[] { SoNgayLamViec, MaNV, SoGioTangCa, TongTienTangCa, TroCapAnTrua, TroCapXangXe, TroCapTrachNhiem, TienThuong, TongLuong, BHXH, BHYT, CongDoan, ThucLanh , MaNV, thangchamcong });
+                return result > 0;
+            }
+            catch (Exception ex)
+            {
+                string exs = ex.ToString();
+                return false;
+            }
+        }
+
         public string CountMoneyByMonth(string dateTime)
         {
             string Money;
@@ -81,7 +99,6 @@ namespace QuanLyNhanSu_Master.DAO
             query += " Inner join ChucVu CV on NV.MaChucVu=CV.MaChucVu  ";
             query += " WHERE(CL.ThangChi = '"+ date + "') ";
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
-
             return data;
         }
     }

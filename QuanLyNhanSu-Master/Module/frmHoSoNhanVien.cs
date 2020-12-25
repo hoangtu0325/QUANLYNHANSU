@@ -195,5 +195,12 @@ namespace QuanLyNhanSu_Master.Module
 
             }
         }
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            frmFilterExportExcel frmFilterExportExcel = new frmFilterExportExcel();
+            frmFilterExportExcel.StartPosition = FormStartPosition.CenterScreen;
+            frmFilterExportExcel.Show();
+        }
     }
 }

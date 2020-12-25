@@ -34,13 +34,14 @@
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btnLuu = new Bunifu.Framework.UI.BunifuThinButton2();
             this.Panels = new System.Windows.Forms.Panel();
-            this.txtChucVu = new System.Windows.Forms.Label();
-            this.txtPhongBan = new System.Windows.Forms.Label();
+            this.cbListPhongBan = new System.Windows.Forms.ComboBox();
+            this.cbListChucVu = new System.Windows.Forms.ComboBox();
+            this.cbListTinhThanh = new System.Windows.Forms.ComboBox();
             this.txtMaBacLuong = new System.Windows.Forms.Label();
             this.txtMaNV = new System.Windows.Forms.Label();
+            this.btnDeleteNhanVien = new Bunifu.Framework.UI.BunifuThinButton2();
             this.txtDanToc = new System.Windows.Forms.TextBox();
             this.txtTonGiao = new System.Windows.Forms.TextBox();
-            this.txtNoiCap = new System.Windows.Forms.TextBox();
             this.txtNgayCap = new System.Windows.Forms.TextBox();
             this.txtTaiKhoanNH = new System.Windows.Forms.TextBox();
             this.txtSoBHYT = new System.Windows.Forms.TextBox();
@@ -157,14 +158,15 @@
             // Panels
             // 
             this.Panels.BackColor = System.Drawing.Color.White;
-            this.Panels.Controls.Add(this.txtChucVu);
-            this.Panels.Controls.Add(this.txtPhongBan);
+            this.Panels.Controls.Add(this.cbListPhongBan);
+            this.Panels.Controls.Add(this.cbListChucVu);
+            this.Panels.Controls.Add(this.cbListTinhThanh);
             this.Panels.Controls.Add(this.txtMaBacLuong);
             this.Panels.Controls.Add(this.txtMaNV);
+            this.Panels.Controls.Add(this.btnDeleteNhanVien);
             this.Panels.Controls.Add(this.btnLuu);
             this.Panels.Controls.Add(this.txtDanToc);
             this.Panels.Controls.Add(this.txtTonGiao);
-            this.Panels.Controls.Add(this.txtNoiCap);
             this.Panels.Controls.Add(this.txtNgayCap);
             this.Panels.Controls.Add(this.txtTaiKhoanNH);
             this.Panels.Controls.Add(this.txtSoBHYT);
@@ -213,27 +215,47 @@
             this.Panels.Size = new System.Drawing.Size(1584, 737);
             this.Panels.TabIndex = 6;
             // 
-            // txtChucVu
+            // cbListPhongBan
             // 
-            this.txtChucVu.AutoSize = true;
-            this.txtChucVu.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.txtChucVu.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.txtChucVu.Location = new System.Drawing.Point(1231, 103);
-            this.txtChucVu.Name = "txtChucVu";
-            this.txtChucVu.Size = new System.Drawing.Size(88, 23);
-            this.txtChucVu.TabIndex = 66;
-            this.txtChucVu.Text = "Nhân viên";
+            this.cbListPhongBan.BackColor = System.Drawing.Color.White;
+            this.cbListPhongBan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbListPhongBan.DropDownWidth = 162;
+            this.cbListPhongBan.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.cbListPhongBan.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbListPhongBan.FormattingEnabled = true;
+            this.cbListPhongBan.ItemHeight = 23;
+            this.cbListPhongBan.Location = new System.Drawing.Point(1235, 37);
+            this.cbListPhongBan.Name = "cbListPhongBan";
+            this.cbListPhongBan.Size = new System.Drawing.Size(177, 31);
+            this.cbListPhongBan.TabIndex = 69;
             // 
-            // txtPhongBan
+            // cbListChucVu
             // 
-            this.txtPhongBan.AutoSize = true;
-            this.txtPhongBan.Font = new System.Drawing.Font("Segoe UI", 10.2F);
-            this.txtPhongBan.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.txtPhongBan.Location = new System.Drawing.Point(1231, 45);
-            this.txtPhongBan.Name = "txtPhongBan";
-            this.txtPhongBan.Size = new System.Drawing.Size(126, 23);
-            this.txtPhongBan.TabIndex = 66;
-            this.txtPhongBan.Text = "Phòng nhân sự";
+            this.cbListChucVu.BackColor = System.Drawing.Color.White;
+            this.cbListChucVu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbListChucVu.DropDownWidth = 162;
+            this.cbListChucVu.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.cbListChucVu.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbListChucVu.FormattingEnabled = true;
+            this.cbListChucVu.ItemHeight = 23;
+            this.cbListChucVu.Location = new System.Drawing.Point(1235, 94);
+            this.cbListChucVu.Name = "cbListChucVu";
+            this.cbListChucVu.Size = new System.Drawing.Size(177, 31);
+            this.cbListChucVu.TabIndex = 69;
+            // 
+            // cbListTinhThanh
+            // 
+            this.cbListTinhThanh.BackColor = System.Drawing.Color.White;
+            this.cbListTinhThanh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbListTinhThanh.DropDownWidth = 162;
+            this.cbListTinhThanh.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.cbListTinhThanh.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbListTinhThanh.FormattingEnabled = true;
+            this.cbListTinhThanh.ItemHeight = 23;
+            this.cbListTinhThanh.Location = new System.Drawing.Point(1263, 438);
+            this.cbListTinhThanh.Name = "cbListTinhThanh";
+            this.cbListTinhThanh.Size = new System.Drawing.Size(177, 31);
+            this.cbListTinhThanh.TabIndex = 69;
             // 
             // txtMaBacLuong
             // 
@@ -257,6 +279,33 @@
             this.txtMaNV.TabIndex = 66;
             this.txtMaNV.Text = "01";
             // 
+            // btnDeleteNhanVien
+            // 
+            this.btnDeleteNhanVien.ActiveBorderThickness = 1;
+            this.btnDeleteNhanVien.ActiveCornerRadius = 20;
+            this.btnDeleteNhanVien.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(65)))), ((int)(((byte)(155)))));
+            this.btnDeleteNhanVien.ActiveForecolor = System.Drawing.Color.White;
+            this.btnDeleteNhanVien.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(65)))), ((int)(((byte)(155)))));
+            this.btnDeleteNhanVien.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDeleteNhanVien.BackColor = System.Drawing.Color.White;
+            this.btnDeleteNhanVien.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDeleteNhanVien.BackgroundImage")));
+            this.btnDeleteNhanVien.ButtonText = "Xóa";
+            this.btnDeleteNhanVien.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDeleteNhanVien.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteNhanVien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(184)))));
+            this.btnDeleteNhanVien.IdleBorderThickness = 1;
+            this.btnDeleteNhanVien.IdleCornerRadius = 20;
+            this.btnDeleteNhanVien.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnDeleteNhanVien.IdleForecolor = System.Drawing.Color.Red;
+            this.btnDeleteNhanVien.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnDeleteNhanVien.Location = new System.Drawing.Point(1127, 661);
+            this.btnDeleteNhanVien.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
+            this.btnDeleteNhanVien.Name = "btnDeleteNhanVien";
+            this.btnDeleteNhanVien.Size = new System.Drawing.Size(94, 58);
+            this.btnDeleteNhanVien.TabIndex = 65;
+            this.btnDeleteNhanVien.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnDeleteNhanVien.Click += new System.EventHandler(this.btnDeleteNhanVien_Click);
+            // 
             // txtDanToc
             // 
             this.txtDanToc.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -278,17 +327,6 @@
             this.txtTonGiao.Size = new System.Drawing.Size(226, 22);
             this.txtTonGiao.TabIndex = 13;
             this.txtTonGiao.Text = "Không";
-            // 
-            // txtNoiCap
-            // 
-            this.txtNoiCap.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNoiCap.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNoiCap.Location = new System.Drawing.Point(1268, 447);
-            this.txtNoiCap.Multiline = true;
-            this.txtNoiCap.Name = "txtNoiCap";
-            this.txtNoiCap.Size = new System.Drawing.Size(226, 22);
-            this.txtNoiCap.TabIndex = 17;
-            this.txtNoiCap.Text = "25/5/2015";
             // 
             // txtNgayCap
             // 
@@ -669,9 +707,9 @@
             this.bunifuCustomLabel21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(108)))), ((int)(((byte)(107)))));
             this.bunifuCustomLabel21.Location = new System.Drawing.Point(1044, 156);
             this.bunifuCustomLabel21.Name = "bunifuCustomLabel21";
-            this.bunifuCustomLabel21.Size = new System.Drawing.Size(111, 23);
+            this.bunifuCustomLabel21.Size = new System.Drawing.Size(92, 23);
             this.bunifuCustomLabel21.TabIndex = 0;
-            this.bunifuCustomLabel21.Text = "Hệ số lương :";
+            this.bunifuCustomLabel21.Text = "Mã lương :";
             // 
             // bunifuCustomLabel18
             // 
@@ -828,7 +866,6 @@
         private Bunifu.Framework.UI.BunifuThinButton2 btnLuu;
         private Bunifu.Framework.UI.BunifuCustomLabel btnChangeImage;
         private System.Windows.Forms.Label txtMaNV;
-        private System.Windows.Forms.TextBox txtNoiCap;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel8;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel18;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel16;
@@ -842,8 +879,10 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel23;
         private System.Windows.Forms.TextBox txtTaiKhoanNH;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel25;
-        private System.Windows.Forms.Label txtChucVu;
-        private System.Windows.Forms.Label txtPhongBan;
         private Bunifu.Framework.UI.BunifuImageButton btnReturn;
+        private System.Windows.Forms.ComboBox cbListTinhThanh;
+        private System.Windows.Forms.ComboBox cbListPhongBan;
+        private System.Windows.Forms.ComboBox cbListChucVu;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnDeleteNhanVien;
     }
 }

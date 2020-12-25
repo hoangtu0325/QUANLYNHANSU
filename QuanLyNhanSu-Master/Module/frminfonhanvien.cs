@@ -24,10 +24,12 @@ namespace QuanLyNhanSu_Master.Module
         private void BindingDataToTextBox(int id)
         {
             List<NhanVien> nhanVien = HoSoNhanVienDAO.Instance.GetNhanVienToList(id);
+            List<TinhThanh> tinhThanh = HoSoNhanVienDAO.Instance.GetListTinhThanh();
+            List<ChucVu> chucVu = HoSoNhanVienDAO.Instance.GetListChucVu();
+            List<PhongBan> phongBan = HoSoNhanVienDAO.Instance.GetAllPhongBan();
+
             txtTenNV.DataBindings.Add(new Binding("Text", nhanVien, "TenNV", false));
             txtMaNV.DataBindings.Add(new Binding("Text", nhanVien, "MaNV", false));
-            txtPhongBan.DataBindings.Add(new Binding("Text", nhanVien, "TenPhongBan", false));
-            txtChucVu.DataBindings.Add(new Binding("Text", nhanVien, "TenChucVu", false));
             txtMaBacLuong.DataBindings.Add(new Binding("Text", nhanVien, "MaBacLuong", false));
             txtNgaySinh.DataBindings.Add(new Binding("Text", nhanVien, "NgaySinh", false));
             txtGioiTinh.DataBindings.Add(new Binding("Text", nhanVien, "GioiTinh", false));
@@ -38,10 +40,24 @@ namespace QuanLyNhanSu_Master.Module
             txtDanToc.DataBindings.Add(new Binding("Text", nhanVien, "DanToc", false));
             txtDiaChi.DataBindings.Add(new Binding("Text", nhanVien, "DiaChi", false));
             txtNgayCap.DataBindings.Add(new Binding("Text", nhanVien, "NgayCap", false));
-            txtNoiCap.DataBindings.Add(new Binding("Text", nhanVien, "TenTinhThanh", false));
             txtSoBHXH.DataBindings.Add(new Binding("Text", nhanVien, "SoBHXH", false));
             txtSoBHYT.DataBindings.Add(new Binding("Text", nhanVien, "SoBHYT", false));
             txtTaiKhoanNH.DataBindings.Add(new Binding("Text", nhanVien, "TaiKhoanNH", false));
+
+            cbListPhongBan.DataSource = phongBan;
+            cbListPhongBan.DisplayMember = "TenPhongBan";
+            cbListPhongBan.ValueMember = "TenPhongBan";
+            cbListPhongBan.Text = nhanVien[0].TenPhongBan.ToString();
+
+            cbListTinhThanh.DataSource = tinhThanh;
+            cbListTinhThanh.DisplayMember = "TenTinhThanh";
+            cbListTinhThanh.ValueMember = "TenTinhThanh";
+            cbListTinhThanh.Text = nhanVien[0].TenTinhThanh.ToString();
+
+            cbListChucVu.DataSource = chucVu;
+            cbListChucVu.DisplayMember = "TenChucVu";
+            cbListChucVu.ValueMember = "TenChucVu";
+            cbListChucVu.Text = nhanVien[0].TenChucVu.ToString();
             if (nhanVien[0].HinhAnh != null)
             {
                 Image image = Base64ToImage(nhanVien[0].HinhAnh);
@@ -77,12 +93,9 @@ namespace QuanLyNhanSu_Master.Module
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 string name = openFileDialog.FileName;
-                //byte[] imageArray = System.IO.File.ReadAllBytes(@name);
-                ////byte[] imageArray = ImageToByte(btnImageNhanVien.Image);
-                //base64Image = Convert.ToBase64String(imageArray);
                 Image image = Image.FromFile(name);
                 string ss = System.IO.Path.GetDirectoryName(Application.ExecutablePath);
-                image.Save(System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\\New folder\\image.jpeg", System.Drawing.Imaging.ImageFormat.Jpeg);
+                image.Save(System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\\Template\\image.jpeg", System.Drawing.Imaging.ImageFormat.Jpeg);
                 btnImageNhanVien.Image = Image.FromFile(name);
             }
 
@@ -94,7 +107,6 @@ namespace QuanLyNhanSu_Master.Module
                 MemoryStream ms = new MemoryStream();
                 using (ms)
                 {
-                    //image.s(System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\\New folder\\image.jpeg", System.Drawing.Imaging.ImageFormat.Jpeg);
                     return ms.ToArray();
                 }
             }
@@ -114,13 +126,13 @@ namespace QuanLyNhanSu_Master.Module
                 {
                     Image image = Image.FromStream(ms, true);
                     string ss = System.IO.Path.GetDirectoryName(Application.ExecutablePath);
-                    image.Save(System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\\New folder\\image.jpg", System.Drawing.Imaging.ImageFormat.Jpeg);
+                    image.Save(System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\\Template\\image.jpg", System.Drawing.Imaging.ImageFormat.Jpeg);
                     return image;
                 }
             }
             else
             {
-                string name = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\\New folder\\user.jpg";
+                string name = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\\Template\\user.jpg";
                 Image image = Image.FromFile(name);
                 return image;
             }
@@ -129,14 +141,16 @@ namespace QuanLyNhanSu_Master.Module
         private void btnLuu_Click(object sender, EventArgs e)
         {
             string ss = btnImageNhanVien.ImageLocation;
-            //btnImageNhanVien.Image.Save(@"F:\\asda.bmp");
             if (NotNullTextBox())
             {
-                byte[] imageArray = System.IO.File.ReadAllBytes(System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\\New folder\\image.jpeg");
+                byte[] imageArray = System.IO.File.ReadAllBytes(System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\\Template\\image.jpeg");
                 base64Image = Convert.ToBase64String(imageArray);
                 string LastModified = DateTime.Now.ToString("yyyy-MM-dd");
-              
-                    int result = HoSoNhanVienDAO.Instance.UpdateInfoNhanVien(Convert.ToInt32(txtMaNV.Text), txtTenNV.Text, DateTime.Parse(txtNgaySinh.Text), txtGioiTinh.Text, txtDiaChi.Text, txtEmail.Text, txtSoDienThoai.Text, txtCmnd.Text, DateTime.Parse(txtNgayCap.Text), txtNoiCap.Text, txtDanToc.Text, txtPhongBan.Text, txtChucVu.Text, Convert.ToSingle(txtMaBacLuong.Text), txtTinhTrangLamViec.Text, txtSoBHXH.Text, txtSoBHYT.Text, txtTaiKhoanNH.Text, LastModified, Account.UserName, base64Image);
+                string TinhThanh = cbListTinhThanh.SelectedValue.ToString().Trim();
+                string PhongBan = cbListPhongBan.SelectedValue.ToString().Trim();
+                string ChucVu = cbListChucVu.SelectedValue.ToString().Trim();
+               
+                int result = HoSoNhanVienDAO.Instance.UpdateInfoNhanVien(Convert.ToInt32(txtMaNV.Text), txtTenNV.Text, DateTime.Parse(txtNgaySinh.Text), txtGioiTinh.Text, txtDiaChi.Text, txtEmail.Text, txtSoDienThoai.Text, txtCmnd.Text, DateTime.Parse(txtNgayCap.Text), TinhThanh, txtDanToc.Text, PhongBan, ChucVu, Convert.ToSingle(txtMaBacLuong.Text), txtTinhTrangLamViec.Text, txtSoBHXH.Text, txtSoBHYT.Text, txtTaiKhoanNH.Text, LastModified, Account.UserName, base64Image);
 
                 if (result > 0)
                 {
@@ -185,6 +199,11 @@ namespace QuanLyNhanSu_Master.Module
         {
             this.Close();
           
+        }
+
+        private void btnDeleteNhanVien_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

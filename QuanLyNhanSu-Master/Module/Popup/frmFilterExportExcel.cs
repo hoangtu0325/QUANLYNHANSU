@@ -21,7 +21,7 @@ namespace QuanLyNhanSu_Master.Module.Popup
             InitializeComponent();
             (new DropShadow()).ApplyShadows(this);
         }
-
+        bool IsPdf = false;
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -107,6 +107,10 @@ namespace QuanLyNhanSu_Master.Module.Popup
         }
         public void ExportExcel()
         {
+            if (rbExcel.Checked)
+            {
+                IsPdf = false;
+            }
             string ListPhongBan = "";
             string Gender = "";
             string TinhTrangLamViec = "";

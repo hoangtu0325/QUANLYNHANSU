@@ -93,7 +93,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.GridBangChiLuong.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.GridBangChiLuong.ColumnHeadersHeight = 30;
+            this.GridBangChiLuong.ColumnHeadersHeight = 50;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -126,7 +126,7 @@
             this.lblCountMoney.BackColor = System.Drawing.Color.Transparent;
             this.lblCountMoney.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCountMoney.ForeColor = System.Drawing.Color.Black;
-            this.lblCountMoney.Location = new System.Drawing.Point(133, 661);
+            this.lblCountMoney.Location = new System.Drawing.Point(118, 661);
             this.lblCountMoney.Name = "lblCountMoney";
             this.lblCountMoney.Size = new System.Drawing.Size(32, 25);
             this.lblCountMoney.TabIndex = 9;
@@ -141,9 +141,9 @@
             this.labelss.ForeColor = System.Drawing.Color.DimGray;
             this.labelss.Location = new System.Drawing.Point(18, 661);
             this.labelss.Name = "labelss";
-            this.labelss.Size = new System.Drawing.Size(118, 25);
+            this.labelss.Size = new System.Drawing.Size(95, 25);
             this.labelss.TabIndex = 10;
-            this.labelss.Text = "Tổng lương :";
+            this.labelss.Text = "Tổng NV :";
             // 
             // bunifuElipse1
             // 

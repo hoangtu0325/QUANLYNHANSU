@@ -33,11 +33,20 @@ namespace QuanLyNhanSu_Master.Module
         {
 
             string TenNV = txtTenNhanVien.Text;
-            string NgaySinh = txtNgaySinh.Text;
+            string NgaySinh = (Convert.ToDateTime(txtNgaySinh.Text)).ToString("yyyy/MM/dd");
             string Cmnd = txtCmnd.Text;
-            string NgayCap = txtNgayCap.Text;
+            string NgayCap = (Convert.ToDateTime(txtNgayCap.Text)).ToString("yyyy/MM/dd");
             string TenTT = cbListTinhThanh.GetItemText(cbListTinhThanh.SelectedItem);
             string GT = txtGioiTinh.Text;
+            if (GT == "Nam")
+            {
+                GT = "1";
+            }
+            else
+            {
+                GT = "0";
+            }
+
             string DiaChi = txtDiaChi.Text;
             string Email = txtEmail.Text;
             string Sdt = txtSdt.Text;

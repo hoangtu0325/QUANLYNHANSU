@@ -38,6 +38,8 @@ namespace QuanLyNhanSu_Master.Module
         {
             GridBangChamCong.Columns["Tên nhân viên"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             GridBangChamCong.Columns["Tên nhân viên"].Frozen = true;
+            GridBangChamCong.Columns["Tổng số ngày"].DisplayIndex = 2;
+            GridBangChamCong.Columns["Số giờ tăng ca"].DisplayIndex = 3;
             foreach (DataGridViewRow item in GridBangChamCong.Rows)
             {
                 if (item.Index == 1)

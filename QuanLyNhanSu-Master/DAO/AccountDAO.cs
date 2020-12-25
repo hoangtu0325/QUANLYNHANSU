@@ -120,7 +120,7 @@ namespace QuanLyNhanSu_Master.DAO
                     return false;
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 return false;
             }
@@ -219,7 +219,7 @@ namespace QuanLyNhanSu_Master.DAO
             {
 
                 query = "INSERT INTO NhanVien(MaNV, TenNV, NgaySinh, GioiTinh, DiaChi, Email, Sdt, Cmnd, NgayCap, MaTinhThanh, DanToc, MaPhongBan, MaChucVu, MaBacLuong, TinhTrangLamViec, SoBHXH, SoBHYT, TaiKhoanNH) ";
-                query += " VALUES((select max(MaNV) + 1 from NhanVien),N'" +txtTenNhanVien+"', N'"+ txtNgaySinh + "' , N'"+ txtGioiTinh + "', N'"+ txtDiaChi + "', N'"+ txtEmail + "', N'"+ txtSdt + "', N'"+ txtCmnd + "', N'"+ txtNgayCap + "', (select MaTinhThanh from TinhThanh where TenTinhThanh like CONCAT(N'"+ txtTenTinhThanh + "', '%')) ,N'"+ txtDanToc + "', (select MaPhongBan from PhongBan where TenPhongBan like CONCAT( N'"+ txtPhongBan + "', '%')), (select MaChucVu from ChucVu where TenChucVu like CONCAT(N'"+ txtTenChucVu + "', '%')) , N'"+ txtMaBacLuong + "', N'"+ txtTinhTrangLamViec + "', N'"+ txtSoBHXH + "', N'"+ txtSoBHYT+"', N'"+txtTaiKhoanNH +"')";
+                query += " VALUES((select max(MaNV) + 1 from NhanVien),N'" +txtTenNhanVien+"', N'"+ txtNgaySinh + "' , "+ txtGioiTinh + ", N'"+ txtDiaChi + "', N'"+ txtEmail + "', N'"+ txtSdt + "', N'"+ txtCmnd + "', N'"+ txtNgayCap + "', (select MaTinhThanh from TinhThanh where TenTinhThanh like CONCAT(N'"+ txtTenTinhThanh + "', '%')) ,N'"+ txtDanToc + "', (select MaPhongBan from PhongBan where TenPhongBan like CONCAT( N'"+ txtPhongBan + "', '%')), (select MaChucVu from ChucVu where TenChucVu like CONCAT(N'"+ txtTenChucVu + "', '%')) , N'"+ txtMaBacLuong + "', N'"+ txtTinhTrangLamViec + "', N'"+ txtSoBHXH + "', N'"+ txtSoBHYT+"', N'"+txtTaiKhoanNH +"')";
                 //string query = " exec SP_AddNewImployee @TenNV , @NgaySinh , @GioiTinh , @DiaChi , @Email , @Sdt , @Cmnd , @NgayCap , @TenTinhThanh , @DanToc , @TenPhongBan , @TenChucVu , @MaBacLuong , @TinhTrangLamViec , @SoBHXH , @SoBHYT , @TaiKhoanNH";
                 int result = DataProvider.Instance.ExecuteNonQuery(query);
                 return result > 0;
